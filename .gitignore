@@ -3,10 +3,7 @@ data/raw/
 data/interim/
 data/processed/
 
-# data/external: solo se ignoran los CSVs de empresas con datos sensibles
-data/external/empresas_muestra.csv
-data/external/tracking_descargas.csv
-data/external/stoxx600_componentes.csv
+# data/external: todo se versiona excepto credenciales o datos de acceso restringido
 
 # Los PDFs de normativa y diccionarios SÍ se versionan (documentos de referencia)
 # data/external/normativa/ → versionado
