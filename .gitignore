@@ -1,0 +1,40 @@
+# Datos crudos — no se versionan (informes empresariales pesados)
+data/raw/
+data/interim/
+data/processed/
+
+# data/external: solo se ignoran los CSVs de empresas con datos sensibles
+data/external/empresas_muestra.csv
+data/external/tracking_descargas.csv
+data/external/stoxx600_componentes.csv
+
+# Los PDFs de normativa y diccionarios SÍ se versionan (documentos de referencia)
+# data/external/normativa/ → versionado
+# data/external/diccionarios/ → versionado
+
+# Archivos Excel pesados
+*.xlsx
+*.xls
+
+# Entorno Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Variables de entorno y secretos
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Modelos grandes
+results/models/*.pkl
+results/models/*.bin
+results/models/*.pt
