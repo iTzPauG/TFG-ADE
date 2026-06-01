@@ -1,61 +1,98 @@
 ticker_wiki,nombre,sector_icb,pais,sede,sufijo,ticker_yf,supersector,id_empresa
-LDO,Leonardo,Industrial Goods and Services,Italy,Rome,.MI,LDO.MI,Industrial Goods and Services,E001
-BOL,Bolloré,Industrial Goods and Services,France,Puteaux,.PA,BOL.PA,Industrial Goods and Services,E002
-SGSN,SGS S.A.,Industrial Goods and Services,Switzerland,Geneva,.SW,SGSN.SW,Industrial Goods and Services,E003
-SKG,Smurfit Kappa,Industrial Goods and Services,Ireland,Dublin,.IR,SKG.IR,Industrial Goods and Services,E004
-SAF,Safran,Industrial Goods and Services,France,Paris,.PA,SAF.PA,Industrial Goods and Services,E005
-DPLM,Diploma,Industrial Goods and Services,United Kingdom,London,.L,DPLM.L,Industrial Goods and Services,E006
-KNEBV,Kone,Industrial Goods and Services,Finland,Espoo,.HE,KNEBV.HE,Industrial Goods and Services,E007
-RTO,Rentokil Initial,Industrial Goods and Services,United Kingdom,Crawley,.L,RTO.L,Industrial Goods and Services,E008
-HLMA,Halma plc,Industrial Goods and Services,United Kingdom,Amersham,.L,HLMA.L,Industrial Goods and Services,E009
-MNDI,Mondi,Industrial Goods and Services,United Kingdom,Weybridge,.L,MNDI.L,Industrial Goods and Services,E010
-WISE,Wise,Financial Services,United Kingdom,London,.L,WISE.L,Financials,E011
-ZURN,Zurich Insurance Group,Insurance,Switzerland,Zurich,.SW,ZURN.SW,Financials,E012
-PRU,Prudential,Insurance,United Kingdom,London,.L,PRU.L,Financials,E013
-ABN,ABN AMRO,Banks,Netherlands,Amsterdam,.AS,ABN.AS,Financials,E014
-STAN,Standard Chartered,Banks,United Kingdom,London,.L,STAN.L,Financials,E015
-INP,Investec,Financial Services,United Kingdom,London,.L,INP.L,Financials,E016
-LLOY,Lloyds Banking Group,Banks,United Kingdom,London,.L,LLOY.L,Financials,E017
-PGHN,Partners Group,Financial Services,Switzerland,Baar,.SW,PGHN.SW,Financials,E018
-ISP,Intesa Sanpaolo,Banks,Italy,Turin,.MI,ISP.MI,Financials,E019
-PHNX,Phoenix Group,Insurance,United Kingdom,London,.L,PHNX.L,Financials,E020
-UMG,Universal Music Group,Media,Netherlands,Hilversum,.AS,UMG.AS,Communication Services,E021
-KPN,KPN,Telecommunications,Netherlands,Rotterdam,.AS,KPN.AS,Communication Services,E022
-BT.A,BT Group,Telecommunications,United Kingdom,London,.L,BT.A.L,Communication Services,E023
-VIV,Vivendi,Media,France,Paris,.PA,VIV.PA,Communication Services,E024
-ERICb,Ericsson,Telecommunications,Sweden,Stockholm,.ST,ERICb.ST,Communication Services,E025
-NOVO B,Novo Nordisk,Health Care,Denmark,Bagsværd,.CO,NOVO B.CO,Health Care,E026
-CTEC,ConvaTec,Health Care,United Kingdom,Reading,.L,CTEC.L,Health Care,E027
-ALC,Alcon,Health Care,Switzerland,Fribourg,.SW,ALC.SW,Health Care,E028
-QIA,Qiagen,Health Care,Netherlands,Venlo,.AS,QIA.AS,Health Care,E029
-LONN,Lonza Group,Health Care,Switzerland,Basel,.SW,LONN.SW,Health Care,E030
-LXS,Lanxess,Chemicals,Germany,Essen,.DE,LXS.DE,Basic Materials,E031
-EDV,Endeavour Mining,Basic Resources,United Kingdom,London,.L,EDV.L,Basic Materials,E032
-CRDA,Croda International,Chemicals,United Kingdom,Snaith,.L,CRDA.L,Basic Materials,E033
-SY1,Symrise,Chemicals,Germany,Holzminden,.DE,SY1.DE,Basic Materials,E034
-ADH,Adevinta,Consumer Products and Services,Norway,Oslo,.OL,ADH.OL,Consumer Products and Services,E035
-BOSS,Hugo Boss,Consumer Products and Services,Germany,Metzingen,.DE,BOSS.DE,Consumer Products and Services,E036
-CFR,Richemont,Consumer Products and Services,Switzerland,Bellevue,.SW,CFR.SW,Consumer Products and Services,E037
-ENEL,Enel,Utilities,Italy,Rome,.MI,ENEL.MI,Utilities,E038
-ANE,Acciona Energía,Utilities,Spain,Madrid,.MC,ANE.MC,Utilities,E039
-ENGIE,Engie,Utilities,France,Courbevoie,.PA,ENGIE.PA,Utilities,E040
-BBY,Balfour Beatty,Construction and Materials,United Kingdom,London,.L,BBY.L,Construction and Materials,E041
-SKA B,Skanska,Construction and Materials,Sweden,Stockholm,.ST,SKA B.ST,Construction and Materials,E042
-DG,Vinci,Construction and Materials,France,Rueil-Malmaison,.PA,DG.PA,Construction and Materials,E043
-DHER,Delivery Hero,Retail,Germany,Berlin,.DE,DHER.DE,Consumer Discretionary,E044
-TPK,Travis Perkins,Retail,United Kingdom,Northampton,.L,TPK.L,Consumer Discretionary,E045
-HMB,H&M,Retail,Sweden,Stockholm,.ST,HMB.ST,Consumer Discretionary,E046
-LUMI,Lumibird,Technology,France,Lannion,.PA,LUMI.PA,Technology,E047
-TOM,TomTom,Technology,Netherlands,Amsterdam,.AS,TOM.AS,Technology,E048
-STMPA,STMicroelectronics,Technology,Netherlands,Geneva,.AS,STMPA.AS,Technology,E049
-BATS,British American Tobacco,"Food, Beverage and Tobacco",United Kingdom,London,.L,BATS.L,"Food, Beverage and Tobacco",E050
-SWMA,Swedish Match,"Food, Beverage and Tobacco",Sweden,Stockholm,.ST,SWMA.ST,"Food, Beverage and Tobacco",E051
-UTG,Unite Group,Real Estate,United Kingdom,London,.L,UTG.L,Real Estate,E052
-SGRO,Segro,Real Estate,United Kingdom,London,.L,SGRO.L,Real Estate,E053
-REP,Repsol,Energy,Spain,Madrid,.MC,REP.MC,Energy,E054
-AKERBP,Aker BP,Energy,Norway,Lysaker,.OL,AKERBP.OL,Energy,E055
-CPG,Compass Group,Travel and Leisure,United Kingdom,Chertsey,.L,CPG.L,Travel and Leisure,E056
-FLTR,Flutter Entertainment,Travel and Leisure,Ireland,Dublin,.IR,FLTR.IR,Travel and Leisure,E057
-STLAM,Stellantis,Automobiles and Parts,Netherlands,Hoofddorp,.AS,STLAM.AS,Automobiles and Parts,E058
-MBG,Mercedes-Benz Group,Automobiles and Parts,Germany,Stuttgart,.DE,MBG.DE,Automobiles and Parts,E059
-RKT,Reckitt,"Personal Care, Drug and Grocery Stores",United Kingdom,Slough,.L,RKT.L,"Personal Care, Drug and Grocery Stores",E060
+STLAM,Stellantis,Automobiles and Parts,Netherlands,Hoofddorp,.AS,STLA,Consumer Discretionary,E001
+MBG,Mercedes-Benz Group,Automobiles and Parts,Germany,Stuttgart,.DE,MBG.DE,Consumer Discretionary,E002
+CON,Continental,Automobiles and Parts,Germany,Hanover,.DE,CON.DE,Consumer Discretionary,E003
+FR,Valeo,Automobiles and Parts,France,Paris,.PA,FR.PA,Consumer Discretionary,E004
+CABK,CaixaBank,Banks,Spain,Valencia,.MC,CABK.MC,Financials,E005
+HSBA,HSBC,Banks,United Kingdom,London,.L,HSBA.L,Financials,E006
+SEB,Skandinaviska Enskilda Banken,Banks,Sweden,Stockholm,.ST,SEB-A.ST,Financials,E007
+RBI,Raiffeisen Bank International,Banks,Austria,Vienna,.VI,RBI.VI,Financials,E008
+UPM,UPM-Kymmene,Basic Resources,Finland,Helsinki,.HE,UPM.HE,Basic Materials,E009
+BOL,Boliden AB,Basic Resources,Sweden,Stockholm,.ST,BOL.ST,Basic Materials,E010
+ACX,Acerinox,Basic Resources,Spain,Madrid,.MC,ACX.MC,Basic Materials,E011
+VOE,Voestalpine,Basic Resources,Austria,Linz,.VI,VOE.VI,Basic Materials,E012
+1COV,Covestro,Chemicals,Germany,Leverkusen,.DE,1COV.DE,Basic Materials,E013
+SY1,Symrise,Chemicals,Germany,Holzminden,.DE,SY1.DE,Basic Materials,E014
+YAR,Yara International,Chemicals,Norway,Oslo,.OL,YAR.OL,Basic Materials,E015
+BBY,Balfour Beatty,Construction and Materials,United Kingdom,London,.L,BBY.L,Industrials,E016
+SKA B,Skanska,Construction and Materials,Sweden,Stockholm,.ST,SKA-B.ST,Industrials,E017
+DG,Vinci,Construction and Materials,France,Rueil-Malmaison,.PA,DG.PA,Industrials,E018
+EN,Bouygues,Construction and Materials,France,Paris,.PA,EN.PA,Industrials,E019
+EFGI,Eiffage,Construction and Materials,France,Asnières-sur-Seine,.PA,FGR.PA,Industrials,E020
+BRNW,Brunello Cucinelli,Consumer Products and Services,Italy,Solomeo,.MI,BC.MI,Consumer Discretionary,E021
+BOSS,Hugo Boss,Consumer Products and Services,Germany,Metzingen,.DE,BOSS.DE,Consumer Discretionary,E022
+CFR,Richemont,Consumer Products and Services,Switzerland,Bellevue,.SW,CFR.SW,Consumer Discretionary,E023
+KER,Kering,Consumer Products and Services,France,Paris,.PA,KER.PA,Consumer Discretionary,E024
+ADS,Adidas,Consumer Products and Services,Germany,Herzogenaurach,.DE,ADS.DE,Consumer Discretionary,E025
+REP,Repsol,Energy,Spain,Madrid,.MC,REP.MC,Energy,E026
+AKERBP,Aker BP,Energy,Norway,Lysaker,.OL,AKRBP.OL,Energy,E027
+NSN,Neste,Energy,Finland,Espoo,.HE,NESTE.HE,Energy,E028
+TGS,TGS,Energy,Norway,Oslo,.OL,TGS.OL,Energy,E029
+VESTAS,Vestas,Energy,Denmark,Aarhus,.CO,VWS.CO,Energy,E030
+LSEG,London Stock Exchange Group,Financial Services,United Kingdom,London,.L,LSEG.L,Financials,E031
+ALLFG,Allfunds Group,Financial Services,Spain,Madrid,.MC,ALLFG.AS,Financials,E032
+WEND,Wendel,Financial Services,France,Paris,.PA,MF.PA,Financials,E033
+III,3i,Financial Services,United Kingdom,London,.L,III.L,Financials,E034
+EXO,Exor,Financial Services,Netherlands,Amsterdam,.AS,EXO.AS,Financials,E035
+GLB,Glanbia,"Food, Beverage and Tobacco",Ireland,Kilkenny,.IR,GLB.L,Consumer Staples,E036
+PERP,Pernod Ricard,"Food, Beverage and Tobacco",France,Paris,.PA,RI.PA,Consumer Staples,E037
+CPR,Davide Campari-Milano,"Food, Beverage and Tobacco",Italy,Sesto San Giovanni,.MI,CPR.MI,Consumer Staples,E038
+NOVO B,Novo Nordisk,Health Care,Denmark,Bagsværd,.CO,NOVO-B.CO,Health Care,E039
+CTEC,ConvaTec,Health Care,United Kingdom,Reading,.L,CTEC.L,Health Care,E040
+ALC,Alcon,Health Care,Switzerland,Fribourg,.SW,ALC.SW,Health Care,E041
+QIA,Qiagen,Health Care,Netherlands,Venlo,.AS,QGEN,Health Care,E042
+LONN,Lonza Group,Health Care,Switzerland,Basel,.SW,LONN.SW,Health Care,E043
+LDO,Leonardo,Industrial Goods and Services,Italy,Rome,.MI,LDO.MI,Industrials,E044
+BOL,Bolloré,Industrial Goods and Services,France,Puteaux,.PA,BOL.PA,Industrials,E045
+SGSN,SGS S.A.,Industrial Goods and Services,Switzerland,Geneva,.SW,SGSN.SW,Industrials,E046
+SAF,Safran,Industrial Goods and Services,France,Paris,.PA,SAF.PA,Industrials,E047
+CS,AXA,Insurance,France,Paris,.PA,CS.PA,Financials,E048
+TLX,Talanx,Insurance,Germany,Hanover,.DE,TLX.DE,Financials,E049
+AV,Aviva,Insurance,United Kingdom,London,.L,AV.L,Financials,E050
+TRYG,Tryg,Insurance,Denmark,Ballerup,.CO,TRYG.CO,Financials,E051
+ZURN,Zurich Insurance Group,Insurance,Switzerland,Zurich,.SW,ZURN.SW,Financials,E052
+VPLAY B,Viaplay,Media,Sweden,Stockholm,.ST,VPLAY-B.ST,Communication Services,E053
+ONT,Ontex,"Personal Care, Drug and Grocery Stores",Belgium,Aalst,.BR,ONTEX.BR,Consumer Staples,E054
+ULVR,Unilever,"Personal Care, Drug and Grocery Stores",United Kingdom,London,.L,ULVR.L,Consumer Staples,E055
+DIA,Dia,"Personal Care, Drug and Grocery Stores",Spain,Las Rozas,.MC,DIA.MC,Consumer Staples,E056
+COLR,Colruyt,"Personal Care, Drug and Grocery Stores",Belgium,Halle,.BR,COLR.BR,Consumer Staples,E057
+SGRO,Segro,Real Estate,United Kingdom,London,.L,SGRO.L,Real Estate,E058
+MRL,Merlin Properties,Real Estate,Spain,Madrid,.MC,MRL.MC,Real Estate,E059
+GFC,Gecina,Real Estate,France,Paris,.PA,GFC.PA,Real Estate,E060
+CAST,Castellum,Real Estate,Sweden,Gothenburg,.ST,CAST.ST,Real Estate,E061
+DHER,Delivery Hero,Retail,Germany,Berlin,.DE,DHER.DE,Consumer Discretionary,E062
+TPK,Travis Perkins,Retail,United Kingdom,Northampton,.L,TPK.L,Consumer Discretionary,E063
+HMB,H&M,Retail,Sweden,Stockholm,.ST,HNNMY,Consumer Discretionary,E064
+MKS,Marks & Spencer,Retail,United Kingdom,London,.L,MKS.L,Consumer Discretionary,E065
+JD,JD Sports,Retail,United Kingdom,Bury,.L,JD.L,Consumer Discretionary,E066
+MELE,Melexis,Technology,Belgium,Ypres,.BR,MELE.BR,Technology,E067
+SGE,Sage Group,Technology,United Kingdom,Newcastle upon Tyne,.L,SGE.L,Technology,E068
+STMPA,STMicroelectronics,Technology,Netherlands,Geneva,.AS,STM,Technology,E069
+VOD,Vodafone Group,Telecommunications,United Kingdom,Newbury,.L,VOD.L,Communication Services,E070
+SCMN,Swisscom,Telecommunications,Switzerland,Ittigen,.SW,SCMN.SW,Communication Services,E071
+FNTN,Freenet,Telecommunications,Germany,Büdelsdorf,.DE,FNTN.DE,Communication Services,E072
+ORAN,Orange S.A.,Telecommunications,France,Issy-les-Moulineaux,.PA,ORA.PA,Communication Services,E073
+TIT,Telecom Italia,Telecommunications,Italy,Milan,.MI,TIT.MI,Communication Services,E074
+CPG,Compass Group,Travel and Leisure,United Kingdom,Chertsey,.L,CPG.L,Consumer Discretionary,E075
+FLTR,Flutter Entertainment,Travel and Leisure,Ireland,Dublin,.IR,FLTR.L,Consumer Discretionary,E076
+AENA,Aena,Travel and Leisure,Spain,Madrid,.MC,AENA.MC,Consumer Discretionary,E077
+AF,Air France-KLM,Travel and Leisure,France,Tremblay-en-France,.PA,AF.PA,Consumer Discretionary,E078
+ENEL,Enel,Utilities,Italy,Rome,.MI,ENEL.MI,Utilities,E079
+ANE,Acciona Energía,Utilities,Spain,Madrid,.MC,ANE.MC,Utilities,E080
+ENGIE,Engie,Utilities,France,Courbevoie,.PA,ENGI.PA,Utilities,E081
+SSE,SSE,Utilities,United Kingdom,Perth,.L,SSE.L,Utilities,E082
+ENG,Enagás,Utilities,Spain,Madrid,.MC,ENG.MC,Utilities,E083
+WKL,Wolters Kluwer,Media,Netherlands,Alphen aan den Rijn,.AS,WKL.AS,Communication Services,E084
+STER,Stora Enso,Basic Resources,Finland,Helsinki,.HE,STERV.HE,Basic Materials,E085
+TUI,TUI Group,Travel and Leisure,Germany,Hanover,.DE,TUI1.DE,Consumer Discretionary,E086
+ORK,Orkla ASA,"Food, Beverage and Tobacco",Norway,Oslo,.OL,ORK.OL,Consumer Staples,E087
+BARN,Barry Callebaut,"Food, Beverage and Tobacco",Switzerland,Zurich,.SW,BARN.SW,Consumer Staples,E088
+ADEN,Adecco,Industrial Goods and Services,Switzerland,Zurich,.SW,ADEN.SW,Industrials,E089
+WIHL,Wihlborgs Fastigheter,Real Estate,Sweden,Malmö,.ST,WIHL.ST,Real Estate,E090
+P911,Porsche,Automobiles and Parts,Germany,Stuttgart,.DE,P911.DE,Consumer Discretionary,E091
+EVK,Evonik Industries,Chemicals,Germany,Essen,.DE,EVK.DE,Basic Materials,E092
+BNR,Brenntag,Chemicals,Germany,Essen,.DE,BNR.DE,Basic Materials,E093
+OR,L'Oréal,"Personal Care, Drug and Grocery Stores",France,Clichy,.PA,OR.PA,Consumer Staples,E094
+UBSG,UBS Group,Banks,Switzerland,Zurich,.SW,UBSG.SW,Financials,E095
+NEM,Nemetschek,Technology,Germany,Munich,.DE,NEM.DE,Technology,E096
+UMG,Universal Music Group,Media,Netherlands,,.AS,UMG.AS,Communication Services,E097

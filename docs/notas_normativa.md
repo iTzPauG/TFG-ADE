@@ -139,17 +139,17 @@ Las empresas del STOXX 600 publican el **% de ventas/capex/opex "alineados con l
 **EUR-Lex:** https://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=CELEX:32019R2088
 
 ### Qué regula
-Obligaciones de transparencia ESG para **participantes en mercados financieros** (gestoras, aseguradoras, fondos de pensiones). No aplica directamente a empresas no financieras, pero condiciona su reporting porque los inversores institucionales deben rendir cuentas sobre las empresas de su cartera.
+Obligaciones de transparencia en sostenibilidad para **participantes en mercados financieros** (gestoras, aseguradoras, fondos de pensiones). No aplica directamente a empresas no financieras, pero condiciona su reporting porque los inversores institucionales deben rendir cuentas sobre las empresas de su cartera.
 
 ### Clasificación de productos financieros
 | Artículo | Tipo | Descripción |
 |----------|------|-------------|
-| **Art. 6** | Sin integración ESG | El producto no promueve características ESG |
-| **Art. 8** | Promueve características ESG | El producto promueve características medioambientales o sociales |
+| **Art. 6** | Sin integración de sostenibilidad | El producto no promueve características medioambientales o sociales |
+| **Art. 8** | Promueve características de sostenibilidad | El producto promueve características medioambientales o sociales |
 | **Art. 9** | Objetivo de inversión sostenible | El producto tiene la inversión sostenible como objetivo explícito |
 
 ### Relevancia para el TFG
-Contextualiza por qué las grandes corporaciones tienen incentivo para mejorar su reporting ESG: los fondos Art. 8 y 9 presionan a las empresas en cartera para obtener datos de mayor calidad.
+Contextualiza por qué las grandes corporaciones tienen incentivo para mejorar su reporting de sostenibilidad: los fondos Art. 8 y 9 presionan a las empresas en cartera para obtener datos de mayor calidad.
 
 ---
 

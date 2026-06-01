@@ -1,121 +1,292 @@
 id_empresa,empresa,ticker,pais,año,tipo_informe,url_fuente,fecha_descarga,n_paginas,idioma,estado,notas
-E001,Leonardo,LDO,Italy,2022,,,,,,pendiente,
-E001,Leonardo,LDO,Italy,2023,,,,,,pendiente,
-E002,Bolloré,BOL,France,2022,,,,,,pendiente,
-E002,Bolloré,BOL,France,2023,,,,,,pendiente,
-E003,SGS S.A.,SGSN,Switzerland,2022,,,,,,pendiente,
-E003,SGS S.A.,SGSN,Switzerland,2023,,,,,,pendiente,
-E004,Smurfit Kappa,SKG,Ireland,2022,,,,,,pendiente,
-E004,Smurfit Kappa,SKG,Ireland,2023,,,,,,pendiente,
-E005,Safran,SAF,France,2022,,,,,,pendiente,
-E005,Safran,SAF,France,2023,,,,,,pendiente,
-E006,Diploma,DPLM,United Kingdom,2022,,,,,,pendiente,
-E006,Diploma,DPLM,United Kingdom,2023,,,,,,pendiente,
-E007,Kone,KNEBV,Finland,2022,,,,,,pendiente,
-E007,Kone,KNEBV,Finland,2023,,,,,,pendiente,
-E008,Rentokil Initial,RTO,United Kingdom,2022,,,,,,pendiente,
-E008,Rentokil Initial,RTO,United Kingdom,2023,,,,,,pendiente,
-E009,Halma plc,HLMA,United Kingdom,2022,,,,,,pendiente,
-E009,Halma plc,HLMA,United Kingdom,2023,,,,,,pendiente,
-E010,Mondi,MNDI,United Kingdom,2022,,,,,,pendiente,
-E010,Mondi,MNDI,United Kingdom,2023,,,,,,pendiente,
-E011,Wise,WISE,United Kingdom,2022,,,,,,pendiente,
-E011,Wise,WISE,United Kingdom,2023,,,,,,pendiente,
-E012,Zurich Insurance Group,ZURN,Switzerland,2022,,,,,,pendiente,
-E012,Zurich Insurance Group,ZURN,Switzerland,2023,,,,,,pendiente,
-E013,Prudential,PRU,United Kingdom,2022,,,,,,pendiente,
-E013,Prudential,PRU,United Kingdom,2023,,,,,,pendiente,
-E014,ABN AMRO,ABN,Netherlands,2022,,,,,,pendiente,
-E014,ABN AMRO,ABN,Netherlands,2023,,,,,,pendiente,
-E015,Standard Chartered,STAN,United Kingdom,2022,,,,,,pendiente,
-E015,Standard Chartered,STAN,United Kingdom,2023,,,,,,pendiente,
-E016,Investec,INP,United Kingdom,2022,,,,,,pendiente,
-E016,Investec,INP,United Kingdom,2023,,,,,,pendiente,
-E017,Lloyds Banking Group,LLOY,United Kingdom,2022,,,,,,pendiente,
-E017,Lloyds Banking Group,LLOY,United Kingdom,2023,,,,,,pendiente,
-E018,Partners Group,PGHN,Switzerland,2022,,,,,,pendiente,
-E018,Partners Group,PGHN,Switzerland,2023,,,,,,pendiente,
-E019,Intesa Sanpaolo,ISP,Italy,2022,,,,,,pendiente,
-E019,Intesa Sanpaolo,ISP,Italy,2023,,,,,,pendiente,
-E020,Phoenix Group,PHNX,United Kingdom,2022,,,,,,pendiente,
-E020,Phoenix Group,PHNX,United Kingdom,2023,,,,,,pendiente,
-E021,Universal Music Group,UMG,Netherlands,2022,,,,,,pendiente,
-E021,Universal Music Group,UMG,Netherlands,2023,,,,,,pendiente,
-E022,KPN,KPN,Netherlands,2022,,,,,,pendiente,
-E022,KPN,KPN,Netherlands,2023,,,,,,pendiente,
-E023,BT Group,BT.A,United Kingdom,2022,,,,,,pendiente,
-E023,BT Group,BT.A,United Kingdom,2023,,,,,,pendiente,
-E024,Vivendi,VIV,France,2022,,,,,,pendiente,
-E024,Vivendi,VIV,France,2023,,,,,,pendiente,
-E025,Ericsson,ERICb,Sweden,2022,,,,,,pendiente,
-E025,Ericsson,ERICb,Sweden,2023,,,,,,pendiente,
-E026,Novo Nordisk,NOVO B,Denmark,2022,,,,,,pendiente,
-E026,Novo Nordisk,NOVO B,Denmark,2023,,,,,,pendiente,
-E027,ConvaTec,CTEC,United Kingdom,2022,,,,,,pendiente,
-E027,ConvaTec,CTEC,United Kingdom,2023,,,,,,pendiente,
-E028,Alcon,ALC,Switzerland,2022,,,,,,pendiente,
-E028,Alcon,ALC,Switzerland,2023,,,,,,pendiente,
-E029,Qiagen,QIA,Netherlands,2022,,,,,,pendiente,
-E029,Qiagen,QIA,Netherlands,2023,,,,,,pendiente,
-E030,Lonza Group,LONN,Switzerland,2022,,,,,,pendiente,
-E030,Lonza Group,LONN,Switzerland,2023,,,,,,pendiente,
-E031,Lanxess,LXS,Germany,2022,,,,,,pendiente,
-E031,Lanxess,LXS,Germany,2023,,,,,,pendiente,
-E032,Endeavour Mining,EDV,United Kingdom,2022,,,,,,pendiente,
-E032,Endeavour Mining,EDV,United Kingdom,2023,,,,,,pendiente,
-E033,Croda International,CRDA,United Kingdom,2022,,,,,,pendiente,
-E033,Croda International,CRDA,United Kingdom,2023,,,,,,pendiente,
-E034,Symrise,SY1,Germany,2022,,,,,,pendiente,
-E034,Symrise,SY1,Germany,2023,,,,,,pendiente,
-E035,Adevinta,ADH,Norway,2022,,,,,,pendiente,
-E035,Adevinta,ADH,Norway,2023,,,,,,pendiente,
-E036,Hugo Boss,BOSS,Germany,2022,,,,,,pendiente,
-E036,Hugo Boss,BOSS,Germany,2023,,,,,,pendiente,
-E037,Richemont,CFR,Switzerland,2022,,,,,,pendiente,
-E037,Richemont,CFR,Switzerland,2023,,,,,,pendiente,
-E038,Enel,ENEL,Italy,2022,,,,,,pendiente,
-E038,Enel,ENEL,Italy,2023,,,,,,pendiente,
-E039,Acciona Energía,ANE,Spain,2022,,,,,,pendiente,
-E039,Acciona Energía,ANE,Spain,2023,,,,,,pendiente,
-E040,Engie,ENGIE,France,2022,,,,,,pendiente,
-E040,Engie,ENGIE,France,2023,,,,,,pendiente,
-E041,Balfour Beatty,BBY,United Kingdom,2022,,,,,,pendiente,
-E041,Balfour Beatty,BBY,United Kingdom,2023,,,,,,pendiente,
-E042,Skanska,SKA B,Sweden,2022,,,,,,pendiente,
-E042,Skanska,SKA B,Sweden,2023,,,,,,pendiente,
-E043,Vinci,DG,France,2022,,,,,,pendiente,
-E043,Vinci,DG,France,2023,,,,,,pendiente,
-E044,Delivery Hero,DHER,Germany,2022,,,,,,pendiente,
-E044,Delivery Hero,DHER,Germany,2023,,,,,,pendiente,
-E045,Travis Perkins,TPK,United Kingdom,2022,,,,,,pendiente,
-E045,Travis Perkins,TPK,United Kingdom,2023,,,,,,pendiente,
-E046,H&M,HMB,Sweden,2022,,,,,,pendiente,
-E046,H&M,HMB,Sweden,2023,,,,,,pendiente,
-E047,Lumibird,LUMI,France,2022,,,,,,pendiente,
-E047,Lumibird,LUMI,France,2023,,,,,,pendiente,
-E048,TomTom,TOM,Netherlands,2022,,,,,,pendiente,
-E048,TomTom,TOM,Netherlands,2023,,,,,,pendiente,
-E049,STMicroelectronics,STMPA,Netherlands,2022,,,,,,pendiente,
-E049,STMicroelectronics,STMPA,Netherlands,2023,,,,,,pendiente,
-E050,British American Tobacco,BATS,United Kingdom,2022,,,,,,pendiente,
-E050,British American Tobacco,BATS,United Kingdom,2023,,,,,,pendiente,
-E051,Swedish Match,SWMA,Sweden,2022,,,,,,pendiente,
-E051,Swedish Match,SWMA,Sweden,2023,,,,,,pendiente,
-E052,Unite Group,UTG,United Kingdom,2022,,,,,,pendiente,
-E052,Unite Group,UTG,United Kingdom,2023,,,,,,pendiente,
-E053,Segro,SGRO,United Kingdom,2022,,,,,,pendiente,
-E053,Segro,SGRO,United Kingdom,2023,,,,,,pendiente,
-E054,Repsol,REP,Spain,2022,,,,,,pendiente,
-E054,Repsol,REP,Spain,2023,,,,,,pendiente,
-E055,Aker BP,AKERBP,Norway,2022,,,,,,pendiente,
-E055,Aker BP,AKERBP,Norway,2023,,,,,,pendiente,
-E056,Compass Group,CPG,United Kingdom,2022,,,,,,pendiente,
-E056,Compass Group,CPG,United Kingdom,2023,,,,,,pendiente,
-E057,Flutter Entertainment,FLTR,Ireland,2022,,,,,,pendiente,
-E057,Flutter Entertainment,FLTR,Ireland,2023,,,,,,pendiente,
-E058,Stellantis,STLAM,Netherlands,2022,,,,,,pendiente,
-E058,Stellantis,STLAM,Netherlands,2023,,,,,,pendiente,
-E059,Mercedes-Benz Group,MBG,Germany,2022,,,,,,pendiente,
-E059,Mercedes-Benz Group,MBG,Germany,2023,,,,,,pendiente,
-E060,Reckitt,RKT,United Kingdom,2022,,,,,,pendiente,
-E060,Reckitt,RKT,United Kingdom,2023,,,,,,pendiente,
+E001,Stellantis,STLAM,Netherlands,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/NYSE_STLA_2022.pdf,2026-05-28,50.0,,descargado,descarga directa bloqueada — descargar manualmente
+E001,Stellantis,STLAM,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/NYSE_STLA_2023.pdf,2026-05-28,51.0,,descargado,descarga directa bloqueada — descargar manualmente
+E001,Stellantis,STLAM,Netherlands,2024,integrated,https://www.stellantis.com/en/investors/annual-reports,2026-05-29,442.0,en,descargado,descargado manualmente desde stellantis.com
+E002,Mercedes-Benz Group,MBG,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/m/OTC_MBGAF_2022.pdf,2026-05-28,42.0,,descargado,descarga directa bloqueada — descargar manualmente
+E002,Mercedes-Benz Group,MBG,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/m/OTC_MBGAF_2023.pdf,2026-05-28,41.0,,descargado,descarga directa bloqueada — descargar manualmente
+E002,Mercedes-Benz Group,MBG,Germany,2024,integrated,https://www.mercedes-benz-group.com/en/investor-relations/reports-and-financials/annual-reports.html,2026-05-29,453.0,en,descargado,descargado manualmente desde IR mercedes-benz-group.com
+E003,Continental,CON,Germany,2022,integrated,https://annualreport.continental.com/2022/en/service/docs/annual-report-2022-data.pdf,2026-05-26,64.0,,descargado,descarga directa bloqueada — descargar manualmente
+E003,Continental,CON,Germany,2023,integrated,https://cdn.continental.com/fileadmin/__imported/sites/corporate/_international/english/hubpages/30_20investors/30_20reports/annual_20reports/downloads/annual_report_2023.pdf,2026-05-26,95.0,,descargado,descarga directa bloqueada — descargar manualmente
+E003,Continental,CON,Germany,2024,integrated,https://cdn.continental.com/fileadmin/__imported/sites/corporate/_international/english/hubpages/30_20investors/30_20reports/annual_20reports/downloads/annual-report-2024.pdf,2026-05-26,116.0,,descargado,no encontrado automáticamente
+E004,Valeo,FR,France,2022,integrated,https://www.bnains.org/archives/communiques/Valeo/20230330_Document_d_enregistrement_universel_2022_Valeo.pdf,2026-05-27,161.0,,descargado,no encontrado automáticamente
+E004,Valeo,FR,France,2023,integrated,https://www.bnains.org/archives/communiques/Valeo/20240329_Document_d_enregistrement_universel_2023_Valeo.pdf,2026-05-27,213.0,,descargado,no encontrado automáticamente
+E004,Valeo,FR,France,2024,integrated,https://www.valeo.com/wp-content/uploads/2025/04/Valeo_2024-Universal-registration-document.pdf,2026-05-27,140.0,,descargado,no encontrado automáticamente
+E005,CaixaBank,CABK,Spain,2022,integrated,https://www.caixabank.com/deployedfiles/caixabank_com/Estaticos/PDFs/Accionistasinversores/Informacion_economico_financiera/CCAA-GRUP-CAIXABANK-ING.pdf,2026-05-26,476.0,,descargado,no encontrado automáticamente
+E005,CaixaBank,CABK,Spain,2023,integrated,https://www.caixabank.com/deployedfiles/caixabank_com/Estaticos/PDFs/Accionistasinversores/Informacion_economico_financiera/CAIXABANK_2023_CAC_ING.pdf,2026-05-26,883.0,,descargado,no encontrado automáticamente
+E005,CaixaBank,CABK,Spain,2024,integrated,https://www.caixabank.com/deployedfiles/caixabank_com/Estaticos/PDFs/Accionistasinversores/Informacion_economico_financiera/Informe_Anual_Consolidado_2024_ENG.pdf,2026-05-26,1770.0,,descargado,no encontrado automáticamente
+E006,HSBC,HSBA,United Kingdom,2022,integrated,https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2022/annual/pdfs/hsbc-holdings-plc/230221-annual-report-and-accounts-2022.pdf,2026-05-26,89.0,,descargado,no encontrado automáticamente
+E006,HSBC,HSBA,United Kingdom,2023,integrated,https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2023/annual/pdfs/hsbc-holdings-plc/240226-annual-report-and-accounts-2023.pdf,2026-05-26,85.0,,descargado,no encontrado automáticamente
+E006,HSBC,HSBA,United Kingdom,2024,integrated,https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/annual/pdfs/hsbc-holdings-plc/250219-annual-report-and-accounts-2024.pdf,2026-05-26,105.0,,descargado,no encontrado automáticamente
+E007,Skandinaviska Enskilda Banken,SEB,Sweden,2022,integrated,https://webapp.sebgroup.com/mb/mblib.nsf/alldocsbyunid/90A6F3B0C1DDAFB8C1258960004B71A2/$FILE/annual_report_2022.pdf,2026-05-26,52.0,,descargado,no encontrado automáticamente
+E007,Skandinaviska Enskilda Banken,SEB,Sweden,2023,integrated,https://sebgroup.com/siteassets/documents/press/cision/documents/2024/20240227-seb-publishes-annual-and-sustainability-report-2023-en-gb-1-3410354-4760766.pdf,2026-05-26,66.0,,descargado,no encontrado automáticamente
+E007,Skandinaviska Enskilda Banken,SEB,Sweden,2024,integrated,https://webapp.sebgroup.com/mb/mblib.nsf/alldocsbyunid/0C76B7571DFB23F5C1258C4900320544/$FILE/SEB_Annual_Report_2024_ENG.pdf,2026-05-26,121.0,,descargado,no encontrado automáticamente
+E008,Raiffeisen Bank International,RBI,Austria,2022,integrated,https://www.rbinternational.com/content/dam/rbi/ho/investors/results-reports/annual-reports/rbi/2022%20Annual%20Report%20RBI.pdf.coredownload.pdf,2026-05-27,136.0,,descargado,no encontrado automáticamente
+E008,Raiffeisen Bank International,RBI,Austria,2023,integrated,https://www.rbinternational.com/content/dam/rbi/ho/investors/results-reports/annual-reports/rbi/2024-02-22-2023-Annual-Report-RBI.pdf.coredownload.pdf,2026-05-27,22.0,,descargado,no encontrado automáticamente
+E008,Raiffeisen Bank International,RBI,Austria,2024,integrated,https://www.rbinternational.com/content/dam/rbi/ho/investors/results-reports/annual-reports/rbi/2025-02-25%202024-RBI%20Annual%20Report.pdf.coredownload.pdf,2026-05-27,261.0,,descargado,no encontrado automáticamente
+E009,UPM-Kymmene,UPM,Finland,2022,integrated,https://www.upm.com/siteassets/asset/investors/2022/upm-annual-report-2022.pdf,2026-05-26,196.0,,descargado,no encontrado automáticamente
+E009,UPM-Kymmene,UPM,Finland,2023,integrated,https://www.upm.com/siteassets/investors/reports-and-presentations/2023/upm-annual-report-2023.pdf,2026-05-26,182.0,,descargado,no encontrado automáticamente
+E009,UPM-Kymmene,UPM,Finland,2024,integrated,https://www.upm.com/siteassets/asset/investors/2024/upm-annual-report-2024.pdf,2026-05-26,180.0,,descargado,no encontrado automáticamente
+E010,Boliden AB,BOL,Sweden,2022,integrated,https://investors.boliden.com/sites/boliden-ir/files/pr/202303076693-1.pdf,2026-05-26,94.0,,descargado,descarga directa bloqueada — descargar manualmente
+E010,Boliden AB,BOL,Sweden,2023,integrated,https://investors.boliden.com/sites/boliden-ir/files/pr/202403050637-1.pdf,2026-05-26,110.0,,descargado,no encontrado automáticamente
+E010,Boliden AB,BOL,Sweden,2024,integrated,https://investors.boliden.com/sites/boliden-ir/files/pr/202503192744-1.pdf,2026-05-26,268.0,,descargado,no encontrado automáticamente
+E011,Acerinox,ACX,Spain,2022,integrated,https://www.acerinox.com/export/sites/acerinox/es/accionistas-e-inversores/informacion-economica-financiera/informe-anual-integrado/.galleries/Informacion-Anual/2022-Consolidated-Annual-Accounts-and-Integrated-Annual-Report.pdf,2026-05-26,148.0,,descargado,no encontrado automáticamente
+E011,Acerinox,ACX,Spain,2023,integrated,https://www.acerinox.com/export/sites/acerinox/es/accionistas-e-inversores/informacion-economica-financiera/informe-anual-integrado/.galleries/Informacion-Anual/2023-Acerinox-Group-Integrated-Annual-Report.pdf,2026-05-26,188.0,,descargado,no encontrado automáticamente
+E011,Acerinox,ACX,Spain,2024,integrated,https://www.acerinox.com/export/sites/acerinox/es/accionistas-e-inversores/informacion-economica-financiera/informe-anual-integrado/.galleries/Informacion-Anual/2024-Acerinox-Group-Consolidated-Management-Report.pdf,2026-05-26,80.0,,descargado,no encontrado automáticamente
+E012,Voestalpine,VOE,Austria,2022,integrated,https://www.voestalpine.com/group/static/sites/group/.downloads/en/publications-2022-23/2022-23-annual-report.pdf,2026-05-26,58.0,,descargado,no encontrado automáticamente
+E012,Voestalpine,VOE,Austria,2023,integrated,https://www.voestalpine.com/group/static/sites/group/.downloads/en/publications-2023-24/2023-24-annual-report.pdf,2026-05-26,59.0,,descargado,no encontrado automáticamente
+E012,Voestalpine,VOE,Austria,2024,integrated,https://www.voestalpine.com/group/static/sites/group/.downloads/en/publications-2024-25/2024-25-annual-report.pdf,2026-05-26,70.0,,descargado,no encontrado automáticamente
+E013,Covestro,1COV,Germany,2022,integrated,https://report.covestro.com/annual-report-2022/_assets/downloads/covestro-ar22-entire.pdf,2026-05-26,283.0,,descargado,no encontrado automáticamente
+E013,Covestro,1COV,Germany,2023,integrated,https://report.covestro.com/annual-report-2023/_assets/downloads/covestro-ar23-entire.pdf,2026-05-26,358.0,,descargado,no encontrado automáticamente
+E013,Covestro,1COV,Germany,2024,integrated,https://annualreport.covestro.com/ecomaXL/files/Covestro_2024_GB_EN.pdf,2026-05-27,917.0,,descargado,no encontrado automáticamente
+E014,Symrise,SY1,Germany,2022,integrated,https://symrise.com/corporatereport/2022/downloads/SYM_financialreport_2022_EN.pdf,2026-05-26,48.0,,descargado,no encontrado automáticamente
+E014,Symrise,SY1,Germany,2023,integrated,https://symrise.com/corporatereport/2023/downloads/SYM_corporatereport_2023_EN.pdf,2026-05-26,139.0,,descargado,no encontrado automáticamente
+E014,Symrise,SY1,Germany,2024,integrated,https://symrise.com/corporatereport/2024/home/Symrise_Unternehmensbericht_24_EN_interaktiv_geschuetzt.pdf,2026-05-26,190.0,,descargado,no encontrado automáticamente
+E015,Yara International,YAR,Norway,2022,integrated,https://www.yara.com/siteassets/investors/057-reports-and-presentations/annual-reports/2022/yara-integrated-report-2022.pdf,2026-05-26,170.0,,descargado,no encontrado automáticamente
+E015,Yara International,YAR,Norway,2023,integrated,https://www.yara.com/siteassets/investors/057-reports-and-presentations/annual-reports/2023/yara-integrated-report-2023.pdf,2026-05-26,157.0,,descargado,no encontrado automáticamente
+E015,Yara International,YAR,Norway,2024,integrated,https://www.yara.com/siteassets/investors/057-reports-and-presentations/annual-reports/2024/yara-integrated-report-2024.pdf,2026-05-26,92.0,,descargado,no encontrado automáticamente
+E016,Balfour Beatty,BBY,United Kingdom,2022,integrated,https://www.balfourbeatty.com/media/0yjl3b0l/balfour-beatty-plc-annual-report-and-accounts-2022.pdf,2026-05-27,137.0,,descargado,no encontrado automáticamente
+E016,Balfour Beatty,BBY,United Kingdom,2023,integrated,https://www.balfourbeatty.com/media/eo0p0h1j/balfour-beatty-annual-report-and-accounts-2023.pdf,2026-05-27,151.0,,descargado,no encontrado automáticamente
+E016,Balfour Beatty,BBY,United Kingdom,2024,integrated,https://www.balfourbeatty.com/media/yx0pn423/balfour-beatty-annual-report-and-accounts-2024.pdf,2026-05-27,332.0,,descargado,no encontrado automáticamente
+E017,Skanska,SKA B,Sweden,2022,integrated,https://group.skanska.com/493785/siteassets/investors/reports-publications/annual-reports/2022/annual-and-sustainability-report-2022.pdf,2026-05-26,198.0,,descargado,no encontrado automáticamente
+E017,Skanska,SKA B,Sweden,2023,integrated,https://group.skanska.com/493370/siteassets/investors/reports-publications/annual-reports/2023/annual-and-sustainability-report-2023.pdf,2026-05-26,246.0,,descargado,no encontrado automáticamente
+E017,Skanska,SKA B,Sweden,2024,integrated,https://group.skanska.com/49490b/siteassets/investors/reports-publications/annual-reports/2024/annual-and-sustainability-report-2024.pdf,2026-05-26,186.0,,descargado,no encontrado automáticamente
+E018,Vinci,DG,France,2022,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2022.pdf,2026-05-27,219.0,,descargado,no encontrado automáticamente
+E018,Vinci,DG,France,2023,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2023.pdf,2026-05-27,239.0,,descargado,no encontrado automáticamente
+E018,Vinci,DG,France,2024,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2024.pdf,2026-05-27,174.0,,descargado,no encontrado automáticamente
+E019,Bouygues,EN,France,2022,integrated,https://www.bnains.org/archives/communiques/Bouygues/20230322_Document_d_enregistrement_universel_2022_Bouygues.pdf,2026-05-27,279.0,,descargado,no encontrado automáticamente
+E019,Bouygues,EN,France,2023,integrated,https://www.bnains.org/archives/communiques/Bouygues/20240322_Document_d_enregistrement_universel_2023_Bouygues.pdf,2026-05-27,153.0,,descargado,no encontrado automáticamente
+E019,Bouygues,EN,France,2024,integrated,https://www.bnains.org/archives/communiques/Bouygues/20250325_Document_d_enregistrement_universel_2024_Bouygues.pdf,2026-05-27,266.0,,descargado,no encontrado automáticamente
+E020,Eiffage,EFGI,France,2022,integrated,https://www.eiffage.com/files/live/sites/eiffagev2/files/Finance/Rapport%20Annuel/DEU2022.pdf,2026-05-27,61.0,,descargado,no encontrado automáticamente
+E020,Eiffage,EFGI,France,2023,,,,400.0,,descargado,reconciliado
+E020,Eiffage,EFGI,France,2024,,,,424.0,,descargado,reconciliado
+E021,Brunello Cucinelli,BRNW,Italy,2022,integrated,https://investor.brunellocucinelli.com/yep-content/media/CUCINELLI_CONSOLIDATO_ENG_2022_WEB.pdf,2026-05-27,69.0,,descargado,no encontrado automáticamente
+E021,Brunello Cucinelli,BRNW,Italy,2023,integrated,https://investor.brunellocucinelli.com/yep-content/media/Consolidated_Financial_Statements_at_31st_December_2023.pdf,2026-05-27,183.0,,descargado,no encontrado automáticamente
+E021,Brunello Cucinelli,BRNW,Italy,2024,integrated,https://investor.brunellocucinelli.com/yep-content/media/Consolidated_Financial_Statements_2024_including_Consolidated_Sustainability_Report.pdf,2026-05-27,148.0,,descargado,no encontrado automáticamente
+E022,Hugo Boss,BOSS,Germany,2022,integrated,https://annualreport.hugoboss.com/2022/_assets/downloads/entire-hb-ar22.pdf,2026-05-27,153.0,,descargado,no encontrado automáticamente
+E022,Hugo Boss,BOSS,Germany,2023,integrated,https://annualreport.hugoboss.com/2023/_assets/downloads/entire-hb-ar23.pdf,2026-05-27,310.0,,descargado,no encontrado automáticamente
+E022,Hugo Boss,BOSS,Germany,2024,integrated,https://annualreport.hugoboss.com/2024/_assets/downloads/entire-hb-ar24.pdf,2026-05-27,222.0,,descargado,no encontrado automáticamente
+E023,Richemont,CFR,Switzerland,2022,,,,164.0,,descargado,reconciliado
+E023,Richemont,CFR,Switzerland,2023,,,,160.0,,descargado,reconciliado
+E023,Richemont,CFR,Switzerland,2024,,,,164.0,,descargado,reconciliado
+E024,Kering,KER,France,2022,,,,454.0,,descargado,reconciliado
+E024,Kering,KER,France,2023,,,,448.0,,descargado,reconciliado
+E024,Kering,KER,France,2024,,,,445.0,,descargado,reconciliado
+E025,Adidas,ADS,Germany,2022,integrated,https://report.adidas-group.com/2022/en/_assets/downloads/annual-report-adidas-ar22.pdf,2026-05-26,153.0,,descargado,descarga directa bloqueada — descargar manualmente
+E025,Adidas,ADS,Germany,2023,integrated,https://adidas.online-report.eu/2023/en/_assets/downloads/our-company-adidas-ar23.pdf,2026-05-26,21.0,,descargado,
+E025,Adidas,ADS,Germany,2024,integrated,https://report.adidas-group.com/2024/en/_assets/downloads/annual-report-adidas-ar24.pdf,2026-05-26,465.0,,descargado,descarga directa bloqueada — descargar manualmente
+E026,Repsol,REP,Spain,2022,integrated,https://www.repsol.com/content/dam/repsol-corporate/es/accionistas-e-inversores/informes-anuales/2022/informe-financiero-anual-consolidado-2022.pdf,2026-05-26,325.0,,descargado,descarga directa bloqueada — descargar manualmente
+E026,Repsol,REP,Spain,2023,integrated,https://www.repsol.com/content/dam/repsol-corporate/es/accionistas-e-inversores/informes-anuales/2023/informe-financiero-anual-consolidado.pdf,2026-05-26,288.0,,descargado,descarga directa bloqueada — descargar manualmente
+E026,Repsol,REP,Spain,2024,integrated,https://www.repsol.com/content/dam/repsol-corporate/en_gb/accionistas-e-inversores/informes-anuales/2024/consolidated-annual-financial-report-2024.pdf,2026-05-26,172.0,,descargado,no encontrado automáticamente
+E027,Aker BP,AKERBP,Norway,2022,integrated,https://akerbp.com/wp-content/uploads/2023/03/aker-bp-annual-report-2022.pdf,2026-05-26,74.0,,descargado,no encontrado automáticamente
+E027,Aker BP,AKERBP,Norway,2023,integrated,https://akerbp.com/wp-content/uploads/2024/03/aker-bp-annual-report-2023.pdf,2026-05-26,150.0,,descargado,no encontrado automáticamente
+E027,Aker BP,AKERBP,Norway,2024,integrated,https://akerbp.com/wp-content/uploads/2025/04/annual-report-2024.pdf,2026-05-26,170.0,,descargado,no encontrado automáticamente
+E028,Neste,NSN,Finland,2022,integrated,https://www.neste.com/files/pdf/7eb862934530a889c296d0317593e68b-Neste_Annual_Report_2022.pdf,2026-05-26,224.0,,descargado,no encontrado automáticamente
+E028,Neste,NSN,Finland,2023,integrated,https://www.neste.com/files/pdf/5pSrq2XvklFNL6GU1cPFNY-Neste_Annual_Report_2023.pdf,2026-05-26,252.0,,descargado,no encontrado automáticamente
+E028,Neste,NSN,Finland,2024,integrated,https://www.neste.com/files/pdf/3kFaGuHcQk8hRDLS6tlvqF-Neste_Annual_Report_2024.pdf,2026-05-26,231.0,,descargado,no encontrado automáticamente
+E029,TGS,TGS,Norway,2022,integrated,https://www.tgs.com/hubfs/2022_TGS_Annual%20Report.pdf,2026-05-27,358.0,,descargado,no encontrado automáticamente
+E029,TGS,TGS,Norway,2023,integrated,https://www.tgs.com/hubfs/Financial%20Reports/Annual%20Reports/2023%20Annual%20Report/2023%20TGS%20Annual%20Report%20and%20Sustainability%20Report_final.pdf,2026-05-27,147.0,,descargado,no encontrado automáticamente
+E029,TGS,TGS,Norway,2024,integrated,https://www.tgs.com/hubfs/Financial%20Reports/Annual%20Reports/2024%20Annual%20Report/TGS%202024%20Annual%20Report.pdf,2026-05-27,267.0,,descargado,no encontrado automáticamente
+E030,Vestas,VESTAS,Denmark,2022,integrated,https://www.vestas.com/content/dam/vestas-com/global/en/investor/reports-and-presentations/financial/2022/Vestas%20Annual%20Report%202022.pdf.coredownload.inline.pdf,2026-05-28,993.0,,descargado,descarga directa bloqueada — descargar manualmente
+E030,Vestas,VESTAS,Denmark,2023,integrated,https://www.vestas.com/content/dam/vestas-com/global/en/investor/reports-and-presentations/financial/2023/2023-annual-report/Annual%20Report%202023.pdf.coredownload.inline.pdf,2026-05-26,115.0,,descargado,descarga directa bloqueada — descargar manualmente
+E030,Vestas,VESTAS,Denmark,2024,integrated,https://www.vestas.com/content/dam/vestas-com/global/en/investor/reports-and-presentations/financial/2024/fy-2024/Vestas%20Annual%20Report%202024.pdf.coredownload.inline.pdf,2026-05-26,181.0,,descargado,descarga directa bloqueada — descargar manualmente
+E031,London Stock Exchange Group,LSEG,United Kingdom,2022,integrated,https://www.lseg.com/content/dam/lseg/en_us/documents/investor-relations/annual-reports/lseg-annual-report-2022.pdf,2026-05-26,79.0,,descargado,URL incorrecta (subsidiaria financiera) — buscar LSEG Group plc annual report
+E031,London Stock Exchange Group,LSEG,United Kingdom,2023,integrated,https://www.lseg.com/content/dam/lseg/en_us/documents/investor-relations/annual-reports/lseg-annual-report-2023.pdf,2026-05-26,59.0,,descargado,URL incorrecta (subsidiaria financiera) — buscar LSEG Group plc annual report
+E031,London Stock Exchange Group,LSEG,United Kingdom,2024,integrated,https://www.lseg.com/content/dam/lseg/en_us/documents/investor-relations/annual-reports/lseg-annual-report-2024.pdf,2026-05-26,47.0,,descargado,URL incorrecta (subsidiaria financiera) — buscar LSEG Group plc annual report
+E032,Allfunds Group,ALLFG,Spain,2022,integrated,https://app.allfunds.com/docs/cms/Allfunds_2022_Annual_Report_2d8223ebf7.pdf,2026-05-27,113.0,,descargado,no encontrado automáticamente
+E032,Allfunds Group,ALLFG,Spain,2023,integrated,https://app.allfunds.com/docs/cms/REDUX_ANNUAL_REPORT_1cbf35d7ea.pdf,2026-05-29,224.0,en,descargado,descargado manualmente desde allfunds.com IR
+E032,Allfunds Group,ALLFG,Spain,2024,integrated,https://app.allfunds.com/docs/cms/Allfunds_Annual_Report_2024_97e1d5de05.pdf,2026-05-27,198.0,,descargado,no encontrado automáticamente
+E033,Wendel,WEND,France,2022,integrated,https://www.wendelgroup.com/wp-content/uploads/2023/04/WENDEL_URD2022_FR.pdf,2026-05-27,50.0,,descargado,no encontrado automáticamente
+E033,Wendel,WEND,France,2023,integrated,https://www.wendelgroup.com/wp-content/uploads/2024/03/wen-2023-urd-fr-v-mel-240327.pdf,2026-05-27,57.0,,descargado,no encontrado automáticamente
+E033,Wendel,WEND,France,2024,integrated,https://www.wendelgroup.com/wp-content/uploads/2025/03/wen-2024-urd-fr-28032025.pdf,2026-05-27,99.0,,descargado,no encontrado automáticamente
+E034,3i,III,United Kingdom,2022,,,,222.0,,descargado,reconciliado
+E034,3i,III,United Kingdom,2023,,,,238.0,,descargado,reconciliado
+E034,3i,III,United Kingdom,2024,,,,226.0,,descargado,reconciliado
+E035,Exor,EXO,Netherlands,2022,integrated,https://www.exor.com/sites/default/files/2023/document-documents/EXOR_Annual%20Report%202022.pdf,2026-05-27,164.0,,descargado,no encontrado automáticamente
+E035,Exor,EXO,Netherlands,2023,integrated,https://exor.com/sites/default/files/2024/document-documents/EXOR%202023%20Annual%20Report.pdf,2026-05-27,263.0,,descargado,no encontrado automáticamente
+E035,Exor,EXO,Netherlands,2024,integrated,https://www.exor.com/system/files/2025/document-documents/EXOR%202024%20Annual%20Report.pdf,2026-05-27,108.0,,descargado,no encontrado automáticamente
+E036,Glanbia,GLB,Ireland,2022,integrated,https://www.glanbia.com/sites/glanbia-plc/files/glanbia/glanbia-annual-report-2022.pdf,2026-05-27,135.0,,descargado,no encontrado automáticamente
+E036,Glanbia,GLB,Ireland,2023,integrated,https://www.glanbia.com/sites/glanbia-plc/files/glanbia/investors/annual-report/2024/annual-report-2023.pdf,2026-05-27,104.0,,descargado,no encontrado automáticamente
+E036,Glanbia,GLB,Ireland,2024,integrated,https://www.glanbia.com/sites/glanbia-plc/files/glanbia/investors/annual-report/2025/annual-report-2024.pdf,2026-05-27,109.0,,descargado,no encontrado automáticamente
+E037,Pernod Ricard,PERP,France,2022,integrated,https://www.pernod-ricard.com/sites/default/files/inline-files/RAPR021_GB_WEB_2.pdf,2026-05-27,202.0,,descargado,no encontrado automáticamente
+E037,Pernod Ricard,PERP,France,2023,integrated,https://www.pernod-ricard.com/sites/default/files/2023-11/Pernod_Ricard_Rapport_Annuel_202223.pdf,2026-05-27,221.0,,descargado,no encontrado automáticamente
+E037,Pernod Ricard,PERP,France,2024,integrated,https://www.pernod-ricard.com/sites/default/files/2024-11/Pernod_AR24_ENGLISH.pdf,2026-05-27,283.0,,descargado,no encontrado automáticamente
+E038,Davide Campari-Milano,CPR,Italy,2022,integrated,https://www.camparigroup.com/sites/default/files/downloads/01.1%20Campari%20Group_Annual%20Report%20for%20the%20year%20ended%2031%20December%202022.pdf,2026-05-27,45.0,,descargado,no encontrado automáticamente
+E038,Davide Campari-Milano,CPR,Italy,2023,integrated,https://www.camparigroup.com/sites/default/files/downloads/01.1%20Campari%20Group_Annual%20Report%20for%20the%20year%20ended%2031%20December%202023.pdf,2026-05-27,44.0,,descargado,no encontrado automáticamente
+E038,Davide Campari-Milano,CPR,Italy,2024,integrated,https://www.camparigroup.com/sites/default/files/downloads/01.1%20Campari%20Group_Annual%20Report%20for%20the%20year%20ended%2031%20December%202024.pdf,2026-05-27,54.0,,descargado,no encontrado automáticamente
+E039,Novo Nordisk,NOVO B,Denmark,2022,integrated,https://www.novonordisk.com/content/dam/nncorp/global/en/investors/irmaterial/annual_report/2023/novo-nordisk-annual-report-2022.pdf,2026-05-26,112.0,,descargado,
+E039,Novo Nordisk,NOVO B,Denmark,2023,integrated,https://www.novonordisk.com/content/dam/nncorp/global/en/investors/irmaterial/annual_report/2024/novo-nordisk-annual-report-2023.pdf,2026-05-26,119.0,,descargado,
+E039,Novo Nordisk,NOVO B,Denmark,2024,integrated,https://www.novonordisk.com/content/dam/nncorp/global/en/investors/irmaterial/annual_report/2025/novo-nordisk-annual-report-2024.pdf,2026-05-26,162.0,,descargado,
+E040,ConvaTec,CTEC,United Kingdom,2022,integrated,https://www.convatecgroup.com/globalassets/global-assets/pdf/convatec_ar2022__interactive.pdf,2026-05-27,180.0,,descargado,no encontrado automáticamente
+E040,ConvaTec,CTEC,United Kingdom,2023,integrated,https://www.convatecgroup.com/globalassets/global-assets/pdf/convatec-ar-2023_interactive.pdf,2026-05-27,137.0,,descargado,no encontrado automáticamente
+E040,ConvaTec,CTEC,United Kingdom,2024,integrated,https://www.convatecgroup.com/siteassets/convatec-ara-2024.pdf,2026-05-27,168.0,,descargado,no encontrado automáticamente
+E041,Alcon,ALC,Switzerland,2022,integrated,https://s1.q4cdn.com/963204942/files/doc_financials/2022/ar/Alcon-2022-Annual-Report.pdf,2026-05-27,34.0,,descargado,no encontrado automáticamente
+E041,Alcon,ALC,Switzerland,2023,integrated,https://s1.q4cdn.com/963204942/files/doc_earnings/2023/q4/supplemental-info/2023-Annual-Report.pdf,2026-05-27,38.0,,descargado,no encontrado automáticamente
+E041,Alcon,ALC,Switzerland,2024,integrated,https://s1.q4cdn.com/963204942/files/doc_earnings/2024/q4/supplemental-info/2024-Annual-Report.pdf,2026-05-27,43.0,,descargado,no encontrado automáticamente
+E042,Qiagen,QIA,Netherlands,2022,integrated,https://s28.q4cdn.com/125951340/files/doc_downloads/other_reports/2022-IFRS-Annual-Report.pdf,2026-05-27,80.0,,descargado,no encontrado automáticamente
+E042,Qiagen,QIA,Netherlands,2023,integrated,https://s28.q4cdn.com/125951340/files/doc_financials/2023/ar/2023-IFRS-Annual-Report.pdf,2026-05-27,177.0,,descargado,no encontrado automáticamente
+E042,Qiagen,QIA,Netherlands,2024,integrated,https://s28.q4cdn.com/125951340/files/doc_financials/2024/ar/2024-IFRS-Annual-Report.pdf,2026-05-27,346.0,,descargado,no encontrado automáticamente
+E043,Lonza Group,LONN,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/l/lonza_2022.pdf,2026-05-30,234.0,en,descargado,Annual Report narrativo 234pp — reemplaza financial statements
+E043,Lonza Group,LONN,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/l/lonza_2023.pdf,2026-05-28,108.0,,descargado,no encontrado automáticamente
+E043,Lonza Group,LONN,Switzerland,2024,integrated,https://www.annualreports.com/HostedData/AnnualReports/PDF/lonza_2024.pdf,2026-05-28,93.0,,descargado,no encontrado automáticamente
+E044,Leonardo,LDO,Italy,2022,,,,432.0,,descargado,reconciliado
+E044,Leonardo,LDO,Italy,2023,,,,437.0,,descargado,reconciliado
+E044,Leonardo,LDO,Italy,2024,,,,424.0,,descargado,reconciliado
+E045,Bolloré,BOL,France,2022,integrated,https://www.bollore.com/wp-content/uploads/2023/04/0421_boll22t023_deu_fr_pour-mel.pdf,2026-05-27,105.0,,descargado,no encontrado automáticamente
+E045,Bolloré,BOL,France,2023,integrated,https://www.bollore.com/wp-content/uploads/2024/04/0423_boll23t029_deu_fr_2023.pdf,2026-05-27,104.0,,descargado,no encontrado automáticamente
+E045,Bolloré,BOL,France,2024,integrated,https://www.bollore.com/wp-content/uploads/2025/04/boll24t035_deu_fr_2024_mel.pdf,2026-05-27,106.0,,descargado,no encontrado automáticamente
+E046,SGS S.A.,SGSN,Switzerland,2022,integrated,https://www.sgs.com/-/media/sgscorp/documents/corporate/reports-and-presentations/2020s/2022/sgs-2022-integrated-report-en.cdn.en.pdf,2026-05-27,142.0,,descargado,no encontrado automáticamente
+E046,SGS S.A.,SGSN,Switzerland,2023,integrated,https://www.sgs.com/-/media/sgscorp/documents/corporate/reports-and-presentations/2020s/2023/sgs-2023-integrated-report-en.cdn.en-FR.pdf,2026-05-27,137.0,,descargado,no encontrado automáticamente
+E046,SGS S.A.,SGSN,Switzerland,2024,integrated,https://www.sgs.com/-/media/sgscorp/documents/corporate/reports-and-presentations/2020s/2025/sgs-2024-integrated-report-en.cdn.en-RO.pdf,2026-05-27,84.0,,descargado,no encontrado automáticamente
+E047,Safran,SAF,France,2022,integrated,https://www.safran-group.com/sites/default/files/2023-04/SAFRAN_RI-2022_UK_MEL.pdf,2026-05-30,536.0,fr,descargado,URD completo 536pp — reemplaza folleto indicadores 27pp
+E047,Safran,SAF,France,2023,integrated,https://www.safran-group.com/sites/default/files/2024-03/2023-safran-integrated-report.pdf,2026-05-30,542.0,fr,descargado,URD completo 542pp — reemplaza folleto indicadores 35pp
+E047,Safran,SAF,France,2024,integrated,,2026-05-27,,,descargado,no encontrado automáticamente
+E048,AXA,CS,France,2022,integrated,https://www-axa-com.cdn.prismic.io/www-axa-com/aN0PG55xUNkB1WiL_axa_urd2022_accessibleb_va.pdf,2026-05-27,59.0,,descargado,no encontrado automáticamente
+E048,AXA,CS,France,2023,integrated,https://www-axa-com.cdn.prismic.io/www-axa-com/aNzv0Z5xUNkB1VHO_axa_urd2023_accessibleb_va.pdf,2026-05-27,70.0,,descargado,no encontrado automáticamente
+E048,AXA,CS,France,2024,integrated,https://www-axa-com.cdn.prismic.io/www-axa-com/aNzv1p5xUNkB1VHR_axa_urd2024_accessible_va.pdf,2026-05-27,284.0,,descargado,no encontrado automáticamente
+E049,Talanx,TLX,Germany,2022,integrated,,2026-05-27,,,descargado,no encontrado automáticamente
+E049,Talanx,TLX,Germany,2023,integrated,https://www.talanx.com/media/Files/investor-relations/pdf/ergebnisse/2023/FY/2023_tx_konzern_en.pdf,2026-05-27,36.0,,descargado,no encontrado automáticamente
+E049,Talanx,TLX,Germany,2024,integrated,https://www.talanx.com/media/Files/investor-relations/pdf/ergebnisse/2024/Q4/2024_talanx_konzern_en_pw.pdf,2026-05-27,71.0,,descargado,no encontrado automáticamente
+E050,Aviva,AV,United Kingdom,2022,integrated,https://static.aviva.io/content/dam/aviva-corporate/documents/investors/pdfs/reports/2022/aviva-plc-annual-report-and-accounts-2022.pdf,2026-05-26,93.0,,descargado,no encontrado automáticamente
+E050,Aviva,AV,United Kingdom,2023,integrated,https://static.aviva.io/content/dam/aviva-corporate/documents/investors/pdfs/reports/2023/aviva-plc-annual-report-and-accounts-2023.pdf,2026-05-26,147.0,,descargado,no encontrado automáticamente
+E050,Aviva,AV,United Kingdom,2024,integrated,https://static.aviva.io/content/dam/aviva-corporate/documents/investors/pdfs/reports/2024/aviva-plc-annual-report-and-accounts-2024.pdf,2026-05-26,146.0,,descargado,no encontrado automáticamente
+E051,Tryg,TRYG,Denmark,2022,integrated,https://tryg.com/sites/tryg.com/files/2023-08/Tryg%20AR%202022.pdf,2026-05-27,179.0,,descargado,no encontrado automáticamente
+E051,Tryg,TRYG,Denmark,2023,integrated,https://tryg.com/sites/tryg.com/files/2024-01/Tryg%20Annual%20Report%202023_4.pdf,2026-05-27,406.0,,descargado,no encontrado automáticamente
+E051,Tryg,TRYG,Denmark,2024,integrated,https://tryg.com/sites/tryg.com/files/2025-01/Annual%20Report%202024%20-%20TRYG%20A_S.pdf,2026-05-27,358.0,,descargado,no encontrado automáticamente
+E052,Zurich Insurance Group,ZURN,Switzerland,2022,integrated,https://web.archive.org/web/20230410154545if_/https://www.zurich.com/-/media/project/zurich/dotcom/investor-relations/docs/financial-reports/2022/annual-report-2022-en.pdf,2026-05-27,217.0,,descargado,descarga directa bloqueada — descargar manualmente
+E052,Zurich Insurance Group,ZURN,Switzerland,2023,integrated,https://edge.sitecorecloud.io/zurichinsur6934-zwpcorp-prod-ae5e/media/project/zurich/dotcom/investor-relations/docs/financial-reports/2023/annual-report-2023-en.pdf,2026-05-26,204.0,,descargado,no encontrado automáticamente
+E052,Zurich Insurance Group,ZURN,Switzerland,2024,integrated,https://edge.sitecorecloud.io/zurichinsur6934-zwpcorp-prod-ae5e/media/project/zurich/dotcom/investor-relations/docs/financial-reports/2024/annual-report-2024-en.pdf,2026-05-26,227.0,,descargado,no encontrado automáticamente
+E053,Viaplay,VPLAY B,Sweden,2022,integrated,https://www.viaplaygroup.com/sites/viaplay-corp/files/pr/202304044882-1.pdf,2026-05-27,53.0,,descargado,no encontrado automáticamente
+E053,Viaplay,VPLAY B,Sweden,2023,integrated,https://www.viaplaygroup.com/sites/viaplay-corp/files/viaplay_group_ab_publ_annual_sustainability_report_2023.pdf,2026-05-27,79.0,,descargado,no encontrado automáticamente
+E053,Viaplay,VPLAY B,Sweden,2024,integrated,https://www.viaplaygroup.com/sites/viaplay-corp/files/2025-03/Viaplay_Group_Annual_and_Sustainability_report_2024.pdf,2026-05-27,115.0,,descargado,no encontrado automáticamente
+E054,Ontex,ONT,Belgium,2022,integrated,https://ontex.com/wp-content/uploads/2023/04/Ontex-integrated-annual-report-2022-interactive.pdf,2026-05-27,80.0,,descargado,no encontrado automáticamente
+E054,Ontex,ONT,Belgium,2023,integrated,https://ontex.com/wp-content/uploads/2024/04/Ontex-integrated-annual-report-2023-1-1.pdf,2026-05-27,62.0,,descargado,no encontrado automáticamente
+E054,Ontex,ONT,Belgium,2024,integrated,https://ontex.com/wp-content/uploads/2025/03/24AR_AnnualReport_EN_Final.pdf,2026-05-27,77.0,,descargado,no encontrado automáticamente
+E055,Unilever,ULVR,United Kingdom,2022,integrated,https://www.unilever.com/files/92ui5egz/production/16595bc7b5e40fd6a3bba1e8ded0399cfa3f1bed.pdf,2026-05-29,312.0,en,descargado,descargado manualmente
+E055,Unilever,ULVR,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/u/LSE_ULVR_2023.pdf,2026-05-28,188.0,,descargado,descarga directa bloqueada — descargar manualmente
+E055,Unilever,ULVR,United Kingdom,2024,integrated,https://www.unilever.com/files/unilever-annual-report-and-accounts-2024.pdf,2026-05-29,305.0,en,descargado,descargado manualmente
+E056,Dia,DIA,Spain,2022,integrated,https://diacorporate.com/wp-content/uploads/2023/04/Consolidated-Annual-Accounts-and-directors-report-DIA-2022.pdf,2026-05-27,170.0,,descartado,"descartado del corpus NLP — sin contenido ESG (0pp, Cat E). Ver Decisión 010"
+E056,Dia,DIA,Spain,2023,integrated,https://diacorporate.com/wp-content/uploads/2024/02/Memoria-Grupo-DIA-e-IG-consolidado-V.ingles-con-IA-xs.pdf,2026-05-27,94.0,,descargado,no encontrado automáticamente
+E056,Dia,DIA,Spain,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_ACHC_2024.pdf,2026-05-28,22.0,,descargado,no encontrado automáticamente
+E057,Colruyt,COLR,Belgium,2022,integrated,https://www.colruytgroup.com/en/investor-relations/annual-reports,2026-05-29,280.0,en,descargado,descargado manualmente — FY2021/22
+E057,Colruyt,COLR,Belgium,2023,integrated,https://live.euronext.com/sites/default/files/esg_document_files/2023-11/001881_Annual%20report%20Colruyt%20Group%202022-2023_0_2023-11-07_10:34.pdf,2026-05-27,197.0,,descargado,no encontrado automáticamente
+E057,Colruyt,COLR,Belgium,2024,integrated,https://live.euronext.com/sites/default/files/esg_document_files/2025-04/001881_Annual%20report%20with%20sustainability%20reporting%202023_24_0_2025-04-14_13:09.pdf,2026-05-28,173.0,,descargado,no encontrado automáticamente
+E058,Segro,SGRO,United Kingdom,2022,integrated,https://www.segro.com/media/enlje3wp/annual-report-2022-final.pdf,2026-05-27,101.0,,descargado,no encontrado automáticamente
+E058,Segro,SGRO,United Kingdom,2023,integrated,https://www.segro.com/media/0r4biubx/segro_ar2023.pdf,2026-05-27,121.0,,descargado,no encontrado automáticamente
+E058,Segro,SGRO,United Kingdom,2024,integrated,https://www.segro.com/media/1h4c1331/segro_ar24_interactive.pdf,2026-05-27,111.0,,descargado,no encontrado automáticamente
+E059,Merlin Properties,MRL,Spain,2022,integrated,https://ir.merlinproperties.com/wp-content/uploads/2023/04/Annual-Report-2022.pdf,2026-05-27,135.0,,descargado,no encontrado automáticamente
+E059,Merlin Properties,MRL,Spain,2023,integrated,https://ir.merlinproperties.com/wp-content/uploads/2024/05/Annual-Report-2023-3-1.pdf,2026-05-27,134.0,,descargado,no encontrado automáticamente
+E059,Merlin Properties,MRL,Spain,2024,integrated,https://ir.merlinproperties.com/wp-content/uploads/2025/05/Annual-Report-2024_ACC.pdf,2026-05-27,93.0,,descargado,no encontrado automáticamente
+E060,Gecina,GFC,France,2022,integrated,https://www.gecina.fr/sites/default/files/2023-02/gecina_-_document_denregistrement_universel_2022.pdf,2026-05-27,140.0,,descargado,no encontrado automáticamente
+E060,Gecina,GFC,France,2023,integrated,https://www.gecina.fr/sites/default/files/2024-02/gecina_document_d_enregistrement_universel_2023.pdf,2026-05-27,214.0,,descargado,no encontrado automáticamente
+E060,Gecina,GFC,France,2024,integrated,https://www.gecina.fr/sites/default/files/2025-02/gecina_-_document_d_enregistrement_universel_2024.pdf,2026-05-27,158.0,,descargado,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2022,integrated,https://storage.mfn.se/69d1c438-3577-48e0-a826-b27aa0c51960/castellum-annual-report-and-sustainability-report-2022-print.pdf,2026-05-27,116.0,,descargado,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2023,integrated,https://storage.mfn.se/f05cdb7c-567f-481b-bc8e-a11da446b807/castellum-annual-report-2023.pdf,2026-05-27,129.0,,descargado,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2024,integrated,https://storage.mfn.se/e8a0a9e3-9238-42a9-a59a-629f5e32813e/castellum-annual-report-2024.pdf,2026-05-27,142.0,,descargado,no encontrado automáticamente
+E062,Delivery Hero,DHER,Germany,2022,integrated,https://ir-api.eqs.com/media/document/d642242f-833c-45ff-b7b1-9c9784cea279/assets/DeliveryHero_Annual%20Report_2022.pdf?disposition=inline,2026-05-28,88.0,,descargado,no encontrado automáticamente
+E062,Delivery Hero,DHER,Germany,2023,integrated,https://www.lobbyregister.bundestag.de/media/9c/ab/313888/Delivery-Hero-Annual-Report-2023.pdf,2026-05-27,104.0,,descargado,no encontrado automáticamente
+E062,Delivery Hero,DHER,Germany,2024,integrated,https://ir.deliveryhero.com/media/document/c38c7d53-cd6e-44de-8b1f-3559d5c43e6b/assets/DE000A2E4K43-JA-2024-EQ-E-00.pdf,2026-05-27,113.0,,descargado,no encontrado automáticamente
+E063,Travis Perkins,TPK,United Kingdom,2022,integrated,https://www.travisperkinsplc.co.uk/media/dqbnofvc/annual-report-and-accounts-2022.pdf,2026-05-27,135.0,,descargado,no encontrado automáticamente
+E063,Travis Perkins,TPK,United Kingdom,2023,integrated,https://www.travisperkinsplc.co.uk/media/4mznqoer/travis-perkins-annual-report-2023.pdf,2026-05-27,108.0,,descargado,no encontrado automáticamente
+E063,Travis Perkins,TPK,United Kingdom,2024,integrated,https://www.travisperkinsplc.co.uk/media/uc0oz433/travis-perkins-plc-2024-annual-report.pdf,2026-05-27,67.0,,descargado,no encontrado automáticamente
+E064,H&M,HMB,Sweden,2022,integrated,https://hmgroup.com/wp-content/uploads/2023/03/HM-Group-Annual-and-Sustainability-Report-2022.pdf,2026-05-26,51.0,,descargado,no encontrado automáticamente
+E064,H&M,HMB,Sweden,2023,integrated,https://hmgroup.com/wp-content/uploads/2024/03/HM-Group-Annual-and-Sustainability-Report-2023.pdf,2026-05-26,120.0,,descargado,no encontrado automáticamente
+E064,H&M,HMB,Sweden,2024,integrated,https://hmgroup.com/wp-content/uploads/2025/03/HM-Group-Annual-and-sustainability-report-2024.pdf,2026-05-26,106.0,,descargado,no encontrado automáticamente
+E065,Marks & Spencer,MKS,United Kingdom,2022,integrated,https://corporate.marksandspencer.com/sites/marksandspencer/files/Annual%20reports/m-and-s_ar22_full-ar.pdf,2026-05-26,91.0,,descargado,no encontrado automáticamente
+E065,Marks & Spencer,MKS,United Kingdom,2023,integrated,https://corporate.marksandspencer.com/sites/marksandspencer/files/2023-06/M-and-S-2023-Annual-Report.pdf,2026-05-26,108.0,,descargado,no encontrado automáticamente
+E065,Marks & Spencer,MKS,United Kingdom,2024,integrated,https://corporate.marksandspencer.com/sites/marksandspencer/files/2024-06/M-and-S-2024-Annual-Report.pdf,2026-05-26,199.0,,descargado,no encontrado automáticamente
+E066,JD Sports,JD,United Kingdom,2022,integrated,https://s204.q4cdn.com/980191062/files/doc_financials/2022/ar/final-annual-report-2022.pdf,2026-05-27,138.0,,descargado,no encontrado automáticamente
+E066,JD Sports,JD,United Kingdom,2023,integrated,https://s204.q4cdn.com/980191062/files/doc_financials/2023/ar/jd-annual-report-and-accounts-2023.pdf,2026-05-27,192.0,,descargado,no encontrado automáticamente
+E066,JD Sports,JD,United Kingdom,2024,integrated,https://s204.q4cdn.com/980191062/files/doc_financials/2024/ar/jd-sports-fashion-annual-report-and-accounts-2024.pdf,2026-05-27,96.0,,descargado,no encontrado automáticamente
+E067,Melexis,MELE,Belgium,2022,integrated,https://media.melexis.com/-/media/files/documents/investor-relations/reports/annual-reports/en/2022-annual-report-melexis-en.pdf,2026-05-27,1166.0,,descargado,no encontrado automáticamente
+E067,Melexis,MELE,Belgium,2023,integrated,https://media.melexis.com/-/media/files/documents/investor-relations/reports/annual-reports/en/2023-annual-report-melexis-en.pdf,2026-05-27,872.0,,descargado,no encontrado automáticamente
+E067,Melexis,MELE,Belgium,2024,integrated,https://media.melexis.com/-/media/files/documents/investor-relations/reports/annual-reports/en/2024-annual-report-melexis-en.pdf,2026-05-27,776.0,,descargado,no encontrado automáticamente
+E068,Sage Group,SGE,United Kingdom,2022,integrated,https://www.sage.com/en-gb/-/media/files/investors/documents/pdf/annual%20report/sage-annual-report-2022.pdf,2026-05-27,111.0,,descargado,no encontrado automáticamente
+E068,Sage Group,SGE,United Kingdom,2023,integrated,https://www.sage.com/en-gb/-/media/files/investors/documents/pdf/annual%20report/sage-annual-report-2023.pdf,2026-05-27,94.0,,descargado,no encontrado automáticamente
+E068,Sage Group,SGE,United Kingdom,2024,integrated,https://www.sage.com/en-gb/-/media/files/investors/documents/pdf/annual%20report/sage-annual-report-2024.pdf,2026-05-27,131.0,,descargado,no encontrado automáticamente
+E069,STMicroelectronics,STMPA,Netherlands,2022,integrated,https://investors.st.com/financials/annual-and-semi-annual-reports,2026-05-29,227.0,en,descargado,descargado manualmente desde investors.st.com — DAR 2022
+E069,STMicroelectronics,STMPA,Netherlands,2023,integrated,https://investors.st.com/financials/annual-and-semi-annual-reports,2026-05-29,254.0,en,descargado,DAR 2023 descargado manualmente desde investors.st.com (reemplaza copia Wayback)
+E069,STMicroelectronics,STMPA,Netherlands,2024,integrated,https://web.archive.org/web/20250401120642if_/https://investors.st.com/static-files/ea3b0c4d-88be-404f-ac90-9236fe61d454,2026-05-28,442.0,en,descargado,Dutch Annual Report 2024 via Wayback CDX (UUID ea3b0c4d)
+E070,Vodafone Group,VOD,United Kingdom,2022,integrated,https://investors.vodafone.com/~/media/Files/V/Vodafone-IR/documents/performance/financial-results/2022/vodafone-2022-annual-report.pdf,2026-05-28,,en,descargado,URL actualizada: ruta media (no sites/vodafone-ir)
+E070,Vodafone Group,VOD,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/LSE_VOD_2023.pdf,2026-05-28,144.0,,descargado,descarga directa bloqueada — descargar manualmente
+E070,Vodafone Group,VOD,United Kingdom,2024,integrated,https://data.fca.org.uk/artefacts/NSM/Portal/NI-000097578/NI-000097578.pdf,2026-05-28,179.0,,descargado,no encontrado automáticamente
+E071,Swisscom,SCMN,Switzerland,2022,integrated,https://www.swisscom.ch/en/about-swisscom/company/reports-results/annual-report.html,2026-05-29,186.0,,descargado,PDF descargado manualmente — geschaeftsbericht 2022 en
+E071,Swisscom,SCMN,Switzerland,2023,integrated,https://www.swisscom.ch/en/about-swisscom/company/reports-results/annual-report.html,2026-05-29,212.0,,descargado,PDF descargado manualmente — geschaeftsbericht 2023 en
+E071,Swisscom,SCMN,Switzerland,2024,integrated,https://www.swisscom.ch/en/about-swisscom/company/reports-results/annual-report.html,2026-05-29,230.0,,descargado,PDF descargado manualmente — geschaeftsbericht 2024 en
+E072,Freenet,FNTN,Germany,2022,integrated,https://www.freenet.ag/binaries/_ts_1691410969603/content/assets/freenetgroup/pdf/ir-englisch/finanzberichte/2022/2022_ar_web_freenet.pdf,2026-05-27,43.0,,descargado,no encontrado automáticamente
+E072,Freenet,FNTN,Germany,2023,integrated,https://www.freenet.ag/binaries/_ts_1713541479442/content/assets/freenetgroup/pdf/ir-englisch/finanzberichte/2023/freenet-gb-2023-e-web.pdf,2026-05-27,41.0,,descargado,no encontrado automáticamente
+E072,Freenet,FNTN,Germany,2024,integrated,https://www.freenet.ag/binaries/_ts_1743061697640/content/assets/freenetgroup/pdf/ir-englisch/finanzberichte/2024/freenet-gb-2024-en-web.pdf,2026-05-27,53.0,,descargado,no encontrado automáticamente
+E073,Orange S.A.,ORAN,France,2022,integrated,https://rai.orange.com/wp-content/uploads/sites/54/2024/02/orange_integratedannualreport_2022_en.pdf,2026-05-26,48.0,,descargado,no encontrado automáticamente
+E073,Orange S.A.,ORAN,France,2023,integrated,https://www.orange-business.com/sites/default/files/rapport-financier-2023.pdf,2026-05-28,130.0,,descargado,no encontrado automáticamente
+E073,Orange S.A.,ORAN,France,2024,integrated,https://mastermedia.dam-broadcast.com/medias/domain12751/media101349/404737-yf5e7h0wx1-75.pdf,2026-05-28,126.0,,descargado,no encontrado automáticamente
+E074,Telecom Italia,TIT,Italy,2022,integrated,https://www.gruppotim.it/content/dam/gt/investitori/doc---avvisi/anno-2023/eng/Annual-report-2022.pdf,2026-05-27,125.0,,descargado,no encontrado automáticamente
+E074,Telecom Italia,TIT,Italy,2023,integrated,https://www.gruppotim.it/content/dam/gt/investitori/doc---avvisi/anno-2024/eng/Annual-report-2023.pdf,2026-05-27,95.0,,descargado,no encontrado automáticamente
+E074,Telecom Italia,TIT,Italy,2024,integrated,https://www.gruppotim.it/content/dam/gt/investitori/doc---report-finanziari/2024/Annual%20report%202024.pdf,2026-05-27,109.0,,descargado,no encontrado automáticamente
+E075,Compass Group,CPG,United Kingdom,2022,integrated,https://www.compassgroupplc.com/investors/reports-and-presentations,2026-05-29,226.0,en,descargado,reemplaza doc incorrecto (era Compass Diversified Holdings CODI)
+E075,Compass Group,CPG,United Kingdom,2023,integrated,https://www.compassgroupplc.com/investors,2026-05-29,236.0,en,descargado,descargado manualmente desde compassgroupplc.com
+E075,Compass Group,CPG,United Kingdom,2024,integrated,https://www.compassgroupplc.com/investors,2026-05-29,236.0,en,descargado,descargado manualmente desde compassgroupplc.com
+E076,Flutter Entertainment,FLTR,Ireland,2022,integrated,https://flutter.com/media/ygebk1qa/flutter-entertainment-plc-annual-report-accounts-2022.pdf,2026-05-27,170.0,,descargado,no encontrado automáticamente
+E076,Flutter Entertainment,FLTR,Ireland,2023,integrated,https://flutter.com/media/3s0peofa/flutter-entertainment-plc-annual-report-and-accounts-2023-10-k_updated.pdf,2026-05-27,180.0,,descargado,no encontrado automáticamente
+E076,Flutter Entertainment,FLTR,Ireland,2024,integrated,https://flutter.com/media/s44lcmmb/flutter-uk-wrapper-10k_fnl.pdf,2026-05-27,50.0,,descargado,no encontrado automáticamente
+E077,Aena,AENA,Spain,2022,,,,364.0,,descargado,reconciliado
+E077,Aena,AENA,Spain,2023,,,,413.0,,descargado,reconciliado
+E077,Aena,AENA,Spain,2024,,,,309.0,,descargado,reconciliado
+E078,Air France-KLM,AF,France,2022,,,,464.0,,descargado,reconciliado
+E078,Air France-KLM,AF,France,2023,,,,488.0,,descargado,reconciliado
+E078,Air France-KLM,AF,France,2024,integrated,https://www.airfranceklm.com/sites/default/files/2025-04/2024_urd_ven_04032025.pdf,2026-05-28,532.0,en,descargado,descargado automáticamente via Wayback CDX
+E079,Enel,ENEL,Italy,2022,integrated,https://www.enel.com/content/dam/enel-com/documenti/investitori/informazioni-finanziarie/2022/annuali/en/integrated-annual-report_2022.pdf,2026-05-28,,en,descargado,URL actualizada: ruta investitori (no investors)
+E079,Enel,ENEL,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/NYSE_ENIA_2023.pdf,2026-05-28,424.0,,descargado,descarga directa bloqueada — descargar manualmente
+E079,Enel,ENEL,Italy,2024,integrated,https://www.enel.com/content/dam/enel-com/documenti/investitori/informazioni-finanziarie/2024/annuali/en/integrated-annual-report_2024.pdf,2026-05-28,,en,descargado,URL actualizada: ruta investitori (no investors)
+E080,Acciona Energía,ANE,Spain,2022,integrated,https://report2022.acciona-energia.com/pdfs/acciona-energia-2022-integrated-report.pdf,2026-05-27,26.0,,descargado,no encontrado automáticamente
+E080,Acciona Energía,ANE,Spain,2023,integrated,https://report2023.acciona-energia.com/pdfs/ACCIONAEnergia-Sustainability-report_2023.pdf,2026-05-27,70.0,,descargado,no encontrado automáticamente
+E080,Acciona Energía,ANE,Spain,2024,integrated,https://www.acciona.com/content/dam/acciona-global/documentos/juntas-generales/2025/en/intregrated-report-2024-acciona.pdf,2026-05-27,544.0,,descargado,no encontrado automáticamente
+E081,Engie,ENGIE,France,2022,integrated,https://www.engie.com/sites/default/files/assets/documents/2023-02/ENGIE_2022%20Management%20report%20and%20annual%20consolidated%20financial%20statements.pdf,2026-05-26,38.0,,descargado,no encontrado automáticamente
+E081,Engie,ENGIE,France,2023,integrated,https://www.engie.com/sites/default/files/assets/documents/2024-02/2023%20Management%20report%20and%20Annual%20consolidated%20financial%20statements%202.pdf,2026-05-26,36.0,,descargado,no encontrado automáticamente
+E081,Engie,ENGIE,France,2024,integrated,https://www.engie.com/sites/default/files/assets/documents/2025-02/2024%20Management%20report%20and%20Annual%20consolidated%20financial%20statements.pdf,2026-05-26,52.0,,descargado,no encontrado automáticamente
+E082,SSE,SSE,United Kingdom,2022,integrated,https://www.sse.com/media/y5ohomz3/38530-sse-ar2022-web.pdf,2026-05-26,150.0,,descargado,no encontrado automáticamente
+E082,SSE,SSE,United Kingdom,2023,integrated,https://www.sse.com/media/ucnjhbcv/sse-full-annual-report-revised-web.pdf,2026-05-26,127.0,,descargado,no encontrado automáticamente
+E082,SSE,SSE,United Kingdom,2024,integrated,https://www.sse.com/media/0aibgke4/sse_ar24_interactive.pdf,2026-05-26,234.0,,descargado,no encontrado automáticamente
+E083,Enagás,ENG,Spain,2022,integrated,https://www.enagas.es/content/dam/enagas/en/files/enagas-communication-room/publications/informe-anual/Annual_Report_2022_Enagas.pdf,2026-05-27,137.0,,descargado,no encontrado automáticamente
+E083,Enagás,ENG,Spain,2023,integrated,https://www.enagas.es/content/dam/enagas/en/files/enagas-communication-room/publications/informe-anual/Annual-Report-2023.pdf,2026-05-27,179.0,,descargado,no encontrado automáticamente
+E083,Enagás,ENG,Spain,2024,integrated,https://www.enagas.es/content/dam/enagas/en/files/enagas-communication-room/publications/informe-anual/Annual-Report-2024-Enagas.pdf,2026-05-27,198.0,,descargado,no encontrado automáticamente
+E084,Wolters Kluwer,WKL,Netherlands,2022,integrated,https://assets.contenthub.wolterskluwer.com/api/public/content/7ecf79d725094df588fddb8b58370a0c?v=0723f0d6,2026-05-27,70.0,,descargado,no encontrado automáticamente
+E084,Wolters Kluwer,WKL,Netherlands,2023,integrated,https://assets.contenthub.wolterskluwer.com/api/public/content/2190891-wolters-kluwer-2023-annual-report-3ff32c52c4?v=f6d1aeee,2026-05-27,81.0,,descargado,no encontrado automáticamente
+E084,Wolters Kluwer,WKL,Netherlands,2024,integrated,https://assets.contenthub.wolterskluwer.com/api/public/content/2630611-wolters-kluwer-2024-annual-report-cd216d4be7?v=7a259453,2026-05-27,188.0,,descargado,no encontrado automáticamente
+E085,Stora Enso,STER,Finland,2022,integrated,https://www.storaenso.com/-/media/documents/download-center/documents/annual-reports/2022/storaenso_annual_report_2022.pdf,2026-05-26,226.0,,descargado,no encontrado automáticamente
+E085,Stora Enso,STER,Finland,2023,integrated,https://www.storaenso.com/-/media/documents/download-center/documents/annual-reports/2023/storaenso_annual_report_2023.pdf,2026-05-26,173.0,,descargado,no encontrado automáticamente
+E085,Stora Enso,STER,Finland,2024,integrated,https://www.storaenso.com/-/media/documents/download-center/documents/annual-reports/2024/storaenso_annual_report_2024.pdf,2026-05-26,342.0,,descargado,no encontrado automáticamente
+E086,TUI Group,TUI,Germany,2022,integrated,https://www.eqs-news.com/media/document/e4da4bd6-7ca8-48eb-9d21-1600e6d2d57a/assets/DE000TUAG000-JA-2021-EQ-E-00.pdf,2026-05-27,60.0,,descargado,no encontrado automáticamente
+E086,TUI Group,TUI,Germany,2023,integrated,https://www.eqs-news.com/media/document/5cc7fb56-0777-4d73-95a6-0e4b4aad2dec/assets/DE000TUAG505-JA-2022-EQ-E-00.pdf,2026-05-27,70.0,,descargado,no encontrado automáticamente
+E086,TUI Group,TUI,Germany,2024,integrated,https://www.eqs-news.com/media/document/526d0a0b-e2b8-4fce-9e76-6e21e9f070c5/assets/DE000TUAG505-JA-2023-EQ-E-00.pdf,2026-05-27,61.0,,descargado,no encontrado automáticamente
+E087,Orkla ASA,ORK,Norway,2022,integrated,https://www.orkla.com/files/Main/19690/3738803/orkla-annual-report-2022.pdf,2026-05-27,131.0,,descargado,no encontrado automáticamente
+E087,Orkla ASA,ORK,Norway,2023,integrated,https://www.orkla.com/files/Public/19690/3951825/orkla-annual-report-2023.pdf,2026-05-27,502.0,,descargado,no encontrado automáticamente
+E087,Orkla ASA,ORK,Norway,2024,integrated,https://www.orkla.com/files/mfn/7f0f329a-2944-4496-aec4-b6068d0c6b5c/orkla-annual-report-2024.pdf,2026-05-27,389.0,,descargado,no encontrado automáticamente
+E088,Barry Callebaut,BARN,Switzerland,2022,integrated,https://companiesmarketcap.com/annual-reports/6050.ar.en.2021-2022.pdf,2026-05-28,154.0,,descargado,no encontrado automáticamente
+E088,Barry Callebaut,BARN,Switzerland,2023,integrated,https://companiesmarketcap.com/annual-reports/6050.ar.en.2022-2023.pdf,2026-05-28,144.0,,descargado,no encontrado automáticamente
+E088,Barry Callebaut,BARN,Switzerland,2024,integrated,https://companiesmarketcap.com/annual-reports/6050.ar.en.2023-2024.pdf,2026-05-28,319.0,,descargado,no encontrado automáticamente
+E089,Adecco,ADEN,Switzerland,2022,integrated,https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/pdf-links/investors/adecco-group-annual-report-2022.pdf,2026-05-26,285.0,,descargado,no encontrado automáticamente
+E089,Adecco,ADEN,Switzerland,2023,integrated,https://www.adeccogroup.com/-/media/project/Adecco%20Group/adeccogroup/pdf-files/2024-march/the-adecco-group-annual-report-2023.pdf,2026-05-26,78.0,,descargado,no encontrado automáticamente
+E089,Adecco,ADEN,Switzerland,2024,integrated,https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/pdf-files/2025-march/the-adecco-group-annual-report-2024.pdf,2026-05-26,100.0,,descargado,no encontrado automáticamente
+E090,Wihlborgs Fastigheter,WIHL,Sweden,2022,integrated,https://mb.cision.com/Main/890/3743603/1954554.pdf,2026-05-27,111.0,,descargado,no encontrado automáticamente
+E090,Wihlborgs Fastigheter,WIHL,Sweden,2023,integrated,https://mb.cision.com/Main/890/3951531/2698409.pdf,2026-05-27,139.0,,descargado,no encontrado automáticamente
+E090,Wihlborgs Fastigheter,WIHL,Sweden,2024,integrated,https://www.wihlborgs.se/globalassets/investor-relations/digital-ar-2024/wihlborgs-annual-and-sustainability-report-2024_ny.pdf,2026-05-27,121.0,,descargado,no encontrado automáticamente
+E091,Porsche,P911,Germany,2022,integrated,https://investorrelations.porsche.com/~/media/Files/P/porsche-ir/results-and-presentations/financial-reports-and-presentation/2022/q4-and-full-year/annual-and-sustainability-report-2022-porsche-ag.pdf,2026-05-27,142.0,,descargado,no encontrado automáticamente
+E091,Porsche,P911,Germany,2023,,,,239.0,,descargado,reconciliado
+E091,Porsche,P911,Germany,2024,,,,257.0,,descargado,reconciliado
+E092,Evonik Industries,EVK,Germany,2022,,,,232.0,,descargado,reconciliado
+E092,Evonik Industries,EVK,Germany,2023,,,,244.0,,descargado,reconciliado
+E092,Evonik Industries,EVK,Germany,2024,,,,326.0,,descargado,reconciliado
+E093,Brenntag,BNR,Germany,2022,,,,292.0,,descargado,reconciliado
+E093,Brenntag,BNR,Germany,2023,,,,296.0,,descargado,reconciliado
+E093,Brenntag,BNR,Germany,2024,,,,296.0,,descargado,reconciliado
+E094,L'Oréal,OR,France,2022,integrated,https://web.archive.org/web/20231010111221if_/https://www.loreal-finance.com/system/files/2023-03/LOREAL_2022_Universal_Registration_Document_en.pdf,2026-05-28,400.0,en,descargado,URD 2022 (includes integrated report + NFIS) via Wayback CDX
+E094,L'Oréal,OR,France,2023,integrated,https://www.loreal-finance.com/system/files/2024-03/LOREAL_2023_Annual_Report.pdf,2026-05-30,450.0,fr,descargado,URD completo 450pp — reemplaza resumen essentiel 17pp
+E094,L'Oréal,OR,France,2024,integrated,https://www.loreal-finance.com/system/files/2025-03/LOREAL_2024_Annual_Report.pdf,2026-05-30,448.0,fr,descargado,URD completo 448pp — reemplaza resumen essentials 19pp
+E095,UBS Group,UBSG,Switzerland,2022,integrated,https://www.ubs.com/global/en/investor-relations/financial-information/annual-reporting.html,2026-05-29,390.0,en,descargado,descargado manualmente desde ubs.com IR
+E095,UBS Group,UBSG,Switzerland,2023,integrated,https://www.ubs.com/global/en/investor-relations/financial-information/annual-reporting.html,2026-05-29,430.0,en,descargado,descargado manualmente desde ubs.com IR
+E095,UBS Group,UBSG,Switzerland,2024,integrated,https://www.ubs.com/global/en/investor-relations/financial-information/annual-reporting.html,2026-05-29,395.0,en,descargado,descargado manualmente desde ubs.com IR
+E096,Nemetschek,NEM,Germany,2022,integrated,https://www.nemetschek.com/sites/default/files/documents/NGroup%20Gesch%C3%A4ftsbericht%202022.pdf,2026-05-27,61.0,,descartado,"descartado del corpus NLP — ESG incipiente (1pp, Cat D). Ver Decisión 010"
+E096,Nemetschek,NEM,Germany,2023,integrated,https://www.nemetschek.com/sites/default/files/documents/NEM_AnnualReport2023_en.pdf,2026-05-27,45.0,,descargado,no encontrado automáticamente
+E096,Nemetschek,NEM,Germany,2024,integrated,https://ir.nemetschek.com/media/document/8abba513-553d-46fd-9475-33b455e0ba08/assets/NEM_AR2024_EN.pdf,2026-05-28,,en,descargado,URL de ir.nemetschek.com (launch2020 tenía SSL error)
+E097,Universal Music Group,UMG,Netherlands,2022,integrated,https://investors.umusic.com/financial-information/annual-reports,2026-05-29,337.0,en,descargado,reemplaza doc incorrecto (era Focus Universal Inc. 10-K)
+E097,Universal Music Group,UMG,Netherlands,2023,integrated,https://investors.umusic.com/financial-information/annual-reports,2026-05-29,355.0,en,descargado,reemplaza doc incorrecto (era Focus Universal Inc. 10-K)
+E097,Universal Music Group,UMG,Netherlands,2024,integrated,https://downloads.ctfassets.net/e66ejtqbaazg/Yt3zzyacZ1VRFc3dcEt85/b9d00d3ac6ffedea5bb01c770e825c8b/UMG_2024_Annual_Report.pdf,2026-05-27,136.0,,descargado,no encontrado automáticamente

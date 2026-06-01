@@ -1,0 +1,3802 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fase 3 — Búsqueda manual de informes</title>
+  <style>
+    body { font-family: sans-serif; font-size: 14px; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #dee2e6; padding: 6px 10px; text-align: left; }
+    th { background: #343a40; color: white; }
+    a { color: #0d6efd; }
+  </style>
+</head>
+<body>
+  <h2>Fase 3 — Búsqueda manual de informes (290 entradas)</h2>
+  <p>Para cada empresa: descarga el PDF del informe anual integrado, guárdalo en
+     <code>data/raw/[país]/[ticker]/[TICKER]_[AÑO]_integrated.pdf</code>
+     y actualiza el tracking con <code>python scripts/fase3_registrar.py --empresa [id] --año [año] --url [url]</code>
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Empresa</th><th>Ticker</th><th>País</th>
+        <th>Año</th><th>Estado</th><th>Búsqueda</th><th>Notas</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr style="background:#f8f9fa">
+          <td>E001</td>
+          <td><b>Stellantis</b></td>
+          <td>STLAM</td>
+          <td>Netherlands</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Stellantis%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Stellantis" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#fff3cd">
+          <td>E001</td>
+          <td><b>Stellantis</b></td>
+          <td>STLAM</td>
+          <td>Netherlands</td>
+          <td>2023</td>
+          <td><span style="color:#856404">problema</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Stellantis%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Stellantis" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666">descarga fallida</td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E001</td>
+          <td><b>Stellantis</b></td>
+          <td>STLAM</td>
+          <td>Netherlands</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Stellantis%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Stellantis" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E002</td>
+          <td><b>Mercedes-Benz Group</b></td>
+          <td>MBG</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Mercedes-Benz+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Mercedes-Benz+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E002</td>
+          <td><b>Mercedes-Benz Group</b></td>
+          <td>MBG</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Mercedes-Benz+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Mercedes-Benz+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E002</td>
+          <td><b>Mercedes-Benz Group</b></td>
+          <td>MBG</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Mercedes-Benz+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Mercedes-Benz+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E003</td>
+          <td><b>Continental</b></td>
+          <td>CON</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Continental%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Continental" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E003</td>
+          <td><b>Continental</b></td>
+          <td>CON</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Continental%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Continental" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E003</td>
+          <td><b>Continental</b></td>
+          <td>CON</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Continental%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Continental" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E004</td>
+          <td><b>Valeo</b></td>
+          <td>FR</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Valeo%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Valeo" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E004</td>
+          <td><b>Valeo</b></td>
+          <td>FR</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Valeo%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Valeo" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E004</td>
+          <td><b>Valeo</b></td>
+          <td>FR</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Valeo%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Valeo" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E005</td>
+          <td><b>CaixaBank</b></td>
+          <td>CABK</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22CaixaBank%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=CaixaBank" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E005</td>
+          <td><b>CaixaBank</b></td>
+          <td>CABK</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22CaixaBank%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=CaixaBank" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E005</td>
+          <td><b>CaixaBank</b></td>
+          <td>CABK</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22CaixaBank%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=CaixaBank" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E006</td>
+          <td><b>HSBC</b></td>
+          <td>HSBA</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22HSBC%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=HSBC" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E006</td>
+          <td><b>HSBC</b></td>
+          <td>HSBA</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22HSBC%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=HSBC" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E006</td>
+          <td><b>HSBC</b></td>
+          <td>HSBA</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22HSBC%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=HSBC" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E007</td>
+          <td><b>Skandinaviska Enskilda Banken</b></td>
+          <td>SEB</td>
+          <td>Sweden</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Skandinaviska+Enskilda+Banken%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Skandinaviska+Enskilda+Banken" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E007</td>
+          <td><b>Skandinaviska Enskilda Banken</b></td>
+          <td>SEB</td>
+          <td>Sweden</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Skandinaviska+Enskilda+Banken%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Skandinaviska+Enskilda+Banken" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E007</td>
+          <td><b>Skandinaviska Enskilda Banken</b></td>
+          <td>SEB</td>
+          <td>Sweden</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Skandinaviska+Enskilda+Banken%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Skandinaviska+Enskilda+Banken" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E008</td>
+          <td><b>Raiffeisen Bank International</b></td>
+          <td>RBI</td>
+          <td>Austria</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Raiffeisen+Bank+International%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Raiffeisen+Bank+International" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E008</td>
+          <td><b>Raiffeisen Bank International</b></td>
+          <td>RBI</td>
+          <td>Austria</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Raiffeisen+Bank+International%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Raiffeisen+Bank+International" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E008</td>
+          <td><b>Raiffeisen Bank International</b></td>
+          <td>RBI</td>
+          <td>Austria</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Raiffeisen+Bank+International%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Raiffeisen+Bank+International" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E009</td>
+          <td><b>UPM-Kymmene</b></td>
+          <td>UPM</td>
+          <td>Finland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22UPM-Kymmene%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=UPM-Kymmene" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E009</td>
+          <td><b>UPM-Kymmene</b></td>
+          <td>UPM</td>
+          <td>Finland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22UPM-Kymmene%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=UPM-Kymmene" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E009</td>
+          <td><b>UPM-Kymmene</b></td>
+          <td>UPM</td>
+          <td>Finland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22UPM-Kymmene%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=UPM-Kymmene" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E010</td>
+          <td><b>Boliden AB</b></td>
+          <td>BOL</td>
+          <td>Sweden</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Boliden+AB%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Boliden+AB" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E010</td>
+          <td><b>Boliden AB</b></td>
+          <td>BOL</td>
+          <td>Sweden</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Boliden+AB%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Boliden+AB" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E010</td>
+          <td><b>Boliden AB</b></td>
+          <td>BOL</td>
+          <td>Sweden</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Boliden+AB%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Boliden+AB" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E011</td>
+          <td><b>Acerinox</b></td>
+          <td>ACX</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Acerinox%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Acerinox" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E011</td>
+          <td><b>Acerinox</b></td>
+          <td>ACX</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Acerinox%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Acerinox" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E011</td>
+          <td><b>Acerinox</b></td>
+          <td>ACX</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Acerinox%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Acerinox" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E012</td>
+          <td><b>Voestalpine</b></td>
+          <td>VOE</td>
+          <td>Austria</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Voestalpine%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Voestalpine" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E012</td>
+          <td><b>Voestalpine</b></td>
+          <td>VOE</td>
+          <td>Austria</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Voestalpine%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Voestalpine" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E012</td>
+          <td><b>Voestalpine</b></td>
+          <td>VOE</td>
+          <td>Austria</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Voestalpine%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Voestalpine" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E013</td>
+          <td><b>Covestro</b></td>
+          <td>1COV</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Covestro%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Covestro" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E013</td>
+          <td><b>Covestro</b></td>
+          <td>1COV</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Covestro%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Covestro" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E013</td>
+          <td><b>Covestro</b></td>
+          <td>1COV</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Covestro%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Covestro" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E014</td>
+          <td><b>Symrise</b></td>
+          <td>SY1</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Symrise%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Symrise" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E014</td>
+          <td><b>Symrise</b></td>
+          <td>SY1</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Symrise%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Symrise" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E014</td>
+          <td><b>Symrise</b></td>
+          <td>SY1</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Symrise%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Symrise" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E015</td>
+          <td><b>Yara International</b></td>
+          <td>YAR</td>
+          <td>Norway</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Yara+International%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Yara+International" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E015</td>
+          <td><b>Yara International</b></td>
+          <td>YAR</td>
+          <td>Norway</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Yara+International%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Yara+International" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E015</td>
+          <td><b>Yara International</b></td>
+          <td>YAR</td>
+          <td>Norway</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Yara+International%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Yara+International" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E016</td>
+          <td><b>Balfour Beatty</b></td>
+          <td>BBY</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Balfour+Beatty%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Balfour+Beatty" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E016</td>
+          <td><b>Balfour Beatty</b></td>
+          <td>BBY</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Balfour+Beatty%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Balfour+Beatty" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E016</td>
+          <td><b>Balfour Beatty</b></td>
+          <td>BBY</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Balfour+Beatty%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Balfour+Beatty" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E017</td>
+          <td><b>Skanska</b></td>
+          <td>SKA B</td>
+          <td>Sweden</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Skanska%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Skanska" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E017</td>
+          <td><b>Skanska</b></td>
+          <td>SKA B</td>
+          <td>Sweden</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Skanska%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Skanska" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E017</td>
+          <td><b>Skanska</b></td>
+          <td>SKA B</td>
+          <td>Sweden</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Skanska%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Skanska" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E018</td>
+          <td><b>Vinci</b></td>
+          <td>DG</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vinci%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vinci" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E018</td>
+          <td><b>Vinci</b></td>
+          <td>DG</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vinci%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vinci" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E018</td>
+          <td><b>Vinci</b></td>
+          <td>DG</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vinci%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vinci" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E019</td>
+          <td><b>Bouygues</b></td>
+          <td>EN</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Bouygues%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Bouygues" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E019</td>
+          <td><b>Bouygues</b></td>
+          <td>EN</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Bouygues%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Bouygues" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E019</td>
+          <td><b>Bouygues</b></td>
+          <td>EN</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Bouygues%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Bouygues" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E020</td>
+          <td><b>Eiffage</b></td>
+          <td>EFGI</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Eiffage%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Eiffage" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E020</td>
+          <td><b>Eiffage</b></td>
+          <td>EFGI</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Eiffage%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Eiffage" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E020</td>
+          <td><b>Eiffage</b></td>
+          <td>EFGI</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Eiffage%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Eiffage" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E021</td>
+          <td><b>Brunello Cucinelli</b></td>
+          <td>BRNW</td>
+          <td>Italy</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Brunello+Cucinelli%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Brunello+Cucinelli" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E021</td>
+          <td><b>Brunello Cucinelli</b></td>
+          <td>BRNW</td>
+          <td>Italy</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Brunello+Cucinelli%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Brunello+Cucinelli" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E021</td>
+          <td><b>Brunello Cucinelli</b></td>
+          <td>BRNW</td>
+          <td>Italy</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Brunello+Cucinelli%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Brunello+Cucinelli" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E022</td>
+          <td><b>Hugo Boss</b></td>
+          <td>BOSS</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Hugo+Boss%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Hugo+Boss" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E022</td>
+          <td><b>Hugo Boss</b></td>
+          <td>BOSS</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Hugo+Boss%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Hugo+Boss" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E022</td>
+          <td><b>Hugo Boss</b></td>
+          <td>BOSS</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Hugo+Boss%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Hugo+Boss" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E023</td>
+          <td><b>Richemont</b></td>
+          <td>CFR</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Richemont%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Richemont" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E023</td>
+          <td><b>Richemont</b></td>
+          <td>CFR</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Richemont%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Richemont" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E023</td>
+          <td><b>Richemont</b></td>
+          <td>CFR</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Richemont%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Richemont" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E024</td>
+          <td><b>Kering</b></td>
+          <td>KER</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Kering%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Kering" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E024</td>
+          <td><b>Kering</b></td>
+          <td>KER</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Kering%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Kering" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E024</td>
+          <td><b>Kering</b></td>
+          <td>KER</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Kering%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Kering" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E025</td>
+          <td><b>Adidas</b></td>
+          <td>ADS</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Adidas%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Adidas" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E025</td>
+          <td><b>Adidas</b></td>
+          <td>ADS</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Adidas%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Adidas" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E026</td>
+          <td><b>Repsol</b></td>
+          <td>REP</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Repsol%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Repsol" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E026</td>
+          <td><b>Repsol</b></td>
+          <td>REP</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Repsol%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Repsol" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E026</td>
+          <td><b>Repsol</b></td>
+          <td>REP</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Repsol%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Repsol" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E027</td>
+          <td><b>Aker BP</b></td>
+          <td>AKERBP</td>
+          <td>Norway</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aker+BP%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aker+BP" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E027</td>
+          <td><b>Aker BP</b></td>
+          <td>AKERBP</td>
+          <td>Norway</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aker+BP%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aker+BP" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E027</td>
+          <td><b>Aker BP</b></td>
+          <td>AKERBP</td>
+          <td>Norway</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aker+BP%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aker+BP" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E028</td>
+          <td><b>Neste</b></td>
+          <td>NSN</td>
+          <td>Finland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Neste%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Neste" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E028</td>
+          <td><b>Neste</b></td>
+          <td>NSN</td>
+          <td>Finland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Neste%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Neste" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E028</td>
+          <td><b>Neste</b></td>
+          <td>NSN</td>
+          <td>Finland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Neste%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Neste" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E029</td>
+          <td><b>TGS</b></td>
+          <td>TGS</td>
+          <td>Norway</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22TGS%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=TGS" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E029</td>
+          <td><b>TGS</b></td>
+          <td>TGS</td>
+          <td>Norway</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22TGS%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=TGS" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E029</td>
+          <td><b>TGS</b></td>
+          <td>TGS</td>
+          <td>Norway</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22TGS%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=TGS" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E030</td>
+          <td><b>Vestas</b></td>
+          <td>VESTAS</td>
+          <td>Denmark</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vestas%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vestas" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E030</td>
+          <td><b>Vestas</b></td>
+          <td>VESTAS</td>
+          <td>Denmark</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vestas%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vestas" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E030</td>
+          <td><b>Vestas</b></td>
+          <td>VESTAS</td>
+          <td>Denmark</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vestas%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vestas" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E031</td>
+          <td><b>London Stock Exchange Group</b></td>
+          <td>LSEG</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22London+Stock+Exchange+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=London+Stock+Exchange+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E031</td>
+          <td><b>London Stock Exchange Group</b></td>
+          <td>LSEG</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22London+Stock+Exchange+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=London+Stock+Exchange+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E031</td>
+          <td><b>London Stock Exchange Group</b></td>
+          <td>LSEG</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22London+Stock+Exchange+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=London+Stock+Exchange+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E032</td>
+          <td><b>Allfunds Group</b></td>
+          <td>ALLFG</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Allfunds+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Allfunds+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E032</td>
+          <td><b>Allfunds Group</b></td>
+          <td>ALLFG</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Allfunds+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Allfunds+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E032</td>
+          <td><b>Allfunds Group</b></td>
+          <td>ALLFG</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Allfunds+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Allfunds+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E033</td>
+          <td><b>Wendel</b></td>
+          <td>WEND</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wendel%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wendel" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E033</td>
+          <td><b>Wendel</b></td>
+          <td>WEND</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wendel%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wendel" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E033</td>
+          <td><b>Wendel</b></td>
+          <td>WEND</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wendel%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wendel" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E034</td>
+          <td><b>3i</b></td>
+          <td>III</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%223i%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=3i" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E034</td>
+          <td><b>3i</b></td>
+          <td>III</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%223i%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=3i" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E034</td>
+          <td><b>3i</b></td>
+          <td>III</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%223i%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=3i" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E035</td>
+          <td><b>Exor</b></td>
+          <td>EXO</td>
+          <td>Netherlands</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Exor%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Exor" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E035</td>
+          <td><b>Exor</b></td>
+          <td>EXO</td>
+          <td>Netherlands</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Exor%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Exor" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E035</td>
+          <td><b>Exor</b></td>
+          <td>EXO</td>
+          <td>Netherlands</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Exor%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Exor" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E036</td>
+          <td><b>Glanbia</b></td>
+          <td>GLB</td>
+          <td>Ireland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Glanbia%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Glanbia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E036</td>
+          <td><b>Glanbia</b></td>
+          <td>GLB</td>
+          <td>Ireland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Glanbia%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Glanbia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E036</td>
+          <td><b>Glanbia</b></td>
+          <td>GLB</td>
+          <td>Ireland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Glanbia%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Glanbia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E037</td>
+          <td><b>Pernod Ricard</b></td>
+          <td>PERP</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Pernod+Ricard%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Pernod+Ricard" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E037</td>
+          <td><b>Pernod Ricard</b></td>
+          <td>PERP</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Pernod+Ricard%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Pernod+Ricard" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E037</td>
+          <td><b>Pernod Ricard</b></td>
+          <td>PERP</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Pernod+Ricard%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Pernod+Ricard" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E038</td>
+          <td><b>Davide Campari-Milano</b></td>
+          <td>CPR</td>
+          <td>Italy</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Davide+Campari-Milano%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Davide+Campari-Milano" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E038</td>
+          <td><b>Davide Campari-Milano</b></td>
+          <td>CPR</td>
+          <td>Italy</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Davide+Campari-Milano%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Davide+Campari-Milano" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E038</td>
+          <td><b>Davide Campari-Milano</b></td>
+          <td>CPR</td>
+          <td>Italy</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Davide+Campari-Milano%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Davide+Campari-Milano" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E039</td>
+          <td><b>Novo Nordisk</b></td>
+          <td>NOVO B</td>
+          <td>Denmark</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Novo+Nordisk%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Novo+Nordisk" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#fff3cd">
+          <td>E039</td>
+          <td><b>Novo Nordisk</b></td>
+          <td>NOVO B</td>
+          <td>Denmark</td>
+          <td>2023</td>
+          <td><span style="color:#856404">problema</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Novo+Nordisk%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Novo+Nordisk" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666">no encontrado automáticamente</td>
+        </tr>
+        <tr style="background:#fff3cd">
+          <td>E039</td>
+          <td><b>Novo Nordisk</b></td>
+          <td>NOVO B</td>
+          <td>Denmark</td>
+          <td>2024</td>
+          <td><span style="color:#856404">problema</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Novo+Nordisk%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Novo+Nordisk" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666">no encontrado automáticamente</td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E040</td>
+          <td><b>ConvaTec</b></td>
+          <td>CTEC</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22ConvaTec%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=ConvaTec" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E040</td>
+          <td><b>ConvaTec</b></td>
+          <td>CTEC</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22ConvaTec%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=ConvaTec" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E040</td>
+          <td><b>ConvaTec</b></td>
+          <td>CTEC</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22ConvaTec%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=ConvaTec" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E041</td>
+          <td><b>Alcon</b></td>
+          <td>ALC</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Alcon%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Alcon" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E041</td>
+          <td><b>Alcon</b></td>
+          <td>ALC</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Alcon%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Alcon" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E041</td>
+          <td><b>Alcon</b></td>
+          <td>ALC</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Alcon%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Alcon" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E042</td>
+          <td><b>Qiagen</b></td>
+          <td>QIA</td>
+          <td>Netherlands</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Qiagen%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Qiagen" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E042</td>
+          <td><b>Qiagen</b></td>
+          <td>QIA</td>
+          <td>Netherlands</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Qiagen%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Qiagen" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E042</td>
+          <td><b>Qiagen</b></td>
+          <td>QIA</td>
+          <td>Netherlands</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Qiagen%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Qiagen" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E043</td>
+          <td><b>Lonza Group</b></td>
+          <td>LONN</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Lonza+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Lonza+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E043</td>
+          <td><b>Lonza Group</b></td>
+          <td>LONN</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Lonza+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Lonza+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E043</td>
+          <td><b>Lonza Group</b></td>
+          <td>LONN</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Lonza+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Lonza+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E044</td>
+          <td><b>Leonardo</b></td>
+          <td>LDO</td>
+          <td>Italy</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Leonardo%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Leonardo" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E044</td>
+          <td><b>Leonardo</b></td>
+          <td>LDO</td>
+          <td>Italy</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Leonardo%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Leonardo" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E044</td>
+          <td><b>Leonardo</b></td>
+          <td>LDO</td>
+          <td>Italy</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Leonardo%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Leonardo" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E045</td>
+          <td><b>Bolloré</b></td>
+          <td>BOL</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Bollor%C3%A9%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Bollor%C3%A9" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E045</td>
+          <td><b>Bolloré</b></td>
+          <td>BOL</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Bollor%C3%A9%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Bollor%C3%A9" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E045</td>
+          <td><b>Bolloré</b></td>
+          <td>BOL</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Bollor%C3%A9%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Bollor%C3%A9" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E046</td>
+          <td><b>SGS S.A.</b></td>
+          <td>SGSN</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22SGS+S.A.%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=SGS+S.A." target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E046</td>
+          <td><b>SGS S.A.</b></td>
+          <td>SGSN</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22SGS+S.A.%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=SGS+S.A." target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E046</td>
+          <td><b>SGS S.A.</b></td>
+          <td>SGSN</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22SGS+S.A.%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=SGS+S.A." target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E047</td>
+          <td><b>Safran</b></td>
+          <td>SAF</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Safran%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Safran" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E047</td>
+          <td><b>Safran</b></td>
+          <td>SAF</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Safran%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Safran" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E047</td>
+          <td><b>Safran</b></td>
+          <td>SAF</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Safran%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Safran" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E048</td>
+          <td><b>AXA</b></td>
+          <td>CS</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22AXA%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=AXA" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E048</td>
+          <td><b>AXA</b></td>
+          <td>CS</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22AXA%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=AXA" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E048</td>
+          <td><b>AXA</b></td>
+          <td>CS</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22AXA%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=AXA" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E049</td>
+          <td><b>Talanx</b></td>
+          <td>TLX</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Talanx%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Talanx" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E049</td>
+          <td><b>Talanx</b></td>
+          <td>TLX</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Talanx%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Talanx" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E049</td>
+          <td><b>Talanx</b></td>
+          <td>TLX</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Talanx%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Talanx" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E050</td>
+          <td><b>Aviva</b></td>
+          <td>AV</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aviva%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aviva" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E050</td>
+          <td><b>Aviva</b></td>
+          <td>AV</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aviva%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aviva" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E050</td>
+          <td><b>Aviva</b></td>
+          <td>AV</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aviva%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aviva" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E051</td>
+          <td><b>Tryg</b></td>
+          <td>TRYG</td>
+          <td>Denmark</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Tryg%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Tryg" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E051</td>
+          <td><b>Tryg</b></td>
+          <td>TRYG</td>
+          <td>Denmark</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Tryg%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Tryg" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E051</td>
+          <td><b>Tryg</b></td>
+          <td>TRYG</td>
+          <td>Denmark</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Tryg%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Tryg" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E052</td>
+          <td><b>Zurich Insurance Group</b></td>
+          <td>ZURN</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Zurich+Insurance+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Zurich+Insurance+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E052</td>
+          <td><b>Zurich Insurance Group</b></td>
+          <td>ZURN</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Zurich+Insurance+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Zurich+Insurance+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E052</td>
+          <td><b>Zurich Insurance Group</b></td>
+          <td>ZURN</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Zurich+Insurance+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Zurich+Insurance+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E053</td>
+          <td><b>Viaplay</b></td>
+          <td>VPLAY B</td>
+          <td>Sweden</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Viaplay%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Viaplay" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E053</td>
+          <td><b>Viaplay</b></td>
+          <td>VPLAY B</td>
+          <td>Sweden</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Viaplay%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Viaplay" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E053</td>
+          <td><b>Viaplay</b></td>
+          <td>VPLAY B</td>
+          <td>Sweden</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Viaplay%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Viaplay" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E054</td>
+          <td><b>Ontex</b></td>
+          <td>ONT</td>
+          <td>Belgium</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Ontex%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Ontex" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E054</td>
+          <td><b>Ontex</b></td>
+          <td>ONT</td>
+          <td>Belgium</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Ontex%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Ontex" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E054</td>
+          <td><b>Ontex</b></td>
+          <td>ONT</td>
+          <td>Belgium</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Ontex%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Ontex" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E055</td>
+          <td><b>Unilever</b></td>
+          <td>ULVR</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Unilever%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Unilever" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E055</td>
+          <td><b>Unilever</b></td>
+          <td>ULVR</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Unilever%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Unilever" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E055</td>
+          <td><b>Unilever</b></td>
+          <td>ULVR</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Unilever%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Unilever" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E056</td>
+          <td><b>Dia</b></td>
+          <td>DIA</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Dia%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Dia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E056</td>
+          <td><b>Dia</b></td>
+          <td>DIA</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Dia%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Dia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E056</td>
+          <td><b>Dia</b></td>
+          <td>DIA</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Dia%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Dia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E057</td>
+          <td><b>Colruyt</b></td>
+          <td>COLR</td>
+          <td>Belgium</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Colruyt%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Colruyt" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E057</td>
+          <td><b>Colruyt</b></td>
+          <td>COLR</td>
+          <td>Belgium</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Colruyt%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Colruyt" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E057</td>
+          <td><b>Colruyt</b></td>
+          <td>COLR</td>
+          <td>Belgium</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Colruyt%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Colruyt" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E058</td>
+          <td><b>Segro</b></td>
+          <td>SGRO</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Segro%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Segro" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E058</td>
+          <td><b>Segro</b></td>
+          <td>SGRO</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Segro%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Segro" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E058</td>
+          <td><b>Segro</b></td>
+          <td>SGRO</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Segro%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Segro" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E059</td>
+          <td><b>Merlin Properties</b></td>
+          <td>MRL</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Merlin+Properties%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Merlin+Properties" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E059</td>
+          <td><b>Merlin Properties</b></td>
+          <td>MRL</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Merlin+Properties%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Merlin+Properties" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E059</td>
+          <td><b>Merlin Properties</b></td>
+          <td>MRL</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Merlin+Properties%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Merlin+Properties" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E060</td>
+          <td><b>Gecina</b></td>
+          <td>GFC</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Gecina%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Gecina" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E060</td>
+          <td><b>Gecina</b></td>
+          <td>GFC</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Gecina%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Gecina" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E060</td>
+          <td><b>Gecina</b></td>
+          <td>GFC</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Gecina%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Gecina" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E061</td>
+          <td><b>Castellum</b></td>
+          <td>CAST</td>
+          <td>Sweden</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Castellum%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Castellum" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E061</td>
+          <td><b>Castellum</b></td>
+          <td>CAST</td>
+          <td>Sweden</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Castellum%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Castellum" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E061</td>
+          <td><b>Castellum</b></td>
+          <td>CAST</td>
+          <td>Sweden</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Castellum%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Castellum" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E062</td>
+          <td><b>Delivery Hero</b></td>
+          <td>DHER</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Delivery+Hero%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Delivery+Hero" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E062</td>
+          <td><b>Delivery Hero</b></td>
+          <td>DHER</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Delivery+Hero%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Delivery+Hero" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E062</td>
+          <td><b>Delivery Hero</b></td>
+          <td>DHER</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Delivery+Hero%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Delivery+Hero" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E063</td>
+          <td><b>Travis Perkins</b></td>
+          <td>TPK</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Travis+Perkins%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Travis+Perkins" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E063</td>
+          <td><b>Travis Perkins</b></td>
+          <td>TPK</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Travis+Perkins%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Travis+Perkins" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E063</td>
+          <td><b>Travis Perkins</b></td>
+          <td>TPK</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Travis+Perkins%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Travis+Perkins" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E064</td>
+          <td><b>H&M</b></td>
+          <td>HMB</td>
+          <td>Sweden</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22H%26M%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=H%26M" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E064</td>
+          <td><b>H&M</b></td>
+          <td>HMB</td>
+          <td>Sweden</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22H%26M%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=H%26M" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E064</td>
+          <td><b>H&M</b></td>
+          <td>HMB</td>
+          <td>Sweden</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22H%26M%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=H%26M" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E065</td>
+          <td><b>Marks & Spencer</b></td>
+          <td>MKS</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Marks+%26+Spencer%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Marks+%26+Spencer" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E065</td>
+          <td><b>Marks & Spencer</b></td>
+          <td>MKS</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Marks+%26+Spencer%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Marks+%26+Spencer" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E065</td>
+          <td><b>Marks & Spencer</b></td>
+          <td>MKS</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Marks+%26+Spencer%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Marks+%26+Spencer" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E066</td>
+          <td><b>JD Sports</b></td>
+          <td>JD</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22JD+Sports%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=JD+Sports" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E066</td>
+          <td><b>JD Sports</b></td>
+          <td>JD</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22JD+Sports%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=JD+Sports" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E066</td>
+          <td><b>JD Sports</b></td>
+          <td>JD</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22JD+Sports%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=JD+Sports" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E067</td>
+          <td><b>Melexis</b></td>
+          <td>MELE</td>
+          <td>Belgium</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Melexis%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Melexis" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E067</td>
+          <td><b>Melexis</b></td>
+          <td>MELE</td>
+          <td>Belgium</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Melexis%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Melexis" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E067</td>
+          <td><b>Melexis</b></td>
+          <td>MELE</td>
+          <td>Belgium</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Melexis%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Melexis" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E068</td>
+          <td><b>Sage Group</b></td>
+          <td>SGE</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Sage+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Sage+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E068</td>
+          <td><b>Sage Group</b></td>
+          <td>SGE</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Sage+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Sage+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E068</td>
+          <td><b>Sage Group</b></td>
+          <td>SGE</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Sage+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Sage+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E069</td>
+          <td><b>STMicroelectronics</b></td>
+          <td>STMPA</td>
+          <td>Netherlands</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22STMicroelectronics%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=STMicroelectronics" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E069</td>
+          <td><b>STMicroelectronics</b></td>
+          <td>STMPA</td>
+          <td>Netherlands</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22STMicroelectronics%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=STMicroelectronics" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E069</td>
+          <td><b>STMicroelectronics</b></td>
+          <td>STMPA</td>
+          <td>Netherlands</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22STMicroelectronics%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=STMicroelectronics" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E070</td>
+          <td><b>Vodafone Group</b></td>
+          <td>VOD</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vodafone+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vodafone+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E070</td>
+          <td><b>Vodafone Group</b></td>
+          <td>VOD</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vodafone+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vodafone+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E070</td>
+          <td><b>Vodafone Group</b></td>
+          <td>VOD</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Vodafone+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Vodafone+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E071</td>
+          <td><b>Swisscom</b></td>
+          <td>SCMN</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Swisscom%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Swisscom" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E071</td>
+          <td><b>Swisscom</b></td>
+          <td>SCMN</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Swisscom%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Swisscom" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E071</td>
+          <td><b>Swisscom</b></td>
+          <td>SCMN</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Swisscom%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Swisscom" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E072</td>
+          <td><b>Freenet</b></td>
+          <td>FNTN</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Freenet%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Freenet" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E072</td>
+          <td><b>Freenet</b></td>
+          <td>FNTN</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Freenet%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Freenet" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E072</td>
+          <td><b>Freenet</b></td>
+          <td>FNTN</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Freenet%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Freenet" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E073</td>
+          <td><b>Orange S.A.</b></td>
+          <td>ORAN</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Orange+S.A.%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Orange+S.A." target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E073</td>
+          <td><b>Orange S.A.</b></td>
+          <td>ORAN</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Orange+S.A.%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Orange+S.A." target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E073</td>
+          <td><b>Orange S.A.</b></td>
+          <td>ORAN</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Orange+S.A.%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Orange+S.A." target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E074</td>
+          <td><b>Telecom Italia</b></td>
+          <td>TIT</td>
+          <td>Italy</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Telecom+Italia%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Telecom+Italia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E074</td>
+          <td><b>Telecom Italia</b></td>
+          <td>TIT</td>
+          <td>Italy</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Telecom+Italia%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Telecom+Italia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E074</td>
+          <td><b>Telecom Italia</b></td>
+          <td>TIT</td>
+          <td>Italy</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Telecom+Italia%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Telecom+Italia" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E075</td>
+          <td><b>Compass Group</b></td>
+          <td>CPG</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Compass+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Compass+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E075</td>
+          <td><b>Compass Group</b></td>
+          <td>CPG</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Compass+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Compass+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E075</td>
+          <td><b>Compass Group</b></td>
+          <td>CPG</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Compass+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Compass+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E076</td>
+          <td><b>Flutter Entertainment</b></td>
+          <td>FLTR</td>
+          <td>Ireland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Flutter+Entertainment%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Flutter+Entertainment" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E076</td>
+          <td><b>Flutter Entertainment</b></td>
+          <td>FLTR</td>
+          <td>Ireland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Flutter+Entertainment%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Flutter+Entertainment" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E076</td>
+          <td><b>Flutter Entertainment</b></td>
+          <td>FLTR</td>
+          <td>Ireland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Flutter+Entertainment%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Flutter+Entertainment" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E077</td>
+          <td><b>Aena</b></td>
+          <td>AENA</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aena%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aena" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E077</td>
+          <td><b>Aena</b></td>
+          <td>AENA</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aena%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aena" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E077</td>
+          <td><b>Aena</b></td>
+          <td>AENA</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Aena%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Aena" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E078</td>
+          <td><b>Air France-KLM</b></td>
+          <td>AF</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Air+France-KLM%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Air+France-KLM" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E078</td>
+          <td><b>Air France-KLM</b></td>
+          <td>AF</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Air+France-KLM%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Air+France-KLM" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E078</td>
+          <td><b>Air France-KLM</b></td>
+          <td>AF</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Air+France-KLM%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Air+France-KLM" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E079</td>
+          <td><b>Enel</b></td>
+          <td>ENEL</td>
+          <td>Italy</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Enel%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Enel" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E079</td>
+          <td><b>Enel</b></td>
+          <td>ENEL</td>
+          <td>Italy</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Enel%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Enel" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E079</td>
+          <td><b>Enel</b></td>
+          <td>ENEL</td>
+          <td>Italy</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Enel%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Enel" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E080</td>
+          <td><b>Acciona Energía</b></td>
+          <td>ANE</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Acciona+Energ%C3%ADa%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Acciona+Energ%C3%ADa" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E080</td>
+          <td><b>Acciona Energía</b></td>
+          <td>ANE</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Acciona+Energ%C3%ADa%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Acciona+Energ%C3%ADa" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E080</td>
+          <td><b>Acciona Energía</b></td>
+          <td>ANE</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Acciona+Energ%C3%ADa%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Acciona+Energ%C3%ADa" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E081</td>
+          <td><b>Engie</b></td>
+          <td>ENGIE</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Engie%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Engie" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E081</td>
+          <td><b>Engie</b></td>
+          <td>ENGIE</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Engie%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Engie" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E081</td>
+          <td><b>Engie</b></td>
+          <td>ENGIE</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Engie%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Engie" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E082</td>
+          <td><b>SSE</b></td>
+          <td>SSE</td>
+          <td>United Kingdom</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22SSE%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=SSE" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E082</td>
+          <td><b>SSE</b></td>
+          <td>SSE</td>
+          <td>United Kingdom</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22SSE%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=SSE" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E082</td>
+          <td><b>SSE</b></td>
+          <td>SSE</td>
+          <td>United Kingdom</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22SSE%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=SSE" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E083</td>
+          <td><b>Enagás</b></td>
+          <td>ENG</td>
+          <td>Spain</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Enag%C3%A1s%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Enag%C3%A1s" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E083</td>
+          <td><b>Enagás</b></td>
+          <td>ENG</td>
+          <td>Spain</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Enag%C3%A1s%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Enag%C3%A1s" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E083</td>
+          <td><b>Enagás</b></td>
+          <td>ENG</td>
+          <td>Spain</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Enag%C3%A1s%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Enag%C3%A1s" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E084</td>
+          <td><b>Wolters Kluwer</b></td>
+          <td>WKL</td>
+          <td>Netherlands</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wolters+Kluwer%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wolters+Kluwer" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E084</td>
+          <td><b>Wolters Kluwer</b></td>
+          <td>WKL</td>
+          <td>Netherlands</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wolters+Kluwer%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wolters+Kluwer" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E084</td>
+          <td><b>Wolters Kluwer</b></td>
+          <td>WKL</td>
+          <td>Netherlands</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wolters+Kluwer%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wolters+Kluwer" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E085</td>
+          <td><b>Stora Enso</b></td>
+          <td>STER</td>
+          <td>Finland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Stora+Enso%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Stora+Enso" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E085</td>
+          <td><b>Stora Enso</b></td>
+          <td>STER</td>
+          <td>Finland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Stora+Enso%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Stora+Enso" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E085</td>
+          <td><b>Stora Enso</b></td>
+          <td>STER</td>
+          <td>Finland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Stora+Enso%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Stora+Enso" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E086</td>
+          <td><b>TUI Group</b></td>
+          <td>TUI</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22TUI+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=TUI+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E086</td>
+          <td><b>TUI Group</b></td>
+          <td>TUI</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22TUI+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=TUI+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E086</td>
+          <td><b>TUI Group</b></td>
+          <td>TUI</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22TUI+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=TUI+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E087</td>
+          <td><b>Orkla ASA</b></td>
+          <td>ORK</td>
+          <td>Norway</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Orkla+ASA%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Orkla+ASA" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E087</td>
+          <td><b>Orkla ASA</b></td>
+          <td>ORK</td>
+          <td>Norway</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Orkla+ASA%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Orkla+ASA" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E087</td>
+          <td><b>Orkla ASA</b></td>
+          <td>ORK</td>
+          <td>Norway</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Orkla+ASA%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Orkla+ASA" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E088</td>
+          <td><b>Barry Callebaut</b></td>
+          <td>BARN</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Barry+Callebaut%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Barry+Callebaut" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E088</td>
+          <td><b>Barry Callebaut</b></td>
+          <td>BARN</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Barry+Callebaut%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Barry+Callebaut" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E088</td>
+          <td><b>Barry Callebaut</b></td>
+          <td>BARN</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Barry+Callebaut%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Barry+Callebaut" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E089</td>
+          <td><b>Adecco</b></td>
+          <td>ADEN</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Adecco%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Adecco" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E089</td>
+          <td><b>Adecco</b></td>
+          <td>ADEN</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Adecco%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Adecco" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E089</td>
+          <td><b>Adecco</b></td>
+          <td>ADEN</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Adecco%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Adecco" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E090</td>
+          <td><b>Wihlborgs Fastigheter</b></td>
+          <td>WIHL</td>
+          <td>Sweden</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wihlborgs+Fastigheter%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wihlborgs+Fastigheter" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E090</td>
+          <td><b>Wihlborgs Fastigheter</b></td>
+          <td>WIHL</td>
+          <td>Sweden</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wihlborgs+Fastigheter%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wihlborgs+Fastigheter" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E090</td>
+          <td><b>Wihlborgs Fastigheter</b></td>
+          <td>WIHL</td>
+          <td>Sweden</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Wihlborgs+Fastigheter%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Wihlborgs+Fastigheter" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E091</td>
+          <td><b>Porsche</b></td>
+          <td>P911</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Porsche%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Porsche" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E091</td>
+          <td><b>Porsche</b></td>
+          <td>P911</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Porsche%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Porsche" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E091</td>
+          <td><b>Porsche</b></td>
+          <td>P911</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Porsche%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Porsche" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E092</td>
+          <td><b>Evonik Industries</b></td>
+          <td>EVK</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Evonik+Industries%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Evonik+Industries" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E092</td>
+          <td><b>Evonik Industries</b></td>
+          <td>EVK</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Evonik+Industries%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Evonik+Industries" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E092</td>
+          <td><b>Evonik Industries</b></td>
+          <td>EVK</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Evonik+Industries%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Evonik+Industries" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E093</td>
+          <td><b>Brenntag</b></td>
+          <td>BNR</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Brenntag%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Brenntag" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E093</td>
+          <td><b>Brenntag</b></td>
+          <td>BNR</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Brenntag%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Brenntag" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E093</td>
+          <td><b>Brenntag</b></td>
+          <td>BNR</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Brenntag%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Brenntag" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E094</td>
+          <td><b>L'Oréal</b></td>
+          <td>OR</td>
+          <td>France</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22L%27Or%C3%A9al%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=L%27Or%C3%A9al" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E094</td>
+          <td><b>L'Oréal</b></td>
+          <td>OR</td>
+          <td>France</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22L%27Or%C3%A9al%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=L%27Or%C3%A9al" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E094</td>
+          <td><b>L'Oréal</b></td>
+          <td>OR</td>
+          <td>France</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22L%27Or%C3%A9al%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=L%27Or%C3%A9al" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E095</td>
+          <td><b>UBS Group</b></td>
+          <td>UBSG</td>
+          <td>Switzerland</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22UBS+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=UBS+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E095</td>
+          <td><b>UBS Group</b></td>
+          <td>UBSG</td>
+          <td>Switzerland</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22UBS+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=UBS+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E095</td>
+          <td><b>UBS Group</b></td>
+          <td>UBSG</td>
+          <td>Switzerland</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22UBS+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=UBS+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E096</td>
+          <td><b>Nemetschek</b></td>
+          <td>NEM</td>
+          <td>Germany</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Nemetschek%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Nemetschek" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E096</td>
+          <td><b>Nemetschek</b></td>
+          <td>NEM</td>
+          <td>Germany</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Nemetschek%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Nemetschek" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E096</td>
+          <td><b>Nemetschek</b></td>
+          <td>NEM</td>
+          <td>Germany</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Nemetschek%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Nemetschek" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E097</td>
+          <td><b>Universal Music Group</b></td>
+          <td>UMG</td>
+          <td>Netherlands</td>
+          <td>2022</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Universal+Music+Group%22+annual+report+2022+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Universal+Music+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E097</td>
+          <td><b>Universal Music Group</b></td>
+          <td>UMG</td>
+          <td>Netherlands</td>
+          <td>2023</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Universal+Music+Group%22+annual+report+2023+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Universal+Music+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+        <tr style="background:#f8f9fa">
+          <td>E097</td>
+          <td><b>Universal Music Group</b></td>
+          <td>UMG</td>
+          <td>Netherlands</td>
+          <td>2024</td>
+          <td><span style="color:#0d6efd">pendiente</span></td>
+          <td>
+            <a href="https://www.google.com/search?q=%22Universal+Music+Group%22+annual+report+2024+filetype%3Apdf" target="_blank">Google</a> |
+            <a href="https://www.responsibilityreports.com/Search/?q=Universal+Music+Group" target="_blank">RR.com</a>
+          </td>
+          <td style="font-size:0.85em;color:#666"></td>
+        </tr>
+    </tbody>
+  </table>
+</body>
+</html>

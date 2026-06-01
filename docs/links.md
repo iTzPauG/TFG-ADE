@@ -34,10 +34,7 @@
 |--------|------|--------|
 | STOXX Europe 600 (Wikipedia) | https://en.wikipedia.org/wiki/STOXX_Europe_600 | Composición del índice en HTML |
 | STOXX oficial (Qontigo) | https://qontigo.com | Fichas de índice (requiere registro) |
-| Refinitiv/LSEG Workspace | Acceso vía biblioteca UV | Scores ESG completos |
-| MSCI ESG Ratings (público) | https://www.msci.com/our-solutions/esg-investing/esg-ratings-climate-search-tool | Ratings limitados gratuitos |
 | CDP datos climáticos | https://www.cdp.net/en/responses | Datos climáticos abiertos |
-| Sustainalytics | https://www.sustainalytics.com/esg-ratings | ESG Risk Ratings por empresa |
 
 ---
 
@@ -85,7 +82,6 @@
 |---------------|-------------|
 | Web of Science | https://www.uv.es/biblioteca → Recursos electrónicos → Web of Science |
 | Scopus | Ídem → Scopus |
-| Refinitiv/LSEG Workspace | Preguntar directamente en la Biblioteca de Económicas de la UV |
 
 ---
 

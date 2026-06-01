@@ -11,7 +11,7 @@
 ## Justificación del diseño muestral
 
 **Por qué muestreo estratificado:**  
-El STOXX 600 está muy concentrado sectorialmente (Financial Services + Industrials representan >40%). Un muestreo aleatorio simple daría representación excesiva a estos sectores y dejaría sin representación a sectores pequeños pero relevantes para el análisis ESG (Real Estate, Utilities). La estratificación garantiza que cada supersector ICB aporte al análisis comparativo (RQ2).
+El STOXX 600 está muy concentrado sectorialmente (Financial Services + Industrials representan >40%). Un muestreo aleatorio simple daría representación excesiva a estos sectores y dejaría sin representación a sectores pequeños pero relevantes para el análisis de sostenibilidad (Real Estate, Utilities). La estratificación garantiza que cada supersector ICB aporte al análisis comparativo (RQ2).
 
 **Por qué aleatorio dentro del estrato (no top por capitalización):**  
 La selección por capitalización sesga hacia mega-caps con mayor capacidad de reporting (más recursos, más presión mediática). Para estudiar variación en calidad de disclosure necesitamos dispersión dentro de cada sector, no solo los líderes. El muestreo aleatorio dentro del estrato es metodológicamente más sólido para generalizar al sector.
@@ -28,22 +28,19 @@ La selección por capitalización sesga hacia mega-caps con mayor capacidad de r
 
 | Supersector | Empresas |
 |-------------|----------|
-| Industrial Goods and Services | 10 |
+| Industrials | 13 |
 | Financials | 10 |
+| Consumer Discretionary | 10 |
 | Communication Services | 5 |
 | Health Care | 5 |
 | Basic Materials | 4 |
-| Consumer Products and Services | 3 |
 | Utilities | 3 |
-| Construction and Materials | 3 |
-| Consumer Discretionary | 3 |
 | Technology | 3 |
-| Food, Beverage and Tobacco | 2 |
+| Consumer Staples | 3 |
 | Real Estate | 2 |
 | Energy | 2 |
-| Travel and Leisure | 2 |
-| Automobiles and Parts | 2 |
-| Personal Care, Drug and Grocery Stores | 1 |
+
+*Los sectores ICB de Wikipedia (ej. "Industrial Goods and Services", "Construction and Materials") se agrupan en supersectores estándar mediante el mapeo SUPERSECTORES en `scripts/fase2_muestra.py`.*
 
 ## Distribución por país
 
@@ -64,45 +61,64 @@ La selección por capitalización sesga hacia mega-caps con mayor capacidad de r
 
 ## Datos financieros (yfinance)
 
-- **Cobertura market_cap:** 42/60 empresas (70%)
-- **Cobertura ESG scores:** 0/60 — yfinance ha deprecado la API de sostenibilidad para acciones europeas
+- **Cobertura capitalización:** 55/60 empresas (92%)
+- **Cobertura ISIN:** 60/60 — completado con Wikidata SPARQL
 - **Datos disponibles vía yfinance:** ROA, ROE, deuda/equity, ingresos, EBITDA, margen de beneficio
 
-## ESG scores — plan para obtenerlos
+### Empresas sin datos en yfinance (5/60)
 
-Los scores ESG **no están disponibles en yfinance** para la mayoría de empresas europeas. Opciones por orden de preferencia:
+| Empresa | Ticker | Motivo | Acción recomendada |
+|---------|--------|--------|--------------------|
+| Smurfit Kappa | SKG | Fusionada en Smurfit WestRock (SW, NYSE) en 2024; SKG.IR retirado | Datos financieros históricos no disponibles en yfinance |
+| Phoenix Group | PHNX | PHNX.L da 404 en yfinance (bug conocido); empresa activa en LSE | Datos financieros no disponibles en yfinance |
+| Adevinta | ADH | Privatizada por consorcio PE en 2023; sin cotización activa | Datos financieros no disponibles en yfinance |
+| Lumibird | LUMI | Micro-cap francesa sin cobertura en yfinance | Datos financieros no disponibles en yfinance |
+| Swedish Match | SWMA | Adquirida por Philip Morris y retirada de bolsa en 2022 | Considerar sustitución en la muestra si se necesitan 2 años completos |
 
-### Opción A — Refinitiv/LSEG Workspace (recomendada)
-Pedir acceso en la **Biblioteca de Económicas de la UV**. Permite exportar directamente una tabla con:
-- ESG Combined Score
-- Environmental Score (E)
-- Social Score (S)
-- Governance Score (G)
-- Controversies Score
-- Para todos los años 2022 y 2023
+### Correcciones de tickers aplicadas
 
-Pasos: buscar las empresas por ISIN o nombre → seleccionar campos ESG → exportar CSV → merge con `empresas_muestra.csv`.
+El script aplica 13 overrides de tickers donde el ticker de Wikipedia no funciona en yfinance:
 
-### Opción B — Sustainalytics (manual)
-Buscar empresa por empresa en https://www.sustainalytics.com/esg-ratings  
-- Da ESG Risk Rating (numérico, a menor valor = menor riesgo)
-- Tedioso pero gratuito
-- Guardar en `data/external/sustainalytics_manual.csv` con columnas: `nombre, ESG_risk_score, ESG_risk_categoria`
+| Ticker Wikipedia | Ticker yfinance | Motivo |
+|-----------------|-----------------|--------|
+| NOVO B | NOVO-B.CO | Clase B con espacio → guión |
+| SKA B | SKA-B.ST | Clase B con espacio → guión |
+| ERICb | ERIC-B.ST | Formato incorrecto → guión |
+| BT.A | BT-A.L | Punto → guión |
+| STMPA | STM | NYSE tiene mejor cobertura que Amsterdam |
+| QIA | QGEN | NYSE tiene mejor cobertura que Amsterdam |
+| STLAM | STLA | NYSE tiene mejor cobertura que Amsterdam |
+| HMB | HNNMY | ADR americano (HMB.ST sin datos en yfinance) |
+| ENGIE | ENGI.PA | ENGIE.PA da 404; ENGI.PA funciona |
+| AKERBP | AKRBP.OL | AKERBP.OL da 404; AKRBP.OL funciona |
+| INP | INVP.L | INP es ticker incorrecto; INVP es el correcto en LSE |
+| TOM | TOM2.AS | TOM.AS sin datos; TOM2.AS funciona |
+| FLTR | FLTR.L | FLTR.IR sin datos; FLTR.L (London) funciona |
 
-### Opción C — MSCI ESG Ratings (limitado)
-https://www.msci.com/our-solutions/esg-investing/esg-ratings-climate-search-tool  
-Solo da la categoría (AAA/AA/A/BBB/BB/B/CCC), no el score numérico.
+## Variables proxy de greenwashing (Fase 5 → columnas futuras en empresas_muestra.csv)
 
-### Cómo incorporarlos al dataset maestro
-Una vez obtenidos, hacer merge sobre `empresas_muestra.csv` por `nombre` o `ticker`:
+Se adopta la **Opción A** (Decisión 001 en `docs/decisiones.md`): el greenwashing se operacionaliza mediante variables textuales internas.
 
-```python
-import pandas as pd
-maestro = pd.read_csv("data/external/empresas_muestra.csv")
-esg = pd.read_csv("data/external/esg_scores_refinitiv.csv")  # exportado de Refinitiv
-maestro = maestro.merge(esg, on=["ticker", "año"], how="left")
-maestro.to_csv("data/external/empresas_muestra.csv", index=False)
-```
+Las siguientes columnas se añadirán al dataset maestro al ejecutar los scripts de Fase 5:
+
+| Variable | Tipo | Fuente | Descripción |
+|----------|------|--------|-------------|
+| `tono_positivo` | float 0–1 | FinBERT | Media de score "positive" por documento |
+| `tono_negativo` | float 0–1 | FinBERT | Media de score "negative" por documento |
+| `especificidad` | float 0–1 | ClimateBERT-specificity | % de oraciones climáticas con compromisos concretos |
+| `hedging_ratio` | float 0–1 | Loughran-McDonald | Modal/uncertainty words / total tokens |
+| `ratio_cuantitativo` | float 0–1 | regex | % oraciones con cifras, %, años concretos |
+| `ratio_futuro` | float 0–1 | spaCy POS | % verbos en futuro/condicional |
+| `cobertura_ESRS_E` | float 0–1 | diccionario ESRS | Densidad de keywords ambientales (E1-E5) |
+| `cobertura_ESRS_S` | float 0–1 | diccionario ESRS | Densidad de keywords sociales (S1-S4) |
+| `cobertura_ESRS_G` | float 0–1 | diccionario ESRS | Densidad de keywords gobernanza (G1) |
+| `GW_index` | float | combinado | Índice de greenwashing textual (z-score compuesto) |
+| `n_tokens` | int | spaCy | Longitud del management report en tokens |
+| `topic_dominante` | str | BERTopic | Topic más prevalente del documento |
+
+**Referencia:** Bingler et al. (2022) — "Cheap talk and cherry-picking" — usa ClimateBERT-specificity.
+
+---
 
 ## Archivos generados
 
@@ -110,6 +126,7 @@ maestro.to_csv("data/external/empresas_muestra.csv", index=False)
 |---------|-------------|
 | `data/external/stoxx600_componentes.csv` | 534 empresas del índice con sector ICB y país |
 | `data/external/muestra_seleccionada.csv` | 60 empresas seleccionadas con tickers y metadatos |
+| `data/external/isins_wikidata.csv` | ISINs obtenidos vía Wikidata SPARQL (59 automáticos + 6 correcciones manuales) |
 | `data/external/yfinance_datos.csv` | Datos financieros de yfinance por empresa |
 | `data/external/empresas_muestra.csv` | Dataset maestro (120 filas: 60 empresas × 2 años) |
 | `data/external/tracking_descargas.csv` | Hoja de seguimiento para recolección de informes (Fase 3) |

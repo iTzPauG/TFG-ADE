@@ -1,6 +1,10 @@
 # TFG ADE — Guía de trabajo paso a paso
 
-> **Objetivo:** Análisis de informes de sostenibilidad del STOXX Europe 600 mediante PLN (NLP) para detectar impression management / greenwashing bajo el marco regulatorio CSRD/ESRS.
+Título : "Comunicación corporativa y estrategias de gestión en los informes de sostenibilidad de las empresas europeas: un análisis de contenido mediante técnicas de inteligencia artificial".
+
+Abstract: "En el marco del Pacto Verde Europeo y de la creciente presión normativa vinculada a la sostenibilidad, las empresas europeas han tenido que transformar no solo sus prácticas ambientales y sociales, sino también la manera como las comunican. Instrumentos legislativos como la Directiva sobre informes de sostenibilidad corporativa (CSRD), la Taxonomía Europea y el Reglamento SFDR han redefinido las expectativas sobre la transparencia y la rendición de cuentas. En este contexto, el presente trabajo analiza como las grandes empresas europeas comunican sus estrategias de sostenibilidad a través de los informes corporativos, centrándose especialmente en los informes de sostenibilidad como pieza clave del relato empresarial.
+
+Para llevar a cabo este análisis, se aplican técnicas de inteligencia artificial, concretamente de procesamiento del lenguaje natural (PLN), que permiten examinar de manera objetiva, sistemática y escalable el contenido de los informes de una muestra de las empresas que conforman el índice Eurostoxx 600. El objetivo es identificar los principales discursos, enfoques estratégicos y patrones comunicativos empleados en la presentación de la sostenibilidad, así como su impacto empresarial y coherencia con la normativa de la Unión Europea.
 
 ---
 
@@ -73,7 +77,7 @@ TFG-ADE/
 │   ├── raw/              # PDFs originales — nunca se modifican
 │   ├── interim/          # textos extraídos sin limpiar
 │   ├── processed/        # textos limpios y segmentados
-│   └── external/         # datos ESG, financieros
+│   └── external/         # datos financieros externos
 ├── scripts/              # scripts Python (.py) por fase
 │   ├── scraping/
 │   ├── extraction/
@@ -170,11 +174,12 @@ Filtra por: 2015-2025, revistas Q1-Q2. Exporta a Zotero en formato RIS.
 
 - **RQ1:** ¿Qué temas predominan en el management report de las empresas del STOXX 600?
 - **RQ2:** ¿Existen diferencias significativas en contenido y tono según sector y país?
-- **RQ3:** ¿Hay correlación entre tono optimista y desempeño ESG real (proxy de greenwashing)?
+- **RQ3:** ¿Qué factores empresariales (sector, país, tamaño) predicen mayor especificidad y cobertura cuantitativa en el reporting de sostenibilidad? ¿Las empresas con tono más optimista presentan menor especificidad (señal textual de greenwashing)?
 - **RQ4:** ¿Cómo ha evolucionado el reporting entre el régimen NFRD y los primeros informes bajo CSRD?
 
 **Paso 1.11.** Para cada RQ, deriva hipótesis testables. Ejemplo:
-> "H3: empresas con peor ESG score tienden a usar lenguaje más optimista y más vago que las de alto score."
+> "H3a: empresas de sectores de alta exposición mediática (energía, utilities) presentan mayor tono positivo pero menor especificidad que sectores industriales."
+> "H3b: existe correlación negativa entre tono optimista (FinBERT) y especificidad de compromisos (ClimateBERT): más optimismo → menos detalle concreto."
 
 **Paso 1.12.** Reúnete con tu tutor para validar preguntas y enfoque. **No avances sin su visto bueno.**
 
@@ -190,51 +195,37 @@ Filtra por: 2015-2025, revistas Q1-Q2. Exporta a Zotero en formato RIS.
 
 > **Cuándo:** Semana 4.
 
-**Paso 2.1.** Descarga la composición del STOXX Europe 600:
+**Paso 2.1.** Descarga la composición del STOXX Europe 600 desde Wikipedia y guarda en `data/external/stoxx600_componentes.csv`. Script: `scripts/fase2_muestra.py --regen-muestra`.
 
-```python
-import pandas as pd
+**Paso 2.2.** Mapea los tickers al formato yfinance (sufijo de bolsa por país, p.ej. `.DE`, `.PA`, `.L`). Hay casos especiales: clases de acciones (Novo Nordisk → `NOVO-B.CO`), listings USD con mejor cobertura que el europeo (Stellantis → `STLA`), tickers incorrectos en Wikipedia, etc. Todos los overrides quedan documentados en `TICKER_OVERRIDES` dentro de `fase2_muestra.py`.
 
-url = "https://en.wikipedia.org/wiki/STOXX_Europe_600"
-tablas = pd.read_html(url)
-df_stoxx = tablas[0]  # comprueba el índice correcto
-df_stoxx.to_csv("data/external/stoxx600_componentes.csv", index=False)
-```
+**Paso 2.3.** Diseño muestral: **estratificado por sector ICB** con cuota de 5 empresas/sector y **cap geográfico ≤ 15 empresas por país**, aplicado iterativamente.
 
-**Paso 2.2.** Enriquece la tabla con sector ICB, país y capitalización:
+> **Muestra real: 97 empresas** (3 sectores con <5 disponibles tras excluir empresas privatizadas/sin datos). El cap geográfico corrige la sobrerepresentación estructural de UK (32% del STOXX 600). `random_state=42`. Ver Decisiones 002 y 005.
 
-```python
-import yfinance as yf
+**Paso 2.4.** Selección dentro de cada estrato:
+- **Aleatoriamente** con `df.sample(random_state=42)`: representatividad sin sesgo mega-cap
+- Excluye empresas sin cobertura yfinance (privatizadas, micro-caps, bugs confirmados)
 
-for ticker in df_stoxx["Ticker"]:
-    info = yf.Ticker(ticker).info
-    # extrae sector, industry, marketCap, country
-```
-
-**Paso 2.3.** Decide el diseño muestral. Recomendación: **muestreo estratificado** por sector ICB × región (Europa continental / UK / Nórdicos).
-
-> 60 empresas ≈ 3 por cada uno de los 20 supersectores ICB. Documenta la justificación citando el principio de saturación cualitativa.
-
-**Paso 2.4.** Selecciona dentro de cada estrato:
-- Por **capitalización** (top-3 por sector): mejor disponibilidad de datos
-- **Aleatoriamente** con `df.sample(random_state=42)`: mejor representatividad
-
-**Paso 2.5.** Consigue datos ESG y financieros de control (por orden de preferencia):
+**Paso 2.5.** Consigue datos financieros de control **año a año** desde `income_stmt` y `balance_sheet` de yfinance — no uses los campos trailing de `.info` (son el mismo valor para todos los años):
 
 | Fuente | Acceso | Qué da |
 |--------|--------|--------|
-| Refinitiv/LSEG Workspace | Biblioteca UV (pide en Económicas) | Scores ESG completos, datos financieros |
-| Bloomberg Terminal | Sala de la facultad | Ídem |
-| MSCI ESG Ratings | msci.com (limitado, gratuito) | Ratings ESG |
-| CDP | cdp.net (abierto) | Datos climáticos |
-| Sustainalytics | sustainalytics.com (empresa a empresa) | ESG Risk Ratings |
-| yfinance | pip install yfinance | ROA, ROE, tamaño, sector |
+| yfinance | pip install yfinance | ROA, ROE, ingresos, EBITDA, deuda, equity, margen — por año |
 
-**Paso 2.6.** Construye el **dataset maestro** en `data/external/empresas_muestra.csv`:
+> **ISINs:** usa la cascada yfinance → Wikidata (SPARQL, propiedad P946) → búsqueda manual. Script: `scripts/completar_isins.py`. Cobertura final: 97/97. Ver Decisión 004.
 
-Columnas: `id_empresa, nombre, ticker, ISIN, país, sector_ICB, supersector, capitalización, ESG_score, ESG_env, ESG_soc, ESG_gov, controversias, ROA, ROE, deuda, año`
+> **EBITDA para entidades financieras:** yfinance no devuelve EBITDA directo para bancos ni aseguradoras. Se calcula por cascada: EBITDA → Normalized EBITDA → EBIT+D&A → Operating Income+D&A → Pretax Income+D&A. Cobertura resultante: 93-97% por año. Ver Decisión 007 y `scripts/fase2_parche_ebitda.py`.
 
-Estructura: 60 empresas × 2 años = **120 filas**.
+> **Gap FY2022:** 4 empresas con año fiscal no-diciembre (Richemont, 3i, JD Sports, Vodafone) carecen de datos para FY2022 — balance_sheet de yfinance solo cubre los 4 ejercicios más recientes. 1.4% del panel; documentado en `nota`. Ver Decisión 006.
+
+**Paso 2.6.** Dataset maestro en `data/external/empresas_muestra.csv`:
+
+Columnas: `id_empresa, nombre, ticker, ticker_yf, ISIN, pais, sector_ICB, supersector, año, capitalización, moneda, ingresos, ebitda, net_income, total_assets, equity, deuda, ROA, ROE, margen_beneficio, deuda_equity, sector_yf, industria_yf, pais_yf, fuente_ebitda, nota, error_yf`
+
+Estructura: **97 empresas × 3 años (2022-2024) = 291 filas.** Los 3 años permiten analizar la transición NFRD→CSRD (2024 = primer ejercicio obligatorio CSRD para grandes PIEs). Ver Decisión 003.
+
+El `tracking_descargas.csv` se genera automáticamente con una fila por empresa×año en estado `pendiente` — se rellena en la Fase 3.
 
 **Paso 2.7.** Valida la muestra con tu tutor antes de seguir.
 
@@ -254,7 +245,7 @@ Estado puede ser: `pendiente / descargado / problema / descartado`
 
 **Paso 3.3.** Primera pasada en **ResponsibilityReports.com** — cubre el 60-70% de la muestra.
 
-**Paso 3.4.** Segunda pasada: **webs corporativas** — `[empresa].com → Investors / Sustainability → Reports`. Para automatizar usa Google Custom Search API o hazlo a mano (en 60 empresas, 4 horas).
+**Paso 3.4.** Segunda pasada: **webs corporativas** — `[empresa].com → Investors / Sustainability → Reports`. Para automatizar usa Google Custom Search API o hazlo a mano (en 97 empresas, ~6 horas).
 
 **Paso 3.5.** Tercera pasada: **registros oficiales**:
 - España: BORME
@@ -457,33 +448,58 @@ Estos cuatro modelos juntos son la base para detectar greenwashing.
 
 **Paso 5.15.** Aplica ClimateBERT-specificity y construye un **score de especificidad** por documento.
 
-**Paso 5.16.** Define el **"índice de greenwashing"** como combinación:
+**Paso 5.16.** Define el **"índice de greenwashing textual"** como combinación de variables internas al texto:
+
 ```
-Alto tono optimista + baja especificidad + bajo ESG score real = sospecha de greenwashing
+GW_index = α·tono_positivo + β·(1 - especificidad) + γ·hedging_ratio + δ·ratio_futuro_condicional
 ```
-Es un proxy, no una prueba — redáctalo con cautela en el TFG.
+
+Variables que lo componen (todas calculables desde el texto, sin datos externos):
+
+| Variable | Cómo se calcula | Escala |
+|----------|----------------|--------|
+| `tono_positivo` | FinBERT: media de score positive por documento | 0–1 |
+| `especificidad` | ClimateBERT-specificity: % oraciones específicas | 0–1 |
+| `hedging_ratio` | Loughran-McDonald modal words / total tokens | 0–1 |
+| `ratio_cuantitativo` | % oraciones con cifras, %, años | 0–1 |
+| `ratio_futuro` | % verbos en futuro/condicional (spaCy POS) | 0–1 |
+
+Índice final: normaliza cada variable a z-score y promedia. Clasifica empresas en cuartiles: Q4 (mayor GW_index) = mayor sospecha de comunicación vaga con tono optimista.
+
+Referencia metodológica: Bingler et al. (2022) — "Cheap talk and cherry-picking" — usa ClimateBERT-specificity como proxy de greenwashing basado exclusivamente en el texto.
+
+> Es un proxy textual, no una prueba de greenwashing. Redáctalo con cautela en el TFG: "señal de posible impresión gestionada" o "discrepancia entre tono y especificidad".
 
 ---
 
 ### Bloque 5E — Análisis estadístico comparativo (semana 12)
 
 **Paso 5.17.** Tests estadísticos:
-- **ANOVA / Kruskal-Wallis**: diferencias entre sectores
-- **Tests t pareados**: cambios entre 2022 y 2023
-- **Correlaciones** (Pearson/Spearman): métricas textuales vs scores ESG
+- **ANOVA / Kruskal-Wallis**: diferencias de especificidad y tono entre sectores
+- **Tests t pareados**: cambios entre 2022 y 2023 en todas las métricas textuales
+- **Correlaciones** (Pearson/Spearman): tono_positivo vs especificidad, hedging vs cobertura ESRS
 
-**Paso 5.18.** Regresión con `statsmodels`:
+**Paso 5.18.** Dos regresiones con `statsmodels`:
+
+*Modelo 1 — Determinantes de la especificidad del reporting:*
 ```
-ESG_score ~ tono_positivo + especificidad + cobertura_E + cobertura_S + cobertura_G
-          + log(capitalización) + sector + país + año
+especificidad ~ cobertura_E + cobertura_S + cobertura_G
+              + log(capitalización) + sector + país + año
 ```
-Reporta coeficientes, errores estándar robustos, R², diagnósticos.
+
+*Modelo 2 — Correlato entre optimismo y vaguedad (proxy greenwashing):*
+```
+hedging_ratio ~ tono_positivo + ratio_futuro + ratio_cuantitativo
+              + log(capitalización) + sector + año
+```
+
+Reporta coeficientes, errores estándar robustos (HC3), R², F-statistic y diagnósticos de multicolinealidad (VIF).
 
 **Paso 5.19.** Visualizaciones finales (semana 12, días 4-5):
 - Heatmap de cobertura ESRS por sector
-- Boxplots de sentimiento por país
-- Scatterplot tono vs ESG score con línea de regresión
-- Mapa coroplético de Europa con métrica destacada (geopandas + shapefile NUTS de Eurostat)
+- Boxplots de especificidad y tono por país
+- Scatterplot tono_positivo vs especificidad (burbuja = capitalización, color = sector)
+- Mapa coroplético de Europa con GW_index medio por país (geopandas + shapefile NUTS de Eurostat)
 - Evolución temporal de topics (BERTopic temporal viz)
 
 Guarda todas en `results/figures/` en **PNG (300 dpi) y SVG**.
@@ -502,7 +518,7 @@ pip install streamlit
 
 Estructura:
 - Página 1: Overview del corpus (selectores por sector/país/año)
-- Página 2: Explorador por empresa (perfil ESG + métricas textuales)
+- Página 2: Explorador por empresa (métricas textuales)
 - Página 3: Visualizador de topics interactivo
 - Página 4: Comparador entre empresas
 

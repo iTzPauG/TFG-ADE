@@ -30,7 +30,7 @@ Los diccionarios generales de sentimiento (Harvard GI) clasifican erróneamente 
 - Las palabras de **Uncertainty** y **Weak modal** son proxy de hedging language → indicador de vaguedad
 - El diccionario está descargado en: `data/external/diccionarios/LoughranMcDonald_MasterDictionary.csv`
 
-**Limitación relevante:** Desarrollado para textos financieros anglosajones (10-Ks de la SEC). Aplicarlo a informes ESG europeos puede generar ruido. Documentar en la sección de limitaciones del TFG.
+**Limitación relevante:** Desarrollado para textos financieros anglosajones (10-Ks de la SEC). Aplicarlo a informes de sostenibilidad europeos puede generar ruido. Documentar en la sección de limitaciones del TFG.
 
 ---
 
@@ -76,7 +76,7 @@ Desarrolla el concepto de **"organizational façade"** aplicado a los informes d
 - **Façade:** presentación externa construida para legitimar la organización
 
 **Uso en el TFG:**
-Marco teórico para interpretar por qué empresas con peor ESG score podrían usar lenguaje más optimista. Respaldo al "índice de greenwashing" (Paso 5.16).
+Marco teórico para interpretar por qué empresas con peores prácticas de sostenibilidad podrían usar lenguaje más optimista. Respaldo al "índice de greenwashing" (Paso 5.16).
 
 **Gap que deja:** No propone métricas cuantitativas. El TFG aporta operacionalización mediante PLN.
 
@@ -142,7 +142,7 @@ Referencia directa para el "índice de greenwashing" (Paso 5.16). Citar como est
 
 | Autor | Año | Muestra | Método | Hallazgo principal | Gap para el TFG |
 |-------|-----|---------|--------|--------------------|-----------------|
-| Loughran & McDonald | 2011 | 10-Ks SEC | Análisis textual, regresión | Diccionarios generales inadecuados para finanzas | No ESG, no europeo |
+| Loughran & McDonald | 2011 | 10-Ks SEC | Análisis textual, regresión | Diccionarios generales inadecuados para finanzas | No sostenibilidad, no europeo |
 | Hahn & Lülfs | 2014 | DJIA + DAX | Análisis cualitativo | 6 estrategias de legitimación | No cuantitativo, muestra pequeña |
 | Michelon et al. | 2015 | Empresas cotizadas | Análisis de contenido | Reporting más simbólico que sustancial | Pre-CSRD, no PLN |
 | Cho et al. | 2015 | Empresas cotizadas | Análisis conceptual | Concepto de organizational façade | Sin operacionalización cuantitativa |
@@ -156,7 +156,7 @@ Referencia directa para el "índice de greenwashing" (Paso 5.16). Citar como est
 ## Cadenas de búsqueda utilizadas (Paso 1.6)
 
 ```
-("sustainability report*" OR "ESG disclosure" OR "non-financial report*") AND ("text analysis" OR "NLP" OR "content analysis")
+("sustainability report*" OR "sustainability disclosure" OR "non-financial report*") AND ("text analysis" OR "NLP" OR "content analysis")
 ("impression management" OR "greenwashing") AND ("corporate report*")
 ("CSRD" OR "ESRS") AND ("disclosure" OR "reporting")
 ```
