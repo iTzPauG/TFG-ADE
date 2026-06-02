@@ -176,3 +176,91 @@
 **Implementación:** Se marcan como `estado=descartado` en `tracking_descargas.csv` y se anota la exclusión en el campo `nota` de `empresas_muestra.csv`. **No se eliminan las filas**: se preserva el panel financiero y la traza documental. El pipeline de Fase 4 debe filtrar las observaciones con `estado=descartado` antes de extraer texto.
 
 **Impacto en la muestra:** Corpus NLP = **289 observaciones empresa-año** (vs 291 del panel financiero). 2/291 = 0.7% del total. No afecta materialmente al poder estadístico. Documentar en Metodología como exclusión justificada por ausencia de contenido analizable.
+
+---
+
+## Decisión 011 — Extracción de texto (Fase 4A) y remediación por OCR de PDFs con fuente corrupta
+
+**Decisión:** Extraer el texto de los 289 PDFs con **PyMuPDF** (`fitz`, unión de páginas con `\n`). Control de calidad por documento: ratio de caracteres de control y densidad de palabras-función en el idioma detectado. Los PDFs con **fuente embebida sin mapa ToUnicode/cmap válido** (texto ilegible) se remedian con un **OCR híbrido**: se rasteriza con PyMuPDF (`get_pixmap`, 300 dpi) y se pasa por Tesseract **solo las páginas corruptas**, conservando el texto nativo de las páginas legibles.
+
+**Alternativas consideradas:**
+- Reparar el mapeo glifo→Unicode leyendo el `cmap`/`post` de la fuente embebida con fontTools: inviable — las fuentes subset (OpenSans/Arial) venían **sin tabla cmap ni post**, así que la correspondencia carácter↔glifo no existe en el PDF.
+- pdfminer / pdfplumber como extractor alternativo: devuelven `(cid:NN)` (mismo problema de raíz); no recuperan texto.
+- Re-descargar otra copia / poppler: descartado por el usuario (usar los PDFs que ya teníamos, evitar dependencias).
+- OCR de todo el documento: descartado — degradaría las páginas con capa de texto nativa (mejor calidad que OCR).
+
+**Justificación:** El OCR híbrido recupera el contenido sin sacrificar la calidad del texto nativo y sin software extra (rasterizado con PyMuPDF, no pdf2image/poppler). Tesseract 5.5.2 con idiomas eng/fra/spa/deu/ita.
+
+**Documentos remediados (6):** ALC 2024 (144/274 pp OCR), WEND 2023 (11 pp), ADEN 2022 (113/198), ADEN 2023 (106/180), BOL-Bolloré 2022 (304/372). Tras OCR: ratio de control 0,09→0,00, palabras-función a niveles sanos. Originales corruptos respaldados en `data/interim/_corruptos/*.pre_ocr.txt`.
+
+**Nota técnica:** colisión de ticker `BOL` (Boliden E010 / Bolloré E045) → los `.txt` se nombran con `id_empresa` (`{id}_{ticker}_{año}.txt`), no con ticker. Barrido full-doc final: **289/289 con texto limpio, 0 corruptos**. Scripts: `scripts/extraction/fase4_extraccion.py`, `fase4_ocr_remediar.py`.
+
+---
+
+## Decisión 012 — Estrategia de idioma (Fase 4B): versiones oficiales en inglés del emisor, sin traducción automática
+
+**Decisión:** El corpus se homogeneiza a **inglés**. Para los 27 informes detectados como no-ingleses (25 francés + 2 español; `langdetect` con voto por 9 ventanas para robustez ante portadas corruptas), se **sustituye el PDF por la versión oficial en inglés publicada por la propia empresa** (Universal Registration Document en inglés / Integrated Management Report), **no** por traducción automática.
+
+**Alternativas consideradas:**
+- Traducir los 27 con deep-translator (Google): distorsiona justo las señales que se miden (tono, hedging) y añade un paso no reproducible.
+- Modelos multilingües (XLM-R/mBERT): no hay equivalente multilingüe validado de FinBERT/ClimateBERT → rompería la Decisión 001 y obligaría a re-justificar los modelos.
+- Híbrido por idioma: incomparabilidad de scores entre subcorpus.
+
+**Justificación:** Casi todas las empresas del STOXX 600 publican una versión inglesa oficial de su informe (traducción profesional del propio emisor), de mucha mayor calidad que la MT y plenamente defendible. Mantiene intacta la Decisión 001 (FinBERT/ClimateBERT/LM, English-only) y la comparabilidad del corpus, sin distorsión de traducción.
+
+**Implementación:** 12 empresas, 27 informes sustituidos (descarga manual del usuario + verificación automática de idioma/empresa/año). Originales fr/es respaldados en `data/raw/_reemplazados_originales/`. Enlaces en `docs/fase4_informes_ingles.md`. **Resultado: corpus 289/289 en inglés.** Scripts: `fase4_mover_ingleses.py`.
+
+---
+
+## Decisión 013 — Aislamiento del management report y la sostenibilidad (Fase 4C): índice del PDF como método primario
+
+**Decisión:** Segmentar cada informe en (a) **bloque narrativo / management report** y (b) **subsección de sostenibilidad**, usando el **índice navegable del PDF** (`get_toc`) como método primario. Operacionalización robusta a la heterogeneidad de formatos (URD numerados, Strategic Report UK, integrados temáticos):
+- **Fin del bloque narrativo = primer capítulo de ESTADOS FINANCIEROS** (no la gobernanza: en muchos URD la sostenibilidad va *después* de gobernanza y *antes* de los estados financieros).
+- **Subsección de sostenibilidad** = epígrafe que casa con marcadores ESG (sustainability, non-financial, CSR, extra-financial…), agrupando hasta el siguiente capítulo no-sostenible (capta el capítulo CSR completo); se elige el de mayor extensión para descartar menciones cortas.
+
+**Alternativas consideradas:**
+- Un único capítulo "Management Report" homogéneo: no existe transversalmente en estos informes.
+- Regex sobre texto plano: frágil frente a maquetación y multi-columna.
+- Parsear el índice impreso (página "Contents"): los números son páginas impresas con offset respecto al índice del PDF → poco fiable para trocear.
+
+**Justificación:** El TOC del PDF es la lista de epígrafes con su página exacta; el fin en estados financieros es un límite inequívoco y frecuente. Validado a mano (Stellantis, Repsol, Mercedes, Bouygues, Gecina): correcto.
+
+**Cobertura:** management report localizado en **283/289 (98%)**; sostenibilidad fiable por índice en **126** (113 alta confianza ≥8 pp + 13 media). Salidas: `data/interim/secciones/{id}_{ticker}_{año}_{mr,sus}.txt` + manifiesto `secciones_manifest.csv` (rangos, método, `sus_confianza`). Script: `fase4_secciones.py`.
+
+---
+
+## Decisión 014 — Sostenibilidad por densidad de vocabulario ESG (Fase 4C) para informes sin índice fiable
+
+**Decisión:** En los informes donde el índice del PDF **no** da una subsección de sostenibilidad fiable (PDFs sin índice navegable o con maquetación que engaña a la heurística de epígrafes, p. ej. Kering, Gecina, L'Oréal), aislar la sostenibilidad por **densidad de vocabulario ESG por página**: se puntúa cada página por nº de términos ESG por 100 palabras y se toma el **mayor bloque contiguo** de páginas con densidad ≥ 2,5 (fusionando huecos ≤ 3 pp, mínimo 5 pp).
+
+**Alternativas consideradas:**
+- Fallback por tamaño de fuente (pseudo-índice): trunca la sostenibilidad a 2-6 pp en informes con mucho diseño/marketing (la fuente grande también se usa en texto promocional y cifras) → descartado.
+- Semi-manual (hoja de cálculo, Paso 4.9 de la guía): mayor precisión pero coste alto para el estudiante.
+
+**Justificación:** La densidad ESG es **independiente de los epígrafes y de la maquetación**, por lo que funciona igual en informes de diseño y resuelve los casos que la heurística de epígrafes no podía. Calibrado contra rangos conocidos por índice (Stellantis, Mercedes, Repsol): los inicios coinciden bien (Kering 158 vs 159 real, Mercedes inicio exacto). Captura el grueso del contenido ESG (objetivo del análisis), aunque el final puede quedar 1-2 capítulos corto en algún caso.
+
+**Aplicación:** método primario = índice (Decisión 013) donde sea limpio; densidad ESG en los dudosos. Para llegar a **cobertura 100%** se relajó el detector en los 16 informes con ESG disperso (ventana de mayor masa ESG con umbral relativo, garantiza bloque) y se marcó su menor fiabilidad. Scripts: `fase4_sost_densidad.py` y `fase4_completar_cobertura.py`.
+
+**Resultado final (cobertura 289/289):**
+- Management report: **289/289**. 283 por índice/fuente + 6 por fallback (italianos sin índice: Brunello Cucinelli ×3 y Campari ×2 → documento entero por llevar "financial statements" en running header; STMicro 2022 → corte en estados financieros p115).
+- Sostenibilidad: **289/289**. `sus_confianza`: **alta 113 + media 13** (índice fiable = 126) + **densidad 147** (bloque ESG estricto) + **densidad_baja 16** (densidad relajada, fiabilidad baja).
+- **Italianos (sin índice) reprocesados con densidad ESTRICTA**: BRNW 2024, CPR 2022/2023, STMPA 2022 dieron sección real (`densidad`); BRNW 2022/2023 (pre-CSRD, ESG mínimo) no dieron bloque estricto → finalmente se aceptan con densidad relajada (`densidad_baja`) para mantener cobertura completa.
+
+**Caveats a documentar en el TFG:** (1) las 16 secciones `densidad_baja` corresponden a empresas que publican la sostenibilidad en **informe separado** (Engie ×3, Richemont ×3, Lonza ×2, Telecom Italia, RBI, Alcon 2024, Flutter, Bolloré 2022, Dia 2024) o con ESG mínimo/disperso (Brunello Cucinelli 2022/2023) → su sección extraída es parcial; para máxima calidad, sustituir por el informe de sostenibilidad/CSR separado del emisor (acción opcional). (2) Los bloques por densidad pueden empezar/terminar 1-2 páginas dentro de un capítulo vecino. `sus_confianza` ∈ {alta, media, densidad, densidad_baja} permite filtrar por fiabilidad en la Fase 5.
+
+---
+
+## Decisión 015 — Saneamiento de calidad de la segmentación (Fase 4C)
+
+**Decisión:** Auditar y reparar de forma quirúrgica tres defectos de calidad de las secciones `_mr`/`_sus`, sin rehacer lo correcto. Script: `scripts/extraction/fase4_sanear_secciones.py` (dry-run por defecto, `--apply` con backup en `secciones/_bak_sanear/`). Caché de OCR limpio por página en `data/interim/_paginas_ocr/`.
+
+**Defectos corregidos:**
+- **A) Secciones extraídas del PDF con fuente corrupta.** Los scripts 4C leían el texto nativo del PDF crudo (roto) en vez del texto remediado por OCR, dejando 7 secciones ilegibles (ALC 2024, ADEN 2022/2023, AF 2022, AKERBP 2024). Se regeneran desde texto limpio **por página** (OCR solo en las páginas con la capa de texto rota; el resto nativo). El OCR de las páginas corruptas (363 en total) se hace **en paralelo** sobre los núcleos disponibles y se cachea, para no repetirlo.
+- **B) `_sus` que capturó un índice o página divisoria** en vez de contenido (TGS 2023 = 1 página divisoria; AKERBP 2023/2024 y AF 2022 = sub-índice del capítulo). Se re-detectan por densidad ESG sobre el texto limpio. MKS 2023 pasó de una intro de 2 pp al *Non-Financial and Sustainability Information Statement* completo (18 pp).
+- **C) `_mr` que abarcaba casi todo el documento** (fin de la narrativa no detectado → el management report incluía los estados financieros). Se busca el inicio de los estados financieros en la cabecera de página y se re-corta. **106 → 30** management reports documento-entero; los 30 restantes son informes sin epígrafe localizable de estados financieros (integrados temáticos, varios españoles).
+
+**Justificación:** la corrupción de fuente y los falsos positivos contaminarían el análisis de Fase 5. Todo cambio lleva backup y el script es **idempotente** (un segundo pase propone 0 cambios), lo que garantiza consistencia manifiesto↔fichero. Verificación final: 0 secciones corruptas (antes 7), 0 rangos inválidos, 91 ficheros saneados.
+
+**Resultado (`sus_confianza`):** alta 113 · densidad 152 · media 8 · densidad_baja 16 (= 289). Mediana mr_pp 144, sus_pp 39.
+
+**Caveat:** los 30 management reports sin corte de estados financieros conservan el documento completo; como el análisis de sostenibilidad de Fase 5 opera sobre `_sus` (correctamente aislado), no es bloqueante. Marcable para filtrado si se analiza `_mr` en su conjunto.
