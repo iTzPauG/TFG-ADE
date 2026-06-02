@@ -36,19 +36,19 @@ MANIFEST_PATH = INTERIM_DIR / "secciones_manifest.csv"
 
 MIN_TOC = 8  # entradas mínimas para fiarnos del índice
 
-# Epígrafes FUERTES que marcan el FIN del management report (substring sobre el título de NIVEL 1).
-# Solo límites de capítulo inequívocos: gobernanza y estados financieros.
-END_MARKERS = [
-    "corporate governance", "financial statements", "remuneration report",
-    "report of the supervisory board", "governance report", "statutory accounts",
-    "annual accounts", "company accounts",
+# Fin del bloque narrativo = inicio de los ESTADOS FINANCIEROS (límite duro e inequívoco).
+# NO se usa gobernanza como fin: en muchos URD la sostenibilidad va DESPUÉS de gobernanza.
+FIN_MARKERS = [
+    "consolidated financial statements", "financial statements",
+    "parent company financial statements", "company financial statements",
+    "statutory accounts", "annual accounts", "company accounts",
 ]
-# Epígrafes de la subsección de sostenibilidad / información no financiera (substring, niveles 1-3).
+# Epígrafes de la subsección de sostenibilidad / información no financiera (substring).
 SUS_MARKERS = [
     "sustainability", "non-financial", "non financial", "extra-financial", "extra financial",
     "corporate social responsibility", "sustainable development",
     "environmental, social and governance", "esg report", "csr report",
-    "statement of non-financial", "declaration of extra",
+    "statement of non-financial", "declaration of extra", "non financial",
 ]
 # Arranque del cuerpo narrativo (para saltar portada/índice)
 SKIP_START = ["contents", "table of contents", "cover", "glossary", "how to read"]
@@ -71,49 +71,53 @@ def localizar_pdf(pais, ticker, año):
     return m[0] if m else None
 
 
-def secciones_por_toc(toc, npages):
-    """Devuelve (mr_ini, mr_fin, sus_ini, sus_fin) en páginas 1-based, o None si no fiable."""
-    entradas = [(lvl, norm(t), pg) for lvl, t, pg in toc if len(t) > 2]
-    n1 = [e for e in entradas if e[0] == 1]
-    if len(entradas) < 4:
+def find_sections(entradas, npages):
+    """Lógica unificada para índice del PDF y pseudo-índice por fuente.
+    entradas = lista de (nivel, título_normalizado, página). Nivel 1 = capítulo.
+    Devuelve (mr_ini, mr_fin, sus_ini, sus_fin) en páginas 1-based, o None."""
+    ents = [(lvl, norm(t), pg) for lvl, t, pg in entradas if pg >= 1 and len(norm(t)) > 2]
+    if len(ents) < 4:
         return None
+    caps = [e for e in ents if e[0] == 1] or [e for e in ents if e[0] <= 2]
+    caps = sorted(caps, key=lambda e: e[2])
+    umbral = max(2, int(0.06 * npages))
 
-    # Fin del MR: primer END_MARKER (substring) en NIVEL 1 tras el 8% del documento.
-    umbral = max(2, int(0.08 * npages))
-
-    def es_fin(t):
-        return any(m in t for m in END_MARKERS)
-
-    mr_fin = None
-    candidatos = n1 if n1 else [e for e in entradas if e[0] <= 2]
-    for lvl, t, pg in candidatos:
-        if pg >= umbral and es_fin(t):
+    # Fin del bloque narrativo = primer capítulo de estados financieros tras el umbral.
+    mr_fin = npages
+    for lvl, t, pg in caps:
+        if pg >= umbral and any(m in t for m in FIN_MARKERS):
             mr_fin = pg
             break
-    if mr_fin is None:
-        mr_fin = npages
 
-    # Inicio del MR: primera entrada de contenido (saltando portada/índice) antes del fin
+    # Inicio: primer capítulo de contenido (saltando portada/índice).
     mr_ini = 1
-    for lvl, t, pg in candidatos:
+    for lvl, t, pg in caps:
         if pg >= mr_fin:
             break
         if not any(t == m or t.startswith(m) for m in SKIP_START):
             mr_ini = pg
             break
 
-    # Subsección sostenibilidad dentro de [mr_ini, mr_fin): niveles 1-3, substring.
-    sus = [e for e in entradas if e[0] <= 3]
+    # Sostenibilidad: inicio = epígrafe (niveles 1-3) que casa con SUS_MARKERS dentro de
+    # [mr_ini, mr_fin). Fin = siguiente CAPÍTULO que NO sea de sostenibilidad (así se agrupa
+    # todo el capítulo CSR aunque tenga muchos sub-epígrafes). Se elige el inicio que
+    # maximice la extensión resultante (el capítulo principal, no una mención corta).
+    def es_sus(t):
+        return any(m in t for m in SUS_MARKERS)
+
+    sus_ents = [e for e in ents if e[0] <= 3]
+    starts = sorted({pg for lvl, t, pg in sus_ents if mr_ini <= pg < mr_fin and es_sus(t)})
+
+    def fin_de(start):
+        for lvl, t, pg in caps:  # caps ya ordenado por página
+            if pg > start and not es_sus(t):
+                return min(pg, mr_fin)
+        return mr_fin
+
+    cand = [(s, fin_de(s)) for s in starts]
     sus_ini = sus_fin = None
-    for i, (lvl, t, pg) in enumerate(sus):
-        if mr_ini <= pg < mr_fin and any(m in t for m in SUS_MARKERS):
-            sus_ini = pg
-            for lvl2, t2, pg2 in sus[i + 1:]:
-                if pg2 > pg and lvl2 <= lvl:
-                    sus_fin = pg2
-                    break
-            sus_fin = sus_fin or mr_fin
-            break
+    if cand:
+        sus_ini, sus_fin = max(cand, key=lambda c: c[1] - c[0])
     return mr_ini, mr_fin, sus_ini, sus_fin
 
 
@@ -132,22 +136,25 @@ def pseudo_toc_por_fuente(doc):
     if not tam:
         return []
     cuerpo = tam.most_common(1)[0][0]  # tamaño de fuente del cuerpo (el más frecuente)
-    g1, g2 = cuerpo * 1.6, cuerpo * 1.25  # umbrales de epígrafe grande / mediano
+    g1, g2 = cuerpo * 1.7, cuerpo * 1.5  # umbrales de capítulo / sub-epígrafe
 
     headings = []
     for pno, page in enumerate(doc, start=1):
         for b in page.get_text("dict").get("blocks", []):
-            for line in b.get("lines", []):
+            lines = b.get("lines", [])
+            if len(lines) > 3:  # bloques largos = párrafos, no epígrafes
+                continue
+            for line in lines:
                 spans = [s for s in line.get("spans", []) if s["text"].strip()]
                 if not spans:
                     continue
                 txt = " ".join(s["text"] for s in spans).strip()
                 size = max(s["size"] for s in spans)
-                if 3 < len(txt) < 80 and not txt.replace(" ", "").isdigit():
+                if 3 < len(txt) < 55 and re.search(r"[A-Za-z]", txt) and not txt.replace(" ", "").isdigit():
                     if size >= g1:
-                        headings.append((1, txt, pno))
+                        headings.append((1, norm(txt), pno))
                     elif size >= g2:
-                        headings.append((2, txt, pno))
+                        headings.append((2, norm(txt), pno))
     return headings
 
 
@@ -183,13 +190,13 @@ def main():
         toc = doc.get_toc(simple=True)
         metodo, res = "sin_toc", None
         if len(toc) >= MIN_TOC:
-            res = secciones_por_toc(toc, npages)
+            res = find_sections(toc, npages)
             if res:
                 metodo = "toc"
         if res is None:  # fallback: pseudo-índice por tamaño de fuente
             pseudo = pseudo_toc_por_fuente(doc)
             if pseudo:
-                res = secciones_por_toc(pseudo, npages)
+                res = find_sections(pseudo, npages)
                 if res:
                     metodo = "fuente"
         if res is None:
