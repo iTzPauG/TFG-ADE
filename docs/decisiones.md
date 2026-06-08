@@ -264,3 +264,20 @@
 **Resultado (`sus_confianza`):** alta 113 · densidad 152 · media 8 · densidad_baja 16 (= 289). Mediana mr_pp 144, sus_pp 39.
 
 **Caveat:** los 30 management reports sin corte de estados financieros conservan el documento completo; como el análisis de sostenibilidad de Fase 5 opera sobre `_sus` (correctamente aislado), no es bloqueante. Marcable para filtrado si se analiza `_mr` en su conjunto.
+
+---
+
+## Decisión 016 — Corrección del límite del management report y de la sostenibilidad sobre-extraída (Fase 4C)
+
+**Contexto:** una auditoría posterior al saneamiento (Decisión 015) detectó dos defectos que el recorte del *bloque C* no resolvía bien:
+- **El recorte de MR del bloque C era poco fiable.** Buscaba el inicio de los estados financieros como "primer epígrafe *financial statements* en cabecera tras el 30% del documento", lo que saltaba con menciones incidentales y **cortaba ~21 MR demasiado pronto** (mr_fin quedaba *antes* del capítulo de sostenibilidad — imposible, ya que la sostenibilidad es narrativa y precede a los financieros). Otros ~22 ya venían mal de la detección original (43 inversiones en total).
+- **Sostenibilidad sobre-extraída:** en informes tipo URD, el capítulo de sostenibilidad detectado por índice no hallaba su cierre (los sub-epígrafes "7.1 Climate"… también casan como sostenibilidad) y se desbordaba hasta el 60-91% del documento (RBI 2024 = 552 pp, AENA 2022 = 91%).
+
+**Decisión:** sustituir el recorte heurístico de MR por reglas conservadoras y fiables (`scripts/extraction/fase4_recalcular_limites.py`, dry-run por defecto, `--apply` con backup en `secciones/_bak_limites/`, idempotente):
+1. **Invariante `mr_fin ≥ sus_fin`** — el MR siempre contiene la sostenibilidad. Solo se *extiende* mr_fin cuando había quedado por debajo; **nunca se acorta** con heurísticos de financieros (que rompían detecciones correctas por índice). 50 MR corregidos.
+2. **Acotado de sostenibilidad sobre-extraída** (≥55% del doc): `sus_fin` = primer epígrafe de estados financieros tras `sus_ini`, **solo si reduce de verdad y el bloque queda <55%**. 6 casos acotados (RBI 552→43 pp, REP 176→75 pp, CS 416→149 pp, ULVR, ACX, REP23) — verificado: arrancan en el epígrafe real de sostenibilidad, densidad ESG 1,5-5,2.
+3. **No se adivina:** 4 informes sin corte fiable (sostenibilidad arrancando en portada o financieros no localizables) se marcan **`sus_confianza = revisar`** para revisión/marcado manual (AENA 2022/2024, Engie-ENG 2022/2024).
+
+**Justificación:** el límite exacto de fin del MR no es localizable de forma fiable por texto en muchos informes (integrados temáticos, varios españoles) — es el caso que la GUÍA (Paso 4.9) prevé marcar a mano. Priorizar **no romper lo correcto** sobre forzar un corte. El análisis de Fase 5 opera sobre `_sus` (ahora correctamente acotado), por lo que los **56 MR que abarcan ≥85% del documento** (sin corte fiable de financieros) no son bloqueantes.
+
+**Estado final verificado (289/289):** 0 corrupción · 0 inversiones (`sus_fin ≤ mr_fin`) · 0 rangos inválidos · 0 sobre-extraídos sin marcar. `sus_confianza`: **alta 111 · densidad 150 · media 8 · densidad_baja 16 · revisar 4**. Mediana mr_pp 160, sus_pp 38. **Supersede el recorte de MR del bloque C de la Decisión 015** (la cobertura "106→30" de aquella queda obsoleta).
