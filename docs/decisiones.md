@@ -281,3 +281,22 @@
 **Justificación:** el límite exacto de fin del MR no es localizable de forma fiable por texto en muchos informes (integrados temáticos, varios españoles) — es el caso que la GUÍA (Paso 4.9) prevé marcar a mano. Priorizar **no romper lo correcto** sobre forzar un corte. El análisis de Fase 5 opera sobre `_sus` (ahora correctamente acotado), por lo que los **56 MR que abarcan ≥85% del documento** (sin corte fiable de financieros) no son bloqueantes.
 
 **Estado final verificado (289/289):** 0 corrupción · 0 inversiones (`sus_fin ≤ mr_fin`) · 0 rangos inválidos · 0 sobre-extraídos sin marcar. `sus_confianza`: **alta 111 · densidad 150 · media 8 · densidad_baja 16 · revisar 4**. Mediana mr_pp 160, sus_pp 38. **Supersede el recorte de MR del bloque C de la Decisión 015** (la cobertura "106→30" de aquella queda obsoleta).
+
+---
+
+## Decisión 017 — Estructura del corpus (Fase 4D): secciones MR (sin solapamiento) + sostenibilidad
+
+**Decisión:** El `data/processed/corpus.parquet` tiene **una fila por sección** con dos secciones por documento (cuando existen):
+- `seccion = "mr"` → **management report SIN la subsección de sostenibilidad** (rango del MR menos el rango de sostenibilidad). Captura la narrativa estratégica/negocio/gobernanza sin solapar con sostenibilidad.
+- `seccion = "sus"` → subsección de sostenibilidad aislada (Fase 4C).
+
+Columnas: `id, empresa, año, seccion, idioma, clean_text, tokens, confianza, n_tokens, n_chars`. `clean_text` conserva mayúsculas y puntuación (para BERT/FinBERT/ClimateBERT); `tokens` = lemas en minúscula sin stopwords ni puntuación (spaCy `en_core_web_sm`, para LDA/TF-IDF).
+
+**Justificación (opción híbrida frente a alternativas):**
+- **Evita el doble conteo:** por el invariante de la Decisión 016, `sus ⊂ mr`. Meter el MR completo *y* la sostenibilidad duplicaría el texto de sostenibilidad en el corpus, sesgando TF-IDF/LDA/BERTopic y los descriptivos de frecuencia. Restar la sostenibilidad del MR lo elimina.
+- **Conserva ambas preguntas:** `mr` (sin sostenibilidad) habilita RQ1 (temas del management report) y RQ4 (evolución NFRD→CSRD); `sus` es la base de RQ3 (greenwashing/especificidad/ESRS).
+- **Trazabilidad de calidad:** la columna `confianza` lleva `sus_confianza` (alta/densidad/media/densidad_baja/aceptado_sin_financieros) en las filas `sus`, y marca en las filas `mr` si el management report abarca casi todo el documento (los 56 sin corte fiable de estados financieros → arrastran financieros = ruido, filtrable en RQ1).
+
+**Granularidad:** el corpus se guarda a **nivel sección**. El troceo en **párrafos** (topic modeling, Paso 5.8) y en **frases** (FinBERT/ClimateBERT, Pasos 5.11-5.13) es de la Fase 5, sobre `clean_text`. Script: `scripts/extraction/fase4_corpus.py`.
+
+**Limpieza aplicada (Paso 4.11):** eliminación de cabeceras/pies repetidos (líneas que reaparecen en gran parte de las páginas de la sección), números de página sueltos, caracteres de control y artefactos, normalización de espacios y reconstrucción de párrafos rotos por columnas. Se conservan mayúsculas y puntuación.
