@@ -1,0 +1,85 @@
+seccion,año,ngram,tfidf_mean
+sus,2022,financial statement,0.06279667986269913
+sus,2022,non financial,0.061484418524148425
+sus,2022,annual report,0.06112490794408903
+sus,2022,sustainability report,0.059522819622576086
+sus,2022,long term,0.032979992741032464
+sus,2022,sustainability sustainability,0.027859490093238175
+sus,2022,activity total,0.02737437209713417
+sus,2022,human right,0.024402668583896815
+sus,2022,social governance,0.024309485018510556
+sus,2022,environmental social governance,0.024309485018510556
+sus,2022,environmental social,0.024309485018510556
+sus,2022,core business,0.017415994126720617
+sus,2022,eligible activity total,0.01647328405466891
+sus,2022,eligible activity,0.01647328405466891
+sus,2022,chief executive,0.014539559866009744
+sus,2023,non financial,0.07136621581527919
+sus,2023,sustainability report,0.0616921101257186
+sus,2023,annual report,0.05604570002932162
+sus,2023,sustainability statement,0.03853229405964054
+sus,2023,approach sustainability,0.033506780155900744
+sus,2023,sustainable development,0.03232936857375997
+sus,2023,eligible activity,0.03183564868626138
+sus,2023,financial group,0.026896470967313874
+sus,2023,financial statement,0.018410944982349624
+sus,2023,financial information,0.017717979326205197
+sus,2023,non financial information,0.016759210779696262
+sus,2023,positive impact,0.016170593761899422
+sus,2023,climate change,0.013531463783455405
+sus,2023,analysis carry,0.009705367053866406
+sus,2024,sustainability statement,0.08556071237649757
+sus,2024,annual report,0.0694838665097939
+sus,2024,sustainability report,0.06840741820766492
+sus,2024,corporate governance,0.05764591077373046
+sus,2024,non financial,0.05696041611635302
+sus,2024,general information,0.0489262355662548
+sus,2024,sustainability information,0.030927835051546393
+sus,2024,risk management,0.028319016539098484
+sus,2024,financial statement,0.020951139064049565
+sus,2024,non financial group,0.01883226928347226
+sus,2024,financial group,0.01883226928347226
+sus,2024,executive committee,0.01590939633556904
+mr,2022,annual report,0.21776104203541455
+mr,2022,financial statement,0.0878543568162361
+mr,2022,universal registration,0.03949131333361059
+mr,2022,report annual,0.0360931943964475
+mr,2022,sustainability report,0.03054461721468575
+mr,2022,group annual,0.0302681950732614
+mr,2022,universal registration document,0.030198948218513145
+mr,2022,registration document,0.030198948218513145
+mr,2022,management report,0.028865296124706605
+mr,2022,consolidated financial,0.028294170488374043
+mr,2022,corporate governance,0.026728634194303418
+mr,2022,annual sustainability,0.02670900954978231
+mr,2022,annual report annual,0.020502055917723763
+mr,2022,consolidated financial statement,0.018770350815630513
+mr,2022,annual sustainability report,0.017095752085461782
+mr,2023,annual report,0.23281378082463847
+mr,2023,financial statement,0.0946561332879883
+mr,2023,sustainability report,0.03736302085538885
+mr,2023,annual financial,0.03479479761507419
+mr,2023,consolidated financial statement,0.030940866679662317
+mr,2023,consolidated financial,0.030940866679662317
+mr,2023,report annual,0.028750774857648008
+mr,2023,annual sustainability,0.02785856964978701
+mr,2023,financial report,0.0252812212431608
+mr,2023,universal registration document,0.023808258523283533
+mr,2023,universal registration,0.023808258523283533
+mr,2023,registration document,0.023808258523283533
+mr,2023,annual sustainability report,0.0185343201157656
+mr,2024,annual report,0.16111563509524274
+mr,2024,financial statement,0.10592400096427186
+mr,2024,management report,0.04835383381417866
+mr,2024,annual sustainability,0.041237113402061855
+mr,2024,consolidated financial statement,0.03149722526400382
+mr,2024,consolidated financial,0.03149722526400382
+mr,2024,presentation group,0.030927835051546393
+mr,2024,registration document,0.029760323154104425
+mr,2024,universal registration,0.029760323154104425
+mr,2024,universal registration document,0.029760323154104425
+mr,2024,report annual,0.024488164955082645
+mr,2024,sustainability statement,0.023235871823379026
+mr,2024,financial performance,0.023235871823379026
+mr,2024,cash flow,0.022363433449262993
+mr,2024,report remuneration,0.02149099507514696

@@ -1,0 +1,19 @@
+variable,VIF
+C(supersector)[T.Communication Services],1.699628152321995
+C(supersector)[T.Consumer Discretionary],2.5795168440423506
+C(supersector)[T.Consumer Staples],1.8646715488148773
+C(supersector)[T.Energy],1.5395806648995678
+C(supersector)[T.Financials],2.4400568607749915
+C(supersector)[T.Health Care],1.5052022743044238
+C(supersector)[T.Industrials],1.9247714711172959
+C(supersector)[T.Real Estate],1.47662015456329
+C(supersector)[T.Technology],1.4998398820224703
+C(supersector)[T.Utilities],1.659156462931362
+C(año)[T.2023],1.3710913706945782
+C(año)[T.2024],1.375731500375966
+C(region)[T.Nordicos],1.706264945722887
+C(region)[T.Sur],1.2784010022213197
+C(region)[T.UK_Irlanda],1.1626665718197982
+log_cap,1.4773991070633012
+ROA,1.244628578852845
+deuda_equity,1.0386449425556037

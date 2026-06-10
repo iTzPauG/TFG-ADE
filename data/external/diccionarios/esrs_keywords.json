@@ -1,0 +1,214 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "fecha": "2026-06-09",
+    "fuente": "Construido manualmente a partir del Reglamento Delegado (UE) 2023/2772 (ESRS Set 1) y docs/notas_normativa.md. Enriquecido con términos técnicos de la EFRAG ESRS XBRL Taxonomy (Annex 1). Metodología validada contra Suta et al. (2025) 'Dictionary-based assessment of ESRS disclosure topics', Discover Sustainability 6, 146.",
+    "formato": "Términos en minúscula; usar búsqueda de subcadena (str.contains) sobre clean_text en minúscula. Raíces cubren variantes morfológicas (p.ej. 'decarboni' cubre decarbonisation/decarbonization).",
+    "categorias": ["E1","E2","E3","E4","E5","S1","S2","S3","S4","G1","ESRS2"],
+    "nota_metodologica": "Las 16 filas con confianza 'densidad_baja' tienen secciones 'sus' parciales — sus scores de cobertura ESRS serán más bajos por diseño, no por ausencia real de contenido."
+  },
+
+  "E1": {
+    "name": "Climate Change",
+    "description": "ESRS E1 — Cambio climático: emisiones GHG, plan de transición, riesgos físicos y de transición, energías renovables",
+    "terms": [
+      "greenhouse gas", "ghg", "scope 1", "scope 2", "scope 3",
+      "carbon emission", "co2 emission", "carbon footprint", "carbon neutral",
+      "net zero", "net-zero", "carbon offset", "carbon credit",
+      "decarboni", "climate target", "climate goal", "climate risk",
+      "physical risk", "transition risk", "stranded asset",
+      "transition plan", "climate transition", "paris agreement", "1.5",
+      "science-based target", "sbti", "tcfd",
+      "renewable energy", "solar energy", "wind energy", "energy efficiency",
+      "energy intensity", "carbon price", "carbon tax", "emission reduction",
+      "climate scenario", "climate adaptation", "climate mitigation",
+      "global warming", "temperature rise", "low-carbon", "fossil fuel"
+    ]
+  },
+
+  "E2": {
+    "name": "Pollution",
+    "description": "ESRS E2 — Contaminación: emisiones al aire/agua/suelo, sustancias peligrosas, microplásticos",
+    "terms": [
+      "pollut", "air quality", "air emission",
+      "nox", "sox", "particulate matter", "pm2.5", "pm10",
+      "volatile organic", "voc",
+      "water pollution", "soil contamination", "soil pollut",
+      "hazardous substance", "hazardous chemical", "toxic substance",
+      "microplastic", "persistent pollutant",
+      "substances of very high concern", "svhc",
+      "reach regulation", "chemical management",
+      "pollutant release", "point source", "diffuse emission",
+      "noise pollution", "light pollution",
+      "contamination", "remediation", "environmental liability"
+    ]
+  },
+
+  "E3": {
+    "name": "Water and Marine Resources",
+    "description": "ESRS E3 — Agua y recursos marinos: consumo, estrés hídrico, vertidos, recursos marinos",
+    "terms": [
+      "water consumption", "water withdrawal", "water use",
+      "water stress", "water scarcity", "water risk",
+      "water intensity", "water efficiency", "water saving",
+      "wastewater", "effluent", "water discharge", "water recycl",
+      "freshwater", "groundwater", "aquifer", "water table",
+      "water footprint", "water stewardship",
+      "marine resource", "ocean", "sea", "coastal",
+      "water basin", "watershed", "hydrological",
+      "desalination", "water treatment", "water reuse"
+    ]
+  },
+
+  "E4": {
+    "name": "Biodiversity and Ecosystems",
+    "description": "ESRS E4 — Biodiversidad y ecosistemas: pérdida de hábitat, conversión de suelo, servicios ecosistémicos",
+    "terms": [
+      "biodiversit", "ecosystem", "habitat",
+      "species", "flora", "fauna",
+      "deforestation", "forest", "afforestation", "reforestation",
+      "land use", "land conversion", "land degradation",
+      "nature-based solution", "natural capital",
+      "ecosystem service", "ecosystem restoration",
+      "protected area", "natura 2000",
+      "invasive species", "endangered species",
+      "tnfd", "ipbes", "kunming-montreal", "sbtn", "science-based targets for nature",
+      "wetland", "mangrove", "coral reef", "biosphere",
+      "conservation", "restoration", "rewilding",
+      "soil health", "soil biodiversity"
+    ]
+  },
+
+  "E5": {
+    "name": "Resource Use and Circular Economy",
+    "description": "ESRS E5 — Uso de recursos y economía circular: materiales, residuos, diseño circular, eficiencia",
+    "terms": [
+      "circular econom", "circularit",
+      "waste", "recycl", "reuse", "repair", "refurb",
+      "resource efficiency", "resource use",
+      "raw material", "virgin material", "secondary material", "recycled material",
+      "end-of-life", "take-back", "product design",
+      "industrial symbiosis", "extended producer responsibility",
+      "packaging", "plastic waste", "food waste",
+      "material consumption", "material intensity",
+      "by-product", "waste diversion", "landfill",
+      "cradle-to-cradle", "life cycle", "lca"
+    ]
+  },
+
+  "S1": {
+    "name": "Own Workforce",
+    "description": "ESRS S1 — Fuerza laboral propia: condiciones laborales, salarios, diversidad, salud y seguridad",
+    "terms": [
+      "employee", "workforce", "worker", "staff",
+      "wages", "salary", "remuneration", "pay gap", "gender pay",
+      "living wage", "fair wage", "minimum wage",
+      "health and safety", "occupational health", "workplace safety",
+      "accident", "injury", "lost time",
+      "trade union", "collective bargaining", "freedom of association",
+      "discrimination", "harassment", "equal opportunity",
+      "diversity", "inclusion", "equity", "belonging",
+      "training", "upskilling", "skills development", "learning",
+      "turnover", "attrition", "retention",
+      "parental leave", "maternity", "paternity",
+      "headcount", "full-time equivalent", "fte",
+      "non-discrimination", "whistleblow", "speak-up"
+    ]
+  },
+
+  "S2": {
+    "name": "Workers in the Value Chain",
+    "description": "ESRS S2 — Trabajadores en la cadena de valor: proveedores, trabajo infantil/forzoso, derechos laborales",
+    "terms": [
+      "supply chain worker", "value chain worker",
+      "supplier", "subcontractor", "vendor",
+      "child labour", "child labor", "forced labour", "forced labor",
+      "modern slavery", "human trafficking",
+      "labour right", "labor right", "working condition",
+      "ethical sourcing", "responsible sourcing",
+      "supplier audit", "supplier assessment", "supplier code",
+      "due diligence", "human rights due diligence",
+      "living wage supply", "fair trade",
+      "upstream", "tier 1", "tier 2",
+      "conflict mineral", "responsible mineral",
+      "ilo convention", "ilo standard"
+    ]
+  },
+
+  "S3": {
+    "name": "Affected Communities",
+    "description": "ESRS S3 — Comunidades afectadas: derechos de comunidades locales, pueblos indígenas, impacto social",
+    "terms": [
+      "local communit", "affected communit",
+      "indigenous people", "indigenous right",
+      "land right", "land access", "free prior informed consent", "fpic",
+      "resettlement", "displacement",
+      "community engagement", "community consultation",
+      "social licence", "social impact",
+      "human rights", "human right",
+      "access to resource", "access to water", "access to energy",
+      "livelihoods", "poverty",
+      "social investment", "community development",
+      "grievance mechanism", "remedy"
+    ]
+  },
+
+  "S4": {
+    "name": "Consumers and End-Users",
+    "description": "ESRS S4 — Consumidores y usuarios finales: seguridad de producto, privacidad, marketing responsable",
+    "terms": [
+      "consumer", "customer", "end user", "end-user",
+      "product safety", "product recall", "product liability",
+      "data privacy", "data protection", "personal data", "gdpr",
+      "cybersecurity", "information security",
+      "responsible marketing", "advertising standard",
+      "vulnerable consumer", "financial inclusion",
+      "customer satisfaction", "net promoter",
+      "consumer right", "consumer protection",
+      "digital right", "algorithmic", "ai fairness",
+      "accessibility", "universal design"
+    ]
+  },
+
+  "G1": {
+    "name": "Business Conduct",
+    "description": "ESRS G1 — Conducta empresarial: anticorrupción, ética, transparencia fiscal, competencia leal",
+    "terms": [
+      "anti-corruption", "anticorruption", "bribery",
+      "corruption", "fraud", "misconduct",
+      "business ethics", "code of conduct", "code of ethics",
+      "compliance", "regulatory compliance",
+      "whistleblow", "speak-up", "reporting channel",
+      "tax transparency", "tax compliance", "tax strategy",
+      "fair competition", "antitrust", "competition law",
+      "lobbying", "political contribution",
+      "conflict of interest", "related party",
+      "sanctions", "export control",
+      "integrity", "corporate governance",
+      "board independence", "audit committee", "remuneration committee",
+      "supervisory board", "supervisory bodies",
+      "remuneration policy", "executive pay"
+    ]
+  },
+
+  "ESRS2": {
+    "name": "General Disclosures (Governance, Strategy, Materiality)",
+    "description": "ESRS 2 transversal — Gobierno corporativo, estrategia de sostenibilidad, doble materialidad, gestión de riesgos IRO",
+    "terms": [
+      "double materialit", "materiality assessment",
+      "impact materialit", "financial materialit",
+      "stakeholder engagement", "stakeholder dialogue",
+      "sustainability governance", "sustainability strategy",
+      "sustainability target", "sustainability goal",
+      "board oversight", "board responsibilit",
+      "esg governance", "sustainability committee",
+      "risk management", "iro", "impact risk opportunit",
+      "due diligence process",
+      "value chain", "business model",
+      "transition plan", "sustainability roadmap",
+      "esrs", "csrd", "nfrd",
+      "assurance", "third-party verification", "external audit",
+      "gri", "tcfd", "sasb", "iirc", "integrated report"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+# Log Fase 5B — 2026-06-10T00:38:56.957714
+[00:38:56] Cargando corpus…
+[00:38:57] 289 documentos sus cargados
+[00:38:57] [1/3] Segmentando corpus (≥20 palabras/párrafo)…
+00:38:58 Segmentando docs [██████████████████████████████] 100.0% (289/289)
+[00:38:59] 131,140 párrafos totales  |  media 454/doc
+[00:38:59] Por año: {'2022': 29762, '2023': 40388, '2024': 60990}
+[00:38:59] → 5b_paragrafos.parquet  [SEGMENTACIÓN COMPLETA 1/3]
+[00:38:59] [2/2] BERTopic — INICIO
+[00:39:08] Cargando modelo all-MiniLM-L6-v2 en mps…
+[00:39:11] Cargando embeddings desde caché (bertopic_sus_embeddings.npy)…
+[00:39:11] Embeddings cargados: (131140, 384)
+[00:39:11] Ajustando BERTopic — 1/3: UMAP (384→5 dims, ~2-3 min)…
+[00:41:08] UMAP listo: (131140, 5)
+[00:41:08] Ajustando BERTopic — 2/3: HDBSCAN (clustering)…
+[00:41:08] Ajustando BERTopic — 3/3: fit_transform + c-TF-IDF…
+[00:41:25] BERTopic listo: 339 topics, 48,355 outliers (36.9%)
+[00:41:25] Modelo BERTopic guardado → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/models/bertopic_sus/bertopic_model
+[00:41:25] Calculando topics_over_time (implementación manual, compatible pandas 2.x)…
+[00:41:25] topics_over_time listo: 1003 filas (año × topic)
+[00:41:25] Resumen BERTopic: 339 topics | outliers: 48,355/131,140 (36.9%)
+[00:41:26] → 5b_bertopic_topics.csv / 5b_bertopic_para_topics.parquet
+[00:41:26] → 5b_topics_over_time.csv
+[00:41:26] → 5b_bertopic_barchart.png / 5b_topics_over_time.png
+[00:41:26] BERTopic COMPLETO ✓
+[00:41:26] ✓ Fase 5B completa en 2.5 min
+[00:41:26] Tablas  → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/tables
+[00:41:26] Figuras → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/figures
+[00:41:26] Modelos → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/models

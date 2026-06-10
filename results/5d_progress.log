@@ -1,0 +1,19 @@
+[22:55:17] === Fase 5D — GW_index ===
+[22:55:17]   285,509 frases cargadas desde 5c_frases.parquet
+[22:55:17] [1/3] Calculando flags por frase (cifra / lenguaje futuro)…
+22:55:18 Flags por frase [██████████████████████████████] 100.0% (285509/285509)
+[22:55:18]   % frases con cifra (no-año): 31.3%
+[22:55:18]   % frases con lenguaje futuro: 18.1%
+[22:55:18]   % frases futuras SIN cifra: 12.0%
+[22:55:18] [2/3] Agregando a nivel documento y construyendo GW_index…
+[22:55:18]   289 documentos → 5d_gwindex.csv
+[22:55:18] [2/3] Evolución GW_index y componentes por año:
+[22:55:18]     GW_index                     2022=-0.1961  2023=-0.3287  2024=0.5208
+[22:55:18]     hedging_ratio                2022=0.0102  2023=0.0115  2024=0.0132
+[22:55:18]     ratio_cuantitativo           2022=0.3219  2023=0.3359  2024=0.3040
+[22:55:18]     ratio_futuro                 2022=0.1922  2023=0.1876  2024=0.1886
+[22:55:18]     ratio_futuro_sin_cifra       2022=0.1300  2023=0.1232  2024=0.1246
+[22:55:18]     climate_specificity_spec     2022=0.2807  2023=0.2882  2024=0.2570
+[22:55:18] [3/3] Generando figuras…
+[22:55:19]   → 5d_gwindex_evolucion.png / 5d_componentes.png / 5d_gwindex_vs_tono.png
+[22:55:19] ✓ Fase 5D completa en 0.0 min

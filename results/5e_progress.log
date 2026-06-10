@@ -1,0 +1,112 @@
+[23:53:55] === Fase 5E — Estadística inferencial (RQ2, RQ3, RQ4) ===
+[23:53:55] [1/4] Construyendo panel combinado (5d_gwindex + empresas_muestra + corpus)…
+[23:53:55]   cargando corpus.parquet (n_tokens, sección sus)…
+[23:53:56]   panel: 289 filas | sin sector/país: 0 | sin ROA/deuda_equity: 4
+[23:53:56]   → 5e_panel.csv
+[23:53:56] [2/4] RQ2 — Kruskal-Wallis por supersector y por país…
+[23:53:56]   -- por supersector (11 grupos) --
+[23:53:56]     GW_index ~ supersector: H=43.53, p=0.0000, eta2=0.151
+[23:53:56]       medianas: Technology=1.386, Financials=1.139, Health Care=0.603, Energy=0.468, Consumer Discretionary=0.355, Consumer Staples=0.171, Basic Materials=-0.366, Industrials=-0.582, Real Estate=-0.885, Communication Services=-1.189, Utilities=-1.887
+[23:53:56]     finbert_tone ~ supersector: H=18.58, p=0.0460, eta2=0.065
+[23:53:56]       medianas: Health Care=0.250, Industrials=0.202, Consumer Discretionary=0.191, Financials=0.177, Technology=0.171, Utilities=0.165, Consumer Staples=0.159, Energy=0.158, Basic Materials=0.136, Communication Services=0.129, Real Estate=0.098
+[23:53:56]     climate_specificity_spec ~ supersector: H=49.08, p=0.0000, eta2=0.170
+[23:53:56]       medianas: Real Estate=0.339, Communication Services=0.304, Utilities=0.298, Consumer Staples=0.294, Basic Materials=0.292, Industrials=0.285, Energy=0.284, Consumer Discretionary=0.274, Health Care=0.257, Financials=0.204, Technology=0.200
+[23:53:56]   -- por país (14 grupos, descriptivo, grupos pequeños) --
+[23:53:56]     GW_index ~ país: H=49.46, p=0.0000, eta2=0.172
+[23:53:56]       medianas: Switzerland=1.222, United Kingdom=0.852, Norway=0.705, Netherlands=0.624, Belgium=0.610, Denmark=0.492, Ireland=0.362, Germany=0.343, Austria=0.202, Sweden=-0.100, Finland=-0.273, Spain=-0.278, France=-1.523, Italy=-1.887
+[23:53:56]     finbert_tone ~ país: H=45.31, p=0.0000, eta2=0.157
+[23:53:56]       medianas: Finland=0.254, United Kingdom=0.247, Denmark=0.240, Switzerland=0.238, Belgium=0.167, Spain=0.161, Netherlands=0.153, France=0.141, Ireland=0.141, Sweden=0.136, Germany=0.135, Austria=0.123, Italy=0.115, Norway=0.109
+[23:53:56]     climate_specificity_spec ~ país: H=33.90, p=0.0012, eta2=0.118
+[23:53:56]       medianas: Finland=0.372, France=0.305, Sweden=0.305, Denmark=0.294, Germany=0.276, United Kingdom=0.269, Norway=0.267, Spain=0.266, Austria=0.254, Belgium=0.248, Netherlands=0.245, Switzerland=0.211, Italy=0.204, Ireland=0.189
+[23:53:56]   → 5e_kruskal_supersector.csv / 5e_kruskal_pais.csv
+[23:53:56]   → 5e_gwindex_supersector.png / 5e_gwindex_region.png
+[23:53:56] [3/4] RQ4 — test pareado 2022 vs 2024 (NFRD vs CSRD)…
+[23:53:56]   empresas comunes 2022 y 2024: 95
+[23:53:56]     GW_index: 2022=-0.1961 → 2024=0.4237 (Δ=+0.6198)  t-test p=0.0549  Wilcoxon p=0.0205
+[23:53:56]     finbert_tone: 2022=0.2024 → 2024=0.1567 (Δ=-0.0457)  t-test p=0.0015  Wilcoxon p=0.0003
+[23:53:56]     climate_specificity_spec: 2022=0.2807 → 2024=0.2608 (Δ=-0.0199)  t-test p=0.2095  Wilcoxon p=0.0859
+[23:53:56]     climate_sentiment_risk: 2022=0.1044 → 2024=0.1641 (Δ=+0.0597)  t-test p=0.0000  Wilcoxon p=0.0000
+[23:53:56]     climate_sentiment_opportunity: 2022=0.2153 → 2024=0.1647 (Δ=-0.0506)  t-test p=0.0018  Wilcoxon p=0.0006
+[23:53:56]     n_tokens: 2022=10947.2632 → 2024=23380.0526 (Δ=+12432.7895)  t-test p=0.0000  Wilcoxon p=0.0000
+[23:53:56]   → 5e_pareado_2022_2024.csv
+[23:53:56]   → 5e_pareado_2022_2024.png
+[23:53:56] [4/4] RQ3 — regresiones OLS (HC3) + VIF…
+[23:53:56]   observaciones para regresión (tras eliminar NaN financieros/sector): 285 / 289
+[23:53:56]   -- Reg1: GW_index ~ tamaño + financieros + sector + año + región --
+[23:53:56]     R2=0.223  R2_adj=0.171  n=285
+[23:53:56]     Intercept                      coef=+5.2548  p=0.0546
+[23:53:56]     C(supersector)[T.Consumer Discretionary] coef=+0.9144  p=0.0594
+[23:53:56]     C(supersector)[T.Financials]   coef=+2.1036  p=0.0002
+[23:53:56]     C(supersector)[T.Real Estate]  coef=-1.9266  p=0.0136
+[23:53:56]     C(supersector)[T.Technology]   coef=+1.9025  p=0.0111
+[23:53:56]     C(region)[T.Nordicos]          coef=+1.3411  p=0.0003
+[23:53:56]     C(region)[T.UK_Irlanda]        coef=+1.0749  p=0.0109
+[23:53:56]     log_cap                        coef=-0.2682  p=0.0240
+[23:53:56]     VIF máximo: 14.68 (log_cap)
+[23:53:56]   -- Reg2: finbert_tone ~ especificidad + tamaño + financieros + sector + año + región --
+[23:53:56]     R2=0.206  R2_adj=0.152  n=285
+[23:53:56]     Intercept                      coef=+0.2242  p=0.0846
+[23:53:56]     C(supersector)[T.Health Care]  coef=+0.1300  p=0.0419
+[23:53:56]     C(supersector)[T.Real Estate]  coef=-0.0749  p=0.0008
+[23:53:56]     C(año)[T.2024]                 coef=-0.0418  p=0.0128
+[23:53:56]     C(region)[T.UK_Irlanda]        coef=+0.0701  p=0.0002
+[23:53:56]     climate_specificity_spec       coef=+0.2202  p=0.0032
+[23:53:56]     VIF máximo: 22.82 (log_cap)
+[23:53:56]   → 5e_regresion{1,2}_{gwindex,tono}.csv + 5e_regresion{1,2}_vif.csv
+[23:53:56] ✓ Fase 5E completa en 0.0 min
+[23:59:19] === Fase 5E — Estadística inferencial (RQ2, RQ3, RQ4) ===
+[23:59:19] [1/4] Construyendo panel combinado (5d_gwindex + empresas_muestra + corpus)…
+[23:59:19]   cargando corpus.parquet (n_tokens, sección sus)…
+[23:59:19]   panel: 289 filas | sin sector/país: 0 | sin ROA/deuda_equity: 4
+[23:59:20]   → 5e_panel.csv
+[23:59:20] [2/4] RQ2 — Kruskal-Wallis por supersector y por país…
+[23:59:20]   -- por supersector (11 grupos) --
+[23:59:20]     GW_index ~ supersector: H=43.53, p=0.0000, eta2=0.151
+[23:59:20]       medianas: Technology=1.386, Financials=1.139, Health Care=0.603, Energy=0.468, Consumer Discretionary=0.355, Consumer Staples=0.171, Basic Materials=-0.366, Industrials=-0.582, Real Estate=-0.885, Communication Services=-1.189, Utilities=-1.887
+[23:59:20]     finbert_tone ~ supersector: H=18.58, p=0.0460, eta2=0.065
+[23:59:20]       medianas: Health Care=0.250, Industrials=0.202, Consumer Discretionary=0.191, Financials=0.177, Technology=0.171, Utilities=0.165, Consumer Staples=0.159, Energy=0.158, Basic Materials=0.136, Communication Services=0.129, Real Estate=0.098
+[23:59:20]     climate_specificity_spec ~ supersector: H=49.08, p=0.0000, eta2=0.170
+[23:59:20]       medianas: Real Estate=0.339, Communication Services=0.304, Utilities=0.298, Consumer Staples=0.294, Basic Materials=0.292, Industrials=0.285, Energy=0.284, Consumer Discretionary=0.274, Health Care=0.257, Financials=0.204, Technology=0.200
+[23:59:20]   -- por país (14 grupos, descriptivo, grupos pequeños) --
+[23:59:20]     GW_index ~ país: H=49.46, p=0.0000, eta2=0.172
+[23:59:20]       medianas: Switzerland=1.222, United Kingdom=0.852, Norway=0.705, Netherlands=0.624, Belgium=0.610, Denmark=0.492, Ireland=0.362, Germany=0.343, Austria=0.202, Sweden=-0.100, Finland=-0.273, Spain=-0.278, France=-1.523, Italy=-1.887
+[23:59:20]     finbert_tone ~ país: H=45.31, p=0.0000, eta2=0.157
+[23:59:20]       medianas: Finland=0.254, United Kingdom=0.247, Denmark=0.240, Switzerland=0.238, Belgium=0.167, Spain=0.161, Netherlands=0.153, France=0.141, Ireland=0.141, Sweden=0.136, Germany=0.135, Austria=0.123, Italy=0.115, Norway=0.109
+[23:59:20]     climate_specificity_spec ~ país: H=33.90, p=0.0012, eta2=0.118
+[23:59:20]       medianas: Finland=0.372, France=0.305, Sweden=0.305, Denmark=0.294, Germany=0.276, United Kingdom=0.269, Norway=0.267, Spain=0.266, Austria=0.254, Belgium=0.248, Netherlands=0.245, Switzerland=0.211, Italy=0.204, Ireland=0.189
+[23:59:20]   → 5e_kruskal_supersector.csv / 5e_kruskal_pais.csv
+[23:59:20]   → 5e_gwindex_supersector.png / 5e_gwindex_region.png
+[23:59:20] [3/4] RQ4 — test pareado 2022 vs 2024 (NFRD vs CSRD)…
+[23:59:20]   empresas comunes 2022 y 2024: 95
+[23:59:20]     GW_index: 2022=-0.1961 → 2024=0.4237 (Δ=+0.6198)  t-test p=0.0549  Wilcoxon p=0.0205
+[23:59:20]     finbert_tone: 2022=0.2024 → 2024=0.1567 (Δ=-0.0457)  t-test p=0.0015  Wilcoxon p=0.0003
+[23:59:20]     climate_specificity_spec: 2022=0.2807 → 2024=0.2608 (Δ=-0.0199)  t-test p=0.2095  Wilcoxon p=0.0859
+[23:59:20]     climate_sentiment_risk: 2022=0.1044 → 2024=0.1641 (Δ=+0.0597)  t-test p=0.0000  Wilcoxon p=0.0000
+[23:59:20]     climate_sentiment_opportunity: 2022=0.2153 → 2024=0.1647 (Δ=-0.0506)  t-test p=0.0018  Wilcoxon p=0.0006
+[23:59:20]     n_tokens: 2022=10947.2632 → 2024=23380.0526 (Δ=+12432.7895)  t-test p=0.0000  Wilcoxon p=0.0000
+[23:59:20]   → 5e_pareado_2022_2024.csv
+[23:59:20]   → 5e_pareado_2022_2024.png
+[23:59:20] [4/4] RQ3 — regresiones OLS (HC3) + VIF…
+[23:59:20]   observaciones para regresión (tras eliminar NaN financieros/sector): 285 / 289
+[23:59:20]   -- Reg1: GW_index ~ tamaño + financieros + sector + año + región --
+[23:59:20]     R2=0.223  R2_adj=0.171  n=285
+[23:59:20]     Intercept                      coef=+5.2548  p=0.0546
+[23:59:20]     C(supersector)[T.Consumer Discretionary] coef=+0.9144  p=0.0594
+[23:59:20]     C(supersector)[T.Financials]   coef=+2.1036  p=0.0002
+[23:59:20]     C(supersector)[T.Real Estate]  coef=-1.9266  p=0.0136
+[23:59:20]     C(supersector)[T.Technology]   coef=+1.9025  p=0.0111
+[23:59:20]     C(region)[T.Nordicos]          coef=+1.3411  p=0.0003
+[23:59:20]     C(region)[T.UK_Irlanda]        coef=+1.0749  p=0.0109
+[23:59:20]     log_cap                        coef=-0.2682  p=0.0240
+[23:59:20]     VIF máximo: 2.58 (C(supersector)[T.Consumer Discretionary])
+[23:59:20]   -- Reg2: finbert_tone ~ especificidad + tamaño + financieros + sector + año + región --
+[23:59:20]     R2=0.206  R2_adj=0.152  n=285
+[23:59:20]     Intercept                      coef=+0.2242  p=0.0846
+[23:59:20]     C(supersector)[T.Health Care]  coef=+0.1300  p=0.0419
+[23:59:20]     C(supersector)[T.Real Estate]  coef=-0.0749  p=0.0008
+[23:59:20]     C(año)[T.2024]                 coef=-0.0418  p=0.0128
+[23:59:20]     C(region)[T.UK_Irlanda]        coef=+0.0701  p=0.0002
+[23:59:20]     climate_specificity_spec       coef=+0.2202  p=0.0032
+[23:59:20]     VIF máximo: 2.59 (C(supersector)[T.Consumer Discretionary])
+[23:59:20]   → 5e_regresion{1,2}_{gwindex,tono}.csv + 5e_regresion{1,2}_vif.csv
+[23:59:20] ✓ Fase 5E completa en 0.0 min

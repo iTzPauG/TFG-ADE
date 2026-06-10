@@ -1,0 +1,19 @@
+variable,VIF
+C(supersector)[T.Communication Services],1.7001179495121366
+C(supersector)[T.Consumer Discretionary],2.592192532349702
+C(supersector)[T.Consumer Staples],1.8640026673263874
+C(supersector)[T.Energy],1.539567143751522
+C(supersector)[T.Financials],2.5408581237796697
+C(supersector)[T.Health Care],1.527657598675307
+C(supersector)[T.Industrials],1.9188002687468435
+C(supersector)[T.Real Estate],1.5061874013280176
+C(supersector)[T.Technology],1.559318686832595
+C(supersector)[T.Utilities],1.669638452670773
+C(año)[T.2023],1.3719603814844055
+C(año)[T.2024],1.3748168413749164
+C(region)[T.Nordicos],1.7070547133292435
+C(region)[T.Sur],1.3006707022453778
+C(region)[T.UK_Irlanda],1.1637880167691772
+climate_specificity_spec,1.218707658638236
+log_cap,1.474785982720873
+ROA,1.2492800952359715

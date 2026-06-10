@@ -35,6 +35,7 @@ __pycache__/
 results/models/*.pkl
 results/models/*.bin
 results/models/*.pt
+results/models/*.npy
 
 # Descartes de reemplazo de informes (backups locales, no versionar)
 /_pendiente_reemplazo/
