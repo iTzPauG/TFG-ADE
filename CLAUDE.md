@@ -194,8 +194,9 @@ Fase 5 (5A-5E) **COMPLETA**. Siguiente: Fase 6 (dashboard Streamlit + reproducib
   empresa, Topics (LDA+BERTopic), Comparador, Resultados RQ (RQ1-RQ4). Lanzar con
   `conda run -n tfg-ade streamlit run app/Home.py`.
 - `app/utils/data.py`: loaders cacheados (`st.cache_data`) sobre `results/tables/`.
-- Pendiente: `notebooks/99_reproduccion.ipynb` (Paso 6.4) y despliegue en Streamlit
-  Community Cloud (Paso 6.1, opcional).
+- Despliegue en Streamlit Community Cloud (Paso 6.1): `requirements.txt` ligero en la raíz
+  (solo deps del dashboard: streamlit, pandas, plotly) — el `environment.yml` completo
+  (PLN/ML) no se usa para el despliegue. App apuntando a `app/Home.py`.
 
 **Referencias nuevas identificadas:**
 - Suta et al. (2025) — *"Dictionary-based assessment of ESRS disclosure topics"*, Discover Sustainability 6, 146 — citar en Metodología para validar el enfoque dictionary-based ESRS.

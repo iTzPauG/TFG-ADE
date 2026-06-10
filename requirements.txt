@@ -1,0 +1,5 @@
+# Dependencias para el dashboard Streamlit (Fase 6 - despliegue en Streamlit Community Cloud).
+# El entorno completo de PLN/ML está en environment.yml (no necesario para el dashboard).
+streamlit==1.57.0
+pandas==3.0.3
+plotly==6.7.0

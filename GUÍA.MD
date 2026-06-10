@@ -539,7 +539,7 @@ conda env export > environment.yml
 
 > **Cuándo:** Semanas 14-16.
 
-**Paso 7.1.** Configura **Overleaf** (gratis con cuenta universitaria). Pide a tu tutor la plantilla LaTeX oficial de la UV para TFG de ADE; si no existe, usa una plantilla genérica.
+**Paso 7.1.** Configura **Overleaf** (gratis con cuenta universitaria). Pide a tu tutor la plantilla LaTeX oficial de la UPV para TFG de ADE; si no existe, usa una plantilla genérica.
 
 **Paso 7.2.** Conecta **Zotero** con Overleaf vía Better BibTeX: exporta tu biblioteca a `.bib` y mantenlo sincronizado.
 
