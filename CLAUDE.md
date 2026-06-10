@@ -82,7 +82,7 @@ Afecta sobre todo a `data/raw/*.pdf`, `data/interim/secciones/*.txt` y `corpus.p
 | 3 | Recolección de informes | ✅ 291/291 PDFs descargados |
 | 4 | Extracción y limpieza de texto | ✅ **COMPLETA** → `corpus.parquet` |
 | 5 | Análisis con PLN | ✅ **COMPLETA** (5A-5E) |
-| 6 | Dashboard Streamlit + reproducibilidad | 🔄 **EN CURSO** — dashboard funcional (5 páginas) |
+| 6 | Dashboard (HTML estático) + reproducibilidad | 🔄 dashboard listo, falta reproducibilidad |
 | 7 | Redacción del TFG | ⬜ Pendiente |
 
 La guía paso a paso completa de las 7 fases está en `GUÍA.MD` (raíz).
@@ -183,20 +183,22 @@ Granularidad: el corpus está a **nivel sección**; el troceo en **párrafos** (
   significación formal GW_index↑, tono↓, riesgo↑, oportunidad↓, n_tokens↑ (todos p<0.05
   salvo especificidad marginal p=0.086). Interpretación: `docs/fase5e_interpretacion.md`.
 
-Fase 5 (5A-5E) **COMPLETA**. Siguiente: Fase 6 (dashboard Streamlit + reproducibilidad).
+Fase 5 (5A-5E) **COMPLETA**. Siguiente: Fase 6 (dashboard + reproducibilidad).
 
 ## 6bis. Fase 6 (dashboard) — estado
+
+Decisión: dashboard como **HTML estático autocontenido** (sin Streamlit/servidor), para
+desplegar en local abriendo el fichero o sirviéndolo con cualquier servidor estático.
 
 - `scripts/viz/preparar_dashboard.py`: precalcula `results/tables/dashboard/panel.csv`
   (panel maestro 289 docs = 5e_panel + cobertura ESRS + ESG-9) y `bertopic_doc_topics.csv`
   (tópico BERTopic dominante por documento). Re-ejecutar si cambian los resultados de Fase 5.
-- `app/Home.py` + `app/pages/`: dashboard Streamlit con 5 páginas — Overview, Explorador de
-  empresa, Topics (LDA+BERTopic), Comparador, Resultados RQ (RQ1-RQ4). Lanzar con
-  `conda run -n tfg-ade streamlit run app/Home.py`.
-- `app/utils/data.py`: loaders cacheados (`st.cache_data`) sobre `results/tables/`.
-- Despliegue en Streamlit Community Cloud (Paso 6.1): `requirements.txt` ligero en la raíz
-  (solo deps del dashboard: streamlit, pandas, plotly) — el `environment.yml` completo
-  (PLN/ML) no se usa para el despliegue. App apuntando a `app/Home.py`.
+- `scripts/viz/build_dashboard.py`: genera `results/dashboard/index.html` — dashboard con
+  5 secciones (Overview, Explorador de empresa, Topics, Comparador, Resultados RQ),
+  gráficos interactivos con Plotly.js (vía CDN) y datos embebidos como JSON inline.
+- Uso: `conda run -n tfg-ade python scripts/viz/build_dashboard.py` y abrir
+  `results/dashboard/index.html` en el navegador (las imágenes referencian
+  `../figures/*.png` mediante ruta relativa).
 
 **Referencias nuevas identificadas:**
 - Suta et al. (2025) — *"Dictionary-based assessment of ESRS disclosure topics"*, Discover Sustainability 6, 146 — citar en Metodología para validar el enfoque dictionary-based ESRS.

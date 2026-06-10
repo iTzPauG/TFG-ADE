@@ -17,7 +17,7 @@ Contexto completo del proyecto, decisiones metodológicas y estado del pipeline 
 |------|-------------|--------|
 | 1-4 | Marco teórico, muestra, recolección, extracción/limpieza | ✅ |
 | 5 | Análisis PLN (descriptivos, topics, sentimiento, GW_index, estadística) | ✅ |
-| 6 | Dashboard Streamlit + reproducibilidad | 🔄 |
+| 6 | Dashboard (HTML estático) + reproducibilidad | 🔄 |
 | 7 | Redacción del TFG | ⬜ |
 
 ## Entorno
@@ -32,25 +32,26 @@ conda activate tfg-ade
 ## Dashboard (Fase 6)
 
 El dashboard explora los resultados de la Fase 5 (5A-5E) sobre el panel de 289 documentos
-(secciones de sostenibilidad, 97 empresas × 3 años).
+(secciones de sostenibilidad, 97 empresas × 3 años). Es un **HTML estático autocontenido**
+(sin Streamlit ni servidor): usa Plotly.js vía CDN y los datos van embebidos como JSON inline.
+
+Para generarlo (regenera las tablas precalculadas si cambian los resultados de Fase 5):
 
 ```bash
-conda run -n tfg-ade streamlit run app/Home.py
+conda run -n tfg-ade python scripts/viz/preparar_dashboard.py   # solo si cambian resultados de Fase 5
+conda run -n tfg-ade python scripts/viz/build_dashboard.py
 ```
 
-Páginas:
+Y para verlo, abre `results/dashboard/index.html` en el navegador (o sirve la carpeta
+`results/` con un servidor estático, p. ej. `python -m http.server`, para que las imágenes
+en `results/figures/` carguen correctamente con cualquier configuración).
+
+Secciones:
 - **Overview** — descriptivos del corpus, distribución de tokens, cobertura ESRS
 - **Explorador de empresa** — evolución de tono, especificidad, GW_index y tópicos por empresa
 - **Topics** — modelos LDA (K=15) y BERTopic (339 tópicos)
 - **Comparador** — comparación de métricas clave entre empresas
 - **Resultados RQ** — hallazgos por pregunta de investigación (RQ1-RQ4)
-
-Antes de lanzar el dashboard, regenera las tablas precalculadas si cambian los resultados
-de Fase 5:
-
-```bash
-conda run -n tfg-ade python scripts/viz/preparar_dashboard.py
-```
 
 ## Estructura del repositorio
 
@@ -65,15 +66,15 @@ scripts/
 ├── fase3_*.py         # descarga/registro de informes
 ├── extraction/         # pipeline Fase 4 (extracción y limpieza)
 ├── nlp/                 # pipeline Fase 5 (PLN)
-└── viz/                  # precálculo para el dashboard (Fase 6)
-app/
-├── Home.py             # punto de entrada del dashboard Streamlit
-├── pages/                # páginas del dashboard
-└── utils/                # carga de datos cacheada
+└── viz/                  # precálculo + generación del dashboard (Fase 6)
+    ├── preparar_dashboard.py   # precalcula results/tables/dashboard/
+    ├── build_dashboard.py      # genera results/dashboard/index.html
+    └── templates/              # plantilla Jinja2 del dashboard
 results/
 ├── tables/              # tablas de resultados (Fase 5)
 ├── figures/              # figuras (Fase 5)
-└── models/                # modelos LDA/BERTopic
+├── models/                # modelos LDA/BERTopic
+└── dashboard/             # dashboard HTML generado (Fase 6)
 docs/                    # decisiones metodológicas e interpretación de resultados
 ```
 
