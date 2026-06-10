@@ -82,7 +82,7 @@ Afecta sobre todo a `data/raw/*.pdf`, `data/interim/secciones/*.txt` y `corpus.p
 | 3 | Recolección de informes | ✅ 291/291 PDFs descargados |
 | 4 | Extracción y limpieza de texto | ✅ **COMPLETA** → `corpus.parquet` |
 | 5 | Análisis con PLN | ✅ **COMPLETA** (5A-5E) |
-| 6 | Dashboard Streamlit + reproducibilidad | ⬜ Pendiente |
+| 6 | Dashboard Streamlit + reproducibilidad | 🔄 **EN CURSO** — dashboard funcional (5 páginas) |
 | 7 | Redacción del TFG | ⬜ Pendiente |
 
 La guía paso a paso completa de las 7 fases está en `GUÍA.MD` (raíz).
@@ -184,6 +184,18 @@ Granularidad: el corpus está a **nivel sección**; el troceo en **párrafos** (
   salvo especificidad marginal p=0.086). Interpretación: `docs/fase5e_interpretacion.md`.
 
 Fase 5 (5A-5E) **COMPLETA**. Siguiente: Fase 6 (dashboard Streamlit + reproducibilidad).
+
+## 6bis. Fase 6 (dashboard) — estado
+
+- `scripts/viz/preparar_dashboard.py`: precalcula `results/tables/dashboard/panel.csv`
+  (panel maestro 289 docs = 5e_panel + cobertura ESRS + ESG-9) y `bertopic_doc_topics.csv`
+  (tópico BERTopic dominante por documento). Re-ejecutar si cambian los resultados de Fase 5.
+- `app/Home.py` + `app/pages/`: dashboard Streamlit con 5 páginas — Overview, Explorador de
+  empresa, Topics (LDA+BERTopic), Comparador, Resultados RQ (RQ1-RQ4). Lanzar con
+  `conda run -n tfg-ade streamlit run app/Home.py`.
+- `app/utils/data.py`: loaders cacheados (`st.cache_data`) sobre `results/tables/`.
+- Pendiente: `notebooks/99_reproduccion.ipynb` (Paso 6.4) y despliegue en Streamlit
+  Community Cloud (Paso 6.1, opcional).
 
 **Referencias nuevas identificadas:**
 - Suta et al. (2025) — *"Dictionary-based assessment of ESRS disclosure topics"*, Discover Sustainability 6, 146 — citar en Metodología para validar el enfoque dictionary-based ESRS.
