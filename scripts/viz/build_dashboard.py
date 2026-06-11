@@ -64,6 +64,7 @@ def cargar_datos() -> dict:
     bt_topics = pd.read_csv(TABLES / "5b_bertopic_topics.csv",
                              usecols=["Topic", "Count", "Name", "Representation"])
     bt_top = bt_topics[bt_topics["Topic"] != -1].sort_values("Count", ascending=False).head(N_BERTOPIC_TOP)
+    bt_all_names = bt_topics.set_index("Topic")["Name"].to_dict()  # nombre de los 340 tópicos
 
     tot = pd.read_csv(TABLES / "5b_topics_over_time.csv")
     tot_top = tot[tot["Topic"].isin(bt_top["Topic"])].copy()
@@ -82,7 +83,7 @@ def cargar_datos() -> dict:
     return dict(
         panel=panel, bt_doc=bt_doc, desc=desc, cov_anio=cov_anio,
         lda_topics=lda_topics, lda_coherencia=lda_coherencia,
-        bt_topics=bt_top, tot=tot_top,
+        bt_topics=bt_top, bt_all_names=bt_all_names, tot=tot_top,
         kruskal_pais=kruskal_pais, kruskal_supersector=kruskal_supersector,
         pareado=pareado, reg1=reg1, reg1_vif=reg1_vif, reg2=reg2, reg2_vif=reg2_vif,
     )
@@ -110,6 +111,7 @@ def construir_data_json(d: dict) -> dict:
         "panel": round_floats(panel.to_dict(orient="records")),
         "bt_doc": round_floats(d["bt_doc"].to_dict(orient="records")),
         "bt_topic_names": {int(k): v for k, v in bt_topics_idx.items()},
+        "bt_topic_names_all": {int(k): v for k, v in d["bt_all_names"].items()},
         "esrs_cols": ESRS_COLS,
         "esg9_cols": ESG9_COLS,
         "radar_cols": radar_cols,
@@ -129,9 +131,12 @@ def construir_tablas_html(d: dict) -> dict:
     def to_html(df: pd.DataFrame, **kw) -> str:
         return df.to_html(index=False, classes="data-table", border=0, **kw)
 
+    def to_html_lda(df: pd.DataFrame) -> str:
+        return df.to_html(index=False, classes="data-table lda-table", border=0)
+
     return {
         "desc_table": to_html(d["desc"], float_format=lambda x: f"{x:,.0f}"),
-        "lda_topics_table": to_html(d["lda_topics"][["topic_id", "mapeo_ESRS", "palabras"]]),
+        "lda_topics_table": to_html_lda(d["lda_topics"][["topic_id", "mapeo_ESRS", "palabras"]]),
         "kruskal_pais_table": to_html(d["kruskal_pais"], float_format=lambda x: f"{x:.4g}"),
         "kruskal_supersector_table": to_html(d["kruskal_supersector"], float_format=lambda x: f"{x:.4g}"),
         "pareado_table": to_html(d["pareado"], float_format=lambda x: f"{x:.4g}"),

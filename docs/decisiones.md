@@ -1018,3 +1018,57 @@ VIF máximo en ambas regresiones = 2.6 (sin problema de multicolinealidad). Tabl
   significativos a nivel pareado salvo la especificidad climática (marginal).
 
 Interpretación completa: `docs/fase5e_interpretacion.md`.
+
+---
+
+## Decisión 027 — Ampliación de la muestra de 97 a 196 empresas
+
+**Decisión:** Ampliar la muestra estratificada de 97 a 196 empresas (objetivo 200,
+no alcanzado por restricciones de cap geográfico — mismo tipo de déficit que en
+Decisión 002), **conservando intactas las 97 empresas originales** (mismo
+`id_empresa`, mismas filas) y añadiendo 99 nuevas. Implementado en
+`scripts/fase2_ampliacion.py` + `scripts/fase2_correcciones_ampliacion.py`.
+
+**Metodología:**
+- Cuota objetivo recalculada a 10 empresas/sector ICB (200/20 sectores), `random_state=42`.
+- Cap geográfico recalculado a 30 (15% de 200, misma proporción que el cap=15/100
+  original), aplicado **solo sobre las empresas nuevas** — nunca sobre las 97
+  originales. Resultado: UK pasó de 49→30 candidatas; el resto de sectores con
+  déficit (p.ej. Personal Care, Drug & Grocery Stores: solo 2 candidatas
+  disponibles de 5 necesarias) se cubrieron con extras de otros sectores. Déficit
+  final de 4 (196 vs 200 objetivo).
+- Nuevos `id_empresa`: E098–E196, correlativos a partir del último existente.
+
+**Correcciones tras la primera descarga yfinance (27/99 empresas sin datos):**
+1. **22 empresas con ticker Wikipedia incorrecto** → 22 nuevas entradas en
+   `TICKER_OVERRIDES` (`fase2_muestra.py`), p.ej. Michelin `MICP→ML.PA`, Sanofi
+   `SNY→SAN.PA` (SNY es el ADR NYSE), Novartis `"NOV N"→NOVN.SW`, ArcelorMittal
+   `MT→MT.AS`, UniCredit `UC→UCG.MI`, etc.
+2. **5 empresas sustituidas por no tener cobertura yfinance viable o ser entradas
+   duplicadas/discontinuadas**:
+   - **E112 Saint-Gobain** (ticker `SGOB`, entrada **duplicada** de Wikipedia —
+     `SGO` ya está en E114) → **Vinci** (Construction & Materials, Francia).
+   - **E123 Lundin Energy** (fusionada en Aker BP a finales de 2022, deja de
+     existir como entidad independiente para FY2023-2024 → rompería
+     comparabilidad NFRD→CSRD) → **Eni** (Energy, Italia).
+   - **E145 Direct Line** (sin cobertura yfinance) → **Legal & General**
+     (Insurance, Reino Unido).
+   - **E147 Schibsted** (sin cobertura yfinance — mismo problema que Decisión 005
+     en la muestra original; a petición del usuario se mantiene Noruega) →
+     **Storebrand** (Insurance, Noruega).
+   - **E159 Just Eat Takeaway** (sin cobertura yfinance, adquirida por Prosus) →
+     **Zalando** (Retail, Alemania).
+3. **Michelin (E098)**: yfinance devuelve `marketCap=0` (bug conocido para este
+   ticker) pese a tener `income_stmt`/`balance_sheet` completos. Capitalización
+   reconstruida como `sharesOutstanding × currentPrice` (≈23.1 mM EUR).
+
+**Resultado:** 196/196 empresas con datos financieros completos (ROA, ROE,
+ingresos, EBITDA, deuda 2022-2024, salvo los 4 huecos FY2022 ya documentados en
+Decisión 006). `empresas_muestra.csv`: 588 filas (196×3). `tracking_descargas.csv`:
+588 filas, 297 nuevas en estado `pendiente` para Fase 3.
+
+**Implicación para Fase 3-5:** las 99 empresas nuevas necesitan descarga de PDFs
+(Fase 3), extracción/segmentación (Fase 4) y re-ejecución completa de Fase 5
+(5A-5E) sobre el corpus ampliado. Si Fase 3 resulta inviable en el plazo
+disponible para todas las 99, el análisis puede limitarse a las que se
+completen, documentando el tamaño muestral final.

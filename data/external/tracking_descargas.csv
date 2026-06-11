@@ -53,9 +53,9 @@ E017,Skanska,SKA B,Sweden,2024,integrated,https://group.skanska.com/49490b/sitea
 E018,Vinci,DG,France,2022,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2022.pdf,2026-05-27,219.0,,descargado,no encontrado automáticamente
 E018,Vinci,DG,France,2023,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2023.pdf,2026-05-27,239.0,,descargado,no encontrado automáticamente
 E018,Vinci,DG,France,2024,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2024.pdf,2026-05-27,174.0,,descargado,no encontrado automáticamente
-E019,Bouygues,EN,France,2022,integrated,https://www.bnains.org/archives/communiques/Bouygues/20230322_Document_d_enregistrement_universel_2022_Bouygues.pdf,2026-05-27,279.0,,descargado,no encontrado automáticamente
-E019,Bouygues,EN,France,2023,integrated,https://www.bnains.org/archives/communiques/Bouygues/20240322_Document_d_enregistrement_universel_2023_Bouygues.pdf,2026-05-27,153.0,,descargado,no encontrado automáticamente
-E019,Bouygues,EN,France,2024,integrated,https://www.bnains.org/archives/communiques/Bouygues/20250325_Document_d_enregistrement_universel_2024_Bouygues.pdf,2026-05-27,266.0,,descargado,no encontrado automáticamente
+E019,Bouygues,EN,France,2022,integrated,https://www.bnains.org/archives/communiques/Bouygues/20230322_Document_d_enregistrement_universel_2022_Bouygues.pdf,2026-05-27,279.0,,problema,no encontrado automáticamente
+E019,Bouygues,EN,France,2023,integrated,https://www.bnains.org/archives/communiques/Bouygues/20240322_Document_d_enregistrement_universel_2023_Bouygues.pdf,2026-05-27,153.0,,problema,no encontrado automáticamente
+E019,Bouygues,EN,France,2024,integrated,https://www.bnains.org/archives/communiques/Bouygues/20250325_Document_d_enregistrement_universel_2024_Bouygues.pdf,2026-05-27,266.0,,problema,no encontrado automáticamente
 E020,Eiffage,EFGI,France,2022,integrated,https://www.eiffage.com/files/live/sites/eiffagev2/files/Finance/Rapport%20Annuel/DEU2022.pdf,2026-05-27,61.0,,descargado,no encontrado automáticamente
 E020,Eiffage,EFGI,France,2023,,,,400.0,,descargado,reconciliado
 E020,Eiffage,EFGI,France,2024,,,,424.0,,descargado,reconciliado
@@ -72,7 +72,7 @@ E024,Kering,KER,France,2022,,,,454.0,,descargado,reconciliado
 E024,Kering,KER,France,2023,,,,448.0,,descargado,reconciliado
 E024,Kering,KER,France,2024,,,,445.0,,descargado,reconciliado
 E025,Adidas,ADS,Germany,2022,integrated,https://report.adidas-group.com/2022/en/_assets/downloads/annual-report-adidas-ar22.pdf,2026-05-26,153.0,,descargado,descarga directa bloqueada — descargar manualmente
-E025,Adidas,ADS,Germany,2023,integrated,https://adidas.online-report.eu/2023/en/_assets/downloads/our-company-adidas-ar23.pdf,2026-05-26,321,,descargado,reemplazado por informe anual completo EN
+E025,Adidas,ADS,Germany,2023,integrated,https://adidas.online-report.eu/2023/en/_assets/downloads/our-company-adidas-ar23.pdf,2026-05-26,321.0,,descargado,reemplazado por informe anual completo EN
 E025,Adidas,ADS,Germany,2024,integrated,https://report.adidas-group.com/2024/en/_assets/downloads/annual-report-adidas-ar24.pdf,2026-05-26,465.0,,descargado,descarga directa bloqueada — descargar manualmente
 E026,Repsol,REP,Spain,2022,integrated,https://www.repsol.com/content/dam/repsol-corporate/es/accionistas-e-inversores/informes-anuales/2022/informe-financiero-anual-consolidado-2022.pdf,2026-05-26,325.0,,descargado,descarga directa bloqueada — descargar manualmente
 E026,Repsol,REP,Spain,2023,integrated,https://www.repsol.com/content/dam/repsol-corporate/es/accionistas-e-inversores/informes-anuales/2023/informe-financiero-anual-consolidado.pdf,2026-05-26,288.0,,descargado,descarga directa bloqueada — descargar manualmente
@@ -179,12 +179,12 @@ E059,Merlin Properties,MRL,Spain,2024,integrated,https://ir.merlinproperties.com
 E060,Gecina,GFC,France,2022,integrated,https://www.gecina.fr/sites/default/files/2023-02/gecina_-_document_denregistrement_universel_2022.pdf,2026-05-27,140.0,,descargado,no encontrado automáticamente
 E060,Gecina,GFC,France,2023,integrated,https://www.gecina.fr/sites/default/files/2024-02/gecina_document_d_enregistrement_universel_2023.pdf,2026-05-27,214.0,,descargado,no encontrado automáticamente
 E060,Gecina,GFC,France,2024,integrated,https://www.gecina.fr/sites/default/files/2025-02/gecina_-_document_d_enregistrement_universel_2024.pdf,2026-05-27,158.0,,descargado,no encontrado automáticamente
-E061,Castellum,CAST,Sweden,2022,integrated,https://storage.mfn.se/69d1c438-3577-48e0-a826-b27aa0c51960/castellum-annual-report-and-sustainability-report-2022-print.pdf,2026-05-27,116.0,,descargado,no encontrado automáticamente
-E061,Castellum,CAST,Sweden,2023,integrated,https://storage.mfn.se/f05cdb7c-567f-481b-bc8e-a11da446b807/castellum-annual-report-2023.pdf,2026-05-27,129.0,,descargado,no encontrado automáticamente
-E061,Castellum,CAST,Sweden,2024,integrated,https://storage.mfn.se/e8a0a9e3-9238-42a9-a59a-629f5e32813e/castellum-annual-report-2024.pdf,2026-05-27,142.0,,descargado,no encontrado automáticamente
-E062,Delivery Hero,DHER,Germany,2022,integrated,https://ir-api.eqs.com/media/document/d642242f-833c-45ff-b7b1-9c9784cea279/assets/DeliveryHero_Annual%20Report_2022.pdf?disposition=inline,2026-05-28,88.0,,descargado,no encontrado automáticamente
-E062,Delivery Hero,DHER,Germany,2023,integrated,https://www.lobbyregister.bundestag.de/media/9c/ab/313888/Delivery-Hero-Annual-Report-2023.pdf,2026-05-27,104.0,,descargado,no encontrado automáticamente
-E062,Delivery Hero,DHER,Germany,2024,integrated,https://ir.deliveryhero.com/media/document/c38c7d53-cd6e-44de-8b1f-3559d5c43e6b/assets/DE000A2E4K43-JA-2024-EQ-E-00.pdf,2026-05-27,113.0,,descargado,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2022,integrated,https://storage.mfn.se/69d1c438-3577-48e0-a826-b27aa0c51960/castellum-annual-report-and-sustainability-report-2022-print.pdf,2026-05-27,116.0,,problema,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2023,integrated,https://storage.mfn.se/f05cdb7c-567f-481b-bc8e-a11da446b807/castellum-annual-report-2023.pdf,2026-05-27,129.0,,problema,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2024,integrated,https://storage.mfn.se/e8a0a9e3-9238-42a9-a59a-629f5e32813e/castellum-annual-report-2024.pdf,2026-05-27,142.0,,problema,no encontrado automáticamente
+E062,Delivery Hero,DHER,Germany,2022,integrated,https://ir-api.eqs.com/media/document/d642242f-833c-45ff-b7b1-9c9784cea279/assets/DeliveryHero_Annual%20Report_2022.pdf?disposition=inline,2026-05-28,88.0,,problema,no encontrado automáticamente
+E062,Delivery Hero,DHER,Germany,2023,integrated,https://www.lobbyregister.bundestag.de/media/9c/ab/313888/Delivery-Hero-Annual-Report-2023.pdf,2026-05-27,104.0,,problema,no encontrado automáticamente
+E062,Delivery Hero,DHER,Germany,2024,integrated,https://ir.deliveryhero.com/media/document/c38c7d53-cd6e-44de-8b1f-3559d5c43e6b/assets/DE000A2E4K43-JA-2024-EQ-E-00.pdf,2026-05-27,113.0,,problema,no encontrado automáticamente
 E063,Travis Perkins,TPK,United Kingdom,2022,integrated,https://www.travisperkinsplc.co.uk/media/dqbnofvc/annual-report-and-accounts-2022.pdf,2026-05-27,135.0,,descargado,no encontrado automáticamente
 E063,Travis Perkins,TPK,United Kingdom,2023,integrated,https://www.travisperkinsplc.co.uk/media/4mznqoer/travis-perkins-annual-report-2023.pdf,2026-05-27,108.0,,descargado,no encontrado automáticamente
 E063,Travis Perkins,TPK,United Kingdom,2024,integrated,https://www.travisperkinsplc.co.uk/media/uc0oz433/travis-perkins-plc-2024-annual-report.pdf,2026-05-27,67.0,,descargado,no encontrado automáticamente
@@ -215,7 +215,7 @@ E071,Swisscom,SCMN,Switzerland,2024,integrated,https://www.swisscom.ch/en/about-
 E072,Freenet,FNTN,Germany,2022,integrated,https://www.freenet.ag/binaries/_ts_1691410969603/content/assets/freenetgroup/pdf/ir-englisch/finanzberichte/2022/2022_ar_web_freenet.pdf,2026-05-27,43.0,,descargado,no encontrado automáticamente
 E072,Freenet,FNTN,Germany,2023,integrated,https://www.freenet.ag/binaries/_ts_1713541479442/content/assets/freenetgroup/pdf/ir-englisch/finanzberichte/2023/freenet-gb-2023-e-web.pdf,2026-05-27,41.0,,descargado,no encontrado automáticamente
 E072,Freenet,FNTN,Germany,2024,integrated,https://www.freenet.ag/binaries/_ts_1743061697640/content/assets/freenetgroup/pdf/ir-englisch/finanzberichte/2024/freenet-gb-2024-en-web.pdf,2026-05-27,53.0,,descargado,no encontrado automáticamente
-E073,Orange S.A.,ORAN,France,2022,integrated,https://rai.orange.com/wp-content/uploads/sites/54/2024/02/orange_integratedannualreport_2022_en.pdf,2026-05-26,480,,descargado,reemplazado por informe anual completo EN
+E073,Orange S.A.,ORAN,France,2022,integrated,https://rai.orange.com/wp-content/uploads/sites/54/2024/02/orange_integratedannualreport_2022_en.pdf,2026-05-26,480.0,,descargado,reemplazado por informe anual completo EN
 E073,Orange S.A.,ORAN,France,2023,integrated,https://www.orange-business.com/sites/default/files/rapport-financier-2023.pdf,2026-05-28,130.0,,descargado,no encontrado automáticamente
 E073,Orange S.A.,ORAN,France,2024,integrated,https://mastermedia.dam-broadcast.com/medias/domain12751/media101349/404737-yf5e7h0wx1-75.pdf,2026-05-28,126.0,,descargado,no encontrado automáticamente
 E074,Telecom Italia,TIT,Italy,2022,integrated,https://www.gruppotim.it/content/dam/gt/investitori/doc---avvisi/anno-2023/eng/Annual-report-2022.pdf,2026-05-27,125.0,,descargado,no encontrado automáticamente
@@ -290,3 +290,300 @@ E096,Nemetschek,NEM,Germany,2024,integrated,https://ir.nemetschek.com/media/docu
 E097,Universal Music Group,UMG,Netherlands,2022,integrated,https://investors.umusic.com/financial-information/annual-reports,2026-05-29,337.0,en,descargado,reemplaza doc incorrecto (era Focus Universal Inc. 10-K)
 E097,Universal Music Group,UMG,Netherlands,2023,integrated,https://investors.umusic.com/financial-information/annual-reports,2026-05-29,355.0,en,descargado,reemplaza doc incorrecto (era Focus Universal Inc. 10-K)
 E097,Universal Music Group,UMG,Netherlands,2024,integrated,https://downloads.ctfassets.net/e66ejtqbaazg/Yt3zzyacZ1VRFc3dcEt85/b9d00d3ac6ffedea5bb01c770e825c8b/UMG_2024_Annual_Report.pdf,2026-05-27,136.0,,descargado,no encontrado automáticamente
+E098,Michelin,MICP,France,2022,integrated,https://dgaddcosprod.blob.core.windows.net/corporate-production/attachments/clktdc5dh09gn2fhh5lf08qx5-michelin-deu-2022-fr-mel-v2.pdf,2026-06-11,217,,descargado,
+E098,Michelin,MICP,France,2023,integrated,https://dgaddcosprod.blob.core.windows.net/corporate-production/attachments/cloo511be002s35nj6t121dni-20230726-michelin-2023-rfs-en.pdf,2026-06-11,86,,descargado,
+E098,Michelin,MICP,France,2024,integrated,https://www.bnains.org/archives/communiques/Michelin/20250212_Communique_resultats_annuels_2024_Michelin.pdf,2026-06-11,6,,descargado,
+E099,Pirelli,PIRC,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PPAMY_2022.pdf,2026-06-11,215,,descargado,
+E099,Pirelli,PIRC,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PPAMY_2023.pdf,2026-06-11,178,,descargado,
+E099,Pirelli,PIRC,Italy,2024,integrated,https://corp2-assets.pirelli.com/corporate/Annual_Report_Pirelli_2024_ENG.pdf,2026-06-11,173,,descargado,
+E100,Ferrari,FERR,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_RACE_2022.pdf,2026-06-11,88,,descargado,
+E100,Ferrari,FERR,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_RACE_2023.pdf,2026-06-11,79,,descargado,
+E100,Ferrari,FERR,Italy,2024,integrated,https://investors.ferrarigroup.net/content/dam/ferrari/corporate/documents/results-and-reports/2025/ferrari-group-plc_annual-report_2024.pdf.downloadasset.pdf,,,,problema,no encontrado automáticamente
+E101,Renault,RENA,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/g/groupe-renault_2022.pdf,2026-06-11,64,,descargado,
+E101,Renault,RENA,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/g/groupe-renault_2023.pdf,2026-06-11,232,,descargado,
+E101,Renault,RENA,France,2024,integrated,https://events.renaultgroup.com/app/uploads/sites/7/2025/02/RG_2024_Earning_report.pdf,2026-06-11,18,,descargado,
+E102,ABN AMRO,ABN,Netherlands,2022,integrated,,2026-06-11,,,descargado,
+E102,ABN AMRO,ABN,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/abn-amro-bank_2023.pdf,2026-06-11,169,,descargado,
+E102,ABN AMRO,ABN,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/abn-amro-bank_2024.pdf,2026-06-11,243,,descargado,
+E103,KBC Group,KBC,Belgium,2022,integrated,https://wcmassets.kbc.be/content/dam/kbccom/doc/investor-relations/Results/jvs-2022/jvs-2022-grp-en.pdf.cdn.res/last-modified/1680373663510/jvs-2022-grp-en.pdf,,,,problema,no encontrado automáticamente
+E103,KBC Group,KBC,Belgium,2023,,,,,,problema,no encontrado automáticamente
+E103,KBC Group,KBC,Belgium,2024,,,,,,problema,no encontrado automáticamente
+E104,ING Group,INGA,Netherlands,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NYSE_EFSH_2022.pdf,2026-06-11,15,,descargado,
+E104,ING Group,INGA,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NYSE_EFSH_2023.pdf,2026-06-11,17,,descargado,
+E104,ING Group,INGA,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NYSE_EFSH_2024.pdf,,,,problema,no encontrado automáticamente
+E105,UniCredit,UC,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/u/OTC_UNCIF_2022.pdf,,,,problema,no encontrado automáticamente
+E105,UniCredit,UC,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/u/OTC_UNCIF_2023.pdf,,,,problema,no encontrado automáticamente
+E105,UniCredit,UC,Italy,2024,,,,,,problema,no encontrado automáticamente
+E106,Banco Santander,SAN,Spain,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NASDAQ_BCOW_2022.pdf,,,,problema,no encontrado automáticamente
+E106,Banco Santander,SAN,Spain,2023,,,,,,problema,no encontrado automáticamente
+E106,Banco Santander,SAN,Spain,2024,,,,,,problema,no encontrado automáticamente
+E107,Vallourec,VK,France,2022,,,,,,problema,no encontrado automáticamente
+E107,Vallourec,VK,France,2023,,,,,,problema,no encontrado automáticamente
+E107,Vallourec,VK,France,2024,,,,,,problema,no encontrado automáticamente
+E108,ArcelorMittal,MT,Luxembourg,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2022.pdf,,,,problema,no encontrado automáticamente
+E108,ArcelorMittal,MT,Luxembourg,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2023.pdf,,,,problema,no encontrado automáticamente
+E108,ArcelorMittal,MT,Luxembourg,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2024.pdf,,,,problema,no encontrado automáticamente
+E109,Solvay,SOLB,Belgium,2022,,,,,,problema,no encontrado automáticamente
+E109,Solvay,SOLB,Belgium,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/solvay_2023.pdf,,,,problema,no encontrado automáticamente
+E109,Solvay,SOLB,Belgium,2024,,,,,,problema,no encontrado automáticamente
+E110,AkzoNobel,AKZA,Netherlands,2022,,,,,,problema,no encontrado automáticamente
+E110,AkzoNobel,AKZA,Netherlands,2023,,,,,,problema,no encontrado automáticamente
+E110,AkzoNobel,AKZA,Netherlands,2024,,,,,,problema,no encontrado automáticamente
+E111,BASF,BAS,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/basf-ag_2022.pdf,,,,problema,no encontrado automáticamente
+E111,BASF,BAS,Germany,2023,,,,,,problema,no encontrado automáticamente
+E111,BASF,BAS,Germany,2024,,,,,,problema,no encontrado automáticamente
+E112,Vinci,DG,France,2022,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2022.pdf,,,,pendiente,
+E112,Vinci,DG,France,2023,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2023.pdf,,,,pendiente,
+E112,Vinci,DG,France,2024,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2024.pdf,,,,pendiente,
+E113,ACS Group,ACS,Spain,2022,,,,,,problema,no encontrado automáticamente
+E113,ACS Group,ACS,Spain,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TRCS_2023.pdf,,,,problema,no encontrado automáticamente
+E113,ACS Group,ACS,Spain,2024,,,,,,problema,no encontrado automáticamente
+E114,Saint-Gobain,SGO,France,2022,,,,,,problema,no encontrado automáticamente
+E114,Saint-Gobain,SGO,France,2023,,,,,,problema,no encontrado automáticamente
+E114,Saint-Gobain,SGO,France,2024,,,,,,problema,no encontrado automáticamente
+E115,Ferrovial,FER,Netherlands,2022,,,,,,problema,no encontrado automáticamente
+E115,Ferrovial,FER,Netherlands,2023,,,,,,problema,no encontrado automáticamente
+E115,Ferrovial,FER,Netherlands,2024,,,,,,problema,no encontrado automáticamente
+E116,Bouygues,BOUY,France,2022,integrated,https://www.bnains.org/archives/communiques/Bouygues/20230322_Document_d_enregistrement_universel_2022_Bouygues.pdf,,,,problema,no encontrado automáticamente
+E116,Bouygues,BOUY,France,2023,integrated,https://www.bnains.org/archives/communiques/Bouygues/20240322_Document_d_enregistrement_universel_2023_Bouygues.pdf,,,,problema,no encontrado automáticamente
+E116,Bouygues,BOUY,France,2024,integrated,https://www.bnains.org/archives/communiques/Bouygues/20250325_Document_d_enregistrement_universel_2024_Bouygues.pdf,,,,problema,no encontrado automáticamente
+E117,Beiersdorf,BEI,Germany,2022,,,,,,problema,no encontrado automáticamente
+E117,Beiersdorf,BEI,Germany,2023,,,,,,problema,no encontrado automáticamente
+E117,Beiersdorf,BEI,Germany,2024,,,,,,problema,no encontrado automáticamente
+E118,Moncler,MONC,Italy,2022,,,,,,problema,no encontrado automáticamente
+E118,Moncler,MONC,Italy,2023,,,,,,problema,no encontrado automáticamente
+E118,Moncler,MONC,Italy,2024,,,,,,problema,no encontrado automáticamente
+E119,Haleon,HLI,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E119,Haleon,HLI,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E119,Haleon,HLI,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E120,Puma,PUM,Germany,2022,,,,,,problema,no encontrado automáticamente
+E120,Puma,PUM,Germany,2023,,,,,,problema,no encontrado automáticamente
+E120,Puma,PUM,Germany,2024,,,,,,problema,no encontrado automáticamente
+E121,Games Workshop,GAW,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E121,Games Workshop,GAW,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E121,Games Workshop,GAW,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E122,Shell plc,SHEL,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E122,Shell plc,SHEL,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E122,Shell plc,SHEL,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E123,Eni,ENI,Italy,2022,,,,,,problema,no encontrado automáticamente
+E123,Eni,ENI,Italy,2023,,,,,,problema,no encontrado automáticamente
+E123,Eni,ENI,Italy,2024,,,,,,problema,no encontrado automáticamente
+E124,Galp Energia,GALP,Portugal,2022,,,,,,problema,no encontrado automáticamente
+E124,Galp Energia,GALP,Portugal,2023,,,,,,problema,no encontrado automáticamente
+E124,Galp Energia,GALP,Portugal,2024,,,,,,problema,no encontrado automáticamente
+E125,Euronext,ENX,Netherlands,2022,,,,,,problema,no encontrado automáticamente
+E125,Euronext,ENX,Netherlands,2023,,,,,,problema,no encontrado automáticamente
+E125,Euronext,ENX,Netherlands,2024,,,,,,problema,no encontrado automáticamente
+E126,IG Group,IGGI,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E126,IG Group,IGGI,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E126,IG Group,IGGI,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E127,Flow Traders,FLOW,Netherlands,2022,,,,,,problema,no encontrado automáticamente
+E127,Flow Traders,FLOW,Netherlands,2023,,,,,,problema,no encontrado automáticamente
+E127,Flow Traders,FLOW,Netherlands,2024,,,,,,problema,no encontrado automáticamente
+E128,Nestlé,NESN,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E128,Nestlé,NESN,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E128,Nestlé,NESN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E129,Rémy Cointreau,RCO,France,2022,,,,,,problema,no encontrado automáticamente
+E129,Rémy Cointreau,RCO,France,2023,,,,,,problema,no encontrado automáticamente
+E129,Rémy Cointreau,RCO,France,2024,,,,,,problema,no encontrado automáticamente
+E130,Coca-Cola HBC,CCH,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E130,Coca-Cola HBC,CCH,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E130,Coca-Cola HBC,CCH,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E131,Teva Pharmaceutical Industries,TEV,Israel,2022,,,,,,problema,no encontrado automáticamente
+E131,Teva Pharmaceutical Industries,TEV,Israel,2023,,,,,,problema,no encontrado automáticamente
+E131,Teva Pharmaceutical Industries,TEV,Israel,2024,,,,,,problema,no encontrado automáticamente
+E132,EssilorLuxottica,ESLX,France,2022,,,,,,problema,no encontrado automáticamente
+E132,EssilorLuxottica,ESLX,France,2023,,,,,,problema,no encontrado automáticamente
+E132,EssilorLuxottica,ESLX,France,2024,,,,,,problema,no encontrado automáticamente
+E133,Sanofi,SNY,France,2022,,,,,,problema,no encontrado automáticamente
+E133,Sanofi,SNY,France,2023,,,,,,problema,no encontrado automáticamente
+E133,Sanofi,SNY,France,2024,,,,,,problema,no encontrado automáticamente
+E134,Novartis,NOV N,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E134,Novartis,NOV N,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E134,Novartis,NOV N,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E135,Fresenius Medical Care,FME,Germany,2022,,,,,,problema,no encontrado automáticamente
+E135,Fresenius Medical Care,FME,Germany,2023,,,,,,problema,no encontrado automáticamente
+E135,Fresenius Medical Care,FME,Germany,2024,,,,,,problema,no encontrado automáticamente
+E136,Sandvik AB,SAND,Sweden,2022,,,,,,problema,no encontrado automáticamente
+E136,Sandvik AB,SAND,Sweden,2023,,,,,,problema,no encontrado automáticamente
+E136,Sandvik AB,SAND,Sweden,2024,,,,,,problema,no encontrado automáticamente
+E137,Kone,KNEBV,Finland,2022,,,,,,problema,no encontrado automáticamente
+E137,Kone,KNEBV,Finland,2023,,,,,,problema,no encontrado automáticamente
+E137,Kone,KNEBV,Finland,2024,,,,,,problema,no encontrado automáticamente
+E138,Smiths Group,SMIN,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E138,Smiths Group,SMIN,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E138,Smiths Group,SMIN,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E139,Volvo Group,VOLV B,Sweden,2022,,,,,,problema,no encontrado automáticamente
+E139,Volvo Group,VOLV B,Sweden,2023,,,,,,problema,no encontrado automáticamente
+E139,Volvo Group,VOLV B,Sweden,2024,,,,,,problema,no encontrado automáticamente
+E140,Prysmian,PRY,Italy,2022,,,,,,problema,no encontrado automáticamente
+E140,Prysmian,PRY,Italy,2023,,,,,,problema,no encontrado automáticamente
+E140,Prysmian,PRY,Italy,2024,,,,,,problema,no encontrado automáticamente
+E141,Prudential plc,PRU,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E141,Prudential plc,PRU,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E141,Prudential plc,PRU,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E142,Poste Italiane,PST,Italy,2022,,,,,,problema,no encontrado automáticamente
+E142,Poste Italiane,PST,Italy,2023,,,,,,problema,no encontrado automáticamente
+E142,Poste Italiane,PST,Italy,2024,,,,,,problema,no encontrado automáticamente
+E143,SCOR SE,SCR,France,2022,,,,,,problema,no encontrado automáticamente
+E143,SCOR SE,SCR,France,2023,,,,,,problema,no encontrado automáticamente
+E143,SCOR SE,SCR,France,2024,,,,,,problema,no encontrado automáticamente
+E144,Swiss Re,SRENH,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E144,Swiss Re,SRENH,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E144,Swiss Re,SRENH,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E145,Legal & General,LGEN,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E145,Legal & General,LGEN,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E145,Legal & General,LGEN,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E146,RELX,REL,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E146,RELX,REL,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E146,RELX,REL,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E147,Storebrand,SRB,Norway,2022,,,,,,problema,no encontrado automáticamente
+E147,Storebrand,SRB,Norway,2023,,,,,,problema,no encontrado automáticamente
+E147,Storebrand,SRB,Norway,2024,,,,,,problema,no encontrado automáticamente
+E148,Informa,INF,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E148,Informa,INF,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E148,Informa,INF,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E149,Ipsos,IPX,France,2022,,,,,,problema,no encontrado automáticamente
+E149,Ipsos,IPX,France,2023,,,,,,problema,no encontrado automáticamente
+E149,Ipsos,IPX,France,2024,,,,,,problema,no encontrado automáticamente
+E150,Sanoma,SANO,Finland,2022,,,,,,problema,no encontrado automáticamente
+E150,Sanoma,SANO,Finland,2023,,,,,,problema,no encontrado automáticamente
+E150,Sanoma,SANO,Finland,2024,,,,,,problema,no encontrado automáticamente
+E151,Sainsbury's,SBRY,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E151,Sainsbury's,SBRY,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E151,Sainsbury's,SBRY,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E152,Reckitt,RKT,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E152,Reckitt,RKT,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E152,Reckitt,RKT,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E153,Warehouses De Pauw,WDP,Belgium,2022,,,,,,problema,no encontrado automáticamente
+E153,Warehouses De Pauw,WDP,Belgium,2023,,,,,,problema,no encontrado automáticamente
+E153,Warehouses De Pauw,WDP,Belgium,2024,,,,,,problema,no encontrado automáticamente
+E154,Unibail-Rodamco-Westfield,URW,France,2022,,,,,,problema,no encontrado automáticamente
+E154,Unibail-Rodamco-Westfield,URW,France,2023,,,,,,problema,no encontrado automáticamente
+E154,Unibail-Rodamco-Westfield,URW,France,2024,,,,,,problema,no encontrado automáticamente
+E155,Vonovia,VNA,Germany,2022,,,,,,problema,no encontrado automáticamente
+E155,Vonovia,VNA,Germany,2023,,,,,,problema,no encontrado automáticamente
+E155,Vonovia,VNA,Germany,2024,,,,,,problema,no encontrado automáticamente
+E156,Tesco,TSCO,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E156,Tesco,TSCO,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E156,Tesco,TSCO,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E157,Delivery Hero,DASH,Germany,2022,integrated,https://ir-api.eqs.com/media/document/d642242f-833c-45ff-b7b1-9c9784cea279/assets/DeliveryHero_Annual%20Report_2022.pdf?disposition=inline,,,,problema,no encontrado automáticamente
+E157,Delivery Hero,DASH,Germany,2023,integrated,https://www.lobbyregister.bundestag.de/media/9c/ab/313888/Delivery-Hero-Annual-Report-2023.pdf,,,,problema,no encontrado automáticamente
+E157,Delivery Hero,DASH,Germany,2024,integrated,https://ir.deliveryhero.com/media/document/c38c7d53-cd6e-44de-8b1f-3559d5c43e6b/assets/DE000A2E4K43-JA-2024-EQ-E-00.pdf,,,,problema,no encontrado automáticamente
+E158,Jerónimo Martins,JMT,Portugal,2022,,,,,,problema,no encontrado automáticamente
+E158,Jerónimo Martins,JMT,Portugal,2023,,,,,,problema,no encontrado automáticamente
+E158,Jerónimo Martins,JMT,Portugal,2024,,,,,,problema,no encontrado automáticamente
+E159,Zalando,ZAL,Germany,2022,,,,,,problema,no encontrado automáticamente
+E159,Zalando,ZAL,Germany,2023,,,,,,problema,no encontrado automáticamente
+E159,Zalando,ZAL,Germany,2024,,,,,,problema,no encontrado automáticamente
+E160,Carrefour,CARR,France,2022,,,,,,problema,no encontrado automáticamente
+E160,Carrefour,CARR,France,2023,,,,,,problema,no encontrado automáticamente
+E160,Carrefour,CARR,France,2024,,,,,,problema,no encontrado automáticamente
+E161,Logitech,LOGN,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E161,Logitech,LOGN,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E161,Logitech,LOGN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E162,AIXTRON,AIXA,Germany,2022,,,,,,problema,no encontrado automáticamente
+E162,AIXTRON,AIXA,Germany,2023,,,,,,problema,no encontrado automáticamente
+E162,AIXTRON,AIXA,Germany,2024,,,,,,problema,no encontrado automáticamente
+E163,Infineon Technologies,IFX,Germany,2022,,,,,,problema,no encontrado automáticamente
+E163,Infineon Technologies,IFX,Germany,2023,,,,,,problema,no encontrado automáticamente
+E163,Infineon Technologies,IFX,Germany,2024,,,,,,problema,no encontrado automáticamente
+E164,Atos,ATOS,France,2022,,,,,,problema,no encontrado automáticamente
+E164,Atos,ATOS,France,2023,,,,,,problema,no encontrado automáticamente
+E164,Atos,ATOS,France,2024,,,,,,problema,no encontrado automáticamente
+E165,ams OSRAM,AMS,Austria,2022,,,,,,problema,no encontrado automáticamente
+E165,ams OSRAM,AMS,Austria,2023,,,,,,problema,no encontrado automáticamente
+E165,ams OSRAM,AMS,Austria,2024,,,,,,problema,no encontrado automáticamente
+E166,Telia Company,TELIA,Sweden,2022,,,,,,problema,no encontrado automáticamente
+E166,Telia Company,TELIA,Sweden,2023,,,,,,problema,no encontrado automáticamente
+E166,Telia Company,TELIA,Sweden,2024,,,,,,problema,no encontrado automáticamente
+E167,Telenor,TEL,Norway,2022,,,,,,problema,no encontrado automáticamente
+E167,Telenor,TEL,Norway,2023,,,,,,problema,no encontrado automáticamente
+E167,Telenor,TEL,Norway,2024,,,,,,problema,no encontrado automáticamente
+E168,Ericsson,ERICb,Sweden,2022,,,,,,problema,no encontrado automáticamente
+E168,Ericsson,ERICb,Sweden,2023,,,,,,problema,no encontrado automáticamente
+E168,Ericsson,ERICb,Sweden,2024,,,,,,problema,no encontrado automáticamente
+E169,Telefónica,TEF,Spain,2022,,,,,,problema,no encontrado automáticamente
+E169,Telefónica,TEF,Spain,2023,,,,,,problema,no encontrado automáticamente
+E169,Telefónica,TEF,Spain,2024,,,,,,problema,no encontrado automáticamente
+E170,KPN,KPN,Netherlands,2022,,,,,,problema,no encontrado automáticamente
+E170,KPN,KPN,Netherlands,2023,,,,,,problema,no encontrado automáticamente
+E170,KPN,KPN,Netherlands,2024,,,,,,problema,no encontrado automáticamente
+E171,Entain,ENT,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E171,Entain,ENT,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E171,Entain,ENT,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E172,Lufthansa,LHA,Germany,2022,,,,,,problema,no encontrado automáticamente
+E172,Lufthansa,LHA,Germany,2023,,,,,,problema,no encontrado automáticamente
+E172,Lufthansa,LHA,Germany,2024,,,,,,problema,no encontrado automáticamente
+E173,International Airlines Group,IAG,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E173,International Airlines Group,IAG,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E173,International Airlines Group,IAG,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E174,Naturgy,NTGY,Spain,2022,,,,,,problema,no encontrado automáticamente
+E174,Naturgy,NTGY,Spain,2023,,,,,,problema,no encontrado automáticamente
+E174,Naturgy,NTGY,Spain,2024,,,,,,problema,no encontrado automáticamente
+E175,Veolia,VIE,France,2022,,,,,,problema,no encontrado automáticamente
+E175,Veolia,VIE,France,2023,,,,,,problema,no encontrado automáticamente
+E175,Veolia,VIE,France,2024,,,,,,problema,no encontrado automáticamente
+E176,Severn Trent,SVT,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
+E176,Severn Trent,SVT,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
+E176,Severn Trent,SVT,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
+E177,Redeia,RED,Spain,2022,,,,,,problema,no encontrado automáticamente
+E177,Redeia,RED,Spain,2023,,,,,,problema,no encontrado automáticamente
+E177,Redeia,RED,Spain,2024,,,,,,problema,no encontrado automáticamente
+E178,Iberdrola,IBE,Spain,2022,,,,,,problema,no encontrado automáticamente
+E178,Iberdrola,IBE,Spain,2023,,,,,,problema,no encontrado automáticamente
+E178,Iberdrola,IBE,Spain,2024,,,,,,problema,no encontrado automáticamente
+E179,Commerzbank,CBK,Germany,2022,,,,,,problema,no encontrado automáticamente
+E179,Commerzbank,CBK,Germany,2023,,,,,,problema,no encontrado automáticamente
+E179,Commerzbank,CBK,Germany,2024,,,,,,problema,no encontrado automáticamente
+E180,Julius Baer,BAER,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E180,Julius Baer,BAER,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E180,Julius Baer,BAER,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E181,ASML Holding,ASML,Netherlands,2022,,,,,,problema,no encontrado automáticamente
+E181,ASML Holding,ASML,Netherlands,2023,,,,,,problema,no encontrado automáticamente
+E181,ASML Holding,ASML,Netherlands,2024,,,,,,problema,no encontrado automáticamente
+E182,Meliá Hotels,MEL,Spain,2022,,,,,,problema,no encontrado automáticamente
+E182,Meliá Hotels,MEL,Spain,2023,,,,,,problema,no encontrado automáticamente
+E182,Meliá Hotels,MEL,Spain,2024,,,,,,problema,no encontrado automáticamente
+E183,Scout24,G24,Germany,2022,,,,,,problema,no encontrado automáticamente
+E183,Scout24,G24,Germany,2023,,,,,,problema,no encontrado automáticamente
+E183,Scout24,G24,Germany,2024,,,,,,problema,no encontrado automáticamente
+E184,Swiss Prime Site,SPSN,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E184,Swiss Prime Site,SPSN,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E184,Swiss Prime Site,SPSN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E185,Castellum,CASP,Sweden,2022,integrated,https://storage.mfn.se/69d1c438-3577-48e0-a826-b27aa0c51960/castellum-annual-report-and-sustainability-report-2022-print.pdf,,,,problema,no encontrado automáticamente
+E185,Castellum,CASP,Sweden,2023,integrated,https://storage.mfn.se/f05cdb7c-567f-481b-bc8e-a11da446b807/castellum-annual-report-2023.pdf,,,,problema,no encontrado automáticamente
+E185,Castellum,CASP,Sweden,2024,integrated,https://storage.mfn.se/e8a0a9e3-9238-42a9-a59a-629f5e32813e/castellum-annual-report-2024.pdf,,,,problema,no encontrado automáticamente
+E186,Norsk Hydro,NHY,Norway,2022,,,,,,problema,no encontrado automáticamente
+E186,Norsk Hydro,NHY,Norway,2023,,,,,,problema,no encontrado automáticamente
+E186,Norsk Hydro,NHY,Norway,2024,,,,,,problema,no encontrado automáticamente
+E187,OCI,OCI,Netherlands,2022,,,,,,problema,no encontrado automáticamente
+E187,OCI,OCI,Netherlands,2023,,,,,,problema,no encontrado automáticamente
+E187,OCI,OCI,Netherlands,2024,,,,,,problema,no encontrado automáticamente
+E188,Clariant,CLN,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E188,Clariant,CLN,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E188,Clariant,CLN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E189,Mediobanca,MB,Italy,2022,,,,,,problema,no encontrado automáticamente
+E189,Mediobanca,MB,Italy,2023,,,,,,problema,no encontrado automáticamente
+E189,Mediobanca,MB,Italy,2024,,,,,,problema,no encontrado automáticamente
+E190,Deutsche Börse,DB1,Germany,2022,,,,,,problema,no encontrado automáticamente
+E190,Deutsche Börse,DB1,Germany,2023,,,,,,problema,no encontrado automáticamente
+E190,Deutsche Börse,DB1,Germany,2024,,,,,,problema,no encontrado automáticamente
+E191,Transocean,RIGN,Switzerland,2022,,,,,,problema,no encontrado automáticamente
+E191,Transocean,RIGN,Switzerland,2023,,,,,,problema,no encontrado automáticamente
+E191,Transocean,RIGN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
+E192,Snam,SRG,Italy,2022,,,,,,problema,no encontrado automáticamente
+E192,Snam,SRG,Italy,2023,,,,,,problema,no encontrado automáticamente
+E192,Snam,SRG,Italy,2024,,,,,,problema,no encontrado automáticamente
+E193,Lerøy Seafood,LSG,Norway,2022,,,,,,problema,no encontrado automáticamente
+E193,Lerøy Seafood,LSG,Norway,2023,,,,,,problema,no encontrado automáticamente
+E193,Lerøy Seafood,LSG,Norway,2024,,,,,,problema,no encontrado automáticamente
+E194,Gruppo Campari,GWI,Italy,2022,,,,,,problema,no encontrado automáticamente
+E194,Gruppo Campari,GWI,Italy,2023,,,,,,problema,no encontrado automáticamente
+E194,Gruppo Campari,GWI,Italy,2024,,,,,,problema,no encontrado automáticamente
+E195,CTS Eventim,CTS,Germany,2022,,,,,,problema,no encontrado automáticamente
+E195,CTS Eventim,CTS,Germany,2023,,,,,,problema,no encontrado automáticamente
+E195,CTS Eventim,CTS,Germany,2024,,,,,,problema,no encontrado automáticamente
+E196,DIETEREN Group,DIE,Belgium,2022,,,,,,problema,no encontrado automáticamente
+E196,DIETEREN Group,DIE,Belgium,2023,,,,,,problema,no encontrado automáticamente
+E196,DIETEREN Group,DIE,Belgium,2024,,,,,,problema,no encontrado automáticamente

@@ -48,6 +48,7 @@ SESSION.headers.update(HEADERS)
 
 SLEEP_IR = 1.5       # entre peticiones a webs IR
 SLEEP_DDG = 12.0    # entre queries DDG (agresivo para evitar 403)
+SLEEP_AR = 10.0     # cooldown entre peticiones a annualreports.com (evitar baneo de IP)
 TIMEOUT = 30
 MAX_PDF_MB = 300
 
@@ -55,6 +56,11 @@ MAX_PDF_MB = 300
 DDG_MAX_FAILS = 3
 _ddg_fails = 0        # contador de fallos DDG
 _ddg_disabled = False # se activa cuando supera el límite
+
+# Circuit-breaker para annualreports.com: si falla por conexión N veces seguidas, se desactiva
+AR_MAX_FAILS = 3
+_ar_fails = 0         # contador de fallos consecutivos de conexión a annualreports.com
+_ar_disabled = False  # se activa cuando supera el límite
 
 # ---------------------------------------------------------------------------
 # Palabras que descartan un PDF como informe anual integrado
@@ -646,23 +652,51 @@ def _ar_slug(ticker: str, empresa: str) -> str | None:
     return None
 
 
+def _get_page_ar(url: str) -> BeautifulSoup | None:
+    """get_page con circuit-breaker y cooldown propios para annualreports.com."""
+    global _ar_fails, _ar_disabled
+    if _ar_disabled:
+        return None
+    try:
+        r = SESSION.get(url, timeout=TIMEOUT, allow_redirects=True)
+        r.raise_for_status()
+        _ar_fails = 0  # reset circuit-breaker en éxito
+        soup = BeautifulSoup(r.text, "lxml")
+    except Exception as e:
+        print(f"    [HTTP] {e}")
+        _ar_fails += 1
+        print(f"    [AR {_ar_fails}/{AR_MAX_FAILS}]")
+        if _ar_fails >= AR_MAX_FAILS:
+            _ar_disabled = True
+            print("    [AR] Desactivado por bloqueo/rate-limit — se omite el resto de la sesión")
+        soup = None
+    time.sleep(SLEEP_AR)
+    return soup
+
+
 def search_annualreports_com(ticker: str, empresa: str, año: int) -> str | None:
+    if _ar_disabled:
+        return None
+
     # Intenta primero con slug conocido
     slug = _ar_slug(ticker, empresa)
     if slug:
         url = f"{AR_COM}/Company/{slug}"
-        soup = get_page(url)
+        soup = _get_page_ar(url)
         if soup:
             result = _find_pdf_in_page(soup, url, año)
             if result:
                 return result
         # Slug incorrecto o sin PDFs → cae al search
 
+    if _ar_disabled:
+        return None
+
     # Búsqueda por nombre
     first_word = empresa.split()[0].lower().rstrip(".")
     query = urllib.parse.quote_plus(first_word)
     url = f"{AR_COM}/Companies?search={query}"
-    soup = get_page(url)
+    soup = _get_page_ar(url)
     if soup is None:
         return None
 
@@ -670,8 +704,7 @@ def search_annualreports_com(ticker: str, empresa: str, año: int) -> str | None
         text = a.get_text(strip=True).lower()
         if first_word in text:
             company_url = urllib.parse.urljoin(AR_COM, a["href"])
-            time.sleep(1.5)
-            soup2 = get_page(company_url)
+            soup2 = _get_page_ar(company_url)
             if soup2:
                 result = _find_pdf_in_page(soup2, company_url, año)
                 if result:

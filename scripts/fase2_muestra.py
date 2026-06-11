@@ -114,6 +114,31 @@ TICKER_OVERRIDES = {
     "CAPP":   "CAP.PA",      # Capgemini: ticker es CAP en Euronext Paris
     "CARR":   "CA.PA",       # Carrefour: ticker es CA en Euronext Paris
     "TUI":    "TUI1.DE",     # TUI Group: ticker en Frankfurt es TUI1 (TUI.DE sin datos)
+    "TEV":    "TEVA",        # Teva Pharmaceutical: ADR NASDAQ (TEV sin sufijo de bolsa europeo)
+    # --- Ampliación a 196 (Decisión 027) — overrides de tickers Wikipedia incorrectos ---
+    "MICP":   "ML.PA",       # Michelin: ticker correcto ML en Euronext Paris
+    "FERR":   "RACE.MI",     # Ferrari: ticker correcto RACE (Borsa Italiana / NYSE)
+    "RENA":   "RNO.PA",      # Renault: ticker correcto RNO en Euronext Paris
+    "UC":     "UCG.MI",      # UniCredit: ticker correcto UCG en Borsa Italiana
+    "MT":     "MT.AS",       # ArcelorMittal: listing Amsterdam (MT.LU sin datos)
+    "BOUY":   "EN.PA",       # Bouygues: ticker correcto EN en Euronext Paris
+    "HLI":    "HLN.L",       # Haleon: ticker correcto HLN en Londres
+    "ENX":    "ENX.PA",      # Euronext: listing Paris (ENX.AS sin datos)
+    "IGGI":   "IGG.L",       # IG Group: ticker correcto IGG en Londres
+    "CCH":    "CCH.L",       # Coca-Cola HBC: listing Londres (CCH.SW sin datos)
+    "ESLX":   "EL.PA",       # EssilorLuxottica: ticker correcto EL en Euronext Paris
+    "SNY":    "SAN.PA",      # Sanofi: ticker correcto SAN en Euronext Paris (SNY es el ADR NYSE)
+    "NOV N":  "NOVN.SW",     # Novartis: ticker correcto NOVN en SIX Swiss Exchange
+    "SRENH":  "SREN.SW",     # Swiss Re: ticker correcto SREN en SIX Swiss Exchange
+    "SANO":   "SANOMA.HE",   # Sanoma: ticker completo en Helsinki (SANO.HE sin datos)
+    "DASH":   "DHER.DE",     # Delivery Hero: ticker correcto DHER en Frankfurt
+    "ATOS":   "ATO.PA",      # Atos: ticker correcto ATO en Euronext Paris
+    "AMS":    "AMS.SW",      # ams OSRAM: listing SIX Swiss Exchange (AMS.VI sin datos)
+    "CASP":   "CAST.ST",     # Castellum: ticker correcto CAST en Estocolmo
+    "RIGN":   "RIG",         # Transocean: ticker correcto RIG (NYSE, RIGN.SW sin datos)
+    "GWI":    "CPR.MI",      # Gruppo Campari: ticker correcto CPR en Borsa Italiana
+    "CTS":    "EVD.DE",      # CTS Eventim: ticker correcto EVD en Frankfurt
+    "SRB":    "STB.OL",      # Storebrand: ticker correcto STB en Oslo (SRB.OL sin datos)
     # Sin datos en yfinance — excluidas vía TICKERS_EXCLUIDOS
     # SKG: Smurfit Kappa → Smurfit WestRock (NYSE:SW) 2024
     # ADH: Adevinta privatizada 2023
