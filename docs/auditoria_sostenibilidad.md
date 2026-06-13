@@ -1,5 +1,7 @@
 # Auditoría de contenido de sostenibilidad — 291 PDFs
 
+> **⚠ Foto previa a la ampliación — 291 PDFs / 97 empresas.** Esta auditoría de contenido cubre los **291 PDFs de la muestra original de 97 empresas**. Tras la ampliación a 196 empresas (588 PDFs, Decisiones 027-035) debe extenderse a las 99 nuevas; las cifras de cobertura recogidas aquí son las de las 97 originales.
+
 > Actualizado: 2026-05-30 (v3 — tras corrección OR 2023/2024, SAF 2022/2023, LONN 2022)
 > Método: pymupdf + regex multilingüe | 8 workers paralelos | ~3 min ejecución
 

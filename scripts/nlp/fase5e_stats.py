@@ -65,9 +65,10 @@ sns.set_theme(style="whitegrid", palette="muted", font_scale=0.95)
 REGION_MAP = {
     "Sweden": "Nordicos", "Norway": "Nordicos", "Denmark": "Nordicos", "Finland": "Nordicos",
     "France": "Centro", "Germany": "Centro", "Switzerland": "Centro", "Austria": "Centro",
-    "Belgium": "Centro", "Netherlands": "Centro",
-    "Spain": "Sur", "Italy": "Sur",
+    "Belgium": "Centro", "Netherlands": "Centro", "Luxembourg": "Centro",
+    "Spain": "Sur", "Italy": "Sur", "Portugal": "Sur",
     "United Kingdom": "UK_Irlanda", "Ireland": "UK_Irlanda",
+    "Israel": "Otros",
 }
 
 DV_RQ2 = ["GW_index", "finbert_tone", "climate_specificity_spec"]

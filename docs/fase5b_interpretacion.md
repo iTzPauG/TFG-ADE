@@ -1,5 +1,7 @@
 # Fase 5B — Interpretación de resultados
 
+> **⚠ Foto previa a la ampliación — 97 empresas / 289 documentos `sus`.** Los resultados de este documento se calcularon sobre la **muestra original de 97 empresas (289 docs `sus`)**, antes de la ampliación a 196 (Decisiones 027-035). Tras re-ejecutar la Fase 5 sobre el corpus ampliado (**196 empresas / 586 documentos**) estas cifras deberán actualizarse; la metodología no cambia.
+
 > Generado con `scripts/nlp/fase5b_topics.py` (Decisión 022).
 > Tablas en `results/tables/5b_*.csv` · Figuras en `results/figures/5b_*.png` · Modelos en `results/models/`.
 

@@ -7,7 +7,7 @@ decisión metodológica, la fuente de verdad es `docs/decisiones.md` (Decisiones
 
 ## 1. Qué es el proyecto
 
-**TFG de ADE (Universidad de Valencia).** Título:
+**TFG de ADE (Universitat Politècnica de València — Facultad de ADE, FADE).** Tutor: Elíes Seguí Mas. Título:
 > *"Comunicación corporativa y estrategias de gestión en los informes de sostenibilidad
 > de las empresas europeas: un análisis de contenido mediante técnicas de inteligencia artificial."*
 
@@ -78,28 +78,84 @@ Afecta sobre todo a `data/raw/*.pdf`, `data/interim/secciones/*.txt` y `corpus.p
 | Fase | Descripción | Estado |
 |------|-------------|--------|
 | 1 | Marco teórico + normativo + RQs | ✅ Documentado (`docs/notas_*.md`) |
-| 2 | Construcción de la muestra | ✅ 97 empresas × 3 años, financieros 95/97, ISIN 97/97 |
-| 3 | Recolección de informes | ✅ 291/291 PDFs descargados |
-| 4 | Extracción y limpieza de texto | ✅ **COMPLETA** → `corpus.parquet` |
-| 5 | Análisis con PLN | ✅ **COMPLETA** (5A-5E) |
-| 6 | Dashboard (HTML estático) + reproducibilidad | 🔄 dashboard listo, falta reproducibilidad |
+| 2 | Construcción de la muestra | ✅ **196 empresas × 3 años** (ampliación 97→196, Decisiones 027-028-030), financieros 196/196 |
+| 3 | Recolección de informes | ✅ **588/588** (586 descargado + 2 descartado intencional, Decisión 010) |
+| 4 | Extracción y limpieza de texto | ✅ **COMPLETA (4A-4D) para las 196** (Decisión 033/034). `corpus.parquet`: 1172 filas (586 docs × 2 secciones), 263 MB, QA OK (Decisión 035) |
+| 5 | Análisis con PLN | ✅ COMPLETA (5A-5E) sobre las 97 originales (289 docs). 🔲 **Pendiente re-ejecución sobre corpus ampliado** (196 empresas, 586 docs) |
+| 6 | Dashboard (HTML estático) + reproducibilidad | 🔄 dashboard listo (sobre 97), falta reproducibilidad |
 | 7 | Redacción del TFG | ⬜ Pendiente |
 
 La guía paso a paso completa de las 7 fases está en `GUÍA.MD` (raíz).
 
 ### Muestra (Fase 2)
-- **97 empresas × 3 años (2022, 2023, 2024) = 291 filas** en el panel financiero.
-- Muestreo estratificado por sector ICB (~5/sector) con **cap geográfico ≤15 por país**
-  (corrige el 32% estructural de UK). `random_state=42`. Decisiones 002, 005.
+- **196 empresas × 3 años (2022, 2023, 2024) = 588 filas** en el panel financiero
+  (`data/external/empresas_muestra.csv`).
+- Origen: muestra inicial de **97 empresas** (estratificada por sector ICB ~5/sector,
+  cap geográfico ≤15/país, corrige el 32% estructural de UK, `random_state=42`,
+  Decisiones 002, 005) **ampliada a 196** (Decisión 027) repitiendo el muestreo
+  estratificado sobre las restantes empresas del STOXX 600, con el mismo cap
+  geográfico aplicado solo a las 99 nuevas (E098-E196).
+- **Decisión 028**: Delivery Hero estaba duplicado en `stoxx600_componentes.csv`
+  (tickers Wikipedia `DHER` y `DASH` → misma empresa, ISIN `DE000A2E4K43`) y había
+  caído dos veces en la muestra (E062 y E157). E157 sustituido por **Inditex** (ITX,
+  España, mismo sector Retail).
+- **Decisión 030**: 4 duplicados adicionales detectados (misma empresa con 2 entradas
+  en `stoxx600_componentes.csv`): E112 Vinci (=E018), E116 Bouygues (=E019), E185
+  Castellum (=E061), E194 Gruppo Campari (=E038, cambio de nombre 2022). Sustituidos
+  por **Heidelberg Materials** (E112, Alemania, Construction and Materials),
+  **Wienerberger** (E116, Austria, Construction and Materials), **LEG Immobilien**
+  (E185, Alemania, Real Estate) y **Lindt & Sprüngli** (E194, Suiza, Food, Beverage
+  and Tobacco). 196 empresas son ahora entidades únicas confirmadas (sin duplicados
+  por ISIN ni ticker_yf).
 - 2024 = primer ejercicio **obligatorio CSRD** para grandes PIEs → habilita RQ4 (NFRD→CSRD).
 - Dataset maestro: `data/external/empresas_muestra.csv` (financieros año a año desde yfinance:
   ROA, ROE, ingresos, EBITDA, deuda, capitalización…). EBITDA de entidades financieras = proxy
-  reconstruido por cascada (Decisión 007). 4 huecos FY2022 por año fiscal no-diciembre (Decisión 006).
+  reconstruido por cascada (Decisión 007). Huecos FY2022 por año fiscal no-diciembre
+  (Decisión 006): Richemont, 3i, JD Sports, Vodafone (muestra original) + Inditex (Decisión 028).
 
-### Corpus NLP (Fase 4) — `data/processed/corpus.parquet`
-- **578 filas = 289 documentos × 2 secciones.** (289 = 291 − DIA 2022 y NEM 2022, excluidos
-  por carecer de contenido ESG analizable; Decisión 010.)
-- 97 empresas · años 2022/2023/2024 · **100% inglés** · 0 filas vacías · ~113 MB.
+### Recolección de informes (Fase 3) — `data/external/tracking_descargas.csv`
+- **588 filas** (196 empresas × 3 años). **586 `descargado`**, **2 `descartado`**
+  (Dia 2022 y Nemetschek 2022 — PDF existe pero 0-1pp ESG, excluidos del corpus NLP,
+  Decisión 010), **0 `problema`**.
+- PDFs en `data/raw/<País>/<TICKER>/<TICKER>_<año>_integrated.pdf` (gitignored).
+- Las 99 empresas nuevas (E098-E196) están descargadas y **verificadas por contenido**
+  (Decisión 029: 9 PDFs de empresa equivocada o truncados detectados y corregidos —
+  Swiss Re/Swiss Prime Site/IAG/Norsk Hydro/EssilorLuxottica/ABN AMRO/WDP; más Euronext
+  ENX 2023, con fuente sin ToUnicode, sustituido por versión Workiva con texto nativo —
+  ninguno necesita OCR). **Han pasado por Fase 4A-4C** (Decisión 033); pendiente 4D
+  (`corpus.parquet`) y Fase 5 (PLN).
+- **Decisión 031**: QA de contenido completo de los 586 PDFs `descargado` (PyMuPDF,
+  recuento de páginas + texto). 24/25 PDFs problemáticos sustituidos por la versión
+  correcta en inglés (Annual Report/URD/cuentas consolidadas): 18 de empresa
+  equivocada (colisión de ticker con `annualreports.com`: ING, Santander, Flow
+  Traders, SCOR, Informa, ams OSRAM, CTS Eventim, Dia 2024) + 6 de tipo de documento
+  incorrecto (Michelin 2023-2024, Renault 2022-2024, Naturgy 2023). Originales en
+  `data/raw/_reemplazados_decision031/`.
+- **Decisión 032**: 2 sustituciones adicionales — Michelin 2022 (URD francés →
+  Universal Registration Document inglés, 476 págs) y Puma 2023 (PDF con
+  fuente/CMap sin ToUnicode, texto cifrado → Annual Report 2023 con texto
+  nativo, 390 págs). Originales en `data/raw/_reemplazados_decision032/`.
+
+### Segmentación (Fase 4C) — `data/interim/secciones_manifest.csv`
+- **586 filas (196 empresas × 3 años) COMPLETAS** (Decisión 033): las 297 filas
+  de las 99 empresas nuevas (E098-E196) ya tienen `mr_ini/mr_fin/sus_ini/sus_fin`
+  y `_mr.txt`/`_sus.txt` generados, con `sus_confianza` normalizado al mismo
+  esquema que las 289 originales (`densidad`/`alta`/`densidad_baja`, sin casos
+  `revisar` pendientes). Las 289 originales **no se han tocado** (estado
+  validado de Decisiones 015-016 preservado).
+- `sus_confianza` global (586): `densidad` 292, `alta` 233, `densidad_baja` 46,
+  `media` 8, `aceptado_sin_financieros` 7 (tras corrección E174_NTGY_2023,
+  Decisión 035).
+
+### Corpus NLP (Fase 4D) — `data/processed/corpus.parquet`
+- **1172 filas = 586 documentos × 2 secciones**, las **196 empresas** completas
+  (97 originales + 99 ampliación). 586 = 588 − DIA 2022 y NEM 2022, excluidos por
+  carecer de contenido ESG analizable (Decisión 010). Regenerado con
+  `fase4_corpus.py` (resumible vía checkpoint, `nproc=1`) sobre las 297 filas
+  nuevas, preservando las 578 filas originales (Decisión 034). QA completo +
+  4 correcciones quirúrgicas (Decisión 035). ~263 MB.
+- 196 empresas · años 2022/2023/2024 · **100% inglés** · mediana tokens: sus
+  10.104 / mr 31.864.
 - Columnas: `id, empresa, año, seccion, idioma, clean_text, tokens, confianza, n_tokens, n_chars`.
   - `seccion ∈ {mr, sus}`. **`mr` = management report SIN la subsección de sostenibilidad**
     (rango MR menos rango sostenibilidad, para evitar doble conteo, ya que `sus ⊂ mr`). `sus` =
@@ -107,10 +163,12 @@ La guía paso a paso completa de las 7 fases está en `GUÍA.MD` (raíz).
   - `clean_text` → conserva mayúsculas y puntuación → para **BERT/FinBERT/ClimateBERT**.
   - `tokens` → lemas en minúscula, sin stopwords ni puntuación (spaCy `en_core_web_sm`) →
     para **LDA/TF-IDF**.
-  - `confianza` → fiabilidad de la segmentación de sostenibilidad: `alta` (índice PDF fiable),
-    `densidad` (bloque ESG por densidad), `media`, `densidad_baja` (ESG disperso/informe
-    separado → sección parcial, filtrable), etc. Las 16 `densidad_baja` y casos `revisar`
-    son los menos fiables → filtrables en Fase 5.
+  - `confianza` → fiabilidad de la segmentación de sostenibilidad: `alta` 233, `densidad`
+    292, `densidad_baja` 46, `media` 8, `aceptado_sin_financieros` 7 (sus, 586) +
+    `mr` 483 / `mr_con_financieros` 103 (mr, 586). `densidad_baja` es la categoría
+    menos fiable → filtrable en análisis de sensibilidad (Decisión 019).
+- QA exhaustivo (`fase4_qa_corpus.py`): 0 problemas detectados (Decisión 035).
+- Siguiente paso: Fase 5 (5A-5E) sobre el corpus ampliado de 586 docs.
 
 ---
 
@@ -135,6 +193,10 @@ Pipeline en `scripts/extraction/` (ejecutado en orden):
   (b) subsección de sostenibilidad. Método primario = **índice navegable del PDF** (`get_toc`);
   fallback = **densidad de vocabulario ESG por página**. Fin del MR = primer capítulo de
   **estados financieros**. Invariante `sus_fin ≤ mr_fin` (`sus ⊂ mr`). Decisiones 013–016.
+  Re-ejecutado para las 99 empresas nuevas con flag `--nuevos` (no toca las 289 originales) en
+  `fase4_secciones.py`, `fase4_sanear_secciones.py`, `fase4_recalcular_limites.py`,
+  `fase4_sost_densidad.py`; 13 casos `revisar` resueltos con
+  `fase4_revisar13.py` (densidad ESG). Decisión 033.
 - **4D — Corpus** (`fase4_corpus.py`): construye `corpus.parquet`. Limpieza: cabeceras/pies
   repetidos, números de página, caracteres de control, párrafos rotos por columnas. Decisión 017.
   ⚠️ **Correr SIEMPRE con `nproc=1`** (por defecto): con `nproc>1` (8 copias de spaCy + 188M chars

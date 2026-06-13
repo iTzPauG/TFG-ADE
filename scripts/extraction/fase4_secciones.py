@@ -170,6 +170,9 @@ def main():
     ap.add_argument("--empresa")
     ap.add_argument("--año")
     ap.add_argument("--solo-manifest", action="store_true")
+    ap.add_argument("--nuevos", action="store_true",
+                    help="Solo las 99 empresas de la ampliación (E098-E196). "
+                         "Fusiona el resultado con el manifiesto existente sin tocar E001-E097.")
     args = ap.parse_args()
     SEC_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -179,6 +182,8 @@ def main():
         corp = corp[corp.ticker == args.empresa]
     if args.año:
         corp = corp[corp.año == str(args.año)]
+    if args.nuevos:
+        corp = corp[corp.id_empresa.str[1:].astype(int) >= 98]
 
     filas = []
     for r in corp.itertuples():
@@ -225,6 +230,13 @@ def main():
                       "sus_ok": bool(sus_ini)})
 
     man = pd.DataFrame(filas)
+    if MANIFEST_PATH.exists():
+        previo = pd.read_csv(MANIFEST_PATH, dtype={"id_empresa": str, "año": str})
+        man["año"] = man["año"].astype(str)
+        claves = set(zip(man.id_empresa, man.año))
+        previo = previo[~previo.apply(lambda r: (r.id_empresa, str(r.año)) in claves, axis=1)]
+        man = pd.concat([previo, man], ignore_index=True)
+    man = man.sort_values(["id_empresa", "año"]).reset_index(drop=True)
     man.to_csv(MANIFEST_PATH, index=False)
 
     n = len(man)

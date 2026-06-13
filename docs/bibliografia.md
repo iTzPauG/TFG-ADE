@@ -1,7 +1,7 @@
 # Bibliografía del TFG
 
 > Estilo: APA 7.ª edición.
-> Universidad de Valencia — Facultad de Economía — Grado en ADE.
+> Universitat Politècnica de València — Facultad de Administración y Dirección de Empresas (FADE) — Grado en ADE.
 >
 > Organizada en cuatro bloques: (I) Literatura académica, (II) Modelos y recursos PLN,
 > (III) Normativa y documentos institucionales, (IV) Bases de datos y fuentes de mercado.

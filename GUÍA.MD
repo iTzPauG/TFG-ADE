@@ -164,7 +164,7 @@ Filtra por: 2015-2025, revistas Q1-Q2. Exporta a Zotero en formato RIS.
 
 **Paso 1.8.** Crea una **matriz de literatura**: autor / año / muestra / método / hallazgos / gap. Sirve para identificar tu hueco de investigación.
 
-**Paso 1.9.** Revisa TFGs similares en RODERIC (UV), TDX y Dialnet para calibrar el nivel esperado.
+**Paso 1.9.** Revisa TFGs similares en RiuNet (UPV), TDX y Dialnet para calibrar el nivel esperado.
 
 ---
 
@@ -201,7 +201,13 @@ Filtra por: 2015-2025, revistas Q1-Q2. Exporta a Zotero en formato RIS.
 
 **Paso 2.3.** Diseño muestral: **estratificado por sector ICB** con cuota de 5 empresas/sector y **cap geográfico ≤ 15 empresas por país**, aplicado iterativamente.
 
-> **Muestra real: 97 empresas** (3 sectores con <5 disponibles tras excluir empresas privatizadas/sin datos). El cap geográfico corrige la sobrerepresentación estructural de UK (32% del STOXX 600). `random_state=42`. Ver Decisiones 002 y 005.
+> **Muestra inicial: 97 empresas** (3 sectores con <5 disponibles tras excluir empresas privatizadas/sin datos). El cap geográfico corrige la sobrerepresentación estructural de UK (32% del STOXX 600). `random_state=42`. Ver Decisiones 002 y 005.
+>
+> **Ampliación a 196 empresas** (Decisión 027): se repitió el muestreo estratificado
+> sobre el resto del STOXX 600 para añadir 99 empresas nuevas (E098-E196), con el
+> mismo cap geográfico aplicado solo a las nuevas. Un duplicado detectado (Delivery
+> Hero, contado dos veces por una duplicación en `stoxx600_componentes.csv`) se
+> sustituyó por Inditex (Decisión 028). Muestra final: **196 empresas únicas**.
 
 **Paso 2.4.** Selección dentro de cada estrato:
 - **Aleatoriamente** con `df.sample(random_state=42)`: representatividad sin sesgo mega-cap
@@ -223,7 +229,12 @@ Filtra por: 2015-2025, revistas Q1-Q2. Exporta a Zotero en formato RIS.
 
 Columnas: `id_empresa, nombre, ticker, ticker_yf, ISIN, pais, sector_ICB, supersector, año, capitalización, moneda, ingresos, ebitda, net_income, total_assets, equity, deuda, ROA, ROE, margen_beneficio, deuda_equity, sector_yf, industria_yf, pais_yf, fuente_ebitda, nota, error_yf`
 
-Estructura: **97 empresas × 3 años (2022-2024) = 291 filas.** Los 3 años permiten analizar la transición NFRD→CSRD (2024 = primer ejercicio obligatorio CSRD para grandes PIEs). Ver Decisión 003.
+Estructura inicial: **97 empresas × 3 años (2022-2024) = 291 filas.** Los 3 años permiten analizar la transición NFRD→CSRD (2024 = primer ejercicio obligatorio CSRD para grandes PIEs). Ver Decisión 003.
+
+> Ampliada a **196 empresas × 3 años = 588 filas** (Decisiones 027-028). La Fase 4
+> (extracción/segmentación/corpus) se completó sobre las 196 → corpus NLP de **586
+> documentos** (588 − DIA 2022 y NEM 2022, Decisión 010). La Fase 5 (PLN) se está
+> re-ejecutando sobre ese corpus ampliado.
 
 El `tracking_descargas.csv` se genera automáticamente con una fila por empresa×año en estado `pendiente` — se rellena en la Fase 3.
 

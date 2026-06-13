@@ -1072,3 +1072,518 @@ Decisión 006). `empresas_muestra.csv`: 588 filas (196×3). `tracking_descargas.
 (5A-5E) sobre el corpus ampliado. Si Fase 3 resulta inviable en el plazo
 disponible para todas las 99, el análisis puede limitarse a las que se
 completen, documentando el tamaño muestral final.
+
+---
+
+## Decisión 028 — Delivery Hero duplicado en la muestra de 196 → sustituido por Inditex
+
+**Contexto.** Durante la integración de los PDFs de la ampliación a 196 empresas
+(Decisión 027) se detectó que `data/external/stoxx600_componentes.csv` contiene
+"Delivery Hero" (Berlin, Retail, Germany) **dos veces** (`ticker_wiki=DHER` y
+`ticker_wiki=DASH`, de 534 filas con solo 473 nombres únicos). Ambas entradas
+cayeron en la muestra final:
+- **E062** (muestra original de 97) — ticker `DHER`, ISIN `DE000A2E4K43`.
+- **E157** (ampliación de 99 nuevas) — ticker `DASH`, mismo `ticker_yf=DHER.DE`,
+  mismo ISIN real.
+
+Es la misma empresa contada dos veces — mismo problema que **E112 Saint-Gobain
+duplicado** (Decisión 027), no detectado entonces porque los tickers de Wikipedia
+(`DHER` vs `DASH`) son distintos. Los PDFs descargados para E157 (`DASH_2023/2024`)
+eran, de hecho, bit-a-bit el mismo informe que los de E062 (`DHER_2022/2023/2024`).
+
+**Decisión.** Sustituir **E157** por **Inditex** (ticker `ITX`, ticker_yf `ITX.MC`,
+España, sector ICB Retail / Consumer Discretionary — mismo sector que Delivery
+Hero, manteniendo la cuota sectorial). España tenía 7/15 en la cuota de país de las
+99 nuevas, por debajo del cap geográfico (≤15), por lo que cabe sin desplazar a
+otra empresa.
+
+- `data/raw/Germany/DASH/` (PDFs duplicados de Delivery Hero) — **eliminado**.
+- `empresas_muestra.csv`: las 3 filas de E157 reescritas con datos de Inditex
+  (yfinance `ITX.MC`). **Hueco FY2022** (`ingresos`...`deuda_equity` = NaN) por
+  año fiscal no-diciembre (cierre 31-enero) — mismo patrón que Decisión 006
+  (Richemont, 3i, JD Sports, Vodafone). ISIN pendiente (no encontrado en
+  `isins_wikidata.csv`).
+- `tracking_descargas.csv`: las 3 filas de E157 reescritas (Inditex/ITX/Spain) y
+  marcadas `descargado` — Annual Report FY2022/2023/2024 descargados desde
+  `static.inditex.com` / `inditex.com` (ver URLs en `tracking_descargas.csv`).
+  ⚠️ El de FY2023 es notablemente más pequeño (18MB "Annual Accounts" vs ~35-46MB
+  "Annual Report" de 2022/2024, posible cambio de nomenclatura/contenido en
+  Inditex) — revisar en Fase 4 si falta contenido narrativo/sostenibilidad.
+
+**Resultado:** 196/196 empresas siguen siendo entidades únicas. `empresas_muestra.csv`
+y `tracking_descargas.csv` actualizados (588 filas cada uno).
+
+---
+
+## Decisión 029 — Corrección de 7 PDFs erróneos/corruptos en la ampliación de 99 empresas
+
+**Contexto.** Auditoría de las 297 filas nuevas (E098-E196) de `tracking_descargas.csv`
+tras la ampliación (Decisiones 027-028): comprobación automática de que el nombre de
+la empresa aparece en las primeras páginas de cada PDF. 283/297 OK. Se detectaron
+**9 ficheros problemáticos en 7 empresas**, todos con tamaño >0 pero contenido
+incorrecto o incompleto:
+
+- **PDF de empresa equivocada** (5 ficheros, 5 marcados previamente
+  `"no encontrado automáticamente"` salvo EssilorLuxottica):
+  - **E144 Swiss Re** (SRENH 2022 y 2023): el PDF descargado era el Annual Report de
+    **Swiss Life** (otra aseguradora suiza).
+  - **E184 Swiss Prime Site** (SPSN 2022 y 2023): mismo PDF de Swiss Life que el de
+    Swiss Re (idénticos byte a byte, mismo MD5) — error de asignación cruzada.
+  - **E173 International Airlines Group** (IAG 2022): el PDF era el Annual Report de
+    **Ag Growth International** (empresa agrícola canadiense, sin relación).
+  - **E186 Norsk Hydro** (NHY 2023): el PDF era el Integrated Annual Report de
+    **DNV** (entidad certificadora noruega).
+  - **E132 EssilorLuxottica** (ESLX 2022 y 2023, nota "búsqueda manual lote 5"): el
+    PDF era el Universal Registration Document de **Casino Group** (retailer
+    francés en reestructuración).
+- **Descarga truncada/corrupta** (2 ficheros, 0 páginas legibles con PyMuPDF):
+  - **E102 ABN AMRO** (ABN 2022): 2.3MB de los ~9.6MB esperados (`/Linearized L=9609709`).
+  - **E153 Warehouses De Pauw** (WDP 2024, nota "búsqueda manual lote 4"): 25.6MB de
+    los ~31.4MB esperados (`/Linearized L=31417025`).
+
+**Patrón:** 7 de los 9 ficheros llevaban la nota `"no encontrado automáticamente"`
+con `estado=descargado` — el script de descarga automática dejó un PDF "candidato"
+(de otra empresa o truncado) y la búsqueda manual posterior no llegó a sustituirlo.
+
+**Corrección.** El usuario localizó y verificó manualmente las 9 versiones correctas
+(10 ficheros, Swiss Re necesita 2 años). Verificación por contenido (título interno +
+primeras páginas) antes de sustituir:
+
+| Empresa/año | Fichero sustituido por |
+|---|---|
+| ABN AMRO 2022 | `ABN_AMRO_____Integrated_Annual_Report_2022.pdf` (368 págs, 9.6MB) |
+| EssilorLuxottica 2022 | `EssilorLuxottica_DEU_2022_Mise_en_ligne_UK.pdf` (URD 2022, 414 págs) |
+| EssilorLuxottica 2023 | `EssilorLuxottica_DEU_2023_Mise_en_ligne_UK.pdf` (URD 2023, 422 págs) |
+| Swiss Re 2022 | `2022-annual-srz-report-doc.pdf` (Swiss Reinsurance Company, 146 págs) |
+| Swiss Re 2023 | `2023-annual-srz-report.pdf` (Swiss Reinsurance Company, 148 págs) |
+| Swiss Prime Site 2022 | `Report_2022.pdf` (277 págs) |
+| Swiss Prime Site 2023 | `Report_2023_en.pdf` (293 págs) |
+| IAG 2022 | `annual-report-and-accounts-2022.pdf` (288 págs) |
+| Norsk Hydro 2023 | `integrated-annual-report-2023_eng.pdf` (273 págs) |
+| WDP 2024 | `Annual-report-2024-2.pdf` (317 págs, 31.4MB completo) |
+
+`tracking_descargas.csv` actualizado: las 9 filas (10 con Swiss Re) llevan ahora nota
+`"corregido tras Fase 3: ..."` indicando el error original y la sustitución.
+
+**Resultado:** las 99 empresas nuevas (297 filas) tienen ahora PDFs verificados por
+contenido y completos. **588/588** descargas correctas (586 descargado + 2 descartado
+intencional, Decisión 010), 0 con problema de contenido conocido. Lista para Fase 4.
+
+**Adenda — Euronext (E125, ENX 2023) resuelto sin OCR.** El PDF original (título
+interno `EUR2023_URD_EN_MEL.indd`, generado con Adobe InDesign/Distiller) usaba fuentes
+**Barlow/Barlow-Bold subseteadas en CFF con codificación Identity-H y sin tabla
+`/ToUnicode`** — los CIDs del content stream (`cid00001`, `cid00002`...) no tienen
+correspondencia a Unicode en ningún sitio del fichero, por lo que el texto es
+irrecuperable con extractores estándar (PyMuPDF, poppler) sin pasar por OCR de imagen.
+Escaneo de las 297 filas nuevas confirmó que **es el único caso** con este problema.
+El usuario localizó una **versión alternativa del mismo URD 2023 generada con Workiva**
+(`URD 2023 - PDF`, 339 páginas, texto nativo limpio) que sustituye al fichero anterior.
+`tracking_descargas.csv` actualizado con la nota correspondiente. Corpus de la
+ampliación queda **588/588 con texto extraíble sin necesidad de OCR**.
+
+---
+
+## Decisión 030 — 3 duplicados adicionales en la muestra de 196 → sustituidos
+
+**Contexto.** Al comprobar el progreso de Fase 3 se detectó que el recuento de PDFs
+en disco (585) no coincidía con las filas `descargado` (586). La causa: **Vinci
+estaba duplicada** — E018 (muestra original, ticker `DG`, ISIN real
+`FR0000125486`) y **E112** (sustituta de "Saint-Gobain duplicado" en la Decisión 027,
+también asignada a Vinci por error, ISIN `FI4000185533`).
+
+Una revisión sistemática (duplicados por `ISIN`, `ticker_yf` y nombre normalizado)
+reveló **3 duplicados más del mismo tipo** (la misma empresa contada dos veces,
+ambas entradas habían superado la descarga de Fase 3):
+
+| id duplicado | empresa | id original (se mantiene) | causa |
+|---|---|---|---|
+| E112 | Vinci (`DG`, ISIN `FI4000185533`) | E018 Vinci (`DG`, ISIN `FR0000125486`) | sustitución errónea en Dec.027 |
+| E116 | Bouygues (`BOUY`→`EN.PA`) | E019 Bouygues (`EN`, ISIN `FR001400UJU6`) | mismo ISIN/ticker_yf, dos filas en `stoxx600_componentes.csv` |
+| E185 | Castellum (`CASP`) | E061 Castellum (`CAST`, ISIN `SE0020202745`) | mismo ISIN/ticker_yf, dos filas en `stoxx600_componentes.csv` |
+| E194 | Gruppo Campari (`GWI`) | E038 Davide Campari-Milano (`CPR`, ticker_yf `CPR.MI`) | cambio de nombre de la empresa en 2022, dos filas en `stoxx600_componentes.csv` |
+
+**Decisión.** Sustituir las 4 entradas duplicadas (E112, E116, E185, E194) por
+empresas distintas, manteniendo el mismo sector ICB para no romper la cuota
+sectorial y respetando los caps geográficos (ningún país supera 30/196):
+
+- **E112** Vinci → **Heidelberg Materials** (Alemania, ticker `HEI`, Construction
+  and Materials; Alemania 27→28).
+- **E116** Bouygues → **Wienerberger** (Austria, ticker `WIE`, Construction and
+  Materials; Austria 3→4).
+- **E185** Castellum → **LEG Immobilien** (Alemania, ticker `LEG`, Real Estate;
+  Alemania 28→29).
+- **E194** Gruppo Campari → **Lindt & Sprüngli** (Suiza, ticker `LISN`, Food,
+  Beverage and Tobacco; Suiza 18→19).
+
+Implementado en `scripts/fase2_correccion_duplicados_vinci_bouygues.py`:
+re-descarga financieros yfinance (3/3 años OK para las 4), reconstruye las 12 filas
+(4×3 años) de `empresas_muestra.csv`, actualiza `muestra_seleccionada.csv` y
+`tracking_descargas.csv`.
+
+**PDFs.** Descargados los Annual/Sustainability Reports oficiales (inglés) 2022-2024
+de las 4 empresas nuevas (12 PDFs, todos con texto nativo extraíble, verificados con
+PyMuPDF):
+
+| Empresa | 2022 | 2023 | 2024 |
+|---|---|---|---|
+| Heidelberg Materials | 367 págs | 388 págs | 346 págs |
+| Wienerberger | 348 págs | 318 págs | 286 págs |
+| LEG Immobilien | 245 págs | 244 págs | 300 págs |
+| Lindt & Sprüngli | 178 págs | 178 págs | 153 págs |
+
+Directorios obsoletos (PDFs duplicados bit-a-bit) eliminados: `data/raw/France/BOUY/`,
+`data/raw/Sweden/CASP/`, `data/raw/Italy/GWI/`.
+
+**Resultado:** 196 empresas únicas confirmadas (sin duplicados por `ISIN` ni
+`ticker_yf`, salvo una colisión de `ISIN` `DE0005146807` entre Dia (E056, España)
+y Warehouses De Pauw (E153, Bélgica) que **no es un duplicado de empresa** —son
+compañías de sectores/países distintos sin relación; es un valor de ISIN erróneo de
+yfinance, pendiente de investigar si se necesita el campo ISIN más adelante.
+**588/588 descargas correctas** (586 descargado + 2 descartado intencional,
+Decisión 010). Las 4 empresas nuevas (E112, E116, E185, E194) están descargadas
+pero **no han pasado por Fase 4** (extracción/segmentación) ni Fase 5 (PLN).
+
+---
+
+## Decisión 031 — QA de contenido de los 586 PDFs descargados: 18 sustituidos
+
+**Contexto.** Tras resolver los duplicados (Decisión 030), se hizo un escaneo
+sistemático con PyMuPDF de los 586 PDFs marcados como `descargado` (recuento real
+de páginas + texto de las primeras páginas), para comprobar que ninguno fuera un
+"resumen" o documento incorrecto. El escaneo reveló **18 PDFs problemáticos en 8
+empresas**, todos descargados automáticamente desde `annualreports.com` con un
+ticker NASDAQ/NYSE distinto que coincidía por error con el ticker de la muestra
+(p. ej. ticker `FLOW` de Flow Traders → `NASDAQ_FLWS` = 1-800-FLOWERS.COM):
+
+| Empresa | Años afectados | PDF original (incorrecto) |
+|---|---|---|
+| E104 ING Group | 2022, 2023, 2024 | "1847 Holdings LLC" (10-K, NYSE:EFSH) |
+| E106 Banco Santander | 2022 | 10-K de empresa US no identificada (NASDAQ:BCOW) |
+| E127 Flow Traders | 2022, 2023, 2024 | "1-800-FLOWERS.COM, INC." (NASDAQ:FLWS) |
+| E143 SCOR SE | 2022, 2023 | 10-K de empresa de Delaware no identificada (NASDAQ:SCOR ≠ Euronext SCR) |
+| E148 Informa | 2022, 2023 | 10-K de empresa US no identificada (NASDAQ:CASS) |
+| E165 ams OSRAM | 2022, 2023, 2024 | "Adams Diversified Equity Fund" (NYSE:ADX) |
+| E195 CTS Eventim | 2022, 2023, 2024 | "Air Products and Chemicals" (NYSE:APD) |
+| E056 Dia | 2024 | Annual report de otra empresa ("...Lead Care with Light®") |
+
+Adicionalmente se detectaron **otros 7 PDFs candidatos a "tipo de documento
+incorrecto"** (a primera vista, informe de auditoría, informe interino o nota de
+prensa de resultados, en lugar del informe integrado/anual completo): E056 Dia
+2023, E098 Michelin 2023-2024, E101 Renault 2022-2024, E174 Naturgy 2022-2024,
+E177 Redeia 2022. **Estos se revisan en el lote 2, más abajo.**
+
+**Decisión.** Sustituir los 18 PDFs de empresa equivocada por los Annual
+Report/Universal Registration Document oficiales en inglés de cada empresa,
+descargados de sus webs corporativas o de plataformas oficiales (EQS News para
+CTS Eventim, web de SCOR para los URD):
+
+| Empresa | 2022 | 2023 | 2024 |
+|---|---|---|---|
+| ING Group | 343 págs | 401 págs | 446 págs |
+| Banco Santander | 810 págs | — | — |
+| Flow Traders | 180 págs | 183 págs | 166 págs |
+| SCOR SE (URD) | 402 págs | 428 págs | — |
+| Informa | 256 págs | 125 págs | — |
+| ams OSRAM | 116 págs | 132 págs | 200 págs |
+| CTS Eventim | 243 págs | 231 págs | 231 págs |
+| Dia | — | — | 43 págs |
+
+Los 18 PDFs originales (de empresa equivocada) se conservan en
+`data/raw/_reemplazados_decision031/` por trazabilidad. `tracking_descargas.csv`
+actualizado: `url_fuente`, `n_paginas`, `idioma=en` y nota "sustituido (Decisión
+031): PDF original era de otra empresa o tipo de documento incorrecto" para las
+18 filas.
+
+**Nota sobre Dia 2024 (43 págs):** es más corto que el "Memoria e Informe de
+Gestión" usado para 2023 (94 págs) porque Dia no ha publicado aún un equivalente
+en inglés para el ejercicio 2024 — el documento usado (`Annual-Report-2024-Dia-
+Group_ENG-1.pdf`) es el único informe anual en inglés disponible en su web
+corporativa, e incluye gobernanza y sostenibilidad.
+
+---
+
+### Lote 2 — revisión de los 7 candidatos a "tipo de documento incorrecto"
+
+**Contexto.** Para cada uno de los 7 candidatos se inspeccionó el texto de
+páginas profundas (p100-p700, no solo p0) del PDF ya descargado, porque varios
+informes españoles agrupan en un único PDF el "Auditor's Report" (que aparece
+en la portada) seguido de las cuentas anuales auditadas completas y, más
+adelante, el informe de gestión/sostenibilidad íntegro.
+
+**Resultado de la inspección — 4 de los 7 estaban BIEN, no necesitaban cambio:**
+
+- **E056 Dia 2023** (94 págs): aunque empieza con "Auditor's Report", contiene
+  el Memoria/Informe de Gestión completo con contenido ESG. Correcto, sin cambios.
+- **E174 Naturgy 2022** (190 págs) y **E174 Naturgy 2024**: misma estructura —
+  "Auditor's Report on Naturgy Energy Group, S.A. and subsidiaries" (consolidado)
+  seguido de gobernanza, Taxonomía UE, plantillas y demás contenido íntegro.
+  Correctos, sin cambios.
+- **E177 Redeia 2022, 2023, 2024**: las "Consolidated Annual Accounts"/"Auditor's
+  Report" de Redeia también incluyen el informe de gestión completo más adelante
+  en el documento. Correctos, sin cambios.
+
+**3 PDFs SÍ requerían sustitución (3 empresas, 6 ficheros):**
+
+| Empresa/año | Problema detectado | Páginas originales |
+|---|---|---|
+| E098 Michelin 2023 | Informe intermedio (interim report), no el URD anual | 86 págs |
+| E098 Michelin 2024 | Nota de prensa en francés sobre resultados | 6 págs |
+| E101 Renault 2022 | Documento de "highlights"/resumen ejecutivo | 64 págs |
+| E101 Renault 2023 | Documento de "highlights"/resumen ejecutivo | 232 págs |
+| E101 Renault 2024 | Documento de "highlights"/resumen ejecutivo | 18 págs |
+| E174 Naturgy 2023 | "Auditor's Report" sobre cuentas **individuales** (no consolidadas) — no incluye el informe de gestión consolidado con contenido ESG | 132 págs |
+
+**Decisión.** Sustituir estos 6 PDFs por el Universal Registration Document /
+cuentas consolidadas completas en inglés:
+
+| Empresa | 2022 | 2023 | 2024 |
+|---|---|---|---|
+| Michelin (URD) | — | 544 págs | 518 págs |
+| Renault (URD) | 584 págs | 545 págs | 578 págs |
+| Naturgy (cuentas consolidadas) | — | 786 págs | — |
+
+Fuentes: Michelin URD 2023/2024 desde `michelin.com` (alojados en
+`dgaddcosprod.blob.core.windows.net`, vía CDN `cloudimg.io`); Renault URD
+2022/2023/2024 desde `assets.renaultgroup.com` (`renault_urd_en.pdf`,
+`URD_2023.pdf`, `Renault_URD_2024_EN.pdf`); Naturgy 2023 consolidado desde
+`naturgy.com/ccaa-consolidadas-ENG.pdf` (mismo tipo "...and subsidiaries" que
+2022/2024).
+
+Los 6 PDFs originales se conservan en `data/raw/_reemplazados_decision031/`.
+`tracking_descargas.csv` actualizado (`url_fuente`, `n_paginas`, `idioma=en`,
+nota "sustituido (Decisión 031, lote 2)...") para las 6 filas.
+
+**Cierre de Decisión 031.** De los 25 PDFs inicialmente marcados como
+problemáticos (18 + 7), **24 se sustituyeron** (18 del lote 1 + 6 del lote 2) y
+**1 (Dia 2023)** se confirmó correcto sin cambios, junto con 5 más (Naturgy
+2022/2024, Redeia 2022-2024) que también se confirmaron correctos durante la
+revisión del lote 2. QA de contenido de los 586 PDFs **completa**.
+
+---
+
+## Decisión 032 — 2 sustituciones adicionales: Michelin 2022 (FR→EN) y Puma 2023 (CMap roto→EN)
+
+**Contexto.** Durante la revisión de contenido de los 586 PDFs (continuación de
+la Decisión 031), se detectaron 2 casos adicionales no incluidos en aquel
+muestreo:
+
+- **E098 Michelin 2022**: el PDF descargado
+  (`...michelin-deu-2022-fr-mel-v2.pdf`) era el *Document d'Enregistrement
+  Universel* 2022 en **francés**. Como el corpus debe ser 100% inglés
+  (Decisión 012, sustitución por versión oficial EN, nunca traducción
+  automática), se sustituyó por el **Universal Registration Document 2022 en
+  inglés** (476 págs), aportado por el usuario.
+- **E120 Puma 2023**: el PDF descargado (`OTC_PMMAF_2023.pdf`,
+  annualreports.com) tenía la **fuente embebida con CMap sin ToUnicode**
+  (texto cifrado tipo César+3, ilegible por extracción directa — el mismo
+  problema que motivó el OCR híbrido de la Decisión 011, pero aquí la fuente
+  está además rotada/cifrada de forma no estándar y el OCR no es viable de
+  forma fiable). Se sustituyó por el **Annual Report 2023** (390 págs) con
+  texto nativo legible, aportado por el usuario.
+
+**Decisión.** Sustituir ambos PDFs. Los originales se conservan en
+`data/raw/_reemplazados_decision032/` (`MICP_2022_integrated_ORIGINAL_FR.pdf`,
+`PUM_2023_integrated_ORIGINAL_CMAPROTA.pdf`). `tracking_descargas.csv`
+actualizado: `url_fuente`, `n_paginas` (476 y 390), `idioma=en` y nota
+"sustituido (Decisión 032): ..." para ambas filas. Ninguno de los dos
+necesita OCR.
+
+---
+
+## Decisión 033 — Fase 4C completa para las 99 empresas de la ampliación (E098-E196)
+
+**Contexto.** Con las 99 empresas nuevas descargadas y verificadas (Decisiones
+029-032), se ejecutó el pipeline de segmentación (Fase 4C, ver §5 de
+`CLAUDE.md`) sobre ellas, **sin tocar el estado ya validado de las 289 filas
+originales** (Decisiones 013-016), añadiendo un flag `--nuevos` a los 4
+scripts del pipeline que opera por filtro `id_empresa >= E098` y, en
+`fase4_secciones.py`, con lógica de *merge* (no sobrescritura) del manifiesto.
+
+**1. `fase4_secciones.py --nuevos`** (índice/densidad de epígrafes, Decisiones
+013-014): generó las 297 filas nuevas del manifiesto (99 empresas × 3 años).
+Resultado: método `{'toc': 161, 'fuente': 127, 'sin_toc': 9}` · management
+report localizado 282/297 (95%, antes "MR localizado: 571/586 (97%)" global) ·
+sostenibilidad hallada por índice 161/297 (54%).
+
+**2. `fase4_sanear_secciones.py --nuevos --apply`** (saneado de epígrafes
+espurios, Decisión 015): dry-run sobre el manifiesto completo detectó 0
+cambios de Bloque A, 8 de Bloque B y 73 de Bloque C (23 en las 289 originales —
+**NO tocados**, ya estaban en su estado validado de las Decisiones 015-016 — y
+50 en las 99 nuevas). Aplicado solo sobre las nuevas: **58 cambios** (8 + 50),
+con backup en `data/interim/secciones/_bak_sanear/`.
+
+**3. `fase4_recalcular_limites.py --apply --nuevos`** (recálculo de límites
+mr_fin/sus_fin tras el saneado, Decisión 016): sobre las 99 nuevas, **15
+mr_fin re-acotados** (p.ej. E112 Heidelberg Materials, E124 Galp, E159
+Zalando), **8 sus sobre-extraídos re-acotados** (p.ej. E157 Inditex 2024:
+86-513→86-90, E169 Telefónica 2024: 32-407→32-36) y **13 marcados
+`sus_confianza='revisar'`** por cubrir 58-99% del documento (ver punto 5).
+Backup en `data/interim/secciones/_bak_limites/`.
+
+**4. `fase4_completar_cobertura.py`** (relleno de `_mr.txt`/`_sus.txt`
+faltantes, script ya seguro para todo el manifiesto): generó **9 `_mr.txt`** y
+**81 `_sus.txt`** para las nuevas. Cobertura final: `_mr.txt` 586/586 y
+`_sus.txt` 586/586.
+
+**5. `fase4_sost_densidad.py --nuevos`** (densidad de vocabulario ESG,
+Decisión 016, para los "dudosos" = no `toc & sus_ok`): aplicado a 136 filas
+nuevas dudosas → **115 con bloque de densidad, 21 sin bloque**. Los 21 sin
+bloque se etiquetaron inicialmente `densidad_sin_bloque` — categoría no
+existente en el esquema original de las 289 — y se **renombraron a
+`densidad_baja`** (todas con `sus_pp` 1-10 págs, consistente con esa
+categoría existente).
+
+**6. Normalización de `sus_confianza` para las 297 filas nuevas:** 117 filas
+quedaron con `sus_confianza` vacío pese a cumplir la definición literal de
+"alta" del §4 de `CLAUDE.md` (`metodo=='toc' & sus_ok==True`, índice del PDF
+fiable). Se preguntó al usuario, que confirmó etiquetar **las 117 como
+`'alta'`**.
+
+**7. Resolución de los 13 casos `sus_confianza='revisar'`**
+(`scripts/extraction/fase4_revisar13.py`): estos 13 tenían `metodo='toc'` y
+`sus_ok=True`, pero el rango de sostenibilidad por índice cubría 58-99% del
+documento — claramente erróneo, por dos causas distintas:
+
+- **Título de portada contiene "sustainability"** (p.ej. "Heidelberg Materials
+  – Annual and Sustainability Report 2022"): al ser la única entrada de nivel 1
+  del índice y coincidir con `SUS_MARKERS`, la heurística `fin_de()` no
+  encuentra un capítulo posterior que no sea "de sostenibilidad" y devuelve el
+  final del documento → `sus_fin = npáginas` (E112 Heidelberg Materials
+  2022/2023/2024, E120 Puma 2024).
+- **El capítulo de sostenibilidad del índice incluye después gobierno
+  corporativo/riesgos/estados financieros** no separados a nivel de índice
+  (E100 Ferrari 2022, E106 Santander 2024, E157 Inditex 2022/2023, E159
+  Zalando 2023/2024, E169 Telefónica 2022, E182 Meliá 2024, E192 SGS 2024).
+
+**Solución aplicada:** el mismo método de **densidad de vocabulario ESG**
+(`mayor_bloque`, Decisión 016) ya usado para 280/586 documentos, sin
+restricción al rango del índice. Verificado contra el índice del PDF en los
+casos con índice fiable (Santander, Inditex, Telefónica, Ferrari): el bloque de
+densidad cae **dentro** del capítulo de sostenibilidad indicado por el índice y
+antes del inicio de gobernanza/estados financieros — confirma que el bloque de
+densidad es la subsección correcta. En los casos con índice degenerado
+(Heidelberg Materials, Puma) es la única señal disponible.
+
+| Documento | sus anterior (revisar) | sus nuevo (densidad) |
+|---|---|---|
+| E100 FERR 2022 | 170-408 (238pp, 58%) | 191-233 (42pp) |
+| E106 SAN 2024 | 18-560 (542pp, 62%) | 101-195 (94pp) |
+| E112 HEI 2022 | 1-367 (366pp, 99%) | 330-365 (35pp) |
+| E112 HEI 2023 | 1-388 (387pp, 99%) | 22-73 (51pp) |
+| E112 HEI 2024 | 1-346 (345pp, 99%) | 78-203 (125pp) |
+| E120 PUM 2024 | 12-345 (333pp, 96%) | 52-165 (113pp) |
+| E157 ITX 2022 | 101-519 (418pp, 80%) | 326-373 (47pp) |
+| E157 ITX 2023 | 101-568 (467pp, 82%) | 167-235 (68pp) |
+| E159 ZAL 2023 | 65-276 (211pp, 76%) | 79-103 (24pp) |
+| E159 ZAL 2024 | 79-397 (318pp, 80%) | 158-223 (65pp) |
+| E169 TEF 2022 | 85-556 (471pp, 84%) | 85-128 (43pp) |
+| E182 MEL 2024 | 27-261 (234pp, 65%) | 66-136 (70pp) |
+| E192 SRG 2024 | 107-490 (383pp, 65%) | 297-405 (108pp) |
+
+Los 13 quedan con `sus_confianza='densidad'`. `_sus.txt` regenerados (`mr_ini`,
+`mr_fin` y `_mr.txt` **no se tocan**: `fase4_corpus.py` resta el texto de `sus`
+del de `mr` por contenido, no por rango de páginas). Backups de los `_sus.txt`
+anteriores en `data/interim/secciones/_bak_revisar13/`.
+
+**Estado final del manifiesto (586 filas):**
+
+- **297 nuevas** (E098-E196): `sus_confianza` = `densidad` 150, `alta` 117,
+  `densidad_baja` 30.
+- **289 originales** (sin cambios): `densidad` 143, `alta` 115, `densidad_baja`
+  16, `media` 8, `aceptado_sin_financieros` 7.
+- **Global**: `densidad` 293, `alta` 232, `densidad_baja` 46, `media` 8,
+  `aceptado_sin_financieros` 7. `sus_confianza='revisar'`: 0.
+
+**Pendiente:** Fase 4D (`fase4_corpus.py --nproc 1`) para incorporar las 99
+empresas nuevas a `corpus.parquet` (actualmente 578 filas = 289 docs × 2
+secciones, solo las 97 originales).
+
+---
+
+## Decisión 034 — Fase 4D: corpus.parquet ampliado a las 196 empresas (1172 filas)
+
+**Contexto.** Con la Fase 4C completa para las 196 empresas (Decisión 033),
+se ejecutó `fase4_corpus.py` (limpieza + lematización, `nproc=1`) para
+incorporar las 99 empresas nuevas (E098-E196) a `corpus.parquet`.
+
+**Procedimiento (resumible, sin reprocesar lo ya validado):** el checkpoint
+`data/processed/_corpus_partial.jsonl` (que permite reanudar sin recalcular)
+no existía (se había limpiado tras la build de las 97 originales). Se
+reconstruyó a partir del `corpus.parquet` existente (578 filas = 289 docs × 2
+secciones de las 97 originales), volcándolo a JSONL. Con ese checkpoint
+"sembrado", `fase4_corpus.py` saltó las 578 filas ya hechas y procesó
+**solo las 297 filas nuevas** del manifiesto, sin relematizar las 97
+originales.
+
+**Ejecución:** ~57 minutos (3406 s) con `nproc=1`, sobre el M4 local con
+`caffeinate -dimsu -w <pid>` para evitar suspensión.
+
+**Resultado:** `corpus.parquet` → **1172 filas = 586 documentos × 2 secciones**
+(196 empresas × 3 años, 244 MB):
+
+- Mediana de tokens: `sus` 10.104, `mr` 31.864.
+- `confianza` (sus, 586): `alta` 232, `densidad` 293, `densidad_baja` 46,
+  `media` 8, `aceptado_sin_financieros` 7 — coincide con `sus_confianza` del
+  manifiesto (Decisión 033).
+- `confianza` (mr, 586): `mr` 483, `mr_con_financieros` 103.
+- **41 documentos** donde la resta `mr − sus` por contenido no encontró
+  coincidencia exacta del texto de `sus` dentro de `mr` (fallback: `mr`
+  completo, sin restar). Esperable dado el volumen (586 docs) y no bloqueante
+  para Fase 5 — el `sus` de esos documentos sigue siendo correcto, solo el
+  `mr` puede incluir algo de solapamiento con `sus`.
+
+Fase 4 (4A-4D) **COMPLETA** para las 196 empresas. Siguiente: Fase 5 (5A-5E)
+sobre el corpus ampliado de 586 docs.
+
+---
+
+## Decisión 035 — QA completo de corpus.parquet (1172 filas) y 4 correcciones quirúrgicas
+
+**Contexto.** Tras la Decisión 034, se ejecutó un QA exhaustivo del
+`corpus.parquet` ampliado (`scripts/extraction/fase4_qa_corpus.py`): nulos,
+consistencia `n_chars`/`n_tokens`, caracteres de control, `�`, mojibake,
+idioma, ratio no-ASCII, cabeceras repetidas, validez de tokens, duplicados,
+esquema y outliers de tamaño. Se detectaron 4 problemas reales (más 1 falso
+positivo de la propia herramienta de QA, corregido en el script:
+`isinstance(tokens, list)` fallaba porque pyarrow devuelve `numpy.ndarray`).
+
+**Correcciones aplicadas** (`scripts/extraction/fase4_qa_fix035.py`,
+backups en `corpus.parquet.bak_qa035`, `secciones_manifest.csv.bak_qa035` y
+`data/interim/secciones/_bak_qa035/`):
+
+1. **Restos de "dot-leader" de TOC** (`�`/`.` repetidos, glifos de
+   relleno de índice sin mapeo Unicode) en `clean_text` de 10 filas / 6 docs
+   (E010_BOL_2023·mr, E045_BOL_2023·mr, E053_VPLAY B_2022/2023/2024·sus+mr,
+   E061_CAST_2023·mr, E131_TEV_2022·sus). Eliminados con regex
+   `[.�]{4,}` y recalculado `n_chars`. `tokens`/`n_tokens` sin cambios
+   (ni `.` ni `�` son alfabéticos).
+2. **Cabecera repetida 111 veces** sin eliminar en E013_1COV_2024·sus
+   ("CAPITAL MARKET MANAGEMENT REPORT COMPENSATION REPORT FINANCIAL
+   STATEMENTS FURTHER INFORMATION", ~4.6% de la sección — el umbral de
+   `quitar_cabeceras()` no la detectó por estar fuera de rango). Eliminada y
+   fila re-lematizada: `n_chars` 377.080→366.646, `n_tokens` recalculado a
+   30.551.
+3. **Caracteres de control `\x7f`** (glifo de viñeta de fuente personalizada
+   sin mapeo Unicode) en 5 filas / 2 docs (E089_ADEN_2022·mr,
+   E089_ADEN_2023·sus, E089_ADEN_2024·sus+mr, E180_BAER_2023·mr). Eliminados y
+   recalculado `n_chars`.
+4. **E174_NTGY_2023·sus mal ubicado**: `sus_ini/sus_fin`=651-662 (bloque de
+   densidad ESG dentro de un anexo de auditoría escaneado) daba solo 226
+   caracteres / 21 tokens, y además `sus_fin=662 > mr_fin=334` (violaba
+   `sus⊂mr`, Decisión 017). El índice del PDF identifica "II. Non-financial
+   information statement" en páginas 265-662, y el bloque de mayor densidad
+   ESG del documento (264-340) confirma que el contenido relevante empieza en
+   265. Corregido a `sus_ini=265, sus_fin=334` (=`mr_fin`, respeta `sus⊂mr`),
+   `sus_confianza='alta'` (confirmado por TOC). `_sus.txt` regenerado
+   (69 págs); manifiesto actualizado. Filas `sus` y `mr` de E174_NTGY_2023
+   regeneradas en el corpus: `sus` ahora 183.368 chars / 14.647 tokens
+   (`confianza='alta'`); `mr` 678.701 chars / 55.110 tokens (`mr_menos_sus`
+   ahora SÍ encuentra `sus` dentro de `mr` y resta correctamente, antes era
+   uno de los 41 casos de "resta fallida" de la Decisión 034).
+
+**Resultado:** `corpus.parquet` sigue en 1172 filas (586×2), 263 MB.
+`sus_confianza` global: `alta` 233 (+1), `densidad` 292 (−1), resto sin
+cambios. Re-ejecución de `fase4_qa_corpus.py` → **0 problemas detectados**.
+
+Fase 4 (4A-4D) y QA **COMPLETOS**. Siguiente: Fase 5 (5A-5E) sobre el corpus
+ampliado de 586 docs.

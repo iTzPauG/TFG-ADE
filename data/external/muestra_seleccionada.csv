@@ -110,11 +110,11 @@ MT,ArcelorMittal,Basic Resources,Luxembourg,Luxembourg City,.LU,MT.AS,Basic Mate
 SOLB,Solvay,Chemicals,Belgium,Brussels,.BR,SOLB.BR,Basic Materials,E109
 AKZA,AkzoNobel,Chemicals,Netherlands,Amsterdam,.AS,AKZA.AS,Basic Materials,E110
 BAS,BASF,Chemicals,Germany,Ludwigshafen,.DE,BAS.DE,Basic Materials,E111
-DG,Vinci,Construction and Materials,France,Rueil-Malmaison,.PA,DG.PA,Industrials,E112
+HEI,Heidelberg Materials,Construction and Materials,Germany,Heidelberg,.DE,HEI.DE,Industrials,E112
 ACS,ACS Group,Construction and Materials,Spain,Madrid,.MC,ACS.MC,Industrials,E113
 SGO,Saint-Gobain,Construction and Materials,France,Courbevoie,.PA,SGO.PA,Industrials,E114
 FER,Ferrovial,Construction and Materials,Netherlands,Amsterdam,.AS,FER.AS,Industrials,E115
-BOUY,Bouygues,Construction and Materials,France,Paris,.PA,EN.PA,Industrials,E116
+WIE,Wienerberger,Construction and Materials,Austria,Vienna,.VI,WIE.VI,Industrials,E116
 BEI,Beiersdorf,Consumer Products and Services,Germany,Hamburg,.DE,BEI.DE,Consumer Discretionary,E117
 MONC,Moncler,Consumer Products and Services,Italy,Milan,.MI,MONC.MI,Consumer Discretionary,E118
 HLI,Haleon,Consumer Products and Services,United Kingdom,Weybridge,.L,HLN.L,Consumer Discretionary,E119
@@ -183,7 +183,7 @@ ASML,ASML Holding,Technology,Netherlands,Veldhoven,.AS,ASML.AS,Technology,E181
 MEL,Meliá Hotels,Travel and Leisure,Spain,Palma,.MC,MEL.MC,Consumer Discretionary,E182
 G24,Scout24,Technology,Germany,Munich,.DE,G24.DE,Technology,E183
 SPSN,Swiss Prime Site,Real Estate,Switzerland,Olten,.SW,SPSN.SW,Real Estate,E184
-CASP,Castellum,Real Estate,Sweden,Gothenburg,.ST,CAST.ST,Real Estate,E185
+LEG,LEG Immobilien,Real Estate,Germany,Düsseldorf,.DE,LEG.DE,Real Estate,E185
 NHY,Norsk Hydro,Basic Resources,Norway,Oslo,.OL,NHY.OL,Basic Materials,E186
 OCI,OCI,Chemicals,Netherlands,Amsterdam,.AS,OCI.AS,Basic Materials,E187
 CLN,Clariant,Chemicals,Switzerland,Muttenz,.SW,CLN.SW,Basic Materials,E188
@@ -192,6 +192,6 @@ DB1,Deutsche Börse,Financial Services,Germany,Frankfurt,.DE,DB1.DE,Financials,E
 RIGN,Transocean,Energy,Switzerland,Steinhausen,.SW,RIG,Energy,E191
 SRG,Snam,Energy,Italy,San Donato Milanese,.MI,SRG.MI,Energy,E192
 LSG,Lerøy Seafood,"Food, Beverage and Tobacco",Norway,Bergen,.OL,LSG.OL,Consumer Staples,E193
-GWI,Gruppo Campari,"Food, Beverage and Tobacco",Italy,Sesto San Giovanni,.MI,CPR.MI,Consumer Staples,E194
+LISN,Lindt & Sprüngli,"Food, Beverage and Tobacco",Switzerland,Kilchberg,.SW,LISN.SW,Consumer Staples,E194
 CTS,CTS Eventim,Media,Germany,Munich,.DE,EVD.DE,Communication Services,E195
 DIE,DIETEREN Group,Automobiles and Parts,Belgium,Brussels,.BR,DIE.BR,Consumer Discretionary,E196

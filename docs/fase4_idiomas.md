@@ -1,35 +1,38 @@
 # Fase 4B — Detección de idioma de los informes
 
-> Generado el 2026-06-01 por `scripts/extraction/fase4_idioma.py`.
+> Generado el 2026-06-13 por `scripts/extraction/fase4_idioma.py`.
 > Detección con `langdetect` por **voto de 9 ventanas** de 3000 caracteres repartidas por cada documento (robusto a portadas/secciones con fuentes corruptas).
-> Corpus: **289 informes** (97 empresas × 3 años − DIA 2022 y NEM 2022 descartados).
+> Corpus: **586 informes** (196 empresas × 3 años − DIA 2022 y NEM 2022 descartados).
 
 ## Distribución de idiomas
 
 | Idioma | Código | Informes | % |
 |--------|--------|---------:|----:|
-| Inglés | `en` | 289 | 100.0% |
+| Inglés | `en` | 586 | 100.0% |
 
 ## Idiomas por país
 
 | País | Idiomas (nº informes) |
 |------|----------------------|
-| Austria | en×6 |
-| Belgium | en×9 |
+| Austria | en×12 |
+| Belgium | en×21 |
 | Denmark | en×9 |
-| Finland | en×9 |
-| France | en×45 |
-| Germany | en×41 |
+| Finland | en×15 |
+| France | en×84 |
+| Germany | en×86 |
 | Ireland | en×6 |
-| Italy | en×15 |
-| Netherlands | en×18 |
-| Norway | en×12 |
-| Spain | en×26 |
-| Sweden | en×21 |
-| Switzerland | en×27 |
-| United Kingdom | en×45 |
+| Israel | en×3 |
+| Italy | en×42 |
+| Luxembourg | en×3 |
+| Netherlands | en×45 |
+| Norway | en×24 |
+| Portugal | en×6 |
+| Spain | en×50 |
+| Sweden | en×33 |
+| Switzerland | en×57 |
+| United Kingdom | en×90 |
 
-## Informes NO en inglés (0 de 289)
+## Informes NO en inglés (0 de 586)
 
 _Todos los informes están en inglés._
 
@@ -39,7 +42,7 @@ Detectados por baja densidad de palabras función reales y/o exceso de caractere
 
 _Ninguno: todas las extracciones son legibles._
 
-## Voto de idioma no unánime entre ventanas: 5
+## Voto de idioma no unánime entre ventanas: 7
 
 Fracción de ventanas que apoyan el idioma mayoritario < 1.0. Puede indicar documentos bilingües o con secciones corruptas/tabulares.
 
@@ -49,7 +52,9 @@ Fracción de ventanas que apoyan el idioma mayoritario < 1.0. Puede indicar docu
 | E005 | CABK | 2023 | `en` | 0.889 |
 | E005 | CABK | 2024 | `en` | 0.889 |
 | E017 | SKA B | 2024 | `en` | 0.889 |
-| E079 | ENEL | 2023 | `en` | 0.889 |
+| E155 | VNA | 2022 | `en` | 0.889 |
+| E155 | VNA | 2023 | `en` | 0.889 |
+| E184 | SPSN | 2022 | `en` | 0.889 |
 
 ## Implicación para la decisión 4B (traducir vs. multilingüe)
 

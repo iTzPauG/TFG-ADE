@@ -225,6 +225,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="escribe cambios (por defecto dry-run)")
     ap.add_argument("--solo", choices=["A", "B", "C"], help="ejecutar solo un bloque")
+    ap.add_argument("--nuevos", action="store_true",
+                    help="Solo procesar las 99 empresas de la ampliación (E098-E196). "
+                         "No toca E001-E097 (estado ya validado, Decisiones 015-016).")
     args = ap.parse_args()
     do = lambda b: args.solo is None or args.solo == b
 
@@ -295,6 +298,8 @@ def main():
         return cache[key]
 
     for r in man.itertuples():
+        if args.nuevos and int(r.id_empresa[1:]) < 98:
+            continue
         base = f"{r.id_empresa}_{r.ticker}_{r.año}"
         mr_p = SEC_DIR / f"{base}_mr.txt"
         sus_p = SEC_DIR / f"{base}_sus.txt"

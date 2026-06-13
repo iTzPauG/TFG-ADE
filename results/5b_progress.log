@@ -1,29 +1,137 @@
-# Log Fase 5B — 2026-06-10T00:38:56.957714
-[00:38:56] Cargando corpus…
-[00:38:57] 289 documentos sus cargados
-[00:38:57] [1/3] Segmentando corpus (≥20 palabras/párrafo)…
-00:38:58 Segmentando docs [██████████████████████████████] 100.0% (289/289)
-[00:38:59] 131,140 párrafos totales  |  media 454/doc
-[00:38:59] Por año: {'2022': 29762, '2023': 40388, '2024': 60990}
-[00:38:59] → 5b_paragrafos.parquet  [SEGMENTACIÓN COMPLETA 1/3]
-[00:38:59] [2/2] BERTopic — INICIO
-[00:39:08] Cargando modelo all-MiniLM-L6-v2 en mps…
-[00:39:11] Cargando embeddings desde caché (bertopic_sus_embeddings.npy)…
-[00:39:11] Embeddings cargados: (131140, 384)
-[00:39:11] Ajustando BERTopic — 1/3: UMAP (384→5 dims, ~2-3 min)…
-[00:41:08] UMAP listo: (131140, 5)
-[00:41:08] Ajustando BERTopic — 2/3: HDBSCAN (clustering)…
-[00:41:08] Ajustando BERTopic — 3/3: fit_transform + c-TF-IDF…
-[00:41:25] BERTopic listo: 339 topics, 48,355 outliers (36.9%)
-[00:41:25] Modelo BERTopic guardado → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/models/bertopic_sus/bertopic_model
-[00:41:25] Calculando topics_over_time (implementación manual, compatible pandas 2.x)…
-[00:41:25] topics_over_time listo: 1003 filas (año × topic)
-[00:41:25] Resumen BERTopic: 339 topics | outliers: 48,355/131,140 (36.9%)
-[00:41:26] → 5b_bertopic_topics.csv / 5b_bertopic_para_topics.parquet
-[00:41:26] → 5b_topics_over_time.csv
-[00:41:26] → 5b_bertopic_barchart.png / 5b_topics_over_time.png
-[00:41:26] BERTopic COMPLETO ✓
-[00:41:26] ✓ Fase 5B completa en 2.5 min
-[00:41:26] Tablas  → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/tables
-[00:41:26] Figuras → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/figures
-[00:41:26] Modelos → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/models
+# Log Fase 5B — 2026-06-13T16:44:57.922833
+[16:44:57] Cargando corpus…
+[16:45:00] 586 documentos sus cargados
+[16:45:00] [1/3] Segmentando corpus (≥20 palabras/párrafo)…
+16:45:02 Segmentando docs [██████████████████████████████] 100.0% (586/586)
+[16:45:02] 245,400 párrafos totales  |  media 419/doc
+[16:45:02] Por año: {'2022': 62053, '2023': 74767, '2024': 108580}
+[16:45:02] → 5b_paragrafos.parquet  [SEGMENTACIÓN COMPLETA 1/3]
+[16:45:02] [2/3] LDA — INICIO
+[16:45:03] Tokenizando 245,400 párrafos para LDA…
+16:45:06 Tokenizando [██████████████████████████████] 100.0% (245400/245400)
+[16:45:06] 245,229 párrafos con ≥5 tokens tras filtrado
+[16:45:06] Construyendo diccionario y BoW…
+[16:45:15] Vocabulario: 23,122 términos
+[16:45:15] Búsqueda de K óptimo: [5, 10, 15, 20, 25, 30]  (6 iteraciones)
+[16:45:15] [1/6] LDA K=5 — entrenando (10 passes)…
+[16:48:41] [1/6] LDA K=5 — calculando coherencia Cv…
+[16:49:04] [1/6] K=5 ✓  Cv=0.6442  (229s)  [progreso global LDA: 17%]
+[16:49:04] [2/6] LDA K=10 — entrenando (10 passes)…
+[16:51:35] [2/6] LDA K=10 — calculando coherencia Cv…
+[16:53:03] [2/6] K=10 ✓  Cv=0.6944  (238s)  [progreso global LDA: 33%]
+[16:53:03] [3/6] LDA K=15 — entrenando (10 passes)…
+[16:56:08] [3/6] LDA K=15 — calculando coherencia Cv…
+[16:56:36] [3/6] K=15 ✓  Cv=0.6832  (213s)  [progreso global LDA: 50%]
+[16:56:36] [4/6] LDA K=20 — entrenando (10 passes)…
+[16:59:19] [4/6] LDA K=20 — calculando coherencia Cv…
+[17:01:24] [4/6] K=20 ✓  Cv=0.6934  (288s)  [progreso global LDA: 67%]
+[17:01:24] [5/6] LDA K=25 — entrenando (10 passes)…
+[17:04:16] [5/6] LDA K=25 — calculando coherencia Cv…
+[17:04:49] [5/6] K=25 ✓  Cv=0.7060  (204s)  [progreso global LDA: 83%]
+[17:04:49] [6/6] LDA K=30 — entrenando (10 passes)…
+[17:07:43] [6/6] LDA K=30 — calculando coherencia Cv…
+[17:08:20] [6/6] K=30 ✓  Cv=0.6839  (211s)  [progreso global LDA: 100%]
+[17:08:20] K óptimo = 25  (Cv=0.7060)
+[17:08:20] Modelo guardado → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/models/lda_k25
+[17:08:20] Topics LDA (K=25):
+[17:08:20]   T00: waste, products, materials, use, product, circular, economy, raw, recycling, production, hazardous, used, packaging, life, resource
+[17:08:20]   T01: requirements, regulations, standards, companies, standard, compliance, regulatory, tax, specific, legal, must, applicable, iso, required, certification
+[17:08:20]   T02: compliance, conduct, code, corruption, ethics, policy, employees, third, anti, policies, integrity, party, bribery, parties, concerns
+[17:08:20]   T03: stakeholders, engagement, survey, employees, dialogue, stakeholder, industry, employee, feedback, external, groups, local, various, meetings, works
+[17:08:20]   T04: sustainable, development, strategy, commitment, people, culture, ensure, key, focus, approach, environment, value, customers, long, ensuring
+[17:08:20]   T05: investment, portfolio, financial, assets, investments, companies, capital, insurance, asset, bank, financing, finance, property, market, credit
+[17:08:20]   T06: risk, management, internal, process, risks, measures, system, control, assessment, processes, monitoring, ensure, actions, compliance, level
+[17:08:20]   T07: activities, taxonomy, eligible, aligned, economic, activity, capex, climate, criteria, change, opex, sustainable, turnover, proportion, regulation
+[17:08:20]   T08: targets, target, carbon, climate, transition, zero, plan, reduction, net, emissions, set, change, achieve, progress, reduce
+[17:08:20]   T09: due, could, increased, increase, market, costs, changes, result, higher, impact, significant, demand, risk, growth, events
+[17:08:20]   T10: risks, climate, impacts, opportunities, material, related, risk, change, impact, materiality, assessment, analysis, term, identified, potential
+[17:08:20]   T11: new, training, development, support, program, learning, digital, project, programme, projects, innovation, initiatives, skills, technology, people
+[17:08:20]   T12: sustainability, performance, esg, strategy, environmental, governance, management, key, strategic, social, responsible, corporate, targets, assurance, objectives
+[17:08:20]   T13: water, sites, production, air, site, consumption, pollution, wastewater, stress, facilities, treatment, substances, high, resources, quality
+[17:08:20]   T14: employees, health, safety, employee, work, diversity, workforce, women, gender, inclusion, training, working, hours, management, occupational
+[17:08:20]   T15: board, committee, executive, directors, management, members, remuneration, supervisory, governance, audit, officer, corporate, chief, ceo, meeting
+[17:08:20]   T16: energy, consumption, hydro, renewable, electricity, efficiency, gas, sources, vehicles, power, construction, production, fossil, estate, fuel
+[17:08:20]   T17: data, services, customers, customer, security, service, products, protection, end, users, privacy, consumers, digital, product, quality
+[17:08:20]   T18: reporting, esrs, financial, gri, sustainability, statements, disclosure, consolidated, chapter, disclosures, reference, refer, regulation, indicator, related
+[17:08:20]   T19: million, share, net, revenue, income, per, december, financial, shares, cash, period, operating, average, term, rate
+[17:08:20]   T20: years, france, first, europe, two, spain, germany, countries, one, three, brazil, region, since, around, america
+[17:08:20]   T21: biodiversity, environmental, impact, impacts, areas, communities, local, negative, nature, activities, operations, natural, ecosystems, environment, affected
+[17:08:20]   T22: emissions, scope, ghg, data, emission, gas, greenhouse, carbon, category, factors, per, reduction, tco, intensity, used
+[17:08:20]   T23: human, rights, labour, principles, workers, labor, due, social, diligence, policy, collective, international, global, child, conditions
+[17:08:20]   T24: chain, suppliers, value, supply, supplier, procurement, prime, upstream, score, purchasing, sourcing, chains, partners, operations, high
+[17:08:20] Calculando distribución topic por párrafo (245,229 BoWs)…
+17:08:44 doc_topics [██████████████████████████████] 100.0% (245229/245229)
+[17:08:52] → 5b_lda_coherencia.csv / 5b_lda_topics.csv / 5b_lda_doc_topics.csv
+[17:08:52] → 5b_lda_coherencia.png / 5b_lda_topics_barplot.png
+[17:08:52] LDA COMPLETO ✓
+[17:08:52] [3/3] BERTopic — INICIO
+[17:09:04] Cargando modelo all-MiniLM-L6-v2 en mps…
+[17:09:07] Generando embeddings para 245,400 párrafos (batch=512, 480 batches)…
+[17:09:35]   batch 10/480  (5,120/245,400 párrafos)
+[17:09:57]   batch 20/480  (10,240/245,400 párrafos)
+[17:10:18]   batch 30/480  (15,360/245,400 párrafos)
+[17:10:41]   batch 40/480  (20,480/245,400 párrafos)
+[17:11:09]   batch 50/480  (25,600/245,400 párrafos)
+[17:11:32]   batch 60/480  (30,720/245,400 párrafos)
+[17:11:53]   batch 70/480  (35,840/245,400 párrafos)
+[17:12:19]   batch 80/480  (40,960/245,400 párrafos)
+[17:12:40]   batch 90/480  (46,080/245,400 párrafos)
+[17:13:04]   batch 100/480  (51,200/245,400 párrafos)
+[17:13:27]   batch 110/480  (56,320/245,400 párrafos)
+[17:13:54]   batch 120/480  (61,440/245,400 párrafos)
+[17:14:16]   batch 130/480  (66,560/245,400 párrafos)
+[17:14:41]   batch 140/480  (71,680/245,400 párrafos)
+[17:15:05]   batch 150/480  (76,800/245,400 párrafos)
+[17:15:27]   batch 160/480  (81,920/245,400 párrafos)
+[17:15:53]   batch 170/480  (87,040/245,400 párrafos)
+[17:16:17]   batch 180/480  (92,160/245,400 párrafos)
+[17:16:43]   batch 190/480  (97,280/245,400 párrafos)
+[17:17:06]   batch 200/480  (102,400/245,400 párrafos)
+[17:17:28]   batch 210/480  (107,520/245,400 párrafos)
+[17:17:51]   batch 220/480  (112,640/245,400 párrafos)
+[17:18:12]   batch 230/480  (117,760/245,400 párrafos)
+17:18:34 Embeddings [███████████████░░░░░░░░░░░░░░░]  50.0% (240/480)
+[17:18:34]   batch 240/480  (122,880/245,400 párrafos)
+[17:18:55]   batch 250/480  (128,000/245,400 párrafos)
+[17:19:18]   batch 260/480  (133,120/245,400 párrafos)
+[17:19:42]   batch 270/480  (138,240/245,400 párrafos)
+[17:20:04]   batch 280/480  (143,360/245,400 párrafos)
+[17:20:23]   batch 290/480  (148,480/245,400 párrafos)
+[17:20:46]   batch 300/480  (153,600/245,400 párrafos)
+[17:21:07]   batch 310/480  (158,720/245,400 párrafos)
+[17:21:30]   batch 320/480  (163,840/245,400 párrafos)
+[17:21:53]   batch 330/480  (168,960/245,400 párrafos)
+[17:22:16]   batch 340/480  (174,080/245,400 párrafos)
+[17:22:40]   batch 350/480  (179,200/245,400 párrafos)
+[17:23:04]   batch 360/480  (184,320/245,400 párrafos)
+[17:23:30]   batch 370/480  (189,440/245,400 párrafos)
+[17:23:51]   batch 380/480  (194,560/245,400 párrafos)
+[17:24:17]   batch 390/480  (199,680/245,400 párrafos)
+[17:24:48]   batch 400/480  (204,800/245,400 párrafos)
+[17:25:14]   batch 410/480  (209,920/245,400 párrafos)
+[17:25:40]   batch 420/480  (215,040/245,400 párrafos)
+[17:26:02]   batch 430/480  (220,160/245,400 párrafos)
+[17:26:27]   batch 440/480  (225,280/245,400 párrafos)
+[17:26:50]   batch 450/480  (230,400/245,400 párrafos)
+[17:27:14]   batch 460/480  (235,520/245,400 párrafos)
+[17:27:39]   batch 470/480  (240,640/245,400 párrafos)
+17:27:59 Embeddings [██████████████████████████████] 100.0% (480/480)
+[17:27:59]   batch 480/480  (245,400/245,400 párrafos)
+[17:27:59] Embeddings listos: (245400, 384)  (guardados en caché)
+[17:27:59] Ajustando BERTopic — 1/3: UMAP (384→5 dims, ~2-3 min)…
+[17:31:52] UMAP listo: (245400, 5)
+[17:31:52] Ajustando BERTopic — 2/3: HDBSCAN (clustering)…
+[17:31:52] Ajustando BERTopic — 3/3: fit_transform + c-TF-IDF…
+[17:32:25] BERTopic listo: 578 topics, 98,721 outliers (40.2%)
+[17:32:26] Modelo BERTopic guardado → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/models/bertopic_sus/bertopic_model
+[17:32:26] Calculando topics_over_time (implementación manual, compatible pandas 2.x)…
+[17:32:26] topics_over_time listo: 1692 filas (año × topic)
+[17:32:26] Resumen BERTopic: 578 topics | outliers: 98,721/245,400 (40.2%)
+[17:32:27] → 5b_bertopic_topics.csv / 5b_bertopic_para_topics.parquet
+[17:32:27] → 5b_topics_over_time.csv
+[17:32:27] → 5b_bertopic_barchart.png / 5b_topics_over_time.png
+[17:32:27] BERTopic COMPLETO ✓
+[17:32:27] ✓ Fase 5B completa en 47.5 min
+[17:32:27] Tablas  → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/tables
+[17:32:27] Figuras → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/figures
+[17:32:27] Modelos → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/models

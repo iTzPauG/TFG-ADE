@@ -97,6 +97,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--empresa")
     ap.add_argument("--año")
+    ap.add_argument("--nuevos", action="store_true",
+                    help="Solo las 99 empresas de la ampliación (E098-E196).")
     args = ap.parse_args()
 
     man = pd.read_csv(MANIFEST_PATH, dtype=str)
@@ -111,6 +113,8 @@ def main():
         objetivo = objetivo[objetivo.ticker == args.empresa]
     if args.año:
         objetivo = objetivo[objetivo.año == str(args.año)]
+    if args.nuevos:
+        objetivo = objetivo[objetivo.id_empresa.str[1:].astype(int) >= 98]
 
     n_ok = n_no = 0
     for r in objetivo.itertuples():

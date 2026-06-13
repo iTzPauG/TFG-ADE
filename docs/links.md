@@ -76,11 +76,11 @@
 
 ---
 
-## Biblioteca UV — acceso a bases de datos
+## Biblioteca UPV — acceso a bases de datos
 
 | Base de datos | Cómo acceder |
 |---------------|-------------|
-| Web of Science | https://www.uv.es/biblioteca → Recursos electrónicos → Web of Science |
+| Web of Science | Polibuscador (https://biblioteca.upv.es) → Recursos electrónicos → Web of Science |
 | Scopus | Ídem → Scopus |
 
 ---
@@ -92,4 +92,4 @@
 | Overleaf | https://www.overleaf.com |
 | Zotero (gestor de referencias) | https://www.zotero.org |
 | LanguageTool (corrector) | https://languagetool.org/es |
-| Repositori UV (RODERIC) — TFGs | https://roderic.uv.es |
+| Repositori UPV (RiuNet) — TFGs | https://riunet.upv.es |

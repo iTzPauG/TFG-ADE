@@ -102,6 +102,8 @@ def escribir(path, texto, apply):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--nuevos", action="store_true",
+                    help="Solo procesar las 99 empresas de la ampliación (E098-E196).")
     args = ap.parse_args()
 
     man = pd.read_csv(MANIFEST_PATH, dtype=str).fillna("")
@@ -109,6 +111,8 @@ def main():
 
     cambios_mr, cambios_sus, marcados = [], [], []
     for r in man.itertuples():
+        if args.nuevos and int(r.id_empresa[1:]) < 98:
+            continue
         idd, tk, an = r.id_empresa, r.ticker, r.año
         npp = int(f(r.npaginas))
         mr_ini = int(f(r.mr_ini)) or 1

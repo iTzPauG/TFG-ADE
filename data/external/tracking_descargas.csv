@@ -53,9 +53,9 @@ E017,Skanska,SKA B,Sweden,2024,integrated,https://group.skanska.com/49490b/sitea
 E018,Vinci,DG,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/vinci_2022.pdf,2026-06-12,219.0,,descargado,no encontrado automáticamente
 E018,Vinci,DG,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/vinci_2023.pdf,2026-06-12,239.0,,descargado,no encontrado automáticamente
 E018,Vinci,DG,France,2024,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2024.pdf,2026-06-12,174.0,,descargado,no encontrado automáticamente
-E019,Bouygues,EN,France,2022,integrated,https://www.bnains.org/archives/communiques/Bouygues/20230322_Document_d_enregistrement_universel_2022_Bouygues.pdf,2026-06-12,279.0,,problema,no encontrado automáticamente
-E019,Bouygues,EN,France,2023,integrated,https://www.bnains.org/archives/communiques/Bouygues/20240322_Document_d_enregistrement_universel_2023_Bouygues.pdf,2026-06-12,153.0,,problema,no encontrado automáticamente
-E019,Bouygues,EN,France,2024,integrated,https://www.bnains.org/archives/communiques/Bouygues/20250325_Document_d_enregistrement_universel_2024_Bouygues.pdf,2026-06-12,266.0,,problema,no encontrado automáticamente
+E019,Bouygues,EN,France,2022,integrated,https://www.bnains.org/archives/communiques/Bouygues/20230322_Document_d_enregistrement_universel_2022_Bouygues.pdf,2026-06-12,448.0,,descargado,PDF verificado en data/raw/ — tracking corregido (constaba como problema pese a tener el PDF descargado)
+E019,Bouygues,EN,France,2023,integrated,https://www.bnains.org/archives/communiques/Bouygues/20240322_Document_d_enregistrement_universel_2023_Bouygues.pdf,2026-06-12,476.0,,descargado,PDF verificado en data/raw/ — tracking corregido (constaba como problema pese a tener el PDF descargado)
+E019,Bouygues,EN,France,2024,integrated,https://www.bnains.org/archives/communiques/Bouygues/20250325_Document_d_enregistrement_universel_2024_Bouygues.pdf,2026-06-12,640.0,,descargado,PDF verificado en data/raw/ — tracking corregido (constaba como problema pese a tener el PDF descargado)
 E020,Eiffage,EFGI,France,2022,integrated,https://www.eiffage.com/files/live/sites/eiffagev2/files/Finance/Rapport%20Annuel/DEU2022.pdf,2026-05-27,61.0,,descargado,no encontrado automáticamente
 E020,Eiffage,EFGI,France,2023,,,,400.0,,descargado,reconciliado
 E020,Eiffage,EFGI,France,2024,,,,424.0,,descargado,reconciliado
@@ -166,7 +166,7 @@ E055,Unilever,ULVR,United Kingdom,2023,integrated,https://www.annualreports.com/
 E055,Unilever,ULVR,United Kingdom,2024,integrated,https://www.unilever.com/files/unilever-annual-report-and-accounts-2024.pdf,2026-05-29,305.0,en,descargado,descargado manualmente
 E056,Dia,DIA,Spain,2022,integrated,https://diacorporate.com/wp-content/uploads/2023/04/Consolidated-Annual-Accounts-and-directors-report-DIA-2022.pdf,2026-05-27,170.0,,descartado,"descartado del corpus NLP — sin contenido ESG (0pp, Cat E). Ver Decisión 010"
 E056,Dia,DIA,Spain,2023,integrated,https://diacorporate.com/wp-content/uploads/2024/02/Memoria-Grupo-DIA-e-IG-consolidado-V.ingles-con-IA-xs.pdf,2026-05-27,94.0,,descargado,no encontrado automáticamente
-E056,Dia,DIA,Spain,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_ACHC_2024.pdf,2026-05-28,22.0,,descargado,no encontrado automáticamente
+E056,Dia,DIA,Spain,2024,integrated,https://diacorporate.com/wp-content/uploads/2025/06/Annual-Report-2024-Dia-Group_ENG-1.pdf,2026-05-28,43.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
 E057,Colruyt,COLR,Belgium,2022,integrated,https://www.colruytgroup.com/en/investor-relations/annual-reports,2026-05-29,280.0,en,descargado,descargado manualmente — FY2021/22
 E057,Colruyt,COLR,Belgium,2023,integrated,https://live.euronext.com/sites/default/files/esg_document_files/2023-11/001881_Annual%20report%20Colruyt%20Group%202022-2023_0_2023-11-07_10:34.pdf,2026-05-27,197.0,,descargado,no encontrado automáticamente
 E057,Colruyt,COLR,Belgium,2024,integrated,https://live.euronext.com/sites/default/files/esg_document_files/2025-04/001881_Annual%20report%20with%20sustainability%20reporting%202023_24_0_2025-04-14_13:09.pdf,2026-05-28,173.0,,descargado,no encontrado automáticamente
@@ -179,12 +179,12 @@ E059,Merlin Properties,MRL,Spain,2024,integrated,https://ir.merlinproperties.com
 E060,Gecina,GFC,France,2022,integrated,https://www.gecina.fr/sites/default/files/2023-02/gecina_-_document_denregistrement_universel_2022.pdf,2026-05-27,140.0,,descargado,no encontrado automáticamente
 E060,Gecina,GFC,France,2023,integrated,https://www.gecina.fr/sites/default/files/2024-02/gecina_document_d_enregistrement_universel_2023.pdf,2026-05-27,214.0,,descargado,no encontrado automáticamente
 E060,Gecina,GFC,France,2024,integrated,https://www.gecina.fr/sites/default/files/2025-02/gecina_-_document_d_enregistrement_universel_2024.pdf,2026-05-27,158.0,,descargado,no encontrado automáticamente
-E061,Castellum,CAST,Sweden,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/castellum_2022.pdf,2026-06-12,116,,descargado,no encontrado automáticamente
-E061,Castellum,CAST,Sweden,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/castellum_2023.pdf,2026-06-12,129,,descargado,no encontrado automáticamente
-E061,Castellum,CAST,Sweden,2024,integrated,https://storage.mfn.se/e8a0a9e3-9238-42a9-a59a-629f5e32813e/castellum-annual-report-2024.pdf,2026-06-12,142.0,,problema,no encontrado automáticamente
-E062,Delivery Hero,DHER,Germany,2022,integrated,https://ir-api.eqs.com/media/document/d642242f-833c-45ff-b7b1-9c9784cea279/assets/DeliveryHero_Annual%20Report_2022.pdf?disposition=inline,2026-06-12,88.0,,problema,no encontrado automáticamente
-E062,Delivery Hero,DHER,Germany,2023,integrated,https://www.lobbyregister.bundestag.de/media/9c/ab/313888/Delivery-Hero-Annual-Report-2023.pdf,2026-06-12,104.0,,problema,no encontrado automáticamente
-E062,Delivery Hero,DHER,Germany,2024,integrated,https://ir.deliveryhero.com/media/document/c38c7d53-cd6e-44de-8b1f-3559d5c43e6b/assets/DE000A2E4K43-JA-2024-EQ-E-00.pdf,2026-06-12,113.0,,problema,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/castellum_2022.pdf,2026-06-12,116.0,,descargado,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/castellum_2023.pdf,2026-06-12,129.0,,descargado,no encontrado automáticamente
+E061,Castellum,CAST,Sweden,2024,integrated,https://storage.mfn.se/e8a0a9e3-9238-42a9-a59a-629f5e32813e/castellum-annual-report-2024.pdf,2026-06-12,175.0,,descargado,PDF verificado en data/raw/ — tracking corregido (constaba como problema pese a tener el PDF descargado)
+E062,Delivery Hero,DHER,Germany,2022,integrated,https://ir-api.eqs.com/media/document/d642242f-833c-45ff-b7b1-9c9784cea279/assets/DeliveryHero_Annual%20Report_2022.pdf?disposition=inline,2026-06-12,88.0,,descargado,PDF verificado en data/raw/Germany/DHER/ — tracking corregido (estaba en problema con url_fuente/n_paginas ya rellenos)
+E062,Delivery Hero,DHER,Germany,2023,integrated,https://www.lobbyregister.bundestag.de/media/9c/ab/313888/Delivery-Hero-Annual-Report-2023.pdf,2026-06-12,104.0,,descargado,PDF verificado en data/raw/Germany/DHER/ — tracking corregido (estaba en problema con url_fuente/n_paginas ya rellenos)
+E062,Delivery Hero,DHER,Germany,2024,integrated,https://ir.deliveryhero.com/media/document/c38c7d53-cd6e-44de-8b1f-3559d5c43e6b/assets/DE000A2E4K43-JA-2024-EQ-E-00.pdf,2026-06-12,113.0,,descargado,PDF verificado en data/raw/Germany/DHER/ — tracking corregido (estaba en problema con url_fuente/n_paginas ya rellenos)
 E063,Travis Perkins,TPK,United Kingdom,2022,integrated,https://www.travisperkinsplc.co.uk/media/dqbnofvc/annual-report-and-accounts-2022.pdf,2026-05-27,135.0,,descargado,no encontrado automáticamente
 E063,Travis Perkins,TPK,United Kingdom,2023,integrated,https://www.travisperkinsplc.co.uk/media/4mznqoer/travis-perkins-annual-report-2023.pdf,2026-05-27,108.0,,descargado,no encontrado automáticamente
 E063,Travis Perkins,TPK,United Kingdom,2024,integrated,https://www.travisperkinsplc.co.uk/media/uc0oz433/travis-perkins-plc-2024-annual-report.pdf,2026-05-27,67.0,,descargado,no encontrado automáticamente
@@ -290,300 +290,300 @@ E096,Nemetschek,NEM,Germany,2024,integrated,https://ir.nemetschek.com/media/docu
 E097,Universal Music Group,UMG,Netherlands,2022,integrated,https://investors.umusic.com/financial-information/annual-reports,2026-05-29,337.0,en,descargado,reemplaza doc incorrecto (era Focus Universal Inc. 10-K)
 E097,Universal Music Group,UMG,Netherlands,2023,integrated,https://investors.umusic.com/financial-information/annual-reports,2026-05-29,355.0,en,descargado,reemplaza doc incorrecto (era Focus Universal Inc. 10-K)
 E097,Universal Music Group,UMG,Netherlands,2024,integrated,https://downloads.ctfassets.net/e66ejtqbaazg/Yt3zzyacZ1VRFc3dcEt85/b9d00d3ac6ffedea5bb01c770e825c8b/UMG_2024_Annual_Report.pdf,2026-05-27,136.0,,descargado,no encontrado automáticamente
-E098,Michelin,MICP,France,2022,integrated,https://dgaddcosprod.blob.core.windows.net/corporate-production/attachments/clktdc5dh09gn2fhh5lf08qx5-michelin-deu-2022-fr-mel-v2.pdf,2026-06-11,217,,descargado,
-E098,Michelin,MICP,France,2023,integrated,https://dgaddcosprod.blob.core.windows.net/corporate-production/attachments/cloo511be002s35nj6t121dni-20230726-michelin-2023-rfs-en.pdf,2026-06-11,86,,descargado,
-E098,Michelin,MICP,France,2024,integrated,https://www.bnains.org/archives/communiques/Michelin/20250212_Communique_resultats_annuels_2024_Michelin.pdf,2026-06-11,6,,descargado,
-E099,Pirelli,PIRC,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PPAMY_2022.pdf,2026-06-11,215,,descargado,
-E099,Pirelli,PIRC,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PPAMY_2023.pdf,2026-06-11,178,,descargado,
-E099,Pirelli,PIRC,Italy,2024,integrated,https://corp2-assets.pirelli.com/corporate/Annual_Report_Pirelli_2024_ENG.pdf,2026-06-11,173,,descargado,
-E100,Ferrari,FERR,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_RACE_2022.pdf,2026-06-11,88,,descargado,
-E100,Ferrari,FERR,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_RACE_2023.pdf,2026-06-11,79,,descargado,
-E100,Ferrari,FERR,Italy,2024,integrated,https://investors.ferrarigroup.net/content/dam/ferrari/corporate/documents/results-and-reports/2025/ferrari-group-plc_annual-report_2024.pdf.downloadasset.pdf,,,,problema,no encontrado automáticamente
-E101,Renault,RENA,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/g/groupe-renault_2022.pdf,2026-06-11,64,,descargado,
-E101,Renault,RENA,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/g/groupe-renault_2023.pdf,2026-06-11,232,,descargado,
-E101,Renault,RENA,France,2024,integrated,https://events.renaultgroup.com/app/uploads/sites/7/2025/02/RG_2024_Earning_report.pdf,2026-06-11,18,,descargado,
-E102,ABN AMRO,ABN,Netherlands,2022,integrated,,2026-06-11,,,descargado,
-E102,ABN AMRO,ABN,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/abn-amro-bank_2023.pdf,2026-06-11,169,,descargado,
-E102,ABN AMRO,ABN,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/abn-amro-bank_2024.pdf,2026-06-11,243,,descargado,
-E103,KBC Group,KBC,Belgium,2022,integrated,https://wcmassets.kbc.be/content/dam/kbccom/doc/investor-relations/Results/jvs-2022/jvs-2022-grp-en.pdf.cdn.res/last-modified/1680373663510/jvs-2022-grp-en.pdf,,,,problema,no encontrado automáticamente
-E103,KBC Group,KBC,Belgium,2023,,,,,,problema,no encontrado automáticamente
-E103,KBC Group,KBC,Belgium,2024,,,,,,problema,no encontrado automáticamente
-E104,ING Group,INGA,Netherlands,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NYSE_EFSH_2022.pdf,2026-06-11,15,,descargado,
-E104,ING Group,INGA,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NYSE_EFSH_2023.pdf,2026-06-11,17,,descargado,
-E104,ING Group,INGA,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NYSE_EFSH_2024.pdf,2026-06-12,16,,descargado,no encontrado automáticamente
-E105,UniCredit,UC,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/u/OTC_UNCIF_2022.pdf,2026-06-12,304,,descargado,no encontrado automáticamente
-E105,UniCredit,UC,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/u/OTC_UNCIF_2023.pdf,2026-06-12,411,,descargado,no encontrado automáticamente
-E105,UniCredit,UC,Italy,2024,,,,,,problema,no encontrado automáticamente
-E106,Banco Santander,SAN,Spain,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NASDAQ_BCOW_2022.pdf,2026-06-12,12,,descargado,no encontrado automáticamente
-E106,Banco Santander,SAN,Spain,2023,,,,,,problema,no encontrado automáticamente
-E106,Banco Santander,SAN,Spain,2024,,,,,,problema,no encontrado automáticamente
-E107,Vallourec,VK,France,2022,,,,,,problema,no encontrado automáticamente
-E107,Vallourec,VK,France,2023,,,,,,problema,no encontrado automáticamente
-E107,Vallourec,VK,France,2024,,,,,,problema,no encontrado automáticamente
-E108,ArcelorMittal,MT,Luxembourg,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2022.pdf,2026-06-12,227,,descargado,no encontrado automáticamente
-E108,ArcelorMittal,MT,Luxembourg,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2023.pdf,2026-06-12,249,,descargado,no encontrado automáticamente
-E108,ArcelorMittal,MT,Luxembourg,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2024.pdf,2026-06-12,100,,descargado,no encontrado automáticamente
-E109,Solvay,SOLB,Belgium,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/solvay_2022.pdf,2026-06-12,83,,descargado,no encontrado automáticamente
-E109,Solvay,SOLB,Belgium,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/solvay_2023.pdf,2026-06-12,97,,descargado,no encontrado automáticamente
-E109,Solvay,SOLB,Belgium,2024,,,,,,problema,no encontrado automáticamente
-E110,AkzoNobel,AKZA,Netherlands,2022,,,,,,problema,no encontrado automáticamente
-E110,AkzoNobel,AKZA,Netherlands,2023,,,,,,problema,no encontrado automáticamente
-E110,AkzoNobel,AKZA,Netherlands,2024,,,,,,problema,no encontrado automáticamente
-E111,BASF,BAS,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/basf-ag_2022.pdf,2026-06-12,29,,descargado,no encontrado automáticamente
-E111,BASF,BAS,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/basf-ag_2023.pdf,2026-06-12,111,,descargado,no encontrado automáticamente
-E111,BASF,BAS,Germany,2024,,,,,,problema,no encontrado automáticamente
-E112,Vinci,DG,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/vinci_2022.pdf,2026-06-12,,,descargado,
-E112,Vinci,DG,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/vinci_2023.pdf,2026-06-12,,,descargado,
-E112,Vinci,DG,France,2024,integrated,https://www.vinci.com/publi/vinci/vinci-document-enregistrement-universel-2024.pdf,2026-06-12,,,descargado,
-E113,ACS Group,ACS,Spain,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TRCS_2022.pdf,2026-06-12,169,,descargado,no encontrado automáticamente
-E113,ACS Group,ACS,Spain,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TRCS_2023.pdf,2026-06-12,70,,descargado,no encontrado automáticamente
-E113,ACS Group,ACS,Spain,2024,,,,,,problema,no encontrado automáticamente
-E114,Saint-Gobain,SGO,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/saint-gobain_2022.pdf,2026-06-12,165,,descargado,no encontrado automáticamente
-E114,Saint-Gobain,SGO,France,2023,,,,,,problema,no encontrado automáticamente
-E114,Saint-Gobain,SGO,France,2024,,,,,,problema,no encontrado automáticamente
-E115,Ferrovial,FER,Netherlands,2022,,,,,,problema,no encontrado automáticamente
-E115,Ferrovial,FER,Netherlands,2023,,,,,,problema,no encontrado automáticamente
-E115,Ferrovial,FER,Netherlands,2024,,,,,,problema,no encontrado automáticamente
-E116,Bouygues,BOUY,France,2022,integrated,https://www.bnains.org/archives/communiques/Bouygues/20230322_Document_d_enregistrement_universel_2022_Bouygues.pdf,2026-06-12,,,problema,no encontrado automáticamente
-E116,Bouygues,BOUY,France,2023,integrated,https://www.bnains.org/archives/communiques/Bouygues/20240322_Document_d_enregistrement_universel_2023_Bouygues.pdf,2026-06-12,,,problema,no encontrado automáticamente
-E116,Bouygues,BOUY,France,2024,integrated,https://www.bnains.org/archives/communiques/Bouygues/20250325_Document_d_enregistrement_universel_2024_Bouygues.pdf,2026-06-12,,,problema,no encontrado automáticamente
-E117,Beiersdorf,BEI,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/beiersdorf_2022.pdf,2026-06-12,116,,descargado,no encontrado automáticamente
-E117,Beiersdorf,BEI,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/beiersdorf_2023.pdf,2026-06-12,143,,descargado,no encontrado automáticamente
-E117,Beiersdorf,BEI,Germany,2024,,,,,,problema,no encontrado automáticamente
-E118,Moncler,MONC,Italy,2022,,,,,,problema,no encontrado automáticamente
-E118,Moncler,MONC,Italy,2023,,,,,,problema,no encontrado automáticamente
-E118,Moncler,MONC,Italy,2024,,,,,,problema,no encontrado automáticamente
-E119,Haleon,HLI,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/h/LSE_HLN_2022.pdf,2026-06-12,99,,descargado,no encontrado automáticamente
-E119,Haleon,HLI,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/h/LSE_HLN_2023.pdf,2026-06-12,339,,descargado,no encontrado automáticamente
-E119,Haleon,HLI,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E120,Puma,PUM,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PMMAF_2022.pdf,2026-06-12,140,,descargado,no encontrado automáticamente
-E120,Puma,PUM,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PMMAF_2023.pdf,2026-06-12,148,,descargado,no encontrado automáticamente
-E120,Puma,PUM,Germany,2024,,,,,,problema,no encontrado automáticamente
-E121,Games Workshop,GAW,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/g/LSE_GAW_2022.pdf,2026-06-12,25,,descargado,no encontrado automáticamente
-E121,Games Workshop,GAW,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/g/LSE_GAW_2023.pdf,2026-06-12,19,,descargado,no encontrado automáticamente
-E121,Games Workshop,GAW,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E122,Shell plc,SHEL,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
-E122,Shell plc,SHEL,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
-E122,Shell plc,SHEL,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E123,Eni,ENI,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/ASX_AN1_2022.pdf,2026-06-12,85,,descargado,no encontrado automáticamente
-E123,Eni,ENI,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/ASX_AN1_2023.pdf,2026-06-12,128,,descargado,no encontrado automáticamente
-E123,Eni,ENI,Italy,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/ASX_AN1_2024.pdf,2026-06-12,24,,descargado,no encontrado automáticamente
-E124,Galp Energia,GALP,Portugal,2022,,,,,,problema,no encontrado automáticamente
-E124,Galp Energia,GALP,Portugal,2023,,,,,,problema,no encontrado automáticamente
-E124,Galp Energia,GALP,Portugal,2024,,,,,,problema,no encontrado automáticamente
-E125,Euronext,ENX,Netherlands,2022,,,,,,problema,no encontrado automáticamente
-E125,Euronext,ENX,Netherlands,2023,,,,,,problema,no encontrado automáticamente
-E125,Euronext,ENX,Netherlands,2024,,,,,,problema,no encontrado automáticamente
-E126,IG Group,IGGI,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
-E126,IG Group,IGGI,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
-E126,IG Group,IGGI,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E127,Flow Traders,FLOW,Netherlands,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NASDAQ_FLWS_2022.pdf,2026-06-12,77,,descargado,no encontrado automáticamente
-E127,Flow Traders,FLOW,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NASDAQ_FLWS_2023.pdf,2026-06-12,39,,descargado,no encontrado automáticamente
-E127,Flow Traders,FLOW,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/1/NASDAQ_FLWS_2024.pdf,2026-06-12,23,,descargado,no encontrado automáticamente
-E128,Nestlé,NESN,Switzerland,2022,,,,,,problema,no encontrado automáticamente
-E128,Nestlé,NESN,Switzerland,2023,,,,,,problema,no encontrado automáticamente
-E128,Nestlé,NESN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E129,Rémy Cointreau,RCO,France,2022,,,,,,problema,no encontrado automáticamente
-E129,Rémy Cointreau,RCO,France,2023,,,,,,problema,no encontrado automáticamente
-E129,Rémy Cointreau,RCO,France,2024,,,,,,problema,no encontrado automáticamente
-E130,Coca-Cola HBC,CCH,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/ASX_CCL_2022.pdf,2026-06-12,444,,descargado,no encontrado automáticamente
-E130,Coca-Cola HBC,CCH,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/ASX_CCL_2023.pdf,2026-06-12,132,,descargado,no encontrado automáticamente
-E130,Coca-Cola HBC,CCH,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E131,Teva Pharmaceutical Industries,TEV,Israel,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/NYSE_CTVA_2022.pdf,2026-06-12,34,,descargado,no encontrado automáticamente
-E131,Teva Pharmaceutical Industries,TEV,Israel,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/NYSE_CTVA_2023.pdf,2026-06-12,413,,descargado,no encontrado automáticamente
-E131,Teva Pharmaceutical Industries,TEV,Israel,2024,,,,,,problema,no encontrado automáticamente
-E132,EssilorLuxottica,ESLX,France,2022,,,,,,problema,no encontrado automáticamente
-E132,EssilorLuxottica,ESLX,France,2023,,,,,,problema,no encontrado automáticamente
-E132,EssilorLuxottica,ESLX,France,2024,,,,,,problema,no encontrado automáticamente
-E133,Sanofi,SNY,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/NYSE_SNY_2022.pdf,2026-06-12,30,,descargado,no encontrado automáticamente
-E133,Sanofi,SNY,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/NYSE_SNY_2023.pdf,2026-06-12,171,,descargado,no encontrado automáticamente
-E133,Sanofi,SNY,France,2024,,,,,,problema,no encontrado automáticamente
-E134,Novartis,NOV N,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/n/NYSE_NVS_2022.pdf,2026-06-12,48,,descargado,no encontrado automáticamente
-E134,Novartis,NOV N,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/n/NYSE_NVS_2023.pdf,2026-06-12,47,,descargado,no encontrado automáticamente
-E134,Novartis,NOV N,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E135,Fresenius Medical Care,FME,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/fresenius_2022.pdf,2026-06-12,139,,descargado,no encontrado automáticamente
-E135,Fresenius Medical Care,FME,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/fresenius_2023.pdf,2026-06-12,117,,descargado,no encontrado automáticamente
-E135,Fresenius Medical Care,FME,Germany,2024,,,,,,problema,no encontrado automáticamente
-E136,Sandvik AB,SAND,Sweden,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/sandvik-ab_2022.pdf,2026-06-12,121,,descargado,no encontrado automáticamente
-E136,Sandvik AB,SAND,Sweden,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/sandvik-ab_2023.pdf,2026-06-12,148,,descargado,no encontrado automáticamente
-E136,Sandvik AB,SAND,Sweden,2024,,,,,,problema,no encontrado automáticamente
-E137,Kone,KNEBV,Finland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/k/konecranes_2022.pdf,2026-06-12,102,,descargado,no encontrado automáticamente
-E137,Kone,KNEBV,Finland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/k/konecranes_2023.pdf,2026-06-12,60,,descargado,no encontrado automáticamente
-E137,Kone,KNEBV,Finland,2024,,,,,,problema,no encontrado automáticamente
-E138,Smiths Group,SMIN,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/LSE_SMIN_2022.pdf,2026-06-12,47,,descargado,no encontrado automáticamente
-E138,Smiths Group,SMIN,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/LSE_SMIN_2023.pdf,2026-06-12,52,,descargado,no encontrado automáticamente
-E138,Smiths Group,SMIN,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E139,Volvo Group,VOLV B,Sweden,2022,,,,,,problema,no encontrado automáticamente
-E139,Volvo Group,VOLV B,Sweden,2023,,,,,,problema,no encontrado automáticamente
-E139,Volvo Group,VOLV B,Sweden,2024,,,,,,problema,no encontrado automáticamente
-E140,Prysmian,PRY,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/prysmian-group_2022.pdf,2026-06-12,350,,descargado,no encontrado automáticamente
-E140,Prysmian,PRY,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/prysmian-group_2023.pdf,2026-06-12,408,,descargado,no encontrado automáticamente
-E140,Prysmian,PRY,Italy,2024,,,,,,problema,no encontrado automáticamente
-E141,Prudential plc,PRU,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
-E141,Prudential plc,PRU,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
-E141,Prudential plc,PRU,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E142,Poste Italiane,PST,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/poste-italiane_2022.pdf,2026-06-12,775,,descargado,no encontrado automáticamente
-E142,Poste Italiane,PST,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/poste-italiane_2023.pdf,2026-06-12,438,,descargado,no encontrado automáticamente
-E142,Poste Italiane,PST,Italy,2024,,,,,,problema,no encontrado automáticamente
-E143,SCOR SE,SCR,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/NASDAQ_SCOR_2022.pdf,2026-06-12,22,,descargado,no encontrado automáticamente
-E143,SCOR SE,SCR,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/NASDAQ_SCOR_2023.pdf,2026-06-12,20,,descargado,no encontrado automáticamente
-E143,SCOR SE,SCR,France,2024,,,,,,problema,no encontrado automáticamente
-E144,Swiss Re,SRENH,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/swiss-life_2022.pdf,2026-06-12,40,,descargado,no encontrado automáticamente
-E144,Swiss Re,SRENH,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/swiss-life_2023.pdf,2026-06-12,49,,descargado,no encontrado automáticamente
-E144,Swiss Re,SRENH,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E145,Legal & General,LGEN,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/L/LSE_LGEN_2022.pdf,2026-06-12,186,,descargado,no encontrado automáticamente
-E145,Legal & General,LGEN,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/L/LSE_LGEN_2023.pdf,2026-06-12,210,,descargado,no encontrado automáticamente
-E145,Legal & General,LGEN,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E146,RELX,REL,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/r/NYSE_RELX_2022.pdf,2026-06-12,115,,descargado,no encontrado automáticamente
-E146,RELX,REL,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/r/NYSE_RELX_2023.pdf,2026-06-12,137,,descargado,no encontrado automáticamente
-E146,RELX,REL,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E147,Storebrand,SRB,Norway,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/OTC_SREDF_2022.pdf,2026-06-12,221,,descargado,no encontrado automáticamente
-E147,Storebrand,SRB,Norway,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/OTC_SREDF_2023.pdf,2026-06-12,206,,descargado,no encontrado automáticamente
-E147,Storebrand,SRB,Norway,2024,,,,,,problema,no encontrado automáticamente
-E148,Informa,INF,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/NASDAQ_CASS_2022.pdf,2026-06-12,18,,descargado,no encontrado automáticamente
-E148,Informa,INF,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/NASDAQ_CASS_2023.pdf,2026-06-12,21,,descargado,no encontrado automáticamente
-E148,Informa,INF,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E149,Ipsos,IPX,France,2022,,,,,,problema,no encontrado automáticamente
-E149,Ipsos,IPX,France,2023,,,,,,problema,no encontrado automáticamente
-E149,Ipsos,IPX,France,2024,,,,,,problema,no encontrado automáticamente
-E150,Sanoma,SANO,Finland,2022,,,,,,problema,no encontrado automáticamente
-E150,Sanoma,SANO,Finland,2023,,,,,,problema,no encontrado automáticamente
-E150,Sanoma,SANO,Finland,2024,,,,,,problema,no encontrado automáticamente
-E151,Sainsbury's,SBRY,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/LSE_SBRY.L_2022.pdf,2026-06-12,91,,descargado,no encontrado automáticamente
-E151,Sainsbury's,SBRY,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/LSE_SBRY.L_2023.pdf,2026-06-12,28,,descargado,no encontrado automáticamente
-E151,Sainsbury's,SBRY,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E152,Reckitt,RKT,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/r/LSE_RB_2022.pdf,2026-06-12,175,,descargado,no encontrado automáticamente
-E152,Reckitt,RKT,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/r/LSE_RB_2023.pdf,2026-06-12,152,,descargado,no encontrado automáticamente
-E152,Reckitt,RKT,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E153,Warehouses De Pauw,WDP,Belgium,2022,,,,,,problema,no encontrado automáticamente
-E153,Warehouses De Pauw,WDP,Belgium,2023,,,,,,problema,no encontrado automáticamente
-E153,Warehouses De Pauw,WDP,Belgium,2024,,,,,,problema,no encontrado automáticamente
-E154,Unibail-Rodamco-Westfield,URW,France,2022,,,,,,problema,no encontrado automáticamente
-E154,Unibail-Rodamco-Westfield,URW,France,2023,,,,,,problema,no encontrado automáticamente
-E154,Unibail-Rodamco-Westfield,URW,France,2024,,,,,,problema,no encontrado automáticamente
-E155,Vonovia,VNA,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/vonovia-se_2022.pdf,2026-06-12,52,,descargado,no encontrado automáticamente
-E155,Vonovia,VNA,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/vonovia-se_2023.pdf,2026-06-12,45,,descargado,no encontrado automáticamente
-E155,Vonovia,VNA,Germany,2024,,,,,,problema,no encontrado automáticamente
-E156,Tesco,TSCO,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TSCO_2022.pdf,2026-06-12,121,,descargado,no encontrado automáticamente
-E156,Tesco,TSCO,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TSCO_2023.pdf,2026-06-12,110,,descargado,no encontrado automáticamente
-E156,Tesco,TSCO,United Kingdom,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TSCO_2024.pdf,2026-06-12,157,,descargado,no encontrado automáticamente
-E157,Delivery Hero,DASH,Germany,2022,integrated,https://ir-api.eqs.com/media/document/d642242f-833c-45ff-b7b1-9c9784cea279/assets/DeliveryHero_Annual%20Report_2022.pdf?disposition=inline,2026-06-12,,,problema,no encontrado automáticamente
-E157,Delivery Hero,DASH,Germany,2023,integrated,https://www.lobbyregister.bundestag.de/media/9c/ab/313888/Delivery-Hero-Annual-Report-2023.pdf,2026-06-12,,,problema,no encontrado automáticamente
-E157,Delivery Hero,DASH,Germany,2024,integrated,https://ir.deliveryhero.com/media/document/c38c7d53-cd6e-44de-8b1f-3559d5c43e6b/assets/DE000A2E4K43-JA-2024-EQ-E-00.pdf,2026-06-12,,,problema,no encontrado automáticamente
-E158,Jerónimo Martins,JMT,Portugal,2022,,,,,,problema,no encontrado automáticamente
-E158,Jerónimo Martins,JMT,Portugal,2023,,,,,,problema,no encontrado automáticamente
-E158,Jerónimo Martins,JMT,Portugal,2024,,,,,,problema,no encontrado automáticamente
-E159,Zalando,ZAL,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/z/zalando_2022.pdf,2026-06-12,267,,descargado,no encontrado automáticamente
-E159,Zalando,ZAL,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/z/zalando_2023.pdf,2026-06-12,151,,descargado,no encontrado automáticamente
-E159,Zalando,ZAL,Germany,2024,,,,,,problema,no encontrado automáticamente
-E160,Carrefour,CARR,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/OTC_CRERF_2022.pdf,2026-06-12,98,,descargado,no encontrado automáticamente
-E160,Carrefour,CARR,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/OTC_CRERF_2023.pdf,2026-06-12,131,,descargado,no encontrado automáticamente
-E160,Carrefour,CARR,France,2024,,,,,,problema,no encontrado automáticamente
-E161,Logitech,LOGN,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/l/NASDAQ_LOGI_2022.pdf,2026-06-12,14,,descargado,no encontrado automáticamente
-E161,Logitech,LOGN,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/l/NASDAQ_LOGI_2023.pdf,2026-06-12,15,,descargado,no encontrado automáticamente
-E161,Logitech,LOGN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E162,AIXTRON,AIXA,Germany,2022,,,,,,problema,no encontrado automáticamente
-E162,AIXTRON,AIXA,Germany,2023,,,,,,problema,no encontrado automáticamente
-E162,AIXTRON,AIXA,Germany,2024,,,,,,problema,no encontrado automáticamente
-E163,Infineon Technologies,IFX,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/i/infineon-technologies_2022.pdf,2026-06-12,79,,descargado,no encontrado automáticamente
-E163,Infineon Technologies,IFX,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/i/infineon-technologies_2023.pdf,2026-06-12,64,,descargado,no encontrado automáticamente
-E163,Infineon Technologies,IFX,Germany,2024,,,,,,problema,no encontrado automáticamente
-E164,Atos,ATOS,France,2022,,,,,,problema,no encontrado automáticamente
-E164,Atos,ATOS,France,2023,,,,,,problema,no encontrado automáticamente
-E164,Atos,ATOS,France,2024,,,,,,problema,no encontrado automáticamente
-E165,ams OSRAM,AMS,Austria,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADX_2022.pdf,2026-06-12,12,,descargado,no encontrado automáticamente
-E165,ams OSRAM,AMS,Austria,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADX_2023.pdf,2026-06-12,7,,descargado,no encontrado automáticamente
-E165,ams OSRAM,AMS,Austria,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADX_2024.pdf,2026-06-12,4,,descargado,no encontrado automáticamente
-E166,Telia Company,TELIA,Sweden,2022,,,,,,problema,no encontrado automáticamente
-E166,Telia Company,TELIA,Sweden,2023,,,,,,problema,no encontrado automáticamente
-E166,Telia Company,TELIA,Sweden,2024,,,,,,problema,no encontrado automáticamente
-E167,Telenor,TEL,Norway,2022,,,,,,problema,no encontrado automáticamente
-E167,Telenor,TEL,Norway,2023,,,,,,problema,no encontrado automáticamente
-E167,Telenor,TEL,Norway,2024,,,,,,problema,no encontrado automáticamente
-E168,Ericsson,ERICb,Sweden,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/NASDAQ_ERIC_2022.pdf,2026-06-12,53,,descargado,no encontrado automáticamente
-E168,Ericsson,ERICb,Sweden,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/NASDAQ_ERIC_2023.pdf,2026-06-12,54,,descargado,no encontrado automáticamente
-E168,Ericsson,ERICb,Sweden,2024,,,,,,problema,no encontrado automáticamente
-E169,Telefónica,TEF,Spain,2022,,,,,,problema,no encontrado automáticamente
-E169,Telefónica,TEF,Spain,2023,,,,,,problema,no encontrado automáticamente
-E169,Telefónica,TEF,Spain,2024,,,,,,problema,no encontrado automáticamente
-E170,KPN,KPN,Netherlands,2022,,,,,,problema,no encontrado automáticamente
-E170,KPN,KPN,Netherlands,2023,,,,,,problema,no encontrado automáticamente
-E170,KPN,KPN,Netherlands,2024,,,,,,problema,no encontrado automáticamente
-E171,Entain,ENT,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/LSE_ENT_2022.pdf,2026-06-12,148,,descargado,no encontrado automáticamente
-E171,Entain,ENT,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/LSE_ENT_2023.pdf,2026-06-12,107,,descargado,no encontrado automáticamente
-E171,Entain,ENT,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E172,Lufthansa,LHA,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/L/Lufthansa_2022.pdf,2026-06-12,63,,descargado,no encontrado automáticamente
-E172,Lufthansa,LHA,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/L/Lufthansa_2023.pdf,2026-06-12,68,,descargado,no encontrado automáticamente
-E172,Lufthansa,LHA,Germany,2024,,,,,,problema,no encontrado automáticamente
-E173,International Airlines Group,IAG,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/TSX_AFN_2022.pdf,2026-06-12,1435,,descargado,no encontrado automáticamente
-E173,International Airlines Group,IAG,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
-E173,International Airlines Group,IAG,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E174,Naturgy,NTGY,Spain,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/n/naturgy_2022.pdf,2026-06-12,190,,descargado,no encontrado automáticamente
-E174,Naturgy,NTGY,Spain,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/n/naturgy_2023.pdf,2026-06-12,10,,descargado,no encontrado automáticamente
-E174,Naturgy,NTGY,Spain,2024,,,,,,problema,no encontrado automáticamente
-E175,Veolia,VIE,France,2022,,,,,,problema,no encontrado automáticamente
-E175,Veolia,VIE,France,2023,,,,,,problema,no encontrado automáticamente
-E175,Veolia,VIE,France,2024,,,,,,problema,no encontrado automáticamente
-E176,Severn Trent,SVT,United Kingdom,2022,,,,,,problema,no encontrado automáticamente
-E176,Severn Trent,SVT,United Kingdom,2023,,,,,,problema,no encontrado automáticamente
-E176,Severn Trent,SVT,United Kingdom,2024,,,,,,problema,no encontrado automáticamente
-E177,Redeia,RED,Spain,2022,,,,,,problema,no encontrado automáticamente
-E177,Redeia,RED,Spain,2023,,,,,,problema,no encontrado automáticamente
-E177,Redeia,RED,Spain,2024,,,,,,problema,no encontrado automáticamente
-E178,Iberdrola,IBE,Spain,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/i/OTC_IBDSF_2022.pdf,2026-06-12,148,,descargado,no encontrado automáticamente
-E178,Iberdrola,IBE,Spain,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/i/OTC_IBDSF_2023.pdf,2026-06-12,160,,descargado,no encontrado automáticamente
-E178,Iberdrola,IBE,Spain,2024,,,,,,problema,no encontrado automáticamente
-E179,Commerzbank,CBK,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/commerzbank_2022.pdf,2026-06-12,48,,descargado,no encontrado automáticamente
-E179,Commerzbank,CBK,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/commerzbank_2023.pdf,2026-06-12,59,,descargado,no encontrado automáticamente
-E179,Commerzbank,CBK,Germany,2024,,,,,,problema,no encontrado automáticamente
-E180,Julius Baer,BAER,Switzerland,2022,,,,,,problema,no encontrado automáticamente
-E180,Julius Baer,BAER,Switzerland,2023,,,,,,problema,no encontrado automáticamente
-E180,Julius Baer,BAER,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E181,ASML Holding,ASML,Netherlands,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_ASML_2022.pdf,2026-06-12,142,,descargado,no encontrado automáticamente
-E181,ASML Holding,ASML,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_ASML_2023.pdf,2026-06-12,603,,descargado,no encontrado automáticamente
-E181,ASML Holding,ASML,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_ASML_2024.pdf,2026-06-12,395,,descargado,no encontrado automáticamente
-E182,Meliá Hotels,MEL,Spain,2022,,,,,,problema,no encontrado automáticamente
-E182,Meliá Hotels,MEL,Spain,2023,,,,,,problema,no encontrado automáticamente
-E182,Meliá Hotels,MEL,Spain,2024,,,,,,problema,no encontrado automáticamente
-E183,Scout24,G24,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/scout24-ag_2022.pdf,2026-06-12,44,,descargado,no encontrado automáticamente
-E183,Scout24,G24,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/scout24-ag_2023.pdf,2026-06-12,80,,descargado,no encontrado automáticamente
-E183,Scout24,G24,Germany,2024,,,,,,problema,no encontrado automáticamente
-E184,Swiss Prime Site,SPSN,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/swiss-life_2022.pdf,2026-06-12,40,,descargado,no encontrado automáticamente
-E184,Swiss Prime Site,SPSN,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/swiss-life_2023.pdf,2026-06-12,49,,descargado,no encontrado automáticamente
-E184,Swiss Prime Site,SPSN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E185,Castellum,CASP,Sweden,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/castellum_2022.pdf,2026-06-12,116,,descargado,no encontrado automáticamente
-E185,Castellum,CASP,Sweden,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/castellum_2023.pdf,2026-06-12,129,,descargado,no encontrado automáticamente
-E185,Castellum,CASP,Sweden,2024,integrated,https://storage.mfn.se/e8a0a9e3-9238-42a9-a59a-629f5e32813e/castellum-annual-report-2024.pdf,2026-06-12,,,problema,no encontrado automáticamente
-E186,Norsk Hydro,NHY,Norway,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/d/det-norske-veritas_2022.pdf,2026-06-12,171,,descargado,no encontrado automáticamente
-E186,Norsk Hydro,NHY,Norway,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/d/det-norske-veritas_2023.pdf,2026-06-12,182,,descargado,no encontrado automáticamente
-E186,Norsk Hydro,NHY,Norway,2024,,,,,,problema,no encontrado automáticamente
-E187,OCI,OCI,Netherlands,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/american-forest-paper-association_2022.pdf,2026-06-12,402,,descargado,no encontrado automáticamente
-E187,OCI,OCI,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/american-forest-paper-association_2023.pdf,2026-06-12,698,,descargado,no encontrado automáticamente
-E187,OCI,OCI,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/american-forest-paper-association_2024.pdf,2026-06-12,67,,descargado,no encontrado automáticamente
-E188,Clariant,CLN,Switzerland,2022,,,,,,problema,no encontrado automáticamente
-E188,Clariant,CLN,Switzerland,2023,,,,,,problema,no encontrado automáticamente
-E188,Clariant,CLN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E189,Mediobanca,MB,Italy,2022,,,,,,problema,no encontrado automáticamente
-E189,Mediobanca,MB,Italy,2023,,,,,,problema,no encontrado automáticamente
-E189,Mediobanca,MB,Italy,2024,,,,,,problema,no encontrado automáticamente
-E190,Deutsche Börse,DB1,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/d/NYSE_DB_2022.pdf,2026-06-12,144,,descargado,no encontrado automáticamente
-E190,Deutsche Börse,DB1,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/d/NYSE_DB_2023.pdf,2026-06-12,118,,descargado,no encontrado automáticamente
-E190,Deutsche Börse,DB1,Germany,2024,,,,,,problema,no encontrado automáticamente
-E191,Transocean,RIGN,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/NYSE_RIG_2022.pdf,2026-06-12,26,,descargado,no encontrado automáticamente
-E191,Transocean,RIGN,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/NYSE_RIG_2023.pdf,2026-06-12,24,,descargado,no encontrado automáticamente
-E191,Transocean,RIGN,Switzerland,2024,,,,,,problema,no encontrado automáticamente
-E192,Snam,SRG,Italy,2022,,,,,,problema,no encontrado automáticamente
-E192,Snam,SRG,Italy,2023,,,,,,problema,no encontrado automáticamente
-E192,Snam,SRG,Italy,2024,,,,,,problema,no encontrado automáticamente
-E193,Lerøy Seafood,LSG,Norway,2022,,,,,,problema,no encontrado automáticamente
-E193,Lerøy Seafood,LSG,Norway,2023,,,,,,problema,no encontrado automáticamente
-E193,Lerøy Seafood,LSG,Norway,2024,,,,,,problema,no encontrado automáticamente
-E194,Gruppo Campari,GWI,Italy,2022,,,,,,problema,no encontrado automáticamente
-E194,Gruppo Campari,GWI,Italy,2023,,,,,,problema,no encontrado automáticamente
-E194,Gruppo Campari,GWI,Italy,2024,,,,,,problema,no encontrado automáticamente
-E195,CTS Eventim,CTS,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_APD_2022.pdf,2026-06-12,59,,descargado,no encontrado automáticamente
-E195,CTS Eventim,CTS,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_APD_2023.pdf,2026-06-12,85,,descargado,no encontrado automáticamente
-E195,CTS Eventim,CTS,Germany,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_APD_2024.pdf,2026-06-12,119,,descargado,no encontrado automáticamente
-E196,DIETEREN Group,DIE,Belgium,2022,,,,,,problema,no encontrado automáticamente
-E196,DIETEREN Group,DIE,Belgium,2023,,,,,,problema,no encontrado automáticamente
-E196,DIETEREN Group,DIE,Belgium,2024,,,,,,problema,no encontrado automáticamente
+E098,Michelin,MICP,France,2022,integrated,https://dgaddcosprod.blob.core.windows.net/corporate-production/attachments/clktdc5dh09gn2fhh5lf08qx5-michelin-deu-2022-fr-mel-v2.pdf,2026-06-11,476.0,en,descargado,sustituido (Decisión 032): PDF original era el URD 2022 en francés; reemplazado por Universal Registration Document 2022 en inglés (aportado por el usuario)
+E098,Michelin,MICP,France,2023,integrated,https://agngnconpm.cloudimg.io/v7/https://dgaddcosprod.blob.core.windows.net/cxf-corporate/attachments/cluqvjzld0rtu14e93wxlfwmv-cgem-deu-2023-va.pdf,2026-06-11,544.0,en,descargado,"sustituido (Decisión 031, lote 2): PDF original era resumen/informe parcial o auditor's report sin memoria; reemplazado por Universal Registration Document / cuentas consolidadas completas en inglés"
+E098,Michelin,MICP,France,2024,integrated,https://agngnconpm.cloudimg.io/v7/https://dgaddcosprod.blob.core.windows.net/cxf-corporate/attachments/m0tiueu4lcna0lvkt39l0unt-2024-universal-registration-document.pdf,2026-06-11,518.0,en,descargado,"sustituido (Decisión 031, lote 2): PDF original era resumen/informe parcial o auditor's report sin memoria; reemplazado por Universal Registration Document / cuentas consolidadas completas en inglés"
+E099,Pirelli,PIRC,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PPAMY_2022.pdf,2026-06-11,215.0,,descargado,
+E099,Pirelli,PIRC,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PPAMY_2023.pdf,2026-06-11,178.0,,descargado,
+E099,Pirelli,PIRC,Italy,2024,integrated,https://corp2-assets.pirelli.com/corporate/Annual_Report_Pirelli_2024_ENG.pdf,2026-06-11,173.0,,descargado,
+E100,Ferrari,FERR,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_RACE_2022.pdf,2026-06-11,88.0,,descargado,
+E100,Ferrari,FERR,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_RACE_2023.pdf,2026-06-11,79.0,,descargado,
+E100,Ferrari,FERR,Italy,2024,integrated,https://investors.ferrarigroup.net/content/dam/ferrari/corporate/documents/results-and-reports/2025/ferrari-group-plc_annual-report_2024.pdf.downloadasset.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E101,Renault,RENA,France,2022,integrated,https://assets.renaultgroup.com/uploads/2024/10/renault_urd_en.pdf,2026-06-11,584.0,en,descargado,"sustituido (Decisión 031, lote 2): PDF original era resumen/informe parcial o auditor's report sin memoria; reemplazado por Universal Registration Document / cuentas consolidadas completas en inglés"
+E101,Renault,RENA,France,2023,integrated,https://assets.renaultgroup.com/uploads/2024/09/URD_2023.pdf,2026-06-11,545.0,en,descargado,"sustituido (Decisión 031, lote 2): PDF original era resumen/informe parcial o auditor's report sin memoria; reemplazado por Universal Registration Document / cuentas consolidadas completas en inglés"
+E101,Renault,RENA,France,2024,integrated,https://assets.renaultgroup.com/uploads/2025/03/Renault_URD_2024_EN.pdf,2026-06-11,578.0,en,descargado,"sustituido (Decisión 031, lote 2): PDF original era resumen/informe parcial o auditor's report sin memoria; reemplazado por Universal Registration Document / cuentas consolidadas completas en inglés"
+E102,ABN AMRO,ABN,Netherlands,2022,integrated,,2026-06-11,368.0,en,descargado,corregido tras Fase 3: PDF original truncado (2.3MB de 9.6MB esperados) — sustituido por descarga completa de ABN AMRO Integrated Annual Report 2022
+E102,ABN AMRO,ABN,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/abn-amro-bank_2023.pdf,2026-06-11,169.0,,descargado,
+E102,ABN AMRO,ABN,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/abn-amro-bank_2024.pdf,2026-06-11,243.0,,descargado,
+E103,KBC Group,KBC,Belgium,2022,integrated,https://wcmassets.kbc.be/content/dam/kbccom/doc/investor-relations/Results/jvs-2022/jvs-2022-grp-en.pdf.cdn.res/last-modified/1680373663510/jvs-2022-grp-en.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E103,KBC Group,KBC,Belgium,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E103,KBC Group,KBC,Belgium,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E104,ING Group,INGA,Netherlands,2022,integrated,https://ing.com/binaries/content/assets/documents/files/2022_annual_report_ing_groep_n.v.pdf,2026-06-11,343.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E104,ING Group,INGA,Netherlands,2023,integrated,https://ing.com/binaries/content/assets/documents/files/2023-ing-groep-nv-annual-report.pdf,2026-06-11,401.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E104,ING Group,INGA,Netherlands,2024,integrated,https://ing.com/binaries/content/assets/documents/files/2024-ing-groep-nv-annual-report.pdf,2026-06-12,446.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E105,UniCredit,UC,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/u/OTC_UNCIF_2022.pdf,2026-06-12,304.0,,descargado,no encontrado automáticamente
+E105,UniCredit,UC,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/u/OTC_UNCIF_2023.pdf,2026-06-12,411.0,,descargado,no encontrado automáticamente
+E105,UniCredit,UC,Italy,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E106,Banco Santander,SAN,Spain,2022,integrated,https://www.santander.com/content/dam/santander-com/en/documentos/informe-financiero-anual/2022/ifa-2022-consolidated-annual-financial-report-en.pdf,2026-06-12,810.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E106,Banco Santander,SAN,Spain,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E106,Banco Santander,SAN,Spain,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E107,Vallourec,VK,France,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E107,Vallourec,VK,France,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E107,Vallourec,VK,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E108,ArcelorMittal,MT,Luxembourg,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2022.pdf,2026-06-12,227.0,,descargado,no encontrado automáticamente
+E108,ArcelorMittal,MT,Luxembourg,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2023.pdf,2026-06-12,249.0,,descargado,no encontrado automáticamente
+E108,ArcelorMittal,MT,Luxembourg,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ADR_2024.pdf,2026-06-12,100.0,,descargado,no encontrado automáticamente
+E109,Solvay,SOLB,Belgium,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/solvay_2022.pdf,2026-06-12,83.0,,descargado,no encontrado automáticamente
+E109,Solvay,SOLB,Belgium,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/solvay_2023.pdf,2026-06-12,97.0,,descargado,no encontrado automáticamente
+E109,Solvay,SOLB,Belgium,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E110,AkzoNobel,AKZA,Netherlands,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E110,AkzoNobel,AKZA,Netherlands,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E110,AkzoNobel,AKZA,Netherlands,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E111,BASF,BAS,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/basf-ag_2022.pdf,2026-06-12,29.0,,descargado,no encontrado automáticamente
+E111,BASF,BAS,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/basf-ag_2023.pdf,2026-06-12,111.0,,descargado,no encontrado automáticamente
+E111,BASF,BAS,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E112,Heidelberg Materials,HEI,Germany,2022,integrated,https://www.heidelbergmaterials.com/sites/default/files/2023-05/HM_Annual_and_Sustainability_Report_2022.pdf,2026-06-12,367.0,en,descargado,sustituye duplicado (Decisión 030 (Vinci dup)) — descargado de la web oficial
+E112,Heidelberg Materials,HEI,Germany,2023,integrated,https://www.heidelbergmaterials.com/sites/default/files/2024-03/HM_ASR_2023.pdf,2026-06-12,388.0,en,descargado,sustituye duplicado (Decisión 030 (Vinci dup)) — descargado de la web oficial
+E112,Heidelberg Materials,HEI,Germany,2024,integrated,https://www.heidelbergmaterials.com/sites/default/files/2025-03/HM_ASR24_en.pdf,2026-06-12,346.0,en,descargado,sustituye duplicado (Decisión 030 (Vinci dup)) — descargado de la web oficial
+E113,ACS Group,ACS,Spain,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TRCS_2022.pdf,2026-06-12,169.0,,descargado,no encontrado automáticamente
+E113,ACS Group,ACS,Spain,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TRCS_2023.pdf,2026-06-12,70.0,,descargado,no encontrado automáticamente
+E113,ACS Group,ACS,Spain,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E114,Saint-Gobain,SGO,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/saint-gobain_2022.pdf,2026-06-12,165.0,,descargado,no encontrado automáticamente
+E114,Saint-Gobain,SGO,France,2023,integrated,,2026-06-12,442.0,,descargado,descargado manualmente por el usuario (Cloudflare bloqueaba curl) — Saint-Gobain URD 2023
+E114,Saint-Gobain,SGO,France,2024,integrated,,2026-06-12,508.0,,descargado,descargado manualmente por el usuario (Cloudflare bloqueaba curl) — Saint-Gobain 2024
+E115,Ferrovial,FER,Netherlands,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E115,Ferrovial,FER,Netherlands,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E115,Ferrovial,FER,Netherlands,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E116,Wienerberger,WIE,Austria,2022,integrated,https://www.wienerberger.com/content/dam/corp/corporate-website/downloads/investors-downloads/2022/2022-Wienerberger-Annual-and-Sustainability_Report_EN.pdf,2026-06-12,348.0,en,descargado,sustituye duplicado (Decisión 030 (Bouygues dup)) — descargado de la web oficial
+E116,Wienerberger,WIE,Austria,2023,integrated,https://annualreport.wienerberger.com/2023/_assets/downloads/entire-wb-ar23.pdf,2026-06-12,318.0,en,descargado,sustituye duplicado (Decisión 030 (Bouygues dup)) — descargado de la web oficial
+E116,Wienerberger,WIE,Austria,2024,integrated,https://www.wienerberger.com/content/dam/corp/corporate-website/downloads/investors-downloads/2024/2024-wienerberger-Annual-Report.pdf,2026-06-12,286.0,en,descargado,sustituye duplicado (Decisión 030 (Bouygues dup)) — descargado de la web oficial
+E117,Beiersdorf,BEI,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/beiersdorf_2022.pdf,2026-06-12,116.0,,descargado,no encontrado automáticamente
+E117,Beiersdorf,BEI,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/b/beiersdorf_2023.pdf,2026-06-12,143.0,,descargado,no encontrado automáticamente
+E117,Beiersdorf,BEI,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E118,Moncler,MONC,Italy,2022,integrated,,2026-06-12,244.0,,descargado,descargado manualmente por el usuario (web en mantenimiento) — Moncler Annual Report 2022
+E118,Moncler,MONC,Italy,2023,integrated,,2026-06-12,244.0,,descargado,descargado manualmente por el usuario (web en mantenimiento) — Moncler Annual Report 2023
+E118,Moncler,MONC,Italy,2024,integrated,,2026-06-12,412.0,,descargado,descargado manualmente por el usuario (web en mantenimiento) — Moncler Group Annual Report 2024
+E119,Haleon,HLI,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/h/LSE_HLN_2022.pdf,2026-06-12,99.0,,descargado,no encontrado automáticamente
+E119,Haleon,HLI,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/h/LSE_HLN_2023.pdf,2026-06-12,339.0,,descargado,no encontrado automáticamente
+E119,Haleon,HLI,United Kingdom,2024,integrated,,2026-06-12,224.0,,descargado,descargado manualmente por el usuario (haleon.com bloqueaba curl) — Annual Report and Form 20-F 2024
+E120,Puma,PUM,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PMMAF_2022.pdf,2026-06-12,140.0,,descargado,no encontrado automáticamente
+E120,Puma,PUM,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/OTC_PMMAF_2023.pdf,2026-06-12,390.0,en,descargado,"sustituido (Decisión 032): PDF original tenia fuente/CMap sin ToUnicode (texto cifrado tipo Cesar+3, ilegible); reemplazado por Annual Report 2023 con texto nativo (aportado por el usuario)"
+E120,Puma,PUM,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E121,Games Workshop,GAW,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/g/LSE_GAW_2022.pdf,2026-06-12,25.0,,descargado,no encontrado automáticamente
+E121,Games Workshop,GAW,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/g/LSE_GAW_2023.pdf,2026-06-12,19.0,,descargado,no encontrado automáticamente
+E121,Games Workshop,GAW,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E122,Shell plc,SHEL,United Kingdom,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E122,Shell plc,SHEL,United Kingdom,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E122,Shell plc,SHEL,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E123,Eni,ENI,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/ASX_AN1_2022.pdf,2026-06-12,85.0,,descargado,no encontrado automáticamente
+E123,Eni,ENI,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/ASX_AN1_2023.pdf,2026-06-12,128.0,,descargado,no encontrado automáticamente
+E123,Eni,ENI,Italy,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/ASX_AN1_2024.pdf,2026-06-12,24.0,,descargado,no encontrado automáticamente
+E124,Galp Energia,GALP,Portugal,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E124,Galp Energia,GALP,Portugal,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E124,Galp Energia,GALP,Portugal,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E125,Euronext,ENX,Netherlands,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E125,Euronext,ENX,Netherlands,2023,integrated,,2026-06-12,,,descargado,"corregido tras Fase 3: PDF original (URD Euronext 2023) tenia fuentes Barlow/Barlow-Bold subseteadas en CFF (Identity-H) sin tabla ToUnicode -> texto irrecuperable sin OCR. Sustituido por version Workiva del URD 2023 (texto nativo legible, 339 paginas)"
+E125,Euronext,ENX,Netherlands,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E126,IG Group,IGGI,United Kingdom,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E126,IG Group,IGGI,United Kingdom,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E126,IG Group,IGGI,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E127,Flow Traders,FLOW,Netherlands,2022,integrated,https://www.flowtraders.com/media/y5uotj1i/flow-traders-annual-report-2022.pdf,2026-06-12,180.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E127,Flow Traders,FLOW,Netherlands,2023,integrated,https://www.flowtraders.com/media/0urka4ea/annual-report-flow-traders-2023.pdf,2026-06-12,183.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E127,Flow Traders,FLOW,Netherlands,2024,integrated,https://www.flowtraders.com/media/yxgpd4ii/flow-traders-annual-report-2024.pdf,2026-06-12,166.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E128,Nestlé,NESN,Switzerland,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E128,Nestlé,NESN,Switzerland,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E128,Nestlé,NESN,Switzerland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E129,Rémy Cointreau,RCO,France,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E129,Rémy Cointreau,RCO,France,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E129,Rémy Cointreau,RCO,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E130,Coca-Cola HBC,CCH,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/ASX_CCL_2022.pdf,2026-06-12,444.0,,descargado,no encontrado automáticamente
+E130,Coca-Cola HBC,CCH,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/ASX_CCL_2023.pdf,2026-06-12,132.0,,descargado,no encontrado automáticamente
+E130,Coca-Cola HBC,CCH,Switzerland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E131,Teva Pharmaceutical Industries,TEV,Israel,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/NYSE_CTVA_2022.pdf,2026-06-12,34.0,,descargado,no encontrado automáticamente
+E131,Teva Pharmaceutical Industries,TEV,Israel,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/NYSE_CTVA_2023.pdf,2026-06-12,413.0,,descargado,no encontrado automáticamente
+E131,Teva Pharmaceutical Industries,TEV,Israel,2024,integrated,https://s24.q4cdn.com/720828402/files/doc_financials/2024/ar/2024-10-K-final-bannerless-ADA-tagged.pdf,2026-06-12,,,descargado,"descarga manual ampliación (lote 4) — Teva presenta 10-K (no 20-F), EN"
+E132,EssilorLuxottica,ESLX,France,2022,integrated,,2026-06-12,414.0,en,descargado,corregido tras Fase 3: PDF original era Universal Registration Document de Casino Group (empresa equivocada) — sustituido por URD EssilorLuxottica 2022
+E132,EssilorLuxottica,ESLX,France,2023,integrated,,2026-06-12,422.0,en,descargado,corregido tras Fase 3: PDF original era Universal Registration Document de Casino Group (empresa equivocada) — sustituido por URD EssilorLuxottica 2023
+E132,EssilorLuxottica,ESLX,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E133,Sanofi,SNY,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/NYSE_SNY_2022.pdf,2026-06-12,30.0,,descargado,no encontrado automáticamente
+E133,Sanofi,SNY,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/NYSE_SNY_2023.pdf,2026-06-12,171.0,,descargado,no encontrado automáticamente
+E133,Sanofi,SNY,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E134,Novartis,NOV N,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/n/NYSE_NVS_2022.pdf,2026-06-12,48.0,,descargado,no encontrado automáticamente
+E134,Novartis,NOV N,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/n/NYSE_NVS_2023.pdf,2026-06-12,47.0,,descargado,no encontrado automáticamente
+E134,Novartis,NOV N,Switzerland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E135,Fresenius Medical Care,FME,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/fresenius_2022.pdf,2026-06-12,139.0,,descargado,no encontrado automáticamente
+E135,Fresenius Medical Care,FME,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/f/fresenius_2023.pdf,2026-06-12,117.0,,descargado,no encontrado automáticamente
+E135,Fresenius Medical Care,FME,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E136,Sandvik AB,SAND,Sweden,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/sandvik-ab_2022.pdf,2026-06-12,121.0,,descargado,no encontrado automáticamente
+E136,Sandvik AB,SAND,Sweden,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/sandvik-ab_2023.pdf,2026-06-12,148.0,,descargado,no encontrado automáticamente
+E136,Sandvik AB,SAND,Sweden,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E137,Kone,KNEBV,Finland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/k/konecranes_2022.pdf,2026-06-12,102.0,,descargado,no encontrado automáticamente
+E137,Kone,KNEBV,Finland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/k/konecranes_2023.pdf,2026-06-12,60.0,,descargado,no encontrado automáticamente
+E137,Kone,KNEBV,Finland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E138,Smiths Group,SMIN,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/LSE_SMIN_2022.pdf,2026-06-12,47.0,,descargado,no encontrado automáticamente
+E138,Smiths Group,SMIN,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/LSE_SMIN_2023.pdf,2026-06-12,52.0,,descargado,no encontrado automáticamente
+E138,Smiths Group,SMIN,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E139,Volvo Group,VOLV B,Sweden,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E139,Volvo Group,VOLV B,Sweden,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E139,Volvo Group,VOLV B,Sweden,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E140,Prysmian,PRY,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/prysmian-group_2022.pdf,2026-06-12,350.0,,descargado,no encontrado automáticamente
+E140,Prysmian,PRY,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/prysmian-group_2023.pdf,2026-06-12,408.0,,descargado,no encontrado automáticamente
+E140,Prysmian,PRY,Italy,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E141,Prudential plc,PRU,United Kingdom,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E141,Prudential plc,PRU,United Kingdom,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E141,Prudential plc,PRU,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E142,Poste Italiane,PST,Italy,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/poste-italiane_2022.pdf,2026-06-12,775.0,,descargado,no encontrado automáticamente
+E142,Poste Italiane,PST,Italy,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/p/poste-italiane_2023.pdf,2026-06-12,438.0,,descargado,no encontrado automáticamente
+E142,Poste Italiane,PST,Italy,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E143,SCOR SE,SCR,France,2022,integrated,"https://www.scor.com/en/financial-information (2022 Universal Registration Document, EN)",2026-06-12,402.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E143,SCOR SE,SCR,France,2023,integrated,"https://www.scor.com/en/financial-information (2023 Universal Registration Document, EN)",2026-06-12,428.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E143,SCOR SE,SCR,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E144,Swiss Re,SRENH,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/swiss-life_2022.pdf,2026-06-12,146.0,en,descargado,corregido tras Fase 3: PDF original era Annual Report de Swiss Life (empresa equivocada) — sustituido por Swiss Reinsurance Company Consolidated Annual Report 2022
+E144,Swiss Re,SRENH,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/swiss-life_2023.pdf,2026-06-12,148.0,en,descargado,corregido tras Fase 3: PDF original era Annual Report de Swiss Life (empresa equivocada) — sustituido por Swiss Reinsurance Company Consolidated Annual Report 2023
+E144,Swiss Re,SRENH,Switzerland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E145,Legal & General,LGEN,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/L/LSE_LGEN_2022.pdf,2026-06-12,186.0,,descargado,no encontrado automáticamente
+E145,Legal & General,LGEN,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/L/LSE_LGEN_2023.pdf,2026-06-12,210.0,,descargado,no encontrado automáticamente
+E145,Legal & General,LGEN,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E146,RELX,REL,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/r/NYSE_RELX_2022.pdf,2026-06-12,115.0,,descargado,no encontrado automáticamente
+E146,RELX,REL,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/r/NYSE_RELX_2023.pdf,2026-06-12,137.0,,descargado,no encontrado automáticamente
+E146,RELX,REL,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E147,Storebrand,SRB,Norway,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/OTC_SREDF_2022.pdf,2026-06-12,221.0,,descargado,no encontrado automáticamente
+E147,Storebrand,SRB,Norway,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/OTC_SREDF_2023.pdf,2026-06-12,206.0,,descargado,no encontrado automáticamente
+E147,Storebrand,SRB,Norway,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E148,Informa,INF,United Kingdom,2022,integrated,https://www.informa.com/globalassets/documents/investor-relations/2023/informa-annual-report-2022.pdf,2026-06-12,256.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E148,Informa,INF,United Kingdom,2023,integrated,https://www.informa.com/globalassets/documents/investor-relations/2024/2023-informa-annual-report.pdf,2026-06-12,125.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E148,Informa,INF,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E149,Ipsos,IPX,France,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E149,Ipsos,IPX,France,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E149,Ipsos,IPX,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E150,Sanoma,SANO,Finland,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E150,Sanoma,SANO,Finland,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E150,Sanoma,SANO,Finland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E151,Sainsbury's,SBRY,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/LSE_SBRY.L_2022.pdf,2026-06-12,91.0,,descargado,no encontrado automáticamente
+E151,Sainsbury's,SBRY,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/LSE_SBRY.L_2023.pdf,2026-06-12,28.0,,descargado,no encontrado automáticamente
+E151,Sainsbury's,SBRY,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E152,Reckitt,RKT,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/r/LSE_RB_2022.pdf,2026-06-12,175.0,,descargado,no encontrado automáticamente
+E152,Reckitt,RKT,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/r/LSE_RB_2023.pdf,2026-06-12,152.0,,descargado,no encontrado automáticamente
+E152,Reckitt,RKT,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E153,Warehouses De Pauw,WDP,Belgium,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E153,Warehouses De Pauw,WDP,Belgium,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E153,Warehouses De Pauw,WDP,Belgium,2024,integrated,,2026-06-12,317.0,en,descargado,corregido tras Fase 3: PDF original truncado (25.6MB de 31.4MB esperados) — sustituido por descarga completa de WDP Annual Report 2024
+E154,Unibail-Rodamco-Westfield,URW,France,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E154,Unibail-Rodamco-Westfield,URW,France,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E154,Unibail-Rodamco-Westfield,URW,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E155,Vonovia,VNA,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/vonovia-se_2022.pdf,2026-06-12,52.0,,descargado,no encontrado automáticamente
+E155,Vonovia,VNA,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/v/vonovia-se_2023.pdf,2026-06-12,45.0,,descargado,no encontrado automáticamente
+E155,Vonovia,VNA,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E156,Tesco,TSCO,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TSCO_2022.pdf,2026-06-12,121.0,,descargado,no encontrado automáticamente
+E156,Tesco,TSCO,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TSCO_2023.pdf,2026-06-12,110.0,,descargado,no encontrado automáticamente
+E156,Tesco,TSCO,United Kingdom,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/LSE_TSCO_2024.pdf,2026-06-12,157.0,,descargado,no encontrado automáticamente
+E157,Inditex,ITX,Spain,2022,integrated,https://static.inditex.com/annual_report_2022/pdf/Inditex-group-annual-report-2022.pdf,2026-06-12,,,descargado,"Sustituye a Delivery Hero (E157=DASH, duplicado de E062=DHER, Decisión 028). Annual Report FY2022 (1-feb-2022 a 31-ene-2023)"
+E157,Inditex,ITX,Spain,2023,integrated,https://static.inditex.com/annual_report_2023/en/Inditex_Group_Annual_Accounts_2023.pdf,2026-06-12,,,descargado,"Sustituye a Delivery Hero (E157=DASH, duplicado de E062=DHER, Decisión 028). Annual Accounts FY2023 (1-feb-2023 a 31-ene-2024); documento más pequeño (18MB) — revisar en Fase 4 si falta contenido narrativo/sostenibilidad"
+E157,Inditex,ITX,Spain,2024,integrated,https://www.inditex.com/itxcomweb/api/media/604197b9-50de-4f4f-ab84-c1e379cb3fd0/Inditex_Group_Annual_Report_2024.pdf,2026-06-12,,,descargado,"Sustituye a Delivery Hero (E157=DASH, duplicado de E062=DHER, Decisión 028). Annual Report FY2024 (1-feb-2024 a 31-ene-2025)"
+E158,Jerónimo Martins,JMT,Portugal,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E158,Jerónimo Martins,JMT,Portugal,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E158,Jerónimo Martins,JMT,Portugal,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E159,Zalando,ZAL,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/z/zalando_2022.pdf,2026-06-12,267.0,,descargado,no encontrado automáticamente
+E159,Zalando,ZAL,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/z/zalando_2023.pdf,2026-06-12,151.0,,descargado,no encontrado automáticamente
+E159,Zalando,ZAL,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E160,Carrefour,CARR,France,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/OTC_CRERF_2022.pdf,2026-06-12,98.0,,descargado,no encontrado automáticamente
+E160,Carrefour,CARR,France,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/OTC_CRERF_2023.pdf,2026-06-12,131.0,,descargado,no encontrado automáticamente
+E160,Carrefour,CARR,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E161,Logitech,LOGN,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/l/NASDAQ_LOGI_2022.pdf,2026-06-12,14.0,,descargado,no encontrado automáticamente
+E161,Logitech,LOGN,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/l/NASDAQ_LOGI_2023.pdf,2026-06-12,15.0,,descargado,no encontrado automáticamente
+E161,Logitech,LOGN,Switzerland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E162,AIXTRON,AIXA,Germany,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E162,AIXTRON,AIXA,Germany,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E162,AIXTRON,AIXA,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E163,Infineon Technologies,IFX,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/i/infineon-technologies_2022.pdf,2026-06-12,79.0,,descargado,no encontrado automáticamente
+E163,Infineon Technologies,IFX,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/i/infineon-technologies_2023.pdf,2026-06-12,64.0,,descargado,no encontrado automáticamente
+E163,Infineon Technologies,IFX,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E164,Atos,ATOS,France,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E164,Atos,ATOS,France,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E164,Atos,ATOS,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E165,ams OSRAM,AMS,Austria,2022,integrated,https://ams-osram.com/documents/4390887/7195804/ams+OSRAM+ENG+Annual+Report+2022.pdf,2026-06-12,116.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E165,ams OSRAM,AMS,Austria,2023,integrated,https://ams-osram.com/documents/4390887/4391329/ams%20OSRAM%20EN%20Annual%20Report%202023.pdf,2026-06-12,132.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E165,ams OSRAM,AMS,Austria,2024,integrated,https://ams-osram.com/documents/d/ams-osram/annualreport2024,2026-06-12,200.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E166,Telia Company,TELIA,Sweden,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E166,Telia Company,TELIA,Sweden,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E166,Telia Company,TELIA,Sweden,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E167,Telenor,TEL,Norway,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E167,Telenor,TEL,Norway,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E167,Telenor,TEL,Norway,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E168,Ericsson,ERICb,Sweden,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/NASDAQ_ERIC_2022.pdf,2026-06-12,53.0,,descargado,no encontrado automáticamente
+E168,Ericsson,ERICb,Sweden,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/NASDAQ_ERIC_2023.pdf,2026-06-12,54.0,,descargado,no encontrado automáticamente
+E168,Ericsson,ERICb,Sweden,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E169,Telefónica,TEF,Spain,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E169,Telefónica,TEF,Spain,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E169,Telefónica,TEF,Spain,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E170,KPN,KPN,Netherlands,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E170,KPN,KPN,Netherlands,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E170,KPN,KPN,Netherlands,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E171,Entain,ENT,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/LSE_ENT_2022.pdf,2026-06-12,148.0,,descargado,no encontrado automáticamente
+E171,Entain,ENT,United Kingdom,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/e/LSE_ENT_2023.pdf,2026-06-12,107.0,,descargado,no encontrado automáticamente
+E171,Entain,ENT,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E172,Lufthansa,LHA,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/L/Lufthansa_2022.pdf,2026-06-12,63.0,,descargado,no encontrado automáticamente
+E172,Lufthansa,LHA,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/L/Lufthansa_2023.pdf,2026-06-12,68.0,,descargado,no encontrado automáticamente
+E172,Lufthansa,LHA,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E173,International Airlines Group,IAG,United Kingdom,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/TSX_AFN_2022.pdf,2026-06-12,288.0,en,descargado,corregido tras Fase 3: PDF original era Annual Report de Ag Growth International (empresa equivocada) — sustituido por IAG Annual Report and Accounts 2022
+E173,International Airlines Group,IAG,United Kingdom,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E173,International Airlines Group,IAG,United Kingdom,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E174,Naturgy,NTGY,Spain,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/n/naturgy_2022.pdf,2026-06-12,190.0,,descargado,no encontrado automáticamente
+E174,Naturgy,NTGY,Spain,2023,integrated,https://www.naturgy.com/ccaa-consolidadas-ENG.pdf,2026-06-12,786.0,en,descargado,"sustituido (Decisión 031, lote 2): PDF original era resumen/informe parcial o auditor's report sin memoria; reemplazado por Universal Registration Document / cuentas consolidadas completas en inglés"
+E174,Naturgy,NTGY,Spain,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E175,Veolia,VIE,France,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E175,Veolia,VIE,France,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E175,Veolia,VIE,France,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E176,Severn Trent,SVT,United Kingdom,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E176,Severn Trent,SVT,United Kingdom,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E176,Severn Trent,SVT,United Kingdom,2024,integrated,,2026-06-12,280.0,,descargado,descargado manualmente por el usuario (severntrent.com bloqueaba curl) — Annual Report and Accounts 2024
+E177,Redeia,RED,Spain,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E177,Redeia,RED,Spain,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E177,Redeia,RED,Spain,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E178,Iberdrola,IBE,Spain,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/i/OTC_IBDSF_2022.pdf,2026-06-12,148.0,,descargado,no encontrado automáticamente
+E178,Iberdrola,IBE,Spain,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/i/OTC_IBDSF_2023.pdf,2026-06-12,160.0,,descargado,no encontrado automáticamente
+E178,Iberdrola,IBE,Spain,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E179,Commerzbank,CBK,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/commerzbank_2022.pdf,2026-06-12,48.0,,descargado,no encontrado automáticamente
+E179,Commerzbank,CBK,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/c/commerzbank_2023.pdf,2026-06-12,59.0,,descargado,no encontrado automáticamente
+E179,Commerzbank,CBK,Germany,2024,integrated,https://investor-relations.commerzbank.com/media/document/b986ba5a-dc1d-41a7-a708-dc3a010ecc32/assets/Commerzbank_Group_Annual_Report_2024.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E180,Julius Baer,BAER,Switzerland,2022,integrated,https://vpr.hkma.gov.hk/statics/assets/doc/100301/ar_22/ar_22_eng.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E180,Julius Baer,BAER,Switzerland,2023,integrated,https://vpr.hkma.gov.hk/statics/assets/doc/100301/ar_23/ar_23_eng.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E180,Julius Baer,BAER,Switzerland,2024,integrated,https://vpr.hkma.gov.hk/statics/assets/doc/100301/ar_24/ar_24_eng.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E181,ASML Holding,ASML,Netherlands,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_ASML_2022.pdf,2026-06-12,142.0,,descargado,no encontrado automáticamente
+E181,ASML Holding,ASML,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_ASML_2023.pdf,2026-06-12,603.0,,descargado,no encontrado automáticamente
+E181,ASML Holding,ASML,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_ASML_2024.pdf,2026-06-12,395.0,,descargado,no encontrado automáticamente
+E182,Meliá Hotels,MEL,Spain,2022,integrated,https://www.cnmv.es/webservices/verdocumento/ver?e=v9HqPNns5YlUSPtwPKSsHiJs3cK80xVpwaYndxidzOuEhY8wWp9yOrsFup0pipEp,2026-06-12,,,descargado,"descarga manual ampliación (lote 4) — web oficial bloquea (403 Akamai), descargado vía registro CNMV (Management Report, EN)"
+E182,Meliá Hotels,MEL,Spain,2023,integrated,https://www.cnmv.es/webservices/verdocumento/ver?e=6aBlB6q6WS2XwBwrYPeOryJs3cK80xVpwaYndxidzOuEhY8wWp9yOrsFup0pipEp,2026-06-12,,,descargado,"descarga manual ampliación (lote 4) — web oficial bloquea (403 Akamai), descargado vía registro CNMV (Management Report, EN)"
+E182,Meliá Hotels,MEL,Spain,2024,integrated,https://www.cnmv.es/webservices/verdocumento/ver?e=4GB%2f848nSn2hla5pyYgtgSJs3cK80xVpwaYndxidzOuEhY8wWp9yOrsFup0pipEp,2026-06-12,,,descargado,"descarga manual ampliación (lote 4) — web oficial bloquea (403 Akamai), descargado vía registro CNMV (Management Report, EN)"
+E183,Scout24,G24,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/scout24-ag_2022.pdf,2026-06-12,44.0,,descargado,no encontrado automáticamente
+E183,Scout24,G24,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/scout24-ag_2023.pdf,2026-06-12,80.0,,descargado,no encontrado automáticamente
+E183,Scout24,G24,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E184,Swiss Prime Site,SPSN,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/swiss-life_2022.pdf,2026-06-12,277.0,en,descargado,"corregido tras Fase 3: PDF original era Annual Report de Swiss Life (empresa equivocada, idéntico al de Swiss Re) — sustituido por Swiss Prime Site Report 2022"
+E184,Swiss Prime Site,SPSN,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/s/swiss-life_2023.pdf,2026-06-12,293.0,en,descargado,"corregido tras Fase 3: PDF original era Annual Report de Swiss Life (empresa equivocada, idéntico al de Swiss Re) — sustituido por Swiss Prime Site Report 2023"
+E184,Swiss Prime Site,SPSN,Switzerland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E185,LEG Immobilien,LEG,Germany,2022,integrated,https://cdn.financialreports.eu/financialreports/media/filings/260/2023/10-K/260_10-k_2023-03-08_b10b7fe2-2bc5-41b4-a4eb-0ce01c4e82f3.pdf,2026-06-12,245.0,en,descargado,sustituye duplicado (Decisión 030 (Castellum dup)) — descargado de la web oficial
+E185,LEG Immobilien,LEG,Germany,2023,integrated,https://www.eqs-news.com/media/document/2a31e802-ebd7-4803-a4e4-f73aadc87513/assets/LEG_GB_2023_e.pdf,2026-06-12,244.0,en,descargado,sustituye duplicado (Decisión 030 (Castellum dup)) — descargado de la web oficial
+E185,LEG Immobilien,LEG,Germany,2024,integrated,https://www.eqs-news.com/media/document/85aa3186-34b5-44f6-ab96-5b06943ccabc/assets/LEG_GB_2024_e.pdf,2026-06-12,300.0,en,descargado,sustituye duplicado (Decisión 030 (Castellum dup)) — descargado de la web oficial
+E186,Norsk Hydro,NHY,Norway,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/d/det-norske-veritas_2022.pdf,2026-06-12,171.0,,descargado,no encontrado automáticamente
+E186,Norsk Hydro,NHY,Norway,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/d/det-norske-veritas_2023.pdf,2026-06-12,273.0,en,descargado,corregido tras Fase 3: PDF original era Integrated Annual Report de DNV (empresa equivocada) — sustituido por Hydro Integrated Annual Report 2023
+E186,Norsk Hydro,NHY,Norway,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 3) — URL no registrada"
+E187,OCI,OCI,Netherlands,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/american-forest-paper-association_2022.pdf,2026-06-12,402.0,,descargado,no encontrado automáticamente
+E187,OCI,OCI,Netherlands,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/american-forest-paper-association_2023.pdf,2026-06-12,698.0,,descargado,no encontrado automáticamente
+E187,OCI,OCI,Netherlands,2024,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/a/american-forest-paper-association_2024.pdf,2026-06-12,67.0,,descargado,no encontrado automáticamente
+E188,Clariant,CLN,Switzerland,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E188,Clariant,CLN,Switzerland,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E188,Clariant,CLN,Switzerland,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E189,Mediobanca,MB,Italy,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E189,Mediobanca,MB,Italy,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E189,Mediobanca,MB,Italy,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 1) — URL no registrada"
+E190,Deutsche Börse,DB1,Germany,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/d/NYSE_DB_2022.pdf,2026-06-12,144.0,,descargado,no encontrado automáticamente
+E190,Deutsche Börse,DB1,Germany,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/d/NYSE_DB_2023.pdf,2026-06-12,118.0,,descargado,no encontrado automáticamente
+E190,Deutsche Börse,DB1,Germany,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E191,Transocean,RIGN,Switzerland,2022,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/NYSE_RIG_2022.pdf,2026-06-12,26.0,,descargado,no encontrado automáticamente
+E191,Transocean,RIGN,Switzerland,2023,integrated,https://www.annualreports.com/HostedData/AnnualReportArchive/t/NYSE_RIG_2023.pdf,2026-06-12,24.0,,descargado,no encontrado automáticamente
+E191,Transocean,RIGN,Switzerland,2024,integrated,,2026-06-12,,,descargado,descarga manual ampliación (lote 3) — Transocean FY2024 = Form 10-K de SEC convertido a PDF (no hay annual report PDF separado)
+E192,Snam,SRG,Italy,2022,integrated,https://www.snam.it/content/dam/snam/pages-attachments-search/en/documenti/bilanci-annuali/2022/annual_report_2022.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E192,Snam,SRG,Italy,2023,integrated,https://www.snam.it/content/dam/snam/pages-attachments-search/en/documenti/bilanci-annuali/2023/annual_report_2023.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E192,Snam,SRG,Italy,2024,integrated,https://www.snam.it/content/dam/snam/pages-attachments-search/en/documenti/bilanci-annuali/2024/annual_report_2024.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 4) — URL no registrada"
+E193,Lerøy Seafood,LSG,Norway,2022,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E193,Lerøy Seafood,LSG,Norway,2023,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E193,Lerøy Seafood,LSG,Norway,2024,integrated,,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 2) — URL no registrada"
+E194,Lindt & Sprüngli,LISN,Switzerland,2022,integrated,https://www.lindt-spruengli.com/amfile/file/download/id/7615/file/Annual-Report-2022-EN.pdf,2026-06-12,178.0,en,descargado,sustituye duplicado Campari (Decisión 030) — descargado de la web oficial
+E194,Lindt & Sprüngli,LISN,Switzerland,2023,integrated,https://www.lindt-spruengli.com/amfile/file/download/id/8626/file/Annual-Report-2023.pdf,2026-06-12,178.0,en,descargado,sustituye duplicado Campari (Decisión 030) — descargado de la web oficial
+E194,Lindt & Sprüngli,LISN,Switzerland,2024,integrated,https://www.lindt-spruengli.com/amfile/file/download/id/9400/file/Annual-Report-2024.pdf,2026-06-12,153.0,en,descargado,sustituye duplicado Campari (Decisión 030) — descargado de la web oficial
+E195,CTS Eventim,CTS,Germany,2022,integrated,https://www.eqs-news.com/media/document/737e48bd-c846-4f4b-ad29-650d8f9f030a/assets/DE0005470306-JA-2022-PN-EQ-E-00.pdf,2026-06-12,243.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E195,CTS Eventim,CTS,Germany,2023,integrated,https://www.eqs-news.com/media/document/260251cd-d330-47ea-8085-55b16ec93d1f/assets/DE0005470306-JA-2023-EQ-E-00.pdf,2026-06-12,231.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E195,CTS Eventim,CTS,Germany,2024,integrated,https://www.eqs-news.com/media/document/d5cecf8e-8cf1-4517-a76e-c500c27c6b2a/assets/DE0005470306-JA-2024-PN-EQ-E-00.pdf,2026-06-12,231.0,en,descargado,sustituido (Decisión 031): PDF original era de otra empresa o tipo de documento incorrecto
+E196,DIETEREN Group,DIE,Belgium,2022,integrated,https://dieterengroup.imgix.net/annual-reports/INTEGRATED-REPORT-2022-ENG.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E196,DIETEREN Group,DIE,Belgium,2023,integrated,https://dieterengroup.imgix.net/annual-reports/240425_DIET_RA-2023_EN_interactive.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"
+E196,DIETEREN Group,DIE,Belgium,2024,integrated,https://dieterengroup.imgix.net/annual-reports/250428_DIETEREN-RA24_UK-web-2_2025-08-12-161346_ujhd.pdf,2026-06-12,,,descargado,"descargado en ampliación 99 empresas (búsqueda manual, lote 5) — URL no registrada"

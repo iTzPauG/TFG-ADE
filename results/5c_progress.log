@@ -113,3 +113,46 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 [21:53:10]   Tablas  → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/tables
 [21:53:10]   Figuras → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/figures
 [21:53:10]   Figuras → /Users/pgesparter/Documents/GitHub/TFG-ADE/results/figures
+[17:57:47] --fresh: checkpoints 5c_* eliminados
+[17:57:47] [1/6] Cargando corpus…
+[17:57:49]   586 documentos sus cargados
+[17:57:50] [1/6] Segmentando en frases (spaCy sentencizer, rule-based)…
+17:59:04 Segmentando docs [██████████████████████████████] 100.0% (586/586)
+[17:59:04]   539,993 frases totales (≥4 palabras)  |  media 921/doc
+[17:59:05]   → 5c_frases_base.parquet
+[17:59:05] [2/6] Cargando diccionario Loughran-McDonald…
+[17:59:06]   Negative: 2355 términos
+[17:59:06]   Positive: 354 términos
+[17:59:06]   Uncertainty: 297 términos
+[17:59:06]   Litigious: 905 términos
+[17:59:06]   Strong_Modal: 19 términos
+[17:59:06]   Weak_Modal: 27 términos
+[17:59:06]   Constraining: 184 términos
+[17:59:06] [2/6] Calculando ratios LM por frase…
+17:59:13 LM [██████████████████████████████] 100.0% (539993/539993)
+[17:59:14]   → 5c_frases.parquet
+[17:59:14] [3a/6] ClimateBERT — climate-detector (todas las frases)…
+[17:59:16]   Cargando modelo climatebert/distilroberta-base-climate-detector en mps (fp16, max_length=96)…
+19:13:52 climate_detector [██████████████████████████████] 100.0% (8438/8438) (539,993/539,993 frases)
+[19:13:52]   → 5c_climate_detector.parquet
+[19:13:52]   Frases climáticas: 220,773 / 539,993 (40.9%)
+[19:13:52] [3b/6] ClimateBERT — sentiment/commitment/specificity sobre 220,773 frases climáticas (40.9% del total)…
+[19:13:52]   Cargando modelo climatebert/distilroberta-base-climate-sentiment en mps (fp16, max_length=96)…
+19:26:01 climate_sentiment [████████████░░░░░░░░░░░░░░░░░░]  40.0% (1380/3450) (88,320/220,773 frases)
+19:38:10 climate_sentiment [████████████████████████░░░░░░]  80.0% (2760/3450) (176,640/220,773 frases)
+19:44:13 climate_sentiment [██████████████████████████████] 100.0% (3450/3450) (220,773/220,773 frases)
+[19:44:13]   Cargando modelo climatebert/distilroberta-base-climate-commitment en mps (fp16, max_length=96)…
+19:56:31 climate_commitment [████████████░░░░░░░░░░░░░░░░░░]  40.0% (1380/3450) (88,320/220,773 frases)
+20:08:29 climate_commitment [████████████████████████░░░░░░]  80.0% (2760/3450) (176,640/220,773 frases)
+20:14:29 climate_commitment [██████████████████████████████] 100.0% (3450/3450) (220,773/220,773 frases)
+[20:14:29]   Cargando modelo climatebert/distilroberta-base-climate-specificity en mps (fp16, max_length=96)…
+20:27:13 climate_specificity [████████████░░░░░░░░░░░░░░░░░░]  40.0% (1380/3450) (88,320/220,773 frases)
+20:40:56 climate_specificity [████████████████████████░░░░░░]  80.0% (2760/3450) (176,640/220,773 frases)
+20:47:31 climate_specificity [██████████████████████████████] 100.0% (3450/3450) (220,773/220,773 frases)
+[20:47:31]   → 5c_climate_sub.parquet
+[20:47:31] [4/6] FinBERT (ProsusAI) — sentimiento financiero (todas las frases)…
+[20:47:31]   Cargando modelo ProsusAI/finbert en mps (fp16, max_length=96)…
+23:07:25 finbert [██████████████████████████████] 100.0% (8438/8438) (539,993/539,993 frases)
+[23:07:25]   → 5c_finbert.parquet
+[23:07:25] [5/6] FinBERT-ESG-9 (yiyanghkust) — categoría ESG (todas las frases)…
+[23:07:25]   Cargando modelo yiyanghkust/finbert-esg-9-categories en mps (fp16, max_length=96)…

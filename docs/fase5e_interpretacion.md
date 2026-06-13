@@ -1,5 +1,7 @@
 # Fase 5E — Interpretación de resultados
 
+> **⚠ Foto previa a la ampliación — 97 empresas / 289 documentos `sus`.** Los resultados de este documento se calcularon sobre la **muestra original de 97 empresas (289 docs `sus`)**, antes de la ampliación a 196 (Decisiones 027-035). Tras re-ejecutar la Fase 5 sobre el corpus ampliado (**196 empresas / 586 documentos**) estas cifras deberán actualizarse; la metodología no cambia.
+
 `scripts/nlp/fase5e_stats.py` (Decisión 026). Panel: 289 documentos `sus`
 (`results/tables/5e_panel.csv`) = `5d_gwindex.csv` (GW_index, tono, especificidad,
 sentimiento climático) + `n_tokens` (`corpus.parquet`) + sector/país/financieros
