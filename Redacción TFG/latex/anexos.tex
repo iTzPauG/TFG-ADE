@@ -1,0 +1,142 @@
+% =====================================================================
+%  ANEXOS
+% =====================================================================
+\chapter{Detalle de los temas detectados}
+\label{anexo:topics}
+
+Este anexo recoge el detalle completo de los veinticinco temas identificados por el modelo LDA,
+con sus palabras características, la etiqueta interpretativa asignada y su correspondencia
+aproximada con los estándares ESRS (tabla~\ref{tab:lda-full}). Complementa la agrupación en
+siete bloques presentada en la sección~\ref{sec:res-temas}.
+
+\begin{longtable}{p{0.8cm}p{6.4cm}p{4.6cm}p{1.4cm}}
+\caption{Temas del modelo LDA ($K=25$) con etiquetas interpretativas}
+\label{tab:lda-full}\\
+\toprule
+\textbf{Tema} & \textbf{Palabras características} & \textbf{Etiqueta} & \textbf{ESRS} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{\tablename\ \thetable\ -- \textit{continuación}}\\
+\toprule
+\textbf{Tema} & \textbf{Palabras características} & \textbf{Etiqueta} & \textbf{ESRS} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{\textit{continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+T00 & waste, products, materials, use, product, circular, economy & Economía circular y residuos & E5 \\
+T01 & requirements, regulations, standards, companies, compliance, regulatory & Marco normativo general & ESRS 2 \\
+T02 & compliance, conduct, code, corruption, ethics, policy, employees & Ética y anticorrupción & G1 \\
+T03 & stakeholders, engagement, survey, dialogue, stakeholder, industry & Diálogo con grupos de interés & ESRS 2 \\
+T04 & sustainable, development, strategy, commitment, people, culture & Estrategia y compromiso & ESRS 2 \\
+T05 & investment, portfolio, financial, assets, investments, capital & Inversión y activos financieros & --- \\
+T06 & risk, management, internal, process, risks, measures, system & Sistemas de gestión de riesgos & ESRS 2 / G1 \\
+T07 & activities, taxonomy, eligible, aligned, economic, activity, capex & Taxonomía de la UE & --- \\
+T08 & targets, target, carbon, climate, transition, zero, plan & Metas climáticas y transición & E1 \\
+T09 & due, could, increased, increase, market, costs, changes & Lenguaje de riesgo financiero & --- \\
+T10 & risks, climate, impacts, opportunities, material, related, risk & Doble materialidad & ESRS 2 \\
+T11 & new, training, development, support, program, learning, digital & Formación y desarrollo del talento & S1 \\
+T12 & sustainability, performance, esg, strategy, environmental, governance & Desempeño ESG & ESRS 2 \\
+T13 & water, sites, production, air, site, consumption, pollution & Agua, aire y contaminación & E2 / E3 \\
+T14 & employees, health, safety, employee, work, diversity, workforce & Salud, seguridad y diversidad & S1 \\
+T15 & board, committee, executive, directors, members, remuneration & Gobierno corporativo & G1 \\
+T16 & energy, consumption, hydro, renewable, electricity, efficiency, gas & Energía y eficiencia energética & E1 \\
+T17 & data, services, customers, customer, security, service, products & Productos, clientes y ciberseguridad & S4 \\
+T18 & reporting, esrs, financial, gri, sustainability, statements, disclosure & Marco de reporting ESRS/GRI & ESRS 2 \\
+T19 & million, share, net, revenue, income, per, december & Métricas financieras & --- \\
+T20 & years, france, first, europe, two, spain, germany & Geografía y contexto internacional & --- \\
+T21 & biodiversity, environmental, impact, impacts, areas, communities, local & Biodiversidad y comunidades & E4 / S3 \\
+T22 & emissions, scope, ghg, data, emission, gas, greenhouse & Emisiones de gases de efecto invernadero & E1 \\
+T23 & human, rights, labour, principles, workers, labor, due & Derechos humanos y debida diligencia & S2 \\
+T24 & chain, suppliers, value, supply, supplier, procurement & Cadena de suministro y proveedores & S2 \\
+\end{longtable}
+{\footnotesize Fuente: elaboración propia a partir del modelo LDA.}
+
+\bigskip
+Por su parte, el modelo BERTopic identificó 578 temas, de los que aproximadamente el 40\,\% de
+los párrafos quedó sin clasificar. Entre los temas más frecuentes destacan el riesgo climático
+físico, el gobierno corporativo, la cadena de suministro, la gestión del agua, la biodiversidad,
+la diversidad de género, la salud y seguridad laboral, la doble materialidad, la Taxonomía de la
+UE y la ciberseguridad, junto a numerosos temas específicos de empresas concretas. La
+coincidencia de estos grandes temas con los del modelo LDA constituye la base de la triangulación
+discutida en la sección~\ref{sec:res-temas}.
+
+\chapter{Resultados completos de las regresiones}
+\label{anexo:regresiones}
+
+Este anexo recoge los coeficientes completos de las dos regresiones por mínimos cuadrados
+ordinarios con errores estándar robustos a la heterocedasticidad (HC3) presentadas de forma
+resumida en la sección~\ref{sec:res-determinantes}. Las categorías de referencia son el sector
+de materiales básicos, el año 2022 y la región centro. La estimación se realizó sobre 577
+observaciones. El factor de inflación de la varianza se mantuvo por debajo de 3 en todos los
+predictores de ambos modelos, lo que descarta problemas relevantes de multicolinealidad.
+
+\begin{table}[H]
+\centering
+\caption{Regresión 1 --- Variable dependiente: índice de \textit{greenwashing} ($R^2\approx0{,}14$)}
+\label{tab:reg1-full}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Predictor} & \textbf{Coef.} & \textbf{$p$} \\
+\midrule
+Constante & $-$0,401 & 0,813 \\
+Communication Services & +0,153 & 0,654 \\
+Consumer Discretionary & +0,469 & 0,108 \\
+Consumer Staples & +0,582 & 0,169 \\
+Energy & +0,443 & 0,206 \\
+Financials & +2,034 & $<$0,001 \\
+Health Care & +0,519 & 0,250 \\
+Industrials & +0,489 & 0,211 \\
+Real Estate & $-$0,332 & 0,461 \\
+Technology & +1,338 & 0,002 \\
+Utilities & $-$0,070 & 0,902 \\
+Año 2023 & $-$0,010 & 0,969 \\
+Año 2024 & +0,510 & 0,030 \\
+Región Nórdicos & +0,612 & 0,022 \\
+Región Otros & +3,767 & 0,378 \\
+Región Sur & $-$0,505 & 0,150 \\
+Región Reino Unido e Irlanda & +0,751 & 0,003 \\
+Capitalización (log) & $-$0,026 & 0,723 \\
+ROA & +1,445 & 0,192 \\
+Deuda/fondos propios & +0,016 & 0,735 \\
+\bottomrule
+\end{tabular}
+\\[4pt]
+{\footnotesize Fuente: elaboración propia.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Regresión 2 --- Variable dependiente: tono financiero (FinBERT) ($R^2\approx0{,}16$)}
+\label{tab:reg2-full}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Predictor} & \textbf{Coef.} & \textbf{$p$} \\
+\midrule
+Constante & +0,135 & 0,244 \\
+Communication Services & $-$0,046 & 0,028 \\
+Consumer Discretionary & $-$0,002 & 0,923 \\
+Consumer Staples & $-$0,011 & 0,666 \\
+Energy & $-$0,075 & 0,021 \\
+Financials & $-$0,010 & 0,623 \\
+Health Care & +0,049 & 0,243 \\
+Industrials & +0,000 & 0,983 \\
+Real Estate & $-$0,069 & $<$0,001 \\
+Technology & $-$0,010 & 0,783 \\
+Utilities & $-$0,048 & 0,077 \\
+Año 2023 & $-$0,005 & 0,734 \\
+Año 2024 & $-$0,048 & $<$0,001 \\
+Región Nórdicos & $-$0,011 & 0,533 \\
+Región Otros & $-$0,288 & 0,497 \\
+Región Sur & +0,009 & 0,606 \\
+Región Reino Unido e Irlanda & +0,064 & $<$0,001 \\
+Especificidad climática & +0,194 & 0,003 \\
+Capitalización (log) & +0,000 & 0,938 \\
+ROA & +0,100 & 0,488 \\
+\bottomrule
+\end{tabular}
+\\[4pt]
+{\footnotesize Fuente: elaboración propia.}
+\end{table}

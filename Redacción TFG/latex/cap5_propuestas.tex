@@ -1,0 +1,108 @@
+% =====================================================================
+%  CAPÍTULO 5 — PROPUESTAS DE MEJORA (AUTOCRÍTICA)
+% =====================================================================
+\chapter{Propuestas de mejora}
+\label{cap:propuestas}
+
+Todo trabajo de investigación es, en alguna medida, una solución de compromiso entre lo que
+sería deseable y lo que resulta posible con los recursos disponibles. Antes de extraer
+conclusiones conviene, por honestidad intelectual, examinar con espíritu crítico las
+limitaciones del presente análisis y señalar cómo podría mejorarse. Este capítulo no formula,
+por tanto, recomendaciones dirigidas a las empresas —algo que el carácter exploratorio del
+trabajo no autorizaría—, sino que vuelve la mirada sobre el propio método para reconocer sus
+debilidades y proponer vías de refinamiento. Las limitaciones se agrupan en tres frentes: las
+relativas a los instrumentos de medida, las relativas a la construcción del corpus y las
+relativas a la interpretación de los resultados.
+
+\section{Limitaciones de los instrumentos de medida}
+\label{sec:lim-instrumentos}
+
+La primera cautela afecta a las herramientas léxicas y a los modelos de lenguaje. El diccionario
+de \textcite{loughran2011}, columna vertebral del análisis de tono, fue concebido para los
+informes anuales de las empresas estadounidenses y, al trasladarlo a informes de sostenibilidad
+europeos redactados en inglés, es razonable suponer que introduce cierto ruido: el vocabulario
+de la sostenibilidad no coincide exactamente con el de la contabilidad financiera, y algunas
+palabras pueden estar mal clasificadas en este nuevo contexto. Algo análogo ocurre con los
+modelos de lenguaje especializados —FinBERT, ClimateBERT, FinBERT-ESG-9—, que fueron entrenados
+sobre corpus distintos del de este trabajo y que, por tanto, cometen errores de clasificación
+que no se han cuantificado de forma sistemática. Una mejora natural sería ajustar finamente
+estos modelos sobre una muestra de frases de informes ESRS europeos previamente anotada a mano,
+lo que permitiría adaptar las herramientas al dominio concreto y, de paso, estimar su tasa de
+acierto.
+
+A ello se añade una cautela sobre el indicador de cobertura ESRS. Como se ha repetido a lo largo
+del trabajo, este indicador mide la \textit{anchura} del vocabulario empleado, no la profundidad
+de la información ni su conformidad con la norma. Una empresa puede tratar en detalle un asunto
+empleando una terminología propia que no coincida con la del diccionario, y el indicador la
+penalizaría injustamente. Por construcción, se trata de una medida conservadora, cuya lectura
+debe ser siempre relativa y comparativa, nunca absoluta. Su valor reside en el contraste entre
+empresas o entre años, no en la cifra concreta de cobertura.
+
+Por último, el propio índice de \textit{greenwashing} es una construcción original de este
+trabajo y, como tal, encierra decisiones discutibles. La elección de sus cuatro componentes,
+su ponderación —idéntica para los cuatro— y la dirección de cada uno responden a una lógica
+fundamentada en la literatura, pero admiten alternativas. No se ha realizado una validación
+formal de la validez de constructo del índice, esto es, no se ha contrastado de manera
+independiente que valores altos del índice se correspondan efectivamente con casos reconocibles
+de \textit{greenwashing}. El índice debe entenderse, pues, como una herramienta exploratoria y
+comparativa, útil para ordenar y cribar, pero no como un veredicto sobre la conducta de ninguna
+empresa concreta.
+
+\section{Limitaciones de la construcción del corpus}
+\label{sec:lim-corpus}
+
+El segundo frente de limitaciones tiene que ver con la materia prima del análisis. La
+segmentación automática que aísla la subsección de sostenibilidad de cada informe es, pese al
+cuidado puesto en ella, un proceso imperfecto: en un número reducido de documentos la subsección
+se extrajo solo de forma parcial. Estos casos, identificados con una etiqueta de fiabilidad
+baja, se han mantenido en el análisis principal —para no descartar información— pero se han
+sometido a una verificación que confirma que las conclusiones se sostienen al excluirlos. Aun
+así, una segmentación más afinada, o incluso una revisión manual de los límites en los casos
+dudosos, reforzaría la solidez del corpus.
+
+La homogeneización idiomática merece también una reflexión. La decisión de sustituir los
+informes no redactados en inglés por la versión oficial en inglés del propio emisor, en lugar de
+recurrir a una traducción automática, fue acertada en tanto que preserva la integridad
+lingüística necesaria para el análisis de sentimiento; pero no es inocua, pues la versión
+inglesa de un informe puede no ser palabra por palabra idéntica a la original en otra lengua, y
+algún matiz puede perderse en el camino. Asumir esta limitación era, en cualquier caso,
+preferible a introducir el ruido masivo de una traducción automática.
+
+Conviene mencionar, asimismo, dos límites menores pero reales. Por un lado, los datos
+financieros empleados como variables de control presentan algunas lagunas, concentradas en el
+ejercicio 2022 de las empresas cuyo año fiscal no coincide con el natural, lo que reduce
+ligeramente el tamaño de la muestra en las regresiones. Por otro, algunos países están
+representados por muy pocas empresas —en algún caso, una sola—, de modo que el análisis por país
+tiene un carácter exploratorio y se ha preferido agrupar los países en regiones para los
+contrastes formales. Ninguna de estas limitaciones compromete los hallazgos principales, pero
+todas aconsejan prudencia en la lectura de los resultados más desagregados.
+
+\section{Limitaciones de la interpretación}
+\label{sec:lim-interpretacion}
+
+El tercer frente, quizá el más importante, atañe a lo que legítimamente puede concluirse. La
+investigación documenta una asociación temporal muy robusta entre la entrada en vigor de la CSRD
+y la transformación del discurso de sostenibilidad, pero asociación no es causalidad. En el
+mismo periodo concurrieron otros factores —la crisis energética, la evolución del contexto
+macroeconómico, la creciente atención mediática a la sostenibilidad— que pudieron influir en el
+tono y el contenido de los informes. Atribuir en exclusiva a la CSRD los cambios observados
+sería, por tanto, una simplificación. El diseño del trabajo permite afirmar que el reporting
+cambió, y cambió de forma coherente con lo que cabría esperar del nuevo marco, pero no aislar
+con plena certeza la contribución de la norma frente a la de otros factores concurrentes.
+
+A esta cautela se suma la brevedad de la ventana temporal. Tres ejercicios consecutivos bastan
+para detectar el salto asociado a 2024, pero no para distinguir una tendencia estructural de un
+ajuste puntual al primer año de obligatoriedad. Es perfectamente posible que parte del deterioro
+observado en la especificidad y en el contenido cuantitativo responda al esfuerzo de adaptación
+de un primer ejercicio —cuando las empresas dedican mucho texto a explicar metodologías y
+definiciones— y que se corrija en años sucesivos, una vez asentado el nuevo marco. Solo la
+ampliación del panel a ejercicios posteriores permitirá dilucidarlo.
+
+Finalmente, la interpretación cualitativa de los temas detectados por los modelos descansa en el
+juicio del autor y no ha sido validada por terceros. Aunque la coincidencia entre los dos
+métodos de modelado de temas ofrece una garantía razonable, una validación independiente —en la
+que varias personas etiquetasen una muestra de párrafos y se midiese su grado de acuerdo—
+elevaría la fiabilidad de esta parte del análisis. En conjunto, ninguna de estas limitaciones
+invalida los resultados, pero todas delimitan con honestidad su alcance: el trabajo ofrece una
+fotografía rigurosa y reproducible de \textit{cómo} cambió la comunicación de sostenibilidad,
+y deja para investigaciones futuras la tarea de precisar \textit{por qué} y con qué permanencia.

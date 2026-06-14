@@ -1587,3 +1587,101 @@ cambios. Re-ejecución de `fase4_qa_corpus.py` → **0 problemas detectados**.
 
 Fase 4 (4A-4D) y QA **COMPLETOS**. Siguiente: Fase 5 (5A-5E) sobre el corpus
 ampliado de 586 docs.
+
+---
+
+## Decisión 036 — Fase 5 (5A-5E) re-ejecutada desde cero sobre el corpus ampliado (586 docs, 196 empresas)
+
+**Contexto.** Tras completar Fase 4D/QA (Decisiones 034-035) sobre las 196
+empresas (1172 filas, 586 docs), se decidió **rehacer Fase 5 completa desde
+cero** sobre el corpus ampliado (no incremental), en lugar de procesar solo
+las 99 empresas nuevas y agregar — para evitar inconsistencias entre modelos
+entrenados con muestras distintas (K óptimo de LDA, topics de BERTopic,
+z-scores del GW_index, regresiones). Se mantienen todos los scripts de
+`scripts/nlp/` sin cambios salvo `fase5e_stats.py` (ampliación de
+`REGION_MAP` con Portugal→Sur, Luxembourg→Centro e Israel→Otros, los 3 países
+nuevos de la ampliación a 196 empresas).
+
+**Ejecución:** secuencial, M4 local con `caffeinate -i`, ~8h totales
+(5A ~1 min, 5B ~48 min, 5C ~448 min/7.5h, 5D+5E <1 min).
+
+### 5A — Descriptivos + cobertura ESRS
+Recalculado sobre 1172 filas (586 docs). Sin cambios metodológicos.
+
+### 5B — LDA + BERTopic (sobre 245.400 párrafos `sus`, antes 124k)
+- **LDA**: nuevo K óptimo = **25** (antes K=15), Cv=0.7060 (búsqueda en
+  [5,10,15,20,25,30]; K=30 Cv=0.6839, K=20 Cv=0.6934). Los topics T00-T15 de
+  la Decisión 022 **ya no son directamente comparables** — requieren
+  reinterpretación con el nuevo K=25.
+- **BERTopic**: 578 topics (antes 339), 98.721 outliers (40.2%, antes
+  36.9%). Embeddings regenerados (245.400×384, caché nueva).
+- **Reinterpretación de topics (T00-T24 LDA, BERTopic) pendiente** para una
+  sesión posterior — no bloquea 5C-5E.
+
+### 5C — Sentimiento/tono/especificidad (539.993 frases, antes 285.509)
+Pipeline en cascada completo (LM → ClimateBERT detector+sub → FinBERT →
+FinBERT-ESG-9 → agregación) → `5c_doc_agregado.csv`, **586 docs**. Sin
+incidencias (a diferencia del run original de Decisión 024, sin cuelgues MPS
+gracias a `caffeinate -i`). Duración real ~448 min (7.5h), más lenta de lo
+estimado por extrapolación lineal (FinBERT y ESG-9 corrieron a ~1.0-1.1
+s/batch frente a ~0.53 s/batch del climate-detector).
+
+### 5D — GW_index (586 docs)
+Mismas fórmulas (Decisión 025). Evolución por año:
+
+| año  | GW_index | hedging | ratio_cuantitativo | ratio_futuro_sin_cifra | climate_specificity |
+|------|----------|---------|---------------------|------------------------|----------------------|
+| 2022 | -0.2026  | 0.0112  | 0.3234              | 0.1241                 | 0.2621               |
+| 2023 | -0.1677  | 0.0124  | 0.3235              | 0.1238                 | 0.2707               |
+| 2024 | +0.3705  | 0.0146  | 0.3049              | 0.1226                 | 0.2413               |
+
+Patrón **confirmado y más acentuado** que en la muestra original (97
+empresas, Decisión 025: -0.196→+0.521 en 3 puntos vs -0.20→-0.17→+0.37 aquí,
+con salto principal entre 2023 y 2024).
+
+### 5E — Estadística inferencial (panel 586 docs, 568 tras eliminar NaN financieros/sector)
+
+- **RQ2 (Kruskal-Wallis por supersector, 11 grupos)**: GW_index difiere
+  significativamente por sector (H=57.39, p<0.0001, η²=0.100) — Financials
+  (mediana 1.380) y Technology (1.184) más altos; Utilities (-1.616) y Real
+  Estate (-0.515) más bajos. finbert_tone (H=36.45, p=0.0001) y
+  climate_specificity (H=66.29, p<0.0001) también difieren por sector,
+  confirmando hallazgos previos (Decisión 026).
+- **RQ2 (por país, 17 grupos, descriptivo)**: GW_index varía mucho
+  (H=85.26, p<0.0001, η²=0.148); destaca Israel (única empresa, Teva,
+  mediana 3.007) y Portugal (-3.393, 2 empresas) — grupos pequeños, lectura
+  cualitativa.
+- **RQ4 (pareado 2022↔2024, 194 empresas comunes — antes 95)**: confirma con
+  significación formal el patrón de Decisión 026 a mayor escala — GW_index
+  ↑ (-0.208→+0.339, Δ=+0.547, p=0.0051 Wilcoxon), finbert_tone ↓ (0.189→0.142,
+  p<0.0001), climate_sentiment_risk ↑ (+0.055, p<0.0001),
+  climate_sentiment_opportunity ↓ (-0.047, p=0.0002), n_tokens ↑
+  (+9.395, p<0.0001). climate_specificity sin cambio significativo
+  (p=0.1264), igual que en Decisión 026 (entonces p=0.086).
+- **RQ3 (OLS-HC3, n=568, VIF máx 2.72)**:
+  - Reg1 (GW_index ~ tamaño+financieros+sector+año+región): R²=0.141.
+    Financials (+2.03, p<0.0001) y Technology (+1.34, p=0.002) suben el
+    GW_index; año 2024 (+0.51, p=0.030) y regiones Nórdicos (+0.61,
+    p=0.022) y UK_Irlanda (+0.75, p=0.003) también significativos.
+  - Reg2 (finbert_tone ~ especificidad+tamaño+financieros+sector+año+región):
+    R²=0.156. **climate_specificity → tono positivo** (+0.194, p=0.003),
+    confirma el hallazgo de Decisión 026 (no apoya la hipótesis simple
+    "más optimismo ↔ menos especificidad"). Año 2024 negativo (-0.048,
+    p=0.0006); Real Estate (-0.069, p=0.0001) y Energy (-0.075, p=0.021)
+    bajan el tono; UK_Irlanda lo sube (+0.064, p<0.0001).
+
+**Verificación de recuentos**: `5b_paragrafos.parquet` 586 docs,
+`5c_doc_agregado.csv` 586, `5d_gwindex.csv` 586, `5e_panel.csv` 586 (0 NaN en
+`region`, incluyendo Portugal/Luxembourg/Israel).
+
+**Actualización posterior (misma Decisión)**: reinterpretación de topics LDA
+K=25 y BERTopic (578 topics) completada — `docs/fase5b_interpretacion.md`
+reescrito; `docs/fase5{a,c,d,e}_interpretacion.md` revisados con los nuevos
+números sobre 586 docs.
+
+Fase 5 (5A-5E) **COMPLETA sobre el corpus ampliado de 586 docs (196
+empresas)**, con interpretaciones (`docs/fase5{a,b,c,d,e}_interpretacion.md`)
+actualizadas. Fase 6 (dashboard) regenerado con
+`scripts/viz/preparar_dashboard.py` + `build_dashboard.py` sobre el panel de
+586 docs (`results/dashboard/index.html`). Siguiente: reproducibilidad y
+Fase 7 (redacción del TFG).

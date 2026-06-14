@@ -15,6 +15,7 @@ results/ con un servidor estático (p.ej. `python -m http.server` desde la raíz
 """
 
 import json
+import math
 from pathlib import Path
 
 import pandas as pd
@@ -93,7 +94,10 @@ def round_floats(records: list[dict], ndigits: int = 4) -> list[dict]:
     for row in records:
         for k, v in row.items():
             if isinstance(v, float):
-                row[k] = round(v, ndigits)
+                if math.isnan(v) or math.isinf(v):
+                    row[k] = None
+                else:
+                    row[k] = round(v, ndigits)
     return records
 
 
@@ -163,7 +167,7 @@ def main():
     env = Environment(loader=FileSystemLoader(str(TEMPLATES)))
     template = env.get_template("dashboard.html.j2")
     html = template.render(
-        data_json=json.dumps(data_json, ensure_ascii=False),
+        data_json=json.dumps(data_json, ensure_ascii=False, allow_nan=False),
         summary=summary,
         **tablas,
     )

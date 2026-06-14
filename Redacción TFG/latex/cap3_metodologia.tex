@@ -1,0 +1,266 @@
+% =====================================================================
+%  CAPÍTULO 3 — METODOLOGÍA
+% =====================================================================
+\chapter{Metodología}
+\label{cap:metodologia}
+
+La naturaleza de este trabajo —que aplica un instrumental analítico poco habitual en un TFG de
+Administración y Dirección de Empresas— aconseja dedicar un capítulo completo a la
+metodología, tal como recomienda la propia guía de la Facultad para los trabajos cuyo método
+exige ser explicado con detalle. En las páginas que siguen se describe, de forma ordenada, el
+diseño de la investigación, la manera en que se construyeron la muestra y el corpus documental,
+las técnicas de procesamiento del lenguaje natural empleadas —con cita expresa de la fuente
+original de cada una—, la construcción del índice de \textit{greenwashing} y, por último, el
+aparato estadístico utilizado para contrastar las hipótesis. El objetivo es que el lector
+comprenda no solo \textit{qué} se ha hecho, sino \textit{por qué} se ha hecho de ese modo y qué
+se persigue con cada decisión.
+
+\section{Diseño de la investigación y preguntas}
+\label{sec:diseno}
+
+El trabajo se inscribe en la tradición del análisis de contenido, pero lo aborda de manera
+cuantitativa y a gran escala mediante técnicas automáticas. Su unidad de análisis es la
+subsección de sostenibilidad de cada informe corporativo, y su diseño combina dos dimensiones.
+La dimensión transversal permite comparar empresas de distintos sectores y países en un mismo
+momento, y da respuesta a las preguntas sobre diferencias y determinantes (RQ2 y RQ3). La
+dimensión temporal —tres ejercicios consecutivos, 2022, 2023 y 2024— permite observar la
+evolución del reporting en el tránsito de la NFRD a la CSRD y sostiene la cuarta pregunta
+(RQ4). El conjunto conforma un panel de empresa por año sobre el que se proyectan todas las
+métricas textuales.
+
+Las cuatro preguntas de investigación, ya enunciadas en la introducción, se corresponden con
+los cuatro objetivos específicos y guían la organización del capítulo de resultados: los temas
+predominantes (RQ1), las diferencias por sector y país (RQ2), los determinantes de la
+especificidad y la posible relación entre tono y concreción (RQ3) y la evolución entre
+regímenes normativos (RQ4). Conviene insistir en la decisión metodológica que vertebra todo el
+trabajo: el \textit{greenwashing} no se mide mediante calificaciones ESG de terceros, sino que
+se operacionaliza a partir de variables textuales internas —tono, especificidad, vaguedad,
+cobertura cuantitativa— extraídas del propio informe. Esta opción preserva la independencia
+entre el objeto analizado y el instrumento de medida y evita la circularidad en que incurriría
+cualquier análisis que empleara una nota externa de sostenibilidad como medida de la calidad de
+la comunicación.
+
+\section{Muestra: el STOXX Europe 600}
+\label{sec:muestra}
+
+El universo de estudio es el STOXX Europe 600, índice que reúne a seiscientas de las mayores
+empresas cotizadas de Europa y que constituye una referencia habitual del mercado europeo de
+renta variable \parencite{stoxx2024}. De ese universo se seleccionó una muestra de
+\textbf{196 empresas} mediante un muestreo estratificado por sector, con una semilla aleatoria
+fija para garantizar la reproducibilidad. La estratificación responde a una razón de fondo: el
+índice está fuertemente concentrado en unos pocos sectores —servicios financieros e
+industriales suman por sí solos más del cuarenta por ciento—, de modo que un muestreo aleatorio
+simple sobrerrepresentaría a estos y dejaría sin apenas presencia a sectores pequeños pero muy
+relevantes para el análisis de sostenibilidad, como las utilities o el sector inmobiliario.
+Fijando una cuota por sector se garantiza que todos aporten al análisis comparativo. Dentro de
+cada estrato la selección fue aleatoria, y no por capitalización, para evitar el sesgo hacia
+las mayores compañías —dotadas de más recursos y bajo mayor presión mediática— y captar así la
+verdadera dispersión en la calidad del reporting. Se aplicó, además, un límite geográfico que
+corrige la sobrerrepresentación estructural del Reino Unido en el índice.
+
+La muestra resultante distribuye sus 196 empresas entre once supersectores y diecisiete países,
+tal como recogen las tablas~\ref{tab:muestra-sector} y~\ref{tab:muestra-pais}. Cada empresa se
+observa en los tres ejercicios, lo que da lugar a un panel de 588 observaciones de empresa por
+año. Para cada una de ellas se recopilaron, además del informe corporativo, los datos
+financieros básicos —capitalización, rentabilidad sobre activos y sobre fondos propios,
+endeudamiento, cifra de negocio— procedentes de Yahoo Finance, que se emplean como variables de
+control en el análisis de los determinantes \parencite{yfinance2024}.
+
+\begin{table}[H]
+\centering
+\caption{Distribución de la muestra por supersector}
+\label{tab:muestra-sector}
+\begin{tabular}{lr@{\hspace{2cm}}lr}
+\toprule
+\textbf{Supersector} & \textbf{Empresas} & \textbf{Supersector} & \textbf{Empresas} \\
+\midrule
+Consumer Discretionary & 39 & Consumer Staples & 17 \\
+Financials & 33 & Technology & 11 \\
+Industrials & 20 & Energy & 10 \\
+Basic Materials & 18 & Health Care & 10 \\
+Communication Services & 18 & Real Estate & 10 \\
+ & & Utilities & 10 \\
+\bottomrule
+\end{tabular}
+\\[4pt]
+{\footnotesize Fuente: elaboración propia. Total: 196 empresas.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Distribución de la muestra por país}
+\label{tab:muestra-pais}
+\begin{tabular}{lr@{\hspace{1.2cm}}lr@{\hspace{1.2cm}}lr}
+\toprule
+\textbf{País} & \textbf{Emp.} & \textbf{País} & \textbf{Emp.} & \textbf{País} & \textbf{Emp.} \\
+\midrule
+Reino Unido & 30 & Italia & 14 & Austria & 4 \\
+Alemania & 29 & Suecia & 11 & Dinamarca & 3 \\
+Francia & 28 & Noruega & 8 & Irlanda & 2 \\
+Suiza & 19 & Bélgica & 7 & Portugal & 2 \\
+España & 17 & Finlandia & 5 & Luxemburgo & 1 \\
+Países Bajos & 15 & & & Israel & 1 \\
+\bottomrule
+\end{tabular}
+\\[4pt]
+{\footnotesize Fuente: elaboración propia. Total: 196 empresas.}
+\end{table}
+
+La elección de los tres ejercicios no es arbitraria. El año 2022 representa el último ejercicio
+mayoritariamente regido por la NFRD y funciona como línea de base anterior a la CSRD; 2023
+recoge informes elaborados bajo expectativas crecientes de la nueva norma; y 2024 es el primer
+ejercicio de reporte obligatorio bajo la CSRD para las grandes empresas de interés público.
+La comparación entre los extremos de esa ventana —2022 frente a 2024— es la que permite
+responder a la pregunta sobre la evolución del reporting.
+
+\section{Construcción del corpus}
+\label{sec:corpus}
+
+Disponer de una muestra de empresas no equivale a disponer de un material analizable: los
+informes corporativos son documentos extensos, publicados en formato PDF, con estructuras
+heterogéneas y, con frecuencia, en idiomas distintos del inglés. Convertir ese material en un
+corpus de texto limpio y homogéneo fue una fase de trabajo en sí misma, que conviene describir
+porque condiciona la validez de todo lo que sigue.
+
+El primer paso fue la \textbf{extracción del texto} de los informes. La mayoría de los
+documentos permite una extracción directa, pero algunos presentaban el texto como imagen o con
+una codificación de caracteres defectuosa que lo hacía ilegible para las herramientas
+automáticas. En esos casos se recurrió a un reconocimiento óptico de caracteres aplicado
+únicamente a las páginas problemáticas, conservando el texto nativo en el resto, de modo que la
+calidad de la fuente original se preservó siempre que fue posible. El segundo paso fue la
+\textbf{homogeneización idiomática}. Dado que los modelos de lenguaje empleados más adelante
+están entrenados sobre texto en inglés, los informes publicados en otros idiomas se
+sustituyeron por la versión oficial en inglés del mismo emisor —habitualmente el
+\textit{Annual Report} o el documento de registro universal—, nunca por una traducción
+automática, que habría introducido un ruido incompatible con el análisis de sentimiento. El
+corpus final quedó así íntegramente en inglés y libre de traducciones artificiales.
+
+El tercer y más delicado paso fue la \textbf{segmentación}. Cada informe se dividió para aislar,
+por un lado, el informe de gestión y, por otro, la subsección específicamente dedicada a la
+sostenibilidad, que es la unidad de análisis de este trabajo. Esta separación se realizó
+combinando dos criterios: el índice navegable del propio PDF, cuando estaba disponible, y, en su
+defecto, la densidad de vocabulario de sostenibilidad por página. Una decisión importante de
+este proceso merece subrayarse: como la subsección de sostenibilidad está contenida dentro del
+informe de gestión, se optó por definir el informe de gestión \textit{excluyendo} la parte de
+sostenibilidad, de manera que ambas secciones no solapen y se evite el doble cómputo del mismo
+texto. A cada documento se le asignó, además, una etiqueta de fiabilidad de la segmentación,
+que permite identificar los casos en que la subsección se aisló de forma parcial y someterlos a
+un análisis de sensibilidad.
+
+El resultado de todo este proceso es un corpus de \textbf{586 documentos} de sostenibilidad
+analizables, correspondientes a las 196 empresas a lo largo de los tres ejercicios. La
+diferencia respecto de las 588 observaciones del panel se debe a la exclusión de dos informes
+que, pese a existir, carecían de contenido de sostenibilidad analizable. Como ilustra la
+evolución del tamaño de los documentos —que se examina en el capítulo de resultados—, el
+material de partida no es menor: la subsección de sostenibilidad alcanza una mediana de varios
+miles de palabras por documento y crece de forma acusada a lo largo del periodo.
+
+\section{Técnicas de procesamiento del lenguaje natural}
+\label{sec:tecnicas}
+
+Sobre el corpus así construido se aplicó un conjunto de técnicas complementarias. La lógica que
+las articula es la triangulación: en lugar de confiar en un único método, se combinan varios de
+naturaleza distinta —léxicos, estadísticos y basados en modelos de lenguaje— de modo que sus
+resultados puedan contrastarse entre sí y reforzarse mutuamente. A continuación se describen
+agrupadas según su finalidad.
+
+\subsection{Diccionarios: tono y cobertura temática}
+
+El primer bloque de técnicas se apoya en diccionarios, esto es, en listas de términos
+previamente clasificados. Su gran virtud es la transparencia: el resultado es plenamente
+auditable, pues siempre puede rastrearse qué palabras lo han generado. Se emplearon dos. El
+primero es el diccionario financiero de \textcite{loughran2011}, que clasifica miles de
+términos en categorías —negativo, positivo, incertidumbre, lenguaje litigioso, modalidad fuerte
+y débil— en su versión más reciente \parencite{lmdict2024}, y que permite caracterizar el tono y,
+sobre todo, el grado de cautela o vaguedad del discurso. El segundo es un
+\textbf{diccionario propio de términos ESRS}, construido a partir de los requisitos de
+divulgación de los doce estándares —tomando como referencia la taxonomía oficial publicada por
+EFRAG \parencite{efrag2023}— y organizado en once categorías temáticas, con el que se mide la
+amplitud con que cada informe cubre los distintos pilares del marco europeo. Este enfoque sigue
+la estela de \textcite{suta2025}, que validan el uso de diccionarios para evaluar la cobertura de
+los temas ESRS. Conviene precisar qué mide y qué no mide este
+indicador: capta la \textit{anchura} del vocabulario empleado, no la profundidad ni el
+cumplimiento normativo, de modo que su lectura debe ser siempre relativa y comparativa.
+
+\subsection{Modelado de temas: ¿de qué hablan los informes?}
+
+El segundo bloque busca descubrir, sin imponerlos de antemano, los asuntos que vertebran el
+discurso de sostenibilidad. Para ello el corpus se troceó en párrafos y se aplicaron dos
+técnicas de modelado de temas de naturaleza distinta, lo que permite contrastar sus resultados.
+La primera, el \textit{Latent Dirichlet Allocation} o LDA \parencite{blei2003}, es un método
+probabilístico clásico que representa cada documento como una mezcla de temas y cada tema como
+una distribución de palabras; el número óptimo de temas se determinó mediante una medida de
+coherencia que evalúa hasta qué punto las palabras de cada tema tienden a aparecer juntas en el
+texto real. La segunda, BERTopic \parencite{grootendorst2022}, es un enfoque más reciente que,
+en lugar de contar palabras, agrupa los párrafos según su \textit{significado}: para ello
+representa cada fragmento de texto mediante un modelo de lenguaje \parencite{reimers2019},
+reduce la complejidad de esa representación \parencite{mcinnes2018} y agrupa los fragmentos
+semánticamente próximos \parencite{campello2013}. La ventaja de emplear ambos métodos es que,
+si dos técnicas tan diferentes coinciden en identificar los mismos grandes temas, la confianza
+en ese hallazgo aumenta.
+
+\subsection{Modelos de lenguaje: sentimiento y especificidad}
+
+El tercer bloque recurre a modelos de lenguaje especializados, herederos de la arquitectura
+BERT \parencite{devlin2019,liu2019}, que clasifican cada frase del corpus según diversos
+criterios. FinBERT \parencite{araci2019} evalúa el tono financiero general de cada frase
+—positivo, negativo o neutro—. Las cuatro variantes de ClimateBERT
+\parencite{webersinke2022}, las mismas que emplean Bingler y sus colegas, operan en cascada:
+la primera detecta si una frase trata de clima; sobre las que sí lo hacen, las restantes
+evalúan su sentimiento —riesgo frente a oportunidad—, su grado de compromiso —si contiene un
+compromiso concreto o una mera declaración— y su especificidad —si aporta cifras, fechas y
+metas o se queda en lo genérico—. Por último, un clasificador adicional, FinBERT-ESG-9
+\parencite{yang2020}, asigna cada frase a una de nueve categorías temáticas de sostenibilidad,
+lo que ofrece una tercera vía, independiente de los diccionarios y del modelado de temas, para
+caracterizar el contenido del corpus. El uso de estos modelos sobre frases individuales —cientos
+de miles en total— es lo que permite descender del nivel agregado del documento al detalle del
+discurso.
+
+\section{Construcción del índice de \textit{greenwashing}}
+\label{sec:gwindex}
+
+Las métricas anteriores capturan, cada una, una faceta del discurso de sostenibilidad. Para
+sintetizar las señales de \textit{cheap talk} en una única medida comparable se construyó un
+índice compuesto, denominado \gwindex{}, que combina cuatro de esos componentes tras
+estandarizarlos. La definición operativa responde directamente a la noción de
+\textit{greenwashing} adoptada en el trabajo y a las dimensiones de calidad de la divulgación de
+\textcite{michelon2015}: un discurso es tanto más sospechoso de \textit{cheap talk} cuanto más
+cauteloso y evasivo sea su lenguaje, cuantas más promesas de futuro formule sin respaldarlas con
+cifras, cuanto menos contenido cuantitativo aporte y cuanto menos específica sea su información
+climática. Formalmente, el índice se define como
+
+\[
+\textit{GW\_index} = z(\textit{hedging}) + z(\textit{promesa vaga})
+- z(\textit{ratio cuantitativo}) - z(\textit{especificidad climática}),
+\]
+
+\noindent donde $z(\cdot)$ denota la estandarización de cada componente sobre el conjunto del
+panel. El \textit{hedging} mide la proporción de lenguaje de incertidumbre y modalidad débil; la
+\textit{promesa vaga} (\textit{ratio futuro sin cifra}), la proporción de frases prospectivas
+que no contienen ningún dato numérico; el \textit{ratio cuantitativo}, la proporción de frases
+que sí incorporan cifras concretas; y la \textit{especificidad climática}, la proporción de
+frases climáticas que ClimateBERT clasifica como específicas. Los dos primeros componentes
+suman al índice —más vaguedad, más sospecha— y los dos últimos restan —más concreción, menos
+sospecha—. Un valor alto del \gwindex{}, por tanto, señala un reporting comparativamente más
+cauteloso, más vago en sus promesas y menos respaldado por datos. El tono financiero general de
+FinBERT se mantiene deliberadamente al margen del índice, para poder usarlo después como
+variable independiente con la que contrastar la hipótesis del optimismo sin sustancia.
+
+\section{Análisis estadístico inferencial}
+\label{sec:estadistica}
+
+El último componente metodológico es el aparato estadístico con el que se contrastan las
+hipótesis. Para examinar las diferencias por sector y por país (RQ2) se empleó la prueba de
+Kruskal-Wallis, un contraste no paramétrico apropiado cuando las distribuciones no son normales,
+que evita imponer supuestos difíciles de sostener sobre variables como el \gwindex{}. Para
+estudiar la evolución entre 2022 y 2024 (RQ4) se recurrió a pruebas pareadas —la $t$ de Student
+para datos emparejados y la prueba de Wilcoxon, su equivalente no paramétrico—, que comparan
+cada empresa consigo misma en ambos ejercicios y resultan, por ello, especialmente potentes
+para detectar cambios temporales. Finalmente, para analizar los determinantes del discurso
+(RQ3) se estimaron dos regresiones por mínimos cuadrados ordinarios con errores estándar
+robustos a la heterocedasticidad: la primera explica el \gwindex{} en función del tamaño, los
+ratios financieros, el sector, el año y la región; la segunda explica el tono financiero en
+función de la especificidad climática y los mismos controles, con el fin de contrastar
+directamente la relación entre optimismo y concreción. En ambos casos se verificó la ausencia
+de problemas graves de multicolinealidad mediante el factor de inflación de la varianza. Los
+resultados de todos estos contrastes se presentan y discuten en el capítulo siguiente.

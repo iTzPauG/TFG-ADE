@@ -1,19 +1,20 @@
 variable,VIF
-C(supersector)[T.Communication Services],1.7001179495121366
-C(supersector)[T.Consumer Discretionary],2.592192532349702
-C(supersector)[T.Consumer Staples],1.8640026673263874
-C(supersector)[T.Energy],1.539567143751522
-C(supersector)[T.Financials],2.5408581237796697
-C(supersector)[T.Health Care],1.527657598675307
-C(supersector)[T.Industrials],1.9188002687468435
-C(supersector)[T.Real Estate],1.5061874013280176
-C(supersector)[T.Technology],1.559318686832595
-C(supersector)[T.Utilities],1.669638452670773
-C(año)[T.2023],1.3719603814844055
-C(año)[T.2024],1.3748168413749164
-C(region)[T.Nordicos],1.7070547133292435
-C(region)[T.Sur],1.3006707022453778
-C(region)[T.UK_Irlanda],1.1637880167691772
-climate_specificity_spec,1.218707658638236
-log_cap,1.474785982720873
-ROA,1.2492800952359715
+C(supersector)[T.Communication Services],1.8380408234704377
+C(supersector)[T.Consumer Discretionary],2.6792294345788323
+C(supersector)[T.Consumer Staples],1.798094810916196
+C(supersector)[T.Energy],1.5548756339636352
+C(supersector)[T.Financials],2.720058613794612
+C(supersector)[T.Health Care],1.711359222344983
+C(supersector)[T.Industrials],1.9750192275849328
+C(supersector)[T.Real Estate],1.5198083454965499
+C(supersector)[T.Technology],1.5700232216664123
+C(supersector)[T.Utilities],1.7007386949009908
+C(año)[T.2023],1.3655539204618636
+C(año)[T.2024],1.3683882885893672
+C(region)[T.Nordicos],1.4289953379876936
+C(region)[T.Otros],1.1155301332135215
+C(region)[T.Sur],1.299997095829693
+C(region)[T.UK_Irlanda],1.1696664854818997
+climate_specificity_spec,1.133756321647862
+log_cap,1.3400745856029141
+ROA,1.0908175484217972

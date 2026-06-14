@@ -126,6 +126,7 @@
     background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
     padding: 12px; margin-bottom: 18px; box-shadow: var(--shadow);
   }
+  .chart-box { height: 420px; }
   .img-box { padding: 16px; text-align: center; }
   .img-box img { max-width: 100%; border-radius: 8px; }
   .img-box figcaption { font-family: var(--mono); font-size: .78rem; color: var(--muted); margin-top: 10px; letter-spacing: .02em; }
@@ -272,7 +273,7 @@
       <div class="chart-box" id="chart-tokens-sus"></div>
       <div class="chart-box" id="chart-tokens-mr"></div>
     </div>
-    <p class="findings">Crecimiento +111% en la sección de sostenibilidad (10.9k → 23.1k tokens, 2022→2024) — señal RQ4 (NFRD→CSRD). El management report (`mr`) se mantiene estable (~36-40k tokens).</p>
+    <p class="findings">Crecimiento +83% en media (+147% en mediana) en la sección de sostenibilidad (11.2k → 20.5k tokens de media, 6.9k → 17.0k mediana, 2022→2024) — señal RQ4 (NFRD→CSRD). El management report (`mr`) se mantiene estable (~38-41k tokens).</p>
     <div class="table-wrap">{{ desc_table | safe }}</div>
 
     <h2>Cobertura ESRS (diccionario v1.1, 11 categorías)</h2>
@@ -331,20 +332,20 @@
   <!-- ============ TOPICS ============ -->
   <section id="topics" class="tab-content">
     <div class="rq-tabs" id="topics-subtabs">
-      <button class="rq-sub-btn active" data-sub="lda">LDA (K=15)</button>
-      <button class="rq-sub-btn" data-sub="bertopic">BERTopic (339 tópicos)</button>
+      <button class="rq-sub-btn active" data-sub="lda">LDA (K=25)</button>
+      <button class="rq-sub-btn" data-sub="bertopic">BERTopic (578 tópicos)</button>
     </div>
 
     <div id="lda" class="rq-content active">
-      <p>LDA entrenado sobre 131.140 párrafos de la sección de sostenibilidad. K óptimo = 15 por coherencia Cv (Decisión 022).</p>
+      <p>LDA entrenado sobre 245.400 párrafos de la sección de sostenibilidad (196 empresas). K óptimo = 25 por coherencia Cv = 0.706 (Decisión 022/036).</p>
       <div class="chart-box" id="chart-lda-coherencia"></div>
       <div class="img-box"><img src="../figures/5b_lda_topics_barplot.png" alt="LDA topics barplot"></div>
-      <h3>Tópicos interpretados (mapeo a ESRS, Dec.022)</h3>
+      <h3>Tópicos interpretados (mapeo a ESRS, Dec.022/036)</h3>
       <div class="table-wrap">{{ lda_topics_table | safe }}</div>
     </div>
 
     <div id="bertopic" class="rq-content">
-      <p>BERTopic sobre los mismos 131.140 párrafos. 339 tópicos + outliers (36.9%). Triangulación con LDA confirmada (Dec.022).</p>
+      <p>BERTopic sobre los mismos 245.400 párrafos. 578 tópicos + outliers (40.2%). Triangulación con LDA confirmada (Dec.022/036).</p>
       <div class="img-box"><img src="../figures/5b_bertopic_barchart.png" alt="BERTopic barchart"></div>
       <div class="slider-row">
         <label for="bt-n-slider">Nº de tópicos a mostrar (excluyendo outlier -1):</label>
@@ -356,7 +357,7 @@
       <h3>Evolución temporal de tópicos seleccionados</h3>
       <div class="checkbox-grid" id="tot-checkboxes"></div>
       <div class="chart-box" id="chart-topics-time"></div>
-      <p class="findings">Hallazgo RQ4: T7 "doble materialidad/IROs" crece ×8.2 (104→865 párrafos, 2022→2024); T16 "Taxonomía UE" ×1.8; T15 "riesgo climático físico" ×1.7.</p>
+      <p class="findings">Hallazgo RQ4: T16 "doble materialidad/IROs" crece ×9.3 (107→1001 párrafos, 2022→2024); T17 "Taxonomía UE" ×1.7; T4 "biodiversidad" ×3.3; T3 "agua" ×2.3; T0 "riesgo climático físico" ×2.0.</p>
       <div class="img-box"><img src="../figures/5b_topics_over_time.png" alt="Topics over time"></div>
     </div>
   </section>
@@ -386,7 +387,7 @@
 
   <!-- ============ RESULTADOS RQ ============ -->
   <section id="rq" class="tab-content">
-    <p>Análisis estadístico inferencial — Fase 5E (Decisión 026). Panel de {{ summary.n_docs }} documentos `sus`.</p>
+    <p>Análisis estadístico inferencial — Fase 5E (Decisión 026/036). Panel de {{ summary.n_docs }} documentos `sus` (196 empresas).</p>
     <div class="rq-tabs" id="rq-subtabs">
       <button class="rq-sub-btn active" data-sub="rq1">RQ1 — Temas</button>
       <button class="rq-sub-btn" data-sub="rq2">RQ2 — Sector/País</button>
@@ -398,8 +399,8 @@
       <h3>RQ1 — ¿Qué temas predominan en el reporting de sostenibilidad?</h3>
       <div class="findings">
         <ul>
-          <li><b>LDA (K=15, Cv=0.684)</b>: 15 tópicos interpretables, mapeados a categorías ESRS (E1, E2-E4, E5, S1, S2-S3, G1, + 3 tópicos genéricos CSRD).</li>
-          <li><b>BERTopic</b>: 339 tópicos + 36.9% outliers. Triangulación con LDA confirmada — los temas dominantes coinciden entre ambos modelos.</li>
+          <li><b>LDA (K=25, Cv=0.706)</b>: 25 tópicos interpretables, mapeados a categorías ESRS en 7 bloques (E1, E2-E4, E5, S1, S2-S3, G1, + tópicos genéricos CSRD).</li>
+          <li><b>BERTopic</b>: 578 tópicos + 40.2% outliers. Triangulación con LDA confirmada — los temas dominantes coinciden entre ambos modelos.</li>
           <li>Los temas más frecuentes giran en torno a <b>emisiones/riesgo climático (E1)</b>, <b>plantilla propia (S1)</b> y, de forma creciente, <b>doble materialidad / IROs</b> (CSRD).</li>
         </ul>
         Ver detalle completo en la pestaña <b>🧩 Topics</b>.
@@ -433,7 +434,7 @@
 
     <div id="rq3" class="rq-content">
       <h3>RQ3 — Determinantes de especificidad/cobertura y relación tono-especificidad</h3>
-      <p>Dos regresiones OLS con errores robustos HC3 (R² ≈ 0.21-0.22, VIF máx 2.6 — sin problemas de multicolinealidad relevantes).</p>
+      <p>Dos regresiones OLS con errores robustos HC3 (n=577, R² ≈ 0.14-0.16, VIF máx ≈ 2.7-3 — sin problemas de multicolinealidad relevantes).</p>
       <div class="grid-2">
         <div>
           <h4>Modelo 1 — GW_index ~ sector + región + año + tamaño + financieros</h4>
@@ -448,16 +449,17 @@
       </div>
       <div class="findings">
         <ul>
-          <li><b>Empresas más grandes (mayor log-capitalización) → menor GW_index</b> (p = 0.024).</li>
-          <li><b>Especificidad → tono positivo</b> (p = 0.003): relación <b>positiva</b>, no apoya la hipótesis simple "más optimismo ↔ menos especificidad".</li>
-          <li>El año 2024 es significativo en el modelo de tono (p = 0.013) pero no en GW_index tras controles — efecto compositivo, no temporal puro.</li>
+          <li><b>Especificidad → tono positivo</b> (p = 0.003): relación <b>positiva</b>, no apoya la hipótesis simple "más optimismo ↔ menos especificidad" — confirmado a 196 empresas.</li>
+          <li>El año 2024 es significativo tanto en el modelo de tono (p &lt; 0.001) <b>como ahora en GW_index tras controles</b> (p = 0.030) — con el doble de empresas, el efecto CSRD ya no es meramente compositivo.</li>
+          <li>El efecto de tamaño (log-capitalización) sobre GW_index, significativo en la muestra de 97 empresas, <b>no se replica</b> con 196 (p = 0.72).</li>
+          <li><b>Financials</b> (+2.03, p&lt;0.001) y <b>Technology</b> (+1.34, p=0.002) elevan el GW_index frente a Basic Materials; <b>Nórdicos</b> y <b>UK&amp;Irlanda</b> lo elevan frente a Centro.</li>
         </ul>
       </div>
     </div>
 
     <div id="rq4" class="rq-content">
       <h3>RQ4 — Evolución NFRD (2022-23) → CSRD (2024)</h3>
-      <p>Test de Wilcoxon pareado 2022 ↔ 2024 (n=95 empresas con ambos años).</p>
+      <p>Test de Wilcoxon pareado 2022 ↔ 2024 (n=194 empresas con ambos años).</p>
       <div class="table-wrap">{{ pareado_table | safe }}</div>
       <div class="grid-2">
         <div class="img-box"><img src="../figures/5d_gwindex_evolucion.png" alt="GW_index evolución"></div>
@@ -466,11 +468,11 @@
       <div class="findings">
         <b>Hallazgos confirmados con significación formal (p &lt; 0.05):</b>
         <ul>
-          <li><b>GW_index ↑</b> (-0.196 → +0.521): hedging↑, especificidad↓, <b>ratio cuantitativo↓</b> (hallazgo nuevo).</li>
-          <li><b>Tono FinBERT ↓</b> (0.202 → 0.153): comunicación cada vez menos optimista.</li>
-          <li><b>Riesgo climático ↑</b>, <b>oportunidad climática ↓</b>.</li>
-          <li><b>n_tokens ↑</b>: las secciones de sostenibilidad casi se duplican (10.9k → 23.1k tokens).</li>
-          <li>Especificidad climática marginal (p = 0.086), no significativa al 5%.</li>
+          <li><b>GW_index ↑</b> (-0.208 → +0.339, Δ=+0.547, Wilcoxon p=0.0051): hedging↑, especificidad↓, <b>ratio cuantitativo↓</b>.</li>
+          <li><b>Tono FinBERT ↓</b> (0.189 → 0.142, p&lt;0.0001): comunicación cada vez menos optimista.</li>
+          <li><b>Riesgo climático ↑</b> (+0.055, p&lt;0.0001), <b>oportunidad climática ↓</b> (-0.047, p&lt;0.0001).</li>
+          <li><b>n_tokens ↑</b>: las secciones de sostenibilidad crecen +83% en media (11.2k → 20.6k tokens, p&lt;0.0001).</li>
+          <li>Especificidad climática sigue sin alcanzar significación (Wilcoxon p = 0.126).</li>
           <li>Promesas vagas (<code>ratio_futuro_sin_cifra</code>) se mantienen estables.</li>
         </ul>
         La transición a CSRD viene acompañada de informes más extensos, con más cobertura ESRS y más
@@ -571,29 +573,29 @@ function initOverview() {
 
   Plotly.newPlot("chart-tokens-sus", [{
     x: sus.map(r => r.año), y: sus.map(r => r.media), type: "bar", marker: { color: "#2e7d32" },
-  }], { title: "Tokens medios — sección sostenibilidad (sus)", margin: { t: 40 } }, { responsive: true });
+  }], { title: "Tokens medios — sección sostenibilidad (sus)", margin: { t: 56 }, xaxis: { dtick: 1 } }, { responsive: true });
 
   Plotly.newPlot("chart-tokens-mr", [{
     x: mr.map(r => r.año), y: mr.map(r => r.media), type: "bar", marker: { color: "#1565c0" },
-  }], { title: "Tokens medios — management report (mr)", margin: { t: 40 } }, { responsive: true });
+  }], { title: "Tokens medios — management report (mr)", margin: { t: 56 }, xaxis: { dtick: 1 } }, { responsive: true });
 
   const traces = DATA.esrs_cols.map((col, i) => ({
     x: DATA.cov_anio.map(r => r.año), y: DATA.cov_anio.map(r => r[col]),
     name: col, mode: "lines+markers", line: { color: COLORS[i % COLORS.length] },
   }));
   Plotly.newPlot("chart-esrs-evolution", traces, {
-    title: "Cobertura media por categoría ESRS", margin: { t: 40 },
+    title: "Cobertura media por categoría ESRS", margin: { t: 56 }, xaxis: { dtick: 1 },
   }, { responsive: true });
 
   const bySS = countBy(DATA.panel, "supersector");
   const byCountry = countBy(DATA.panel, "pais");
   Plotly.newPlot("chart-by-supersector", [{
     x: bySS.map(d => d.n), y: bySS.map(d => d.key), type: "bar", orientation: "h", marker: { color: "#2e7d32" },
-  }], { title: "Documentos por supersector ICB", margin: { t: 40, l: 160 } }, { responsive: true });
+  }], { title: "Documentos por supersector ICB", margin: { t: 56, l: 160 } }, { responsive: true });
 
   Plotly.newPlot("chart-by-country", [{
     x: byCountry.map(d => d.n), y: byCountry.map(d => d.key), type: "bar", orientation: "h", marker: { color: "#1565c0" },
-  }], { title: "Documentos por país", margin: { t: 40, l: 120 } }, { responsive: true });
+  }], { title: "Documentos por país", margin: { t: 56, l: 120 } }, { responsive: true });
 }
 
 // ───────────────────────────── Explorador empresa ─────────────────────────────
@@ -642,7 +644,7 @@ function renderEmpresa(empresa) {
     grid.appendChild(div);
     Plotly.newPlot(div.id, [{
       x: rows.map(r => r.año), y: rows.map(r => r[col]), mode: "lines+markers", line: { color: "#2e7d32" },
-    }], { title: label, margin: { t: 40, b: 30, l: 50, r: 20 }, height: 280 }, { responsive: true });
+    }], { title: label, margin: { t: 56, b: 30, l: 50, r: 20 }, height: 280 }, { responsive: true });
   });
 
   const radarTraces = rows.map((r, i) => ({
@@ -683,7 +685,7 @@ function initTopics() {
   Plotly.newPlot("chart-lda-coherencia", [{
     x: coh.map(r => r.K), y: coh.map(r => r.coherencia_Cv), mode: "lines+markers", line: { color: "#2e7d32" },
   }], {
-    title: "Coherencia Cv por K", margin: { t: 40 },
+    title: "Coherencia Cv por K", margin: { t: 56 },
     shapes: [{ type: "line", x0: 15, x1: 15, y0: 0, y1: 1, yref: "paper", line: { color: "red", dash: "dash" } }],
     annotations: [{ x: 15, y: 1, yref: "paper", text: "K óptimo", showarrow: false, yshift: 10 }],
   }, { responsive: true });
@@ -728,7 +730,7 @@ function renderTopicsOverTime() {
     };
   });
   Plotly.newPlot("chart-topics-time", traces, {
-    title: "Frecuencia (nº párrafos) por año", margin: { t: 40 },
+    title: "Frecuencia (nº párrafos) por año", margin: { t: 56 },
   }, { responsive: true });
 }
 
@@ -795,7 +797,7 @@ function renderComparador() {
     Plotly.newPlot(div.id, [{
       x: sorted.map(r => r.empresa), y: sorted.map(r => r[col]), type: "bar",
       marker: { color: sorted.map((_, idx) => COLORS[idx % COLORS.length]) },
-    }], { title: label, height: 300, margin: { t: 40, b: 90 } }, { responsive: true });
+    }], { title: label, height: 300, margin: { t: 56, b: 90 } }, { responsive: true });
   });
 
   const radarTraces = rows.map((r, i) => ({

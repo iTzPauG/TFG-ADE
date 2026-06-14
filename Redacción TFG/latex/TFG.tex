@@ -1,0 +1,98 @@
+% =====================================================================
+%  TFG — Grado en ADE (UPV / FADE)
+%  «Comunicación corporativa y estrategias de gestión en los informes de
+%   sostenibilidad de las empresas europeas: un análisis de contenido
+%   mediante técnicas de inteligencia artificial.»
+%  Autor: García Esparter, Pau   ·   Tutor: Seguí Mas, Elíes
+%
+%  Compilar con: pdflatex -> biber -> pdflatex -> pdflatex
+%  (En Overleaf: motor pdfLaTeX, gestor de bibliografía Biber.)
+%  NOTA: la portada NO se incluye (la genera Ebrón automáticamente).
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+
+% --- Idioma y codificación ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+
+% --- Tipografía (Times-like, profesional) ---
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{microtype}
+
+% --- Maquetación ---
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parskip}{0.4em}
+\usepackage{emptypage}
+
+% --- Figuras y tablas ---
+\usepackage{graphicx}
+\graphicspath{{../../results/figures/}}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf,justification=centering]{caption}
+
+% --- Encabezados de capítulo más sobrios ---
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{16pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{24pt}
+
+% --- Bibliografía APA 7 ---
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{references.bib}
+
+% --- Hipervínculos ---
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Comunicación corporativa de sostenibilidad en el STOXX Europe 600},
+  pdfauthor={Pau García Esparter},
+}
+
+% --- Atajos ---
+\newcommand{\gwindex}{\textit{GW\_index}}
+
+\begin{document}
+
+% =====================================================================
+%  RESUMEN EJECUTIVO (castellano / valenciano / inglés)
+% =====================================================================
+\input{resumen}
+
+% =====================================================================
+%  ÍNDICES
+% =====================================================================
+\tableofcontents
+\listoffigures
+\listoftables
+\clearpage
+
+% =====================================================================
+%  CUERPO DEL TRABAJO
+% =====================================================================
+\input{cap1_introduccion}
+\input{cap2_marco}
+\input{cap3_metodologia}
+\input{cap4_resultados}
+\input{cap5_propuestas}
+\input{cap6_conclusiones}
+
+% =====================================================================
+%  BIBLIOGRAFÍA
+% =====================================================================
+\printbibliography[heading=bibintoc,title={Bibliografía}]
+
+% =====================================================================
+%  ANEXOS
+% =====================================================================
+\appendix
+\input{anexos}
+
+\end{document}

@@ -1,0 +1,270 @@
+% =====================================================================
+%  CAPÍTULO 2 — MARCO DEL TRABAJO
+% =====================================================================
+\chapter{Marco del trabajo}
+\label{cap:marco}
+
+Antes de exponer cómo se ha analizado la comunicación de sostenibilidad de las empresas
+europeas conviene delimitar el terreno sobre el que se asienta el trabajo. Ese terreno tiene
+dos dimensiones que se entrelazan. La primera es normativa: la información de sostenibilidad
+no se publica en el vacío, sino bajo un marco regulatorio europeo que en los últimos años ha
+cambiado de manera radical y que condiciona qué deben contar las empresas y con qué nivel de
+exigencia. La segunda es teórica: para interpretar por qué las empresas comunican como
+comunican —y por qué a veces el discurso se aleja de la práctica— resulta imprescindible
+apoyarse en la literatura sobre legitimidad, gestión de impresiones y \textit{greenwashing}.
+A ambas dimensiones se dedica este capítulo, que se cierra con una panorámica del estado de la
+cuestión en la aplicación de la inteligencia artificial al análisis de los informes
+corporativos.
+
+\section{Marco normativo: de la NFRD a la CSRD}
+\label{sec:normativa}
+
+La regulación europea de la información no financiera nació, en su forma moderna, con la
+Directiva 2014/95/UE, comúnmente conocida como NFRD por sus siglas inglesas
+(\textit{Non-Financial Reporting Directive}). Esta norma obligó por primera vez a las grandes
+empresas europeas de más de quinientos empleados a incorporar en su informe de gestión una
+serie de contenidos relativos al medio ambiente, a las cuestiones sociales y laborales, al
+respeto de los derechos humanos, a la lucha contra la corrupción y a la diversidad en sus
+órganos de administración \parencite{nfrd2014}. Fue, sin duda, un avance: situó la
+sostenibilidad en el terreno de la rendición de cuentas obligatoria. Sin embargo, su diseño
+adolecía de debilidades que el tiempo hizo evidentes. Al no imponer un formato común, los
+informes resultaban enormemente heterogéneos y difícilmente comparables entre sí; no exigía
+verificación externa de la información, de modo que su fiabilidad descansaba en la buena
+voluntad del emisor; y, sobre todo, no incorporaba el principio de doble materialidad ni
+descendía al detalle de indicadores concretos. El resultado era un reporting con frecuencia
+genérico, voluntarista y orientado a la imagen más que a la rendición de cuentas. A ello se
+sumaba un alcance limitado, que cubría a unas once mil empresas en el conjunto de la Unión.
+
+La respuesta a esas limitaciones llegó con la Directiva (UE) 2022/2464, la
+\textit{Corporate Sustainability Reporting Directive} (CSRD), que no se limita a retocar la
+NFRD sino que la refunde y amplía sustancialmente \parencite{csrd2022}. Tres son sus
+innovaciones de mayor calado. La primera es la consagración del principio de
+\textbf{doble materialidad}, en virtud del cual la empresa debe informar tanto de los impactos
+que su actividad genera sobre la sociedad y el medio ambiente —materialidad de impacto— como
+de los riesgos y oportunidades que las cuestiones de sostenibilidad representan para su propio
+negocio —materialidad financiera—. La segunda es la estandarización obligatoria de los
+contenidos a través de los \textit{European Sustainability Reporting Standards} (ESRS), que
+sustituyen la libertad de formato de la NFRD por un lenguaje común y comparable. La tercera es
+la exigencia de aseguramiento externo, inicialmente con un nivel de garantía limitada, que
+somete la información de sostenibilidad a un escrutinio independiente análogo —aunque todavía
+no equivalente— al de la información financiera. A todo ello se añade la obligación de un
+etiquetado digital de los datos para facilitar su tratamiento automatizado, y una ampliación
+del alcance que multiplica por más de cuatro el número de empresas afectadas, hasta rondar las
+cincuenta mil en toda la Unión.
+
+El despliegue de la CSRD es progresivo. El primer grupo en aplicarla —las grandes empresas que
+ya estaban sujetas a la NFRD— ha tenido que reportar conforme al nuevo marco a partir del
+ejercicio 2024, con publicación de los informes a lo largo de 2025; los siguientes escalones
+incorporan, en años sucesivos, a otras grandes empresas no cubiertas anteriormente, a las
+pequeñas y medianas cotizadas y, finalmente, a determinadas empresas de fuera de la Unión con
+actividad significativa en ella. Esta gradualidad es precisamente lo que confiere valor
+analítico a la ventana temporal estudiada en este trabajo: los ejercicios 2022 y 2023
+pertenecen todavía, mayoritariamente, al régimen de la NFRD, mientras que 2024 constituye el
+primer ejercicio plenamente sujeto a la CSRD para las grandes empresas de interés público que
+componen la muestra. El contraste entre ambos regímenes, sintetizado en la
+tabla~\ref{tab:nfrd-csrd}, es el eje sobre el que se articula la cuarta pregunta de
+investigación.
+
+\begin{table}[H]
+\centering
+\caption{Principales diferencias entre la NFRD y la CSRD}
+\label{tab:nfrd-csrd}
+\begin{tabular}{lll}
+\toprule
+\textbf{Dimensión} & \textbf{NFRD (2014/95/UE)} & \textbf{CSRD (2022/2464/UE)} \\
+\midrule
+Alcance & $\sim$11.000 empresas & $\sim$50.000 empresas \\
+Estándares & Sin formato único & ESRS obligatorios \\
+Doble materialidad & No & Sí \\
+Aseguramiento externo & No requerido & Garantía limitada obligatoria \\
+Formato digital & No & XBRL/iXBRL obligatorio \\
+Información de la cadena de valor & Mínima & Extensa \\
+Objetivos climáticos & No específicos & Alineados con el Acuerdo de París \\
+\bottomrule
+\end{tabular}
+\\[4pt]
+{\footnotesize Fuente: elaboración propia a partir de \textcite{nfrd2014} y \textcite{csrd2022}.}
+\end{table}
+
+El corazón técnico de la CSRD reside en los ESRS, aprobados mediante el Reglamento Delegado
+(UE) 2023/2772 \parencite{esrs2023}. Se trata de doce estándares que organizan toda la
+información de sostenibilidad. Dos de ellos son transversales y de aplicación obligatoria en
+todos los casos: el ESRS 1 fija los requisitos generales y la arquitectura del sistema
+—el propio concepto de doble materialidad, los horizontes temporales, la debida diligencia—,
+mientras que el ESRS 2 establece las divulgaciones generales sobre gobernanza, estrategia,
+gestión de riesgos e impactos, y métricas y objetivos. Los diez estándares restantes son
+temáticos y se aplican únicamente en la medida en que la empresa los considere materiales.
+Cinco son ambientales y reproducen, no por casualidad, los objetivos de la Taxonomía de la
+Unión: el cambio climático (ESRS E1), la contaminación (E2), los recursos hídricos y marinos
+(E3), la biodiversidad y los ecosistemas (E4) y el uso de recursos y la economía circular
+(E5). Cuatro son sociales y recorren el círculo concéntrico de personas afectadas por la
+actividad: la plantilla propia (S1), los trabajadores de la cadena de valor (S2), las
+comunidades afectadas (S3) y los consumidores y usuarios finales (S4). El último, de
+gobernanza, atañe a la conducta empresarial (G1): anticorrupción, cultura ética, prácticas de
+pago y protección de los denunciantes. Esta taxonomía de doce estándares no es un mero detalle
+regulatorio: como se verá, constituye la rejilla con la que se ha medido la cobertura temática
+de los informes analizados.
+
+El marco europeo se completa con dos piezas que, aun sin ser el objeto directo del análisis,
+condicionan el comportamiento de las empresas. La primera es la Taxonomía de la Unión, el
+Reglamento (UE) 2020/852, que establece un sistema de clasificación de las actividades
+económicas ambientalmente sostenibles en torno a seis objetivos —mitigación y adaptación al
+cambio climático, agua, economía circular, contaminación y biodiversidad— y sujeto a tres
+criterios: contribuir sustancialmente a alguno de ellos, no perjudicar significativamente a
+los demás (el principio \textit{Do No Significant Harm}) y respetar unas salvaguardas sociales
+mínimas \parencite{taxonomia2020}. Las grandes empresas publican desde hace algunos ejercicios
+el porcentaje de su cifra de negocio, de sus inversiones y de sus gastos operativos que está
+alineado con la Taxonomía, un dato que se ha convertido en un indicador de referencia. La
+segunda pieza es el Reglamento (UE) 2019/2088, conocido como SFDR, que impone obligaciones de
+transparencia a los participantes en los mercados financieros —gestoras, aseguradoras, fondos
+de pensiones— y que, aunque no se dirige directamente a las empresas no financieras, ejerce
+sobre ellas una presión indirecta considerable: los inversores institucionales necesitan datos
+de sostenibilidad de calidad sobre las compañías de su cartera para poder cumplir con sus
+propias obligaciones de divulgación \parencite{sfdr2019}. El resultado es un ecosistema
+regulatorio en el que la demanda de información de sostenibilidad fiable y comparable proviene
+simultáneamente del regulador y del mercado.
+
+\section{Marco teórico: comunicación corporativa, legitimidad y \textit{greenwashing}}
+\label{sec:teoria}
+
+La existencia de un marco normativo cada vez más exigente no garantiza, por sí sola, que la
+comunicación de las empresas sea veraz o sustancial. Para entender por qué el discurso
+corporativo puede divergir de la práctica conviene recurrir a la teoría de la legitimidad,
+que constituye el sustrato conceptual de buena parte de la investigación contable sobre
+sostenibilidad. Según esta perspectiva, las organizaciones operan bajo un contrato implícito
+con la sociedad y necesitan que su actividad sea percibida como legítima, esto es, conforme a
+los valores y expectativas del entorno. Cuando ese contrato se ve amenazado —por una crisis,
+por un escándalo ambiental o, simplemente, por una mayor exigencia social—, la empresa
+despliega estrategias para restaurar o reforzar su legitimidad. La comunicación de
+sostenibilidad es una de las herramientas más visibles de ese esfuerzo, y de ahí su ambivalencia:
+puede reflejar un compromiso real o puede operar como un instrumento de gestión de la imagen.
+
+\textcite{cho2015} llevaron esta intuición un paso más allá al introducir el concepto de
+\textit{fachada organizativa} (\textit{organizational façade}). En su análisis, los informes
+de sostenibilidad funcionan a menudo como una construcción discursiva orientada a satisfacer
+las presiones institucionales sin que medie un cambio efectivo en las prácticas de la empresa.
+Los autores hablan de una \textit{hipocresía organizada} en la que el discurso y la acción se
+desacoplan de forma deliberada. La aportación es fundamentalmente conceptual —no ofrece
+métricas— pero proporciona el marco interpretativo para una de las hipótesis centrales de este
+trabajo: la posibilidad de que un lenguaje más optimista enmascare un desempeño menos
+sustancial.
+
+Si Cho y sus colegas describen el fenómeno en términos generales, \textcite{hahn2014}
+descienden al detalle de los mecanismos concretos. A partir de un análisis cualitativo de
+informes elaborados conforme al estándar GRI \parencite{gri2021}, identifican seis estrategias mediante las que
+las empresas legitiman los aspectos negativos de su desempeño: la abstracción —declaraciones
+vagas que evitan cuantificar—, el desplazamiento temporal —remitir la solución a un futuro
+indeterminado—, la externalización de responsabilidades, la comparación favorable, la negación
+del carácter negativo del impacto y la invocación de acciones compensatorias. Estas estrategias
+son especialmente relevantes para esta investigación porque dos de ellas, la abstracción y el
+desplazamiento temporal, admiten una operacionalización cuantitativa directa: la primera se
+traduce en la ausencia de cifras concretas, y la segunda, en un lenguaje prospectivo de
+promesas sin respaldo numérico. Como se detallará en el capítulo de metodología, ambas se han
+convertido en componentes del índice de \textit{greenwashing} construido en este trabajo.
+
+La pregunta sobre la calidad de la divulgación había sido abordada empíricamente por
+\textcite{michelon2015}, cuyo análisis arroja una conclusión incómoda: las prácticas que
+habitualmente se asocian a un reporting de mayor calidad —la publicación de informes
+independientes, el uso del estándar GRI o la verificación externa— no garantizan, por sí
+mismas, una información más sustancial. En muchos casos, sostienen los autores, el reporting es
+más simbólico que real. Su contribución más valiosa para este trabajo es, sin embargo,
+metodológica: descomponen la calidad de la divulgación en dimensiones medibles, entre las que
+destacan la amplitud —número de temas tratados—, la profundidad —nivel de detalle—, la
+especificidad —el peso de lo cuantitativo frente a lo cualitativo— y la neutralidad —la
+inclusión, o no, de información desfavorable—. La especificidad, en particular, es la dimensión
+que vertebra la parte central del análisis empírico de esta investigación.
+
+El instrumental para medir el lenguaje sobre el texto financiero procede de un trabajo ya
+clásico. \textcite{loughran2011} demostraron que los diccionarios de sentimiento de uso
+general clasifican erróneamente numerosas palabras cuando se aplican al ámbito financiero:
+términos como \textit{liability} (pasivo), \textit{tax} (impuesto) o \textit{cost} (coste),
+negativos en un diccionario psicológico convencional, son neutros en el lenguaje de los
+negocios. Para resolverlo construyeron un diccionario específico para textos financieros que
+clasifica las palabras en categorías como negativo, positivo, incertidumbre, lenguaje
+litigioso o modalidad —fuerte y débil—. Estas categorías permiten medir no solo el tono, sino
+también el grado de vaguedad o cautela de un texto: las palabras de incertidumbre y de
+modalidad débil son, en la práctica, indicadores del lenguaje evasivo (\textit{hedging}) que
+Hahn y Lülfs describían como estrategia de abstracción. El diccionario de Loughran y McDonald
+es, por ello, una de las herramientas empleadas en este trabajo, si bien con una cautela que
+se discute más adelante: fue concebido para los informes anuales estadounidenses y su
+traslación a informes de sostenibilidad europeos exige prudencia.
+
+El punto de encuentro entre toda esta tradición teórica y las técnicas de inteligencia
+artificial lo marca el trabajo de \textcite{bingler2022}, que constituye el referente
+metodológico más directo de esta investigación. Aplicando un modelo de lenguaje especializado
+en texto climático —ClimateBERT— a más de mil quinientos informes alineados con las
+recomendaciones del TCFD \parencite{tcfd2017}, los autores muestran que buena parte de las divulgaciones climáticas
+corporativas constituyen \textit{cheap talk}: compromisos retóricos que no se acompañan de
+acciones concretas. Detectan, además, un patrón de \textit{cherry-picking}, consistente en
+divulgar de forma destacada la información climática que no resulta comprometida —la que no
+cuesta nada— mientras se omite la material. Su hallazgo más relevante para el presente trabajo
+es que las divulgaciones voluntarias se asocian a un mayor grado de \textit{cheap talk} que las
+obligatorias, lo que sugiere de forma natural una hipótesis sobre el tránsito de la NFRD a la
+CSRD. La presente investigación adopta su lógica —medir señales de discurso vacío directamente
+sobre el texto— y la extiende a un marco más amplio: no solo el clima, sino el conjunto de las
+dimensiones ESRS, y no solo un régimen, sino la transición entre dos.
+
+\section{Estado de la cuestión: el PLN aplicado al reporting de sostenibilidad}
+\label{sec:estado}
+
+La aplicación de técnicas de procesamiento del lenguaje natural al análisis de los informes
+corporativos ha conocido en los últimos años una expansión notable, impulsada por la
+disponibilidad de modelos de lenguaje cada vez más capaces y por la creciente presión
+regulatoria sobre la información de sostenibilidad. El trabajo de Bingler y sus colegas, ya
+comentado, representa el ejemplo más influyente de esta corriente, pero no el único. La
+investigación se ha movido en dos grandes direcciones complementarias. La primera es el
+análisis de sentimiento y de especificidad, que busca cuantificar el tono y la concreción del
+discurso, y que se apoya en modelos especializados como FinBERT, para el lenguaje financiero,
+o las distintas variantes de ClimateBERT, para el climático. La segunda es el modelado de
+temas, que pretende descubrir, sin imponerlos de antemano, los asuntos de los que hablan los
+informes, y que ha evolucionado desde los métodos probabilísticos clásicos hacia enfoques
+basados en representaciones semánticas del texto.
+
+Una línea más reciente, y especialmente pertinente para este trabajo, es la que propone medir
+la cobertura de los estándares ESRS mediante diccionarios. \textcite{suta2025} desarrollan un
+enfoque basado en diccionarios para evaluar en qué medida los informes cubren los distintos
+temas de divulgación de los ESRS, y validan así una estrategia que combina la transparencia y
+la reproducibilidad de los métodos léxicos con la pertinencia normativa del marco europeo.
+Esta aportación respalda directamente una de las decisiones metodológicas de la presente
+investigación, que construye un diccionario propio de términos ESRS para medir la amplitud
+temática de cada informe.
+
+Conviene, no obstante, leer esta literatura con sentido crítico. Los trabajos pioneros, como
+el de Bingler y sus colegas, se circunscriben al ámbito climático y a un periodo anterior a la
+plena vigencia de la CSRD; los análisis de calidad de la divulgación, como el de Michelon y
+sus colegas, son anteriores a la irrupción de las técnicas de PLN y descansan en la
+codificación manual; y los enfoques basados en diccionarios, aun siendo transparentes,
+capturan la presencia de un vocabulario, no su profundidad ni su veracidad. Cada método ilumina
+una faceta del problema y deja otras en sombra. De esa constatación nace la estrategia central
+de este trabajo, que no se confía a una única técnica sino que triangula varias —diccionarios,
+modelado de temas y modelos de lenguaje— para obtener una imagen más robusta.
+
+El hueco que esta investigación pretende cubrir se sitúa, así, en la intersección de varias
+carencias de la literatura previa. Ninguno de los trabajos revisados analiza el conjunto del
+STOXX Europe 600 —es decir, la gran empresa cotizada europea en su diversidad sectorial y
+geográfica— bajo el marco completo de la CSRD y los ESRS, combinando de forma sistemática el
+modelado de temas, el análisis de sentimiento y especificidad y la detección de señales de
+\textit{greenwashing}, y haciéndolo además sobre una ventana temporal que captura el tránsito
+de un régimen regulatorio voluntario a uno obligatorio. La tabla~\ref{tab:matriz} resume la
+posición de los principales antecedentes y el lugar que ocupa este trabajo respecto de ellos.
+
+\begin{table}[H]
+\centering
+\caption{Matriz de literatura y aportación del presente trabajo}
+\label{tab:matriz}
+\begin{tabular}{p{3.1cm}p{2.4cm}p{3.0cm}p{4.0cm}}
+\toprule
+\textbf{Autor (año)} & \textbf{Muestra} & \textbf{Método} & \textbf{Gap que deja} \\
+\midrule
+Loughran \& McDonald (2011) & Informes 10-K (EE.\,UU.) & Diccionario, análisis textual & No sostenibilidad, no europeo \\
+Hahn \& Lülfs (2014) & DJIA + DAX & Análisis cualitativo & No cuantitativo, muestra pequeña \\
+Michelon et al. (2015) & Empresas cotizadas & Análisis de contenido manual & Anterior a la CSRD, sin PLN \\
+Cho et al. (2015) & Empresas cotizadas & Análisis conceptual & Sin operacionalización \\
+Bingler et al. (2022) & $>$1.500 informes TCFD & ClimateBERT & Solo clima, anterior a la CSRD \\
+Suta et al. (2025) & Informes ESRS & Diccionarios ESRS & Enfoque léxico, sin triangulación \\
+\textbf{Este TFG (2025)} & \textbf{STOXX 600} & \textbf{Temas + sentimiento + \gwindex} & \textbf{Cubre el marco CSRD/ESRS completo} \\
+\bottomrule
+\end{tabular}
+\\[4pt]
+{\footnotesize Fuente: elaboración propia a partir de la revisión de la literatura.}
+\end{table}

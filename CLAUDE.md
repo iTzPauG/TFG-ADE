@@ -81,8 +81,8 @@ Afecta sobre todo a `data/raw/*.pdf`, `data/interim/secciones/*.txt` y `corpus.p
 | 2 | Construcción de la muestra | ✅ **196 empresas × 3 años** (ampliación 97→196, Decisiones 027-028-030), financieros 196/196 |
 | 3 | Recolección de informes | ✅ **588/588** (586 descargado + 2 descartado intencional, Decisión 010) |
 | 4 | Extracción y limpieza de texto | ✅ **COMPLETA (4A-4D) para las 196** (Decisión 033/034). `corpus.parquet`: 1172 filas (586 docs × 2 secciones), 263 MB, QA OK (Decisión 035) |
-| 5 | Análisis con PLN | ✅ COMPLETA (5A-5E) sobre las 97 originales (289 docs). 🔲 **Pendiente re-ejecución sobre corpus ampliado** (196 empresas, 586 docs) |
-| 6 | Dashboard (HTML estático) + reproducibilidad | 🔄 dashboard listo (sobre 97), falta reproducibilidad |
+| 5 | Análisis con PLN | ✅ **COMPLETA (5A-5E) sobre las 196 empresas (586 docs)** — re-ejecutada desde cero (Decisión 036). Pendiente reinterpretación de topics LDA K=25/BERTopic 578 |
+| 6 | Dashboard (HTML estático) + reproducibilidad | ✅ dashboard regenerado sobre **196 empresas / 586 docs** (Decisión 036); falta reproducibilidad |
 | 7 | Redacción del TFG | ⬜ Pendiente |
 
 La guía paso a paso completa de las 7 fases está en `GUÍA.MD` (raíz).
@@ -168,7 +168,6 @@ La guía paso a paso completa de las 7 fases está en `GUÍA.MD` (raíz).
     `mr` 483 / `mr_con_financieros` 103 (mr, 586). `densidad_baja` es la categoría
     menos fiable → filtrable en análisis de sensibilidad (Decisión 019).
 - QA exhaustivo (`fase4_qa_corpus.py`): 0 problemas detectados (Decisión 035).
-- Siguiente paso: Fase 5 (5A-5E) sobre el corpus ampliado de 586 docs.
 
 ---
 
@@ -245,16 +244,38 @@ Granularidad: el corpus está a **nivel sección**; el troceo en **párrafos** (
   significación formal GW_index↑, tono↓, riesgo↑, oportunidad↓, n_tokens↑ (todos p<0.05
   salvo especificidad marginal p=0.086). Interpretación: `docs/fase5e_interpretacion.md`.
 
-Fase 5 (5A-5E) **COMPLETA**. Siguiente: Fase 6 (dashboard + reproducibilidad).
+Fase 5 (5A-5E) **COMPLETA sobre las 97 originales (289 docs)** — bloques arriba.
+
+### Re-ejecución sobre el corpus ampliado (196 empresas, 586 docs)
+
+**✅ COMPLETA (Decisión 036)**, re-ejecutada desde cero (no incremental):
+
+- **5B**: nuevo K óptimo LDA = **25** (antes 15, Cv=0.706); BERTopic 578 topics
+  (antes 339, 40.2% outliers). **Reinterpretación de topics pendiente**
+  (`docs/fase5b_interpretacion.md` desactualizado).
+- **5C**: 539.993 frases → `5c_doc_agregado.csv` (586 docs). Sin incidencias.
+- **5D**: GW_index por año: 2022=−0.203, 2023=−0.168, **2024=+0.371** — mismo
+  patrón que en la muestra original, más acentuado.
+- **5E**: panel 586 docs (568 tras NaN financieros). RQ2 sector (GW_index
+  H=57.4 p<0.0001), RQ4 pareado 194 empresas comunes 2022↔2024 (GW_index
+  Δ=+0.547 p=0.005, tono Δ=−0.046 p<0.0001, todos significativos salvo
+  especificidad p=0.126), RQ3 OLS (R²≈0.14-0.16, VIF máx 2.72) — confirma
+  especificidad→tono positivo (p=0.003).
+- `docs/fase5{a,b,c,d,e}_interpretacion.md` **actualizados** con los nuevos números
+  (586 docs / 196 empresas).
+
+Siguiente: Fase 7 (redacción del TFG).
 
 ## 6bis. Fase 6 (dashboard) — estado
 
-Decisión: dashboard como **HTML estático autocontenido** (sin Streamlit/servidor), para
-desplegar en local abriendo el fichero o sirviéndolo con cualquier servidor estático.
+✅ **Regenerado sobre 586 docs / 196 empresas** (Decisión 036). Decisión: dashboard como
+**HTML estático autocontenido** (sin Streamlit/servidor), para desplegar en local abriendo
+el fichero o sirviéndolo con cualquier servidor estático.
 
 - `scripts/viz/preparar_dashboard.py`: precalcula `results/tables/dashboard/panel.csv`
-  (panel maestro 289 docs = 5e_panel + cobertura ESRS + ESG-9) y `bertopic_doc_topics.csv`
-  (tópico BERTopic dominante por documento). Re-ejecutar si cambian los resultados de Fase 5.
+  (panel maestro 586 docs = 5e_panel + cobertura ESRS + ESG-9) y `bertopic_doc_topics.csv`
+  (tópico BERTopic dominante por documento, sobre 578 topics). Re-ejecutar si cambian los
+  resultados de Fase 5.
 - `scripts/viz/build_dashboard.py`: genera `results/dashboard/index.html` — dashboard con
   5 secciones (Overview, Explorador de empresa, Topics, Comparador, Resultados RQ),
   gráficos interactivos con Plotly.js (vía CDN) y datos embebidos como JSON inline.
