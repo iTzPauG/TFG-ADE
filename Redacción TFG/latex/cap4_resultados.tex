@@ -10,8 +10,7 @@ estándares ESRS, que responde a la primera pregunta junto con el modelado de te
 con el tono, el sentimiento y la especificidad del discurso, y con el índice de
 \textit{greenwashing}, que sostienen la segunda y la tercera. A continuación se analizan los factores
 que determinan esas señales mediante el aparato inferencial. Y por último, se cierra con la evolución del
-reporting entre los regímenes de la NFRD y la CSRD, que constituye la cuarta pregunta y, en
-buena medida, el hallazgo más claro del trabajo. A lo largo de la exposición se procura
+reporting entre los regímenes de la NFRD y la CSRD, que responde la cuarta pregunta. A lo largo de la exposición se procura
 relacionar cada resultado con el marco teórico del capítulo~\ref{cap:marco}, señalando dónde
 confirma la literatura previa y dónde la matiza.
 
@@ -23,7 +22,7 @@ del texto. La tabla~\ref{tab:tokens} y la figura~\ref{fig:tokens} muestran la ex
 sección del informe, medida en palabras, a lo largo de los tres ejercicios. Mientras que el
 informe de gestión se mantiene estable en torno a las cuarenta mil palabras, la subsección de
 sostenibilidad casi se triplica en su mediana entre 2022 y 2024, pasando de unas 6.900 a más de
-17.000 palabras, lo que supone un crecimiento del orden del 147\,\%. El patrón es claro: el
+17.000 palabras, lo que supone un crecimiento del 147\,\%. El patrón es claro: el
 crecimiento textual no afecta al informe en su conjunto, sino que se concentra de forma
 específica en la parte de sostenibilidad. Las empresas están escribiendo mucho más sobre
 sostenibilidad, y lo hacen justo en el tránsito hacia la obligatoriedad de la CSRD.
@@ -62,14 +61,12 @@ aparece en cada informe. La tabla~\ref{tab:esrs} y la figura~\ref{fig:esrs} resu
 resultado. De él se desprenden tres lecturas. En primer lugar, \textit{todas} las categorías
 crecen entre 2022 y 2024, con el salto más pronunciado en el último año, coherente con la
 inminencia de la CSRD. En segundo lugar, el cambio climático (E1) y la plantilla propia (S1)
-son, con diferencia, las categorías más cubiertas —rozan el 0,56 y el 0,53 de cobertura en
-2024—, lo que concuerda con que sean los temas con mayor tradición de reporte bajo los marcos
-voluntarios previos. En tercer lugar, la contaminación (E2) es sistemáticamente la categoría
-menos cubierta. Este último dato pide cautela: lejos de indicar un incumplimiento
-generalizado, refleja el principio de doble materialidad y un sesgo sectorial real, pues el
-reporte detallado de contaminación —emisiones de óxidos, sustancias peligrosas, microplásticos—
-solo es material para empresas industriales o manufactureras y carece de sentido para una
-financiera o una tecnológica.
+son, con diferencia, las categorías más cubiertas, rozadon el 0,56 y el 0,53 de cobertura en
+2024. En tercer lugar, la contaminación (E2) es sistemáticamente la categoría
+menos cubierta. De nuevo hay que interpretar los datos con cautela: lejos de indicar un incumplimiento
+generalizado simplemente refleja que no es un tema relevante sobre el que la mayoría de empresas tienen que declarar
+en sus informes. Cierto es que tan poco protagonismo si resulta sorprendente, cuando seguramente haya menos empresas
+que debieran preocuparse por agua y recursos marino o biodiversidad, sin embargo, estos temas son ligeramente más comunes.
 
 \begin{table}[H]
 \centering
@@ -105,8 +102,8 @@ E2 & Contaminación & 0,112 & 0,129 & 0,195 & +0,083 \\
 \end{figure}
 
 Esta primera radiografía ofrece ya una respuesta provisional a la primera pregunta
-de investigación —el discurso se organiza en torno al clima y a las personas, con la gobernanza
-y la economía circular en un segundo plano— y anticipa con claridad la cuarta: el reporting se
+de investigación: el discurso se organiza en torno al clima y a las personas, con la gobernanza
+y la economía circular en un segundo plano. También anticipa con claridad la cuarta: el reporting se
 expande de forma generalizada y sistemática en el umbral de la CSRD.
 
 \section{Temas predominantes: triangulación entre LDA y BERTopic}
@@ -116,9 +113,7 @@ La cobertura por diccionario indica qué pilares ESRS aparecen, pero no descubre
 temas que estructuran el discurso. Para ello se aplicaron las dos técnicas de modelado de temas
 descritas en la metodología. El modelo LDA alcanzó su coherencia máxima con veinticinco temas,
 como muestra la figura~\ref{fig:coherencia}: la curva asciende de forma clara hasta ese punto y
-vuelve a descender después, lo que justifica la elección. Esa cifra —superior a la que arrojaba
-una muestra más reducida en fases previas del proyecto— refleja que un corpus más amplio admite
-una descomposición temática más fina sin perder interpretabilidad.
+vuelve a descender después, lo que justifica la elección. 
 
 \begin{figure}[H]
 \centering
@@ -129,12 +124,10 @@ una descomposición temática más fina sin perder interpretabilidad.
 \end{figure}
 
 Los veinticinco temas resultantes admiten una lectura muy coherente con el marco ESRS. Para
-facilitar su interpretación se han agrupado en siete bloques temáticos, recogidos en la
-tabla~\ref{tab:bloques}; el detalle de los veinticinco temas con sus palabras características se
-ofrece en el anexo~\ref{anexo:topics}. El discurso se reparte entre un bloque climático —metas y
-planes de transición, energía y emisiones—, un bloque de naturaleza —agua, contaminación,
-biodiversidad y comunidades—, la economía circular, lo social referido a la propia plantilla,
-lo social referido a la cadena de valor, la gobernanza y la conducta, y un bloque
+facilitar su interpretación se han agrupado en siete bloques temáticos.
+El discurso se reparte entre un bloque climático (metas y
+planes de transición, energía y emisiones), un bloque de naturaleza (agua, contaminación,
+biodiversidad y comunidades), la economía circular, la propia plantilla, la cadena de valor, la gobernanza y la conducta, y un bloque
 específicamente ligado al nuevo marco regulatorio que reúne la doble materialidad, la Taxonomía
 de la Unión y el lenguaje de los propios estándares ESRS.
 
@@ -161,10 +154,11 @@ Marco CSRD / Taxonomía & Doble materialidad, Taxonomía de la UE, lenguaje ESRS
 
 El segundo modelo, BERTopic, agrupa los párrafos por significado y produce una descomposición
 mucho más granular: identifica 578 temas, dejando sin clasificar en torno al 40\,\% de los
-párrafos —los más genéricos o de transición—. Esa granularidad no es un defecto, sino una ventaja: el modelo aísla como temas propios subáreas muy concretas —la gestión
+párrafos (los más genéricos o de transición). Esa granularidad no es un defecto, sino una ventaja: el modelo aísla como 
+temas propios subáreas muy concretas (la gestión
 del agua, la biodiversidad, la doble materialidad, la Taxonomía, la ciberseguridad, la
-anticorrupción— junto a numerosos temas específicos de empresas individuales. Lo importante a
-efectos de la primera pregunta es la \textit{triangulación}: los grandes temas detectados por
+anticorrupción) junto a numerosos temas específicos de empresas individuales. Lo importante a
+efectos de la primera pregunta es la complementación: los grandes temas detectados por
 BERTopic, representados en la figura~\ref{fig:bertopic}, coinciden con los del modelo LDA pese a
 descansar en una lógica completamente distinta. Cuando dos métodos tan diferentes identifican
 los mismos asuntos, la confianza en que esos asuntos vertebran realmente el discurso aumenta de
@@ -181,16 +175,15 @@ manera considerable.
 \section{Tono, sentimiento y especificidad}
 \label{sec:res-tono}
 
-El análisis del tono y la especificidad del discurso constituye el núcleo de la tercera pregunta
-y aporta evidencia decisiva sobre la cuarta. Tres modelos independientes, entrenados sobre
-corpus distintos, convergen en una misma conclusión, lo que confiere a este hallazgo una
+El análisis del tono y la especificidad del discurso aporta evidencia decisiva sobre la cuarta pregunta.
+Tres modelos independientes, entrenados sobre corpus distintos, convergen en una misma conclusión, lo que confiere a este hallazgo una
 solidez notable.
 
 El primero es el diccionario de Loughran y McDonald, cuyas siete categorías de lenguaje se
 recogen en la tabla~\ref{tab:lm} y en la figura~\ref{fig:lm}. Leídas en conjunto, las cifras apuntan en una sola dirección: el
-lenguaje afirmativo y categórico retrocede —el tono positivo cae y la modalidad fuerte
-disminuye casi un 17\,\%—, mientras que el lenguaje de incertidumbre, de cautela y de
-restricción aumenta de forma consistente —la incertidumbre crece cerca de un 30\,\%—. En otras
+lenguaje afirmativo y categórico retrocede (el tono positivo cae y la modalidad fuerte
+disminuye casi un 17\,\%), mientras que el lenguaje de incertidumbre, de cautela y de
+restricción aumenta de forma consistente (la incertidumbre crece cerca de un 30\,\%). En otras
 palabras, el discurso de sostenibilidad se vuelve menos rotundo y más prudente a medida que se
 acerca la obligatoriedad de la CSRD.
 
@@ -221,13 +214,10 @@ acerca la obligatoriedad de la CSRD.
 
 El segundo modelo, FinBERT, evalúa el tono financiero general de cada frase. Su resultado,
 recogido en la tabla~\ref{tab:finbert} y en la figura~\ref{fig:finbert}, apunta en la misma
-dirección con una claridad incluso mayor: el tono neto —la diferencia entre frases positivas y
-negativas— cae de forma monótona y sustancial, desde 0,189 en 2022 hasta 0,140 en 2024, lo que
+dirección con una claridad incluso mayor: el tono neto (la diferencia entre frases positivas y
+negativas) cae de forma monótona y sustancial, desde 0,189 en 2022 hasta 0,140 en 2024, lo que
 representa una reducción de más del 25\,\%. La caída se concentra, significativamente, en el
-salto de 2023 a 2024, justo en el umbral de la CSRD. El aumento del peso de las frases neutras
-sugiere, además, un desplazamiento hacia un texto más descriptivo y técnico, en detrimento del
-discurso evaluativo y promocional.
-
+salto de 2023 a 2024, justo en el umbral de la CSRD. 
 \begin{table}[H]
 \centering
 \caption{Tono financiero (FinBERT) por año}
@@ -253,20 +243,17 @@ discurso evaluativo y promocional.
 {\footnotesize Fuente: elaboración propia.}
 \end{figure}
 
-El tercer modelo, ClimateBERT, se aplica solo a las frases climáticas —en torno a dos de cada
-cinco del corpus— y resulta el más revelador para la tercera pregunta. La tabla~\ref{tab:climate}
-recoge sus tres dimensiones. Las tres se mueven en la misma dirección entre 2022 y 2024: el
+El tercer modelo, ClimateBERT, se aplica solo a las frases climáticas y resulta el más revelador para la tercera pregunta. 
+La tabla~\ref{tab:climate} recoge sus tres dimensiones. Las tres se mueven en la misma dirección entre 2022 y 2024: el
 discurso de \textit{oportunidad} climática cae casi cinco puntos mientras el de \textit{riesgo}
-sube en proporción similar —hasta el punto de que en 2024 el riesgo ya supera a la oportunidad,
-cuando en 2022 esta casi lo duplicaba—; las frases con un \textit{compromiso} concreto retroceden
-del 32,8 al 26,1\,\%; y las frases \textit{específicas}, las que aportan cifras, fechas o metas,
+sube en proporción similar, hasta el punto de que en 2024 el riesgo ya supera a la oportunidad,
+cuando en 2022 esta casi lo duplicaba. Las frases con un compromiso concreto retroceden
+del 32,8 al 26,1\,\%sumado a que las frases especificas, las que aportan cifras, fechas o metas,
 también disminuyen. Esta convergencia es importante porque matiza la hipótesis clásica del
-\textit{greenwashing}. No se observa un discurso cada vez más optimista y vacío —el patrón que
-cabría esperar de un \textit{cheap talk} en aumento—, sino algo más sutil: un discurso que se
+\textit{greenwashing}. No se observa un discurso cada vez más optimista y vacío, sino algo más sutil: un discurso que se
 vuelve simultáneamente menos optimista, menos comprometido y menos específico. La lectura más
-plausible, que el índice de la sección siguiente permite confirmar, es que el enorme crecimiento
-del volumen de texto se debe en buena parte a contenido descriptivo de cumplimiento normativo
-—definiciones, metodología de la doble materialidad, tablas de indicadores— más que a nuevos
+plausible es que el enorme crecimiento del volumen de texto se debe en buena parte a contenido descriptivo de cumplimiento normativo
+(definiciones, metodología de la doble materialidad, tablas de indicadores...) más que a nuevos
 compromisos cuantificados.
 
 \begin{table}[H]
@@ -275,7 +262,7 @@ compromisos cuantificados.
 \label{tab:climate}
 \begin{tabular}{lrrr@{\hspace{0.8cm}}rr@{\hspace{0.8cm}}rr}
 \toprule
- & \multicolumn{3}{c}{\textbf{Sentimiento}} & \multicolumn{2}{c}{\textbf{Compromiso}} & \multicolumn{2}{c}{\textbf{Especificidad}} \\
+& \multicolumn{3}{c}{\textbf{Sentimiento}} & \multicolumn{2}{c}{\textbf{Compromiso}} & \multicolumn{2}{c}{\textbf{Especificidad}} \\
 \cmidrule(lr){2-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
 \textbf{Año} & Neutral & Oport. & Riesgo & Sí & No & Sí & No \\
 \midrule
@@ -291,11 +278,11 @@ compromisos cuantificados.
 Como tercera vía de caracterización temática, independiente del diccionario y del modelado de
 temas, el clasificador FinBERT-ESG-9 confirma la imagen anterior: el cambio climático domina y
 crece ligeramente, lo social y la gobernanza ocupan el segundo escalón, y las categorías de
-naturaleza y contaminación permanecen estables y bajas, en plena coherencia con la cobertura por
-diccionario. Resulta destacable que la categoría \textit{no-ESG} aumente su peso, lo que
+naturaleza y contaminación permanecen estables y bajas.
+Resulta destacable que la categoría \textit{no-ESG} aumente su peso, lo que
 respalda la hipótesis de que parte del crecimiento de la subsección de sostenibilidad bajo la
 CSRD es contenido normativo y estructural que ningún clasificador asocia a una temática de
-sostenibilidad concreta. La figura~\ref{fig:esg9} ilustra esta distribución.
+sostenibilidad concreta. La figura~\ref{fig:esg9} ilustra esto.
 
 \begin{figure}[H]
 \centering
@@ -312,16 +299,14 @@ Todas las señales anteriores confluyen en el índice de \textit{greenwashing} (
 sintetiza en una sola medida la cautela del lenguaje, la vaguedad de las promesas, la escasez de
 cifras y la falta de especificidad climática. Su evolución, recogida en la tabla~\ref{tab:gw} y
 en la figura~\ref{fig:gw}, dibuja una trayectoria muy marcada: el índice se mantiene en valores
-negativos en 2022 y 2023 y da un salto pronunciado al terreno positivo en 2024. La
-descomposición por componentes, representada en la figura~\ref{fig:gwcomp}, identifica los
-motores de ese deterioro: el lenguaje evasivo aumenta, la especificidad climática disminuye y,
-de manera especialmente reveladora, el contenido cuantitativo \textit{también} se reduce en
-2024. Este último dato desmonta una objeción evidente: podría pensarse que un informe más
-extenso será necesariamente más detallado, pero ocurre lo contrario: pese a que el texto casi se
-triplica, la proporción de frases con cifras concretas cae. En sentido
+negativos en 2022 y 2023 y da un salto pronunciado en 2024. La
+descomposición por componentes, representada en la figura~\ref{fig:gwcomp}, a que se debe dicho salto: 
+el lenguaje evasivo aumenta, la especificidad climática disminuye y el contenido cuantitativo se reduce en
+2024. Podría pensarse que un informe más extenso será necesariamente más detallado, 
+pero ocurre lo contrario: pese a que el texto casi se triplica, la proporción de frases con cifras concretas cae. En sentido
 inverso, las promesas vagas sin cuantificar permanecen prácticamente estables, de modo que
 el deterioro no proviene de un aumento de las promesas huecas, sino de una pérdida general de
-sustancia —menos cifras, menos especificidad— acompañada de más cautela.
+sustancia, menos cifras y menos especificidad, acompañada de más cautela.
 
 \begin{table}[H]
 \centering
@@ -356,11 +341,10 @@ sustancia —menos cifras, menos especificidad— acompañada de más cautela.
 {\footnotesize Fuente: elaboración propia.}
 \end{figure}
 
-El índice se relaciona, como cabía esperar, con el discurso de riesgo climático: la correlación
+El índice se relaciona con el discurso de riesgo climático: la correlación
 entre ambos es positiva y de magnitud moderada ($r=0{,}46$), mientras que con la oportunidad y
-el compromiso es negativa. La correlación transversal con el tono financiero general es, en
-cambio, casi nula, un punto sobre el que se volverá al discutir la tercera pregunta. La lectura
-temporal es la verdaderamente relevante: el tono cae al mismo tiempo que el índice sube, de modo
+el compromiso es negativa. La lectura
+temporal es la verdaderamente relevante, el tono cae al mismo tiempo que el índice sube, de modo
 que el discurso se vuelve a la vez menos optimista y más evasivo. No es el patrón clásico de
 «más optimismo sin sustancia», sino el de «menos sustancia en general» bajo el nuevo marco
 regulatorio.
@@ -368,13 +352,13 @@ regulatorio.
 \section{Determinantes por sector, país y tamaño}
 \label{sec:res-determinantes}
 
-Las secciones anteriores describen tendencias agregadas; esta examina su \textit{estructura}, es
+Mientras las secciones anteriores describen tendencias agregadas, esta examina su estructura, es
 decir, cómo se distribuyen las señales según las características de la empresa, lo que da
-respuesta a la segunda pregunta y a buena parte de la tercera. La prueba de Kruskal-Wallis,
+respuesta a la segunda pregunta y a parte de la tercera. La prueba de Kruskal-Wallis,
 resumida en la tabla~\ref{tab:kruskal}, confirma que tanto el índice de \textit{greenwashing}
 como el tono y la especificidad difieren de forma estadísticamente muy significativa según el
-sector y según el país: todos los contrastes son significativos al uno por mil. Existe, por
-tanto, una heterogeneidad real que las medias agregadas ocultaban.
+sector y según el país. Existe, por tanto, una heterogeneidad real que las medias agregadas ocultaban. Sin embargo,
+cabe de nuevo interpretar con cautela, las muestras en muchos países o sectotres no son suficientes para obtener conclusiones estadísticas sólidas.
 
 \begin{table}[H]
 \centering
@@ -396,12 +380,11 @@ Especificidad climática & 66,29 & 0,115 & 44,51 & 0,077 \\
 \end{table}
 
 El detalle por sector, representado en la figura~\ref{fig:gwsector}, revela un patrón coherente
-y muy interpretable. Los sectores financiero y tecnológico exhiben los valores más altos del
+y muy interpretable. Los sectores financieros y tecnológicos exhiben los valores más altos del
 índice de \textit{greenwashing} y, simultáneamente, los niveles más bajos de especificidad
-climática; en el extremo opuesto, las utilities, el sector inmobiliario y los materiales básicos
+climática. Por otro lado, las utilities, el sector inmobiliario y los materiales básicos
 presentan los índices más bajos y la mayor especificidad. La lógica es transparente: las
-empresas cuya huella climática directa es menor —o cuya materialidad climática es más financiera
-que operativa— tienden a un discurso climático más cualitativo y genérico, mientras que las de
+empresas cuya huella climática directa es menor tienden a un discurso climático más cualitativo y genérico, mientras que las de
 actividad física intensiva reportan con mayor concreción. El resultado conecta directamente con
 el \textit{cherry-picking} descrito por \textcite{bingler2022}: quienes menos tienen que
 contar en términos operativos son quienes más recurren al lenguaje vago.
@@ -416,9 +399,8 @@ contar en términos operativos son quienes más recurren al lenguaje vago.
 
 La dimensión geográfica, recogida en la figura~\ref{fig:gwregion}, muestra que las empresas del
 Reino Unido e Irlanda y las nórdicas presentan índices más elevados que las de Europa central y,
-sobre todo, que las del sur. Este patrón debe leerse con prudencia, pues algunos países cuentan
-con muy pocas empresas en la muestra —de ahí que en el análisis de regresión se agrupen en
-regiones—, pero la dirección general es consistente.
+sobre todo, que las del sur. De nuevo, este patrón debe leerse con prudencia, pues algunos países cuentan
+con muy pocas empresas en la muestra (por eso se agrupa por regiones), pero la dirección general es consistente.
 
 \begin{figure}[H]
 \centering
@@ -433,10 +415,9 @@ constantes. La primera regresión explica el índice de \textit{greenwashing}; s
 más relevantes se recogen en la tabla~\ref{tab:reg1} y el detalle completo, en el
 anexo~\ref{anexo:regresiones}. Confirma que los efectos sectoriales y regionales son robustos:
 el sector financiero y el tecnológico mantienen índices significativamente superiores al de
-referencia, y las regiones nórdica y británico-irlandesa, también. Dos resultados merecen
-comentario. El primero es que el tamaño de la empresa, medido por su capitalización, no muestra
-ningún efecto significativo sobre el índice —un resultado que matiza la intuición de que las
-mayores compañías comunican necesariamente mejor—. El segundo, muy relevante para la
+referencia, y las regiones nórdica y británico-irlandesa, también. También hay otros resultados que vale la pena comentar. 
+El primero es que el tamaño de la empresa, medido por su capitalización, no muestra
+ningún efecto significativo sobre el índice. El segundo, muy relevante para la
 cuarta pregunta, es que el año 2024 conserva un efecto positivo y significativo sobre el índice
 \textit{aun después de controlar por sector, tamaño y región}: el deterioro de 2024 no es, por
 tanto, un mero artefacto de la composición de la muestra, sino que apunta a un efecto genuino
@@ -462,16 +443,14 @@ Capitalización (log) & $-$0,026 & 0,723 \\
 {\footnotesize Fuente: elaboración propia. $R^2\approx0{,}14$; categorías de referencia: sector materiales básicos, año 2022, región centro.}
 \end{table}
 
-La segunda regresión aborda de frente la hipótesis del \textit{greenwashing} clásico: ¿se asocia
-un tono más optimista a un discurso menos específico? El resultado, recogido en la
-tabla~\ref{tab:reg2}, es claro y contrario a esa hipótesis simple. La especificidad climática
-tiene un efecto \textit{positivo} y significativo sobre el tono ($+0{,}194$): las empresas que
-hablan de clima de forma más concreta tienden también a un tono financiero más positivo,
-probablemente porque la concreción suele acompañar a la comunicación de logros y avances
-tangibles. La hipótesis ingenua de que el optimismo encubre vaguedad no se sostiene en el corte
-transversal. Lo que sí se confirma, una vez más, es el efecto temporal: el año 2024 deprime el
-tono de forma robusta e independiente de cuánto y cómo hable la empresa de clima. El sector
-inmobiliario y el energético aparecen, además, como los de tono más contenido.
+La segunda regresión pone a prueba la versión más simple de la hipótesis de
+\textit{greenwashing}: si una empresa habla de clima de forma vaga, ¿compensa esa
+vaguedad con un tono más optimista? La tabla~\ref{tab:reg2} da una respuesta clara, y
+en sentido contrario al esperado. La especificidad climática tiene un efecto
+\textit{positivo} y significativo sobre el tono ($+0{,}194$): cuanto más concreta es
+una empresa al hablar de clima, más positivo es también su tono financiero. Esto
+sugiere que la concreción no se usa para ocultar malas noticias, sino que suele
+acompañar a la comunicación de logros y avances tangibles.
 
 \begin{table}[H]
 \centering
@@ -496,16 +475,13 @@ Capitalización (log) & +0,000 & 0,938 \\
 \section{Evolución del reporting: de la NFRD a la CSRD}
 \label{sec:res-evolucion}
 
-La cuarta pregunta —cómo evoluciona el reporting entre los dos regímenes normativos— ha ido
-recibiendo respuesta a lo largo de todo el capítulo, pero conviene cerrarla con el contraste
-formal que le da solidez estadística. La prueba pareada compara cada empresa consigo misma en
-2022 y en 2024, sobre las 194 compañías presentes en ambos ejercicios, y sus resultados se
+La cuarta pregunta sobre cómo evoluciona el reporting entre los dos regímenes normativos recibe respuesta firme en esta figura. 
+La prueba pareada compara cada empresa consigo misma en 2022 y en 2024, 
+sobre las 194 compañías presentes en ambos ejercicios, y sus resultados se
 recogen en la tabla~\ref{tab:pareado} y en la figura~\ref{fig:pareado}. El resultado no deja lugar
 a dudas: el reporting de 2024 es significativamente más extenso, menos optimista, con más
 discurso de riesgo climático y con un índice de \textit{greenwashing} más elevado que el de
-2022. Cinco de las seis variables alcanzan significación al uno por mil o muy próxima a ese
-nivel; solo la especificidad climática, que disminuye en la dirección esperada, no llega a ser
-estadísticamente significativa, lo que la confirma como la señal más sutil del conjunto.
+2022. Cinco de las seis variables alcanzan significación.
 
 \begin{table}[H]
 \centering
@@ -536,13 +512,13 @@ Palabras (sostenibilidad) & 11.208 & 20.603 & +9.395 & $<$0,001 \\
 \end{figure}
 
 A este contraste se suma la evidencia más visual de toda la investigación, procedente del
-modelado de temas. Al seguir la frecuencia de cada tema a lo largo del tiempo, destaca con
-nitidez el de la \textbf{doble materialidad}, que multiplica su presencia por más de nueve entre
+modelado de temas. Al seguir la frecuencia de cada tema a lo largo del tiempo, destaca el de la \textbf{doble materialidad}, 
+que multiplica su presencia por más de nueve entre
 2022 y 2024, como muestra la figura~\ref{fig:overtime}. La doble materialidad es el concepto
-nuclear que introduce la CSRD y que no existía bajo la NFRD, de modo que su irrupción repentina
+que introduce la CSRD y que no existía bajo la NFRD, de modo que su irrupción repentina
 en 2024 constituye la huella textual más fuerte y cuantificable del cambio de régimen. Otros
-temas estrechamente ligados al nuevo marco crecen también con fuerza —la Taxonomía de la Unión,
-el riesgo climático físico, el agua y la biodiversidad—, lo que confirma que la transición no
+temas ligados al nuevo marco crecen también con fuerza (la Taxonomía de la Unión,
+el riesgo climático físico, el agua y la biodiversidad), lo que confirma que la transición no
 solo aumenta el volumen del reporting, sino que reorienta su contenido hacia el lenguaje propio
 de los estándares europeos.
 
@@ -554,24 +530,19 @@ de los estándares europeos.
 {\footnotesize Fuente: elaboración propia.}
 \end{figure}
 
-Tomados en su conjunto, los resultados permiten responder a las cuatro preguntas con una
-convergencia notable entre métodos. El discurso de sostenibilidad se organiza en torno al clima
-y a las personas (RQ1); difiere de forma significativa por sector y país, con el sector
-financiero y el tecnológico a la cabeza del lenguaje vago (RQ2); no responde a la hipótesis
-ingenua de que el optimismo encubre vaguedad —la relación entre especificidad y tono es
-positiva—, aunque sí revela una pérdida general de sustancia (RQ3); y experimenta, en el tránsito
-de la NFRD a la CSRD, una transformación profunda: más texto, menos optimismo, más cautela, más
-riesgo y menos concreción, con la doble materialidad como emblema del nuevo régimen (RQ4). El
-sentido último de esta transformación —si es un avance hacia un reporting más honesto sobre la
-incertidumbre o una señal de \textit{cheap talk} creciente— se discute en las conclusiones.
+Tomados en su conjunto, los resultados permiten responder a las cuatro preguntas con fiabilidad gracias a haber usado diferentes métodos:
 
-El capítulo se cierra con la herramienta con la que se han explorado
-todos estos resultados. El conjunto de hallazgos se ha integrado en un cuadro de mando
+\begin{itemize}
+    \item \textbf{RQ1} — El discurso de sostenibilidad se organiza en torno al clima y a las personas.
+    \item \textbf{RQ2} — Difiere de forma significativa por sector y país, con el sector financiero y el tecnológico a la cabeza del lenguaje vago.
+    \item \textbf{RQ3} — No responde a la hipótesis de que el optimismo encubre vaguedad (la relación entre especificidad y tono es positiva), aunque sí revela una pérdida general de sustancia.
+    \item \textbf{RQ4} — Experimenta, en el tránsito de la NFRD a la CSRD, una transformación profunda: más texto, menos optimismo, más cautela, más riesgo y menos concreción, con la doble materialidad como protagonista del nuevo régimen.
+\end{itemize}
+
+El conjunto de hallazgos se ha integrado en un cuadro de mando
 interactivo de elaboración propia que permite navegar por el corpus sin necesidad de manejar los
 datos en bruto: ofrece una visión agregada del material, un explorador que muestra el perfil de
 cualquiera de las 196 empresas, un mapa de los temas detectados, un comparador entre compañías y
 una síntesis de los resultados por pregunta de investigación. Más allá de su utilidad como
-soporte de la defensa del trabajo, este cuadro de mando ilustra el potencial de las técnicas
-empleadas como instrumento de cribado: permitiría a un analista, un inversor o un supervisor
-localizar con rapidez los informes cuyo perfil textual —mucho lenguaje vago, poca
-especificidad— aconseja una lectura más atenta.
+soporte de la defensa del trabajo, este cuadro de mando podría servir como instrumento de investigación para analistas o inversores 
+permitiendo localizar con rapidez los informes que necesitan leerse atentamente porque sus indicadores son sospechosos.
