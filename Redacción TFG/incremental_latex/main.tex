@@ -1,0 +1,95 @@
+% =====================================================================
+%  TFG — Grado en ADE (UPV / FADE)  — VERSIÓN INCREMENTAL PARA OVERLEAF
+%  Solo incluye los capítulos cuyo .tex está presente en esta carpeta,
+%  para poder compilar rápido mientras se van añadiendo poco a poco.
+%
+%  Compilar con: pdflatex -> biber -> pdflatex -> pdflatex
+%  (En Overleaf: motor pdfLaTeX, gestor de bibliografía Biber.)
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+
+% --- Idioma y codificación ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+
+% --- Tipografía (Times-like, profesional) ---
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{microtype}
+
+% --- Maquetación ---
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parskip}{0.4em}
+\usepackage{emptypage}
+
+% --- Figuras y tablas ---
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf,justification=centering]{caption}
+
+% --- Encabezados de capítulo más sobrios ---
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{16pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{24pt}
+
+% --- Bibliografía APA 7 ---
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{references.bib}
+
+% --- Hipervínculos ---
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Comunicación corporativa de sostenibilidad en el STOXX Europe 600},
+  pdfauthor={Pau García Esparter},
+}
+
+% --- Atajos ---
+\newcommand{\gwindex}{\textit{GW\_index}}
+
+\begin{document}
+
+% =====================================================================
+%  RESUMEN EJECUTIVO (solo si ya está copiado a esta carpeta)
+% =====================================================================
+\IfFileExists{resumen.tex}{\input{resumen}}{}
+
+% =====================================================================
+%  ÍNDICES
+% =====================================================================
+\tableofcontents
+\listoffigures
+\listoftables
+\clearpage
+
+% =====================================================================
+%  CUERPO DEL TRABAJO — cada \input solo se ejecuta si el fichero existe
+% =====================================================================
+\IfFileExists{cap1_introduccion.tex}{\input{cap1_introduccion}}{}
+\IfFileExists{cap2_marco.tex}{\input{cap2_marco}}{}
+\IfFileExists{cap3_metodologia.tex}{\input{cap3_metodologia}}{}
+\IfFileExists{cap4_resultados.tex}{\input{cap4_resultados}}{}
+\IfFileExists{cap5_propuestas.tex}{\input{cap5_propuestas}}{}
+\IfFileExists{cap6_conclusiones.tex}{\input{cap6_conclusiones}}{}
+
+% =====================================================================
+%  BIBLIOGRAFÍA
+% =====================================================================
+\printbibliography[heading=bibintoc,title={Bibliografía}]
+
+% =====================================================================
+%  ANEXOS (solo si ya está copiado a esta carpeta)
+% =====================================================================
+\appendix
+\IfFileExists{anexos.tex}{\input{anexos}}{}
+
+\end{document}

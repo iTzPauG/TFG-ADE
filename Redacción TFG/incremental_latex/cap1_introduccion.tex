@@ -8,11 +8,11 @@
 \label{sec:contexto}
 
 El 5 de enero de 2023 entró en vigor la Directiva (UE) 2022/2464, conocida como
-\textit{Corporate Sustainability Reporting Directive} (CSRD), y con ella se abrió la que debía ser una
-de las transformaciones más profundas que ha vivido la información corporativa europea en las
-últimas décadas. Sin embargo, este cambio no es tan fácilmente perceptible.
-El ejercicio 2024 ha sido el primero en el que las grandes empresas europeas de interés público
-han estado obligadas a reportar su desempeño en sostenibilidad conforme a un marco
+\textit{Corporate Sustainability Reporting Directive} (CSRD), y con ella se abrió la que debía ser una de
+las transformaciones más profundas que ha vivido la información corporativa europea en las
+últimas décadas. Sin embargo, su efecto no se ha percibido hasta hace muy poco:
+el ejercicio 2024 ha sido el primero en el que las grandes empresas de interés público
+europeas han estado obligadas a reportar su desempeño en sostenibilidad conforme a un marco
 único, los \textit{European Sustainability Reporting Standards} (ESRS), cuyos primeros
 informes se han publicado a lo largo de 2025. Por primera vez, miles de compañías han tenido
 que aplicar el principio de doble materialidad, cuantificar sus emisiones a lo largo de toda
@@ -20,50 +20,60 @@ la cadena de valor y someter parte de esa información a verificación externa. 
 sostenibilidad ha dejado de ser un ejercicio mayoritariamente voluntario y promocional para
 convertirse en una obligación regulada, comparable y auditable \parencite{csrd2022}.
 
-Esto se produce en un contexto en el que la información no financiera ha
-ganado un peso enorme. Para inversores institucionales, supervisores y consumidores cada vez es más 
-importante saber no solo cuánto gana una empresa, sino cómo lo gana: qué impacto ambiental y
+Este giro normativo se produce en un contexto en el que la información no financiera ha
+ganado un peso enorme. Inversores institucionales, supervisores y consumidores
+demandan saber no solo cuánto gana una empresa, sino cómo lo gana: qué impacto ambiental y
 social genera, qué riesgos de transición asume y qué compromisos adquiere de cara al futuro.
-La sostenibilidad ha pasado a ser fundamental en la comunicación
-corporativa, y los informes anuales dedican un espacio creciente a explicarla. Ahora bien,
+La sostenibilidad se ha incorporado al núcleo de la estrategia y de la comunicación
+corporativas, y los informes anuales dedican un espacio creciente a explicarla. Ahora bien,
 esa misma centralidad ha hecho aflorar un problema bien conocido en la literatura: la
-distancia entre lo que las empresas \textit{dicen} y lo que realmente \textit{hacen}. Lo conocemos como
-\textit{greenwashing} (la construcción de una imagen de sostenibilidad más
-favorable que el desempeño efectivo) o su versión más sutil, el \textit{cheap talk}
-(el compromiso retórico que no se traduce en acciones concretas ni en datos verificables). Este fenómeno
+distancia entre lo que las empresas \textit{dicen} y lo que realmente \textit{hacen}. El
+fenómeno del \textit{greenwashing} —la construcción de una imagen de sostenibilidad más
+favorable que el desempeño efectivo— y su versión más sutil, el \textit{cheap talk}
+—el compromiso retórico que no se traduce en acciones concretas ni en datos verificables—,
 se han convertido en una de las grandes preocupaciones regulatorias y académicas del momento
 \parencite{bingler2022}.
 
-Este es el origen de este trabajo. Buena parte de los análisis de
+Aquí reside el problema práctico que motiva este trabajo. Buena parte de los análisis de
 sostenibilidad descansan sobre las calificaciones o \textit{ratings} ESG que elaboran
 proveedores externos como MSCI, Sustainalytics o Refinitiv. Estos indicadores son cómodos,
-pero presentan dos limitaciones serias: son poco transparentes y muestran
-divergencias notables entre proveedores para una misma empresa, haciendo imposible confiar en dichos ratings.
-Por ello, el presente trabajo renuncia deliberadamente a cualquier
+pero presentan dos limitaciones serias: por un lado, son poco transparentes y muestran
+divergencias notables entre proveedores para una misma empresa; por otro, y de manera más
+fundamental para esta investigación, introducen una circularidad metodológica si lo que se
+pretende es precisamente evaluar la calidad de la comunicación. Si el objetivo es estudiar
+\textit{cómo} comunica una empresa su sostenibilidad y detectar señales de discurso vacío,
+emplear una nota externa como medida de calidad equivale a dar por respondida la pregunta
+antes de formularla. Por ello, el presente trabajo renuncia deliberadamente a cualquier
 \textit{rating} de terceros y se construye íntegramente sobre el análisis del \textbf{texto}
 de los informes: son las propias palabras de las empresas las que se interrogan.
 
 Para hacerlo a escala, este TFG recurre a técnicas de procesamiento del lenguaje natural
 (PLN), una rama de la inteligencia artificial que permite analizar grandes volúmenes de
-texto de forma sistemática y reproducible. Este es el eje sobre el que gira el trabajo:
-la combinación de un marco regulatorio en plena transición, un problema de relevancia económica 
-como el \textit{greenwashing} y un instrumental analítico capaz de leer miles de páginas de informes resulta especialmente
-oportuna para conseguir información real y honesta sobre las empresas del EUROSTOXX 600.
+texto de forma sistemática y reproducible. La combinación de un marco regulatorio en plena
+transición, un problema de relevancia económica como el \textit{greenwashing} y un
+instrumental analítico capaz de leer miles de páginas de informes resulta especialmente
+oportuna: permite observar, casi en tiempo real, cómo cambia el lenguaje corporativo de la
+sostenibilidad en el tránsito de un régimen voluntario a uno obligatorio.
 
 \bigskip
+% --- NOTA: trayectoria personal inventada (placeholder) — sustituir por la real ---
 La elección del tema responde también a una motivación personal. A lo largo del grado, lo
 que más me ha atraído ha sido el punto en el que el análisis de datos se cruza con las
-decisiones empresariales, la idea de que detrás de un texto aparentemente cualitativo
-se esconden patrones medibles que cuentan una historia.
-Cuando se acercó el momento de plantear el TFG me pareció una
+decisiones empresariales: la idea de que detrás de un texto aparentemente cualitativo, como
+es un informe corporativo, se esconden patrones medibles que pueden contar una historia.
+Desde que tuve mi primer contacto con la minería de datos comprendí que las herramientas
+para extraer esa información ya existen y están al alcance de cualquiera con la curiosidad
+suficiente para aprenderlas. Cuando se acercó el momento de plantear el TFG me pareció una
 oportunidad inmejorable para llevar esa inquietud a un problema económico y financiero real,
 de plena actualidad y con implicaciones tangibles para empresas, inversores y reguladores.
 Aplicar la inteligencia artificial a un terreno tradicionalmente reservado al análisis manual
-era, para mí, mejor manera de acabar mi carrera, poniendo a trabajar juntas las dos cosas que más me interesan.
+—la lectura de cientos de informes de sostenibilidad— era, para mí, la manera más honesta de
+cerrar el grado: poniendo a trabajar juntas las dos cosas que más me interesan.
 
 \bigskip
-Este trabajo justifica su novedad por su oportunidad temporal, por su enfoque metodológico,
-y por su contribución inédita: ninguna investigación previa,
+Este trabajo se justifica, así, por su oportunidad temporal —captura el momento
+exacto de la transición normativa—, por su enfoque metodológico —análisis textual directo,
+sin intermediación de notas externas— y por su contribución: ninguna investigación previa,
 hasta donde alcanza la revisión realizada, ha analizado el conjunto del STOXX Europe 600 bajo
 el marco completo CSRD/ESRS combinando modelado de temas, análisis de sentimiento y detección
 de señales de \textit{greenwashing} sobre un corpus propio.
@@ -78,37 +88,40 @@ marco normativo CSRD/ESRS, e identificar en ese discurso patrones comunicativos 
 textuales de \textit{greenwashing}.
 
 Este objetivo general se concreta en cuatro objetivos específicos, formulados como preguntas
-de investigación que estructuran todo el análisis posterior:
+de investigación (RQ, por sus siglas en inglés) que estructuran todo el análisis posterior:
 
 \begin{itemize}
-  \item \textbf{RQ1 — Temas predominantes.} Identificar qué temas concentran el
+  \item \textbf{OE1 (RQ1) — Temas predominantes.} Identificar qué temas concentran el
   discurso de sostenibilidad de las empresas del STOXX 600, mediante modelado de temas sobre
   el texto de sus informes, y contrastar esos temas con las categorías de los estándares
   ESRS.
-  \item \textbf{RQ2 — Diferencias por sector y país.} Determinar si existen diferencias
+  \item \textbf{OE2 (RQ2) — Diferencias por sector y país.} Determinar si existen diferencias
   estadísticamente significativas en el contenido y el tono del reporting en función del
   sector de actividad y del país de origen de la empresa.
-  \item \textbf{RQ3 — Determinantes y señales de \textit{greenwashing}.} Analizar qué
+  \item \textbf{OE3 (RQ3) — Determinantes y señales de \textit{greenwashing}.} Analizar qué
   factores (sector, país, tamaño) se asocian a una mayor especificidad y cobertura
   cuantitativa de la información, y contrastar la hipótesis de que un tono más optimista se
   corresponde con un discurso menos específico —una señal característica del
   \textit{greenwashing}—.
-  \item \textbf{RQ4 — Evolución NFRD $\rightarrow$ CSRD.} Examinar cómo evoluciona el
+  \item \textbf{OE4 (RQ4) — Evolución NFRD $\rightarrow$ CSRD.} Examinar cómo evoluciona el
   reporting de sostenibilidad entre el régimen de la Directiva sobre información no financiera
   (NFRD, ejercicios 2022 y 2023) y el primer ejercicio obligatorio de la CSRD (2024).
 \end{itemize}
 
-Las conclusiones del trabajo (capítulo~\ref{cap:conclusiones}) se construyen de
-forma directa sobre cada uno de ellos, de modo que se pueda verificar que todas las
+Esta precisión en la formulación de los objetivos tiene una finalidad concreta: las conclusiones del
+trabajo (capítulo~\ref{cap:conclusiones}) se construyen de
+forma directa sobre cada uno de ellos, de modo que el lector pueda verificar que todas las
 preguntas planteadas al inicio reciben respuesta.
 
 \section{Metodología y fuentes de información}
 \label{sec:metodologia-resumen}
 
 El trabajo adopta un enfoque cuantitativo de análisis de contenido textual asistido por
-inteligencia artificial. El texto que se analiza pertenece a la subsección de sostenibilidad de cada
-informe corporativo. El detalle completo se expone en el capítulo~\ref{cap:metodologia}, aquí se expone 
-un resumen sobre las cosas necesarias para entender la generalidad del trabajo.
+inteligencia artificial. La unidad de análisis es la subsección de sostenibilidad de cada
+informe corporativo, y el diseño es un panel que combina la dimensión transversal —empresas
+de distintos sectores y países— con la temporal —tres ejercicios consecutivos—. El detalle
+completo se expone en el capítulo~\ref{cap:metodologia}; aquí se ofrece
+únicamente una panorámica que permita situar al lector.
 
 En cuanto a las \textbf{fuentes de información}, se distingue entre fuentes primarias y
 secundarias. La fuente primaria es un corpus documental construido específicamente para esta
@@ -123,10 +136,10 @@ empresas —obtenidos de Yahoo Finance \parencite{yfinance2024}—, los textos n
 europeos \parencite{nfrd2014,csrd2022,esrs2023,taxonomia2020,sfdr2019} y diversos diccionarios
 y recursos lingüísticos especializados.
 
-Sobre ese corpus se aplicó una batería de técnicas de PLN: diccionarios
-clásicos de análisis textual financiero \parencite{loughran2011}, modelos de lenguaje
-recientes especializados en finanzas y clima \parencite{araci2019,webersinke2022} y 
-dos métodos complementarios de modelado de temas \parencite{blei2003,grootendorst2022}.
+Sobre ese corpus se aplicó una batería de técnicas de PLN que van desde los diccionarios
+clásicos de análisis textual financiero \parencite{loughran2011} hasta modelos de lenguaje
+recientes especializados en finanzas y clima \parencite{araci2019,webersinke2022}, pasando
+por dos métodos complementarios de modelado de temas \parencite{blei2003,grootendorst2022}.
 A partir de sus resultados se construyó un índice sintético de \textit{greenwashing} textual
 y se realizaron diversos contrastes estadísticos. Todo el proceso se organizó como un flujo
 de trabajo reproducible, estructurado en siete fases sucesivas que van de la construcción de
@@ -135,33 +148,37 @@ la muestra a la redacción de este documento.
 Resta una decisión metodológica que atraviesa todo el trabajo y que ya
 se ha avanzado: en coherencia con su objeto de estudio, el análisis prescinde por completo de
 calificaciones ESG de terceros. Toda medida de calidad, tono o especificidad procede del
-propio texto de los informes, lo que preserva la independencia entre la comunicación y el instrumento de medida.
+propio texto de los informes, lo que preserva la independencia entre el objeto analizado
+—la comunicación— y el instrumento de medida.
 
 \section{Orden documental}
 \label{sec:orden}
 
-El TFG se organiza en seis capítulos. Tras esta \textbf{introducción}, que
+El presente documento se organiza en seis capítulos. Tras esta \textbf{introducción}, que
 delimita el contexto, los objetivos y el enfoque general, el \textbf{capítulo~2} desarrolla el
-marco del trabajo. Este se aborda desde dos perspectivas: por un lado, el marco
+marco del trabajo. Este se aborda desde una doble perspectiva: por un lado, el marco
 normativo, que recorre la evolución de la regulación europea de la información de
 sostenibilidad desde la NFRD hasta la CSRD, los ESRS, la Taxonomía de la UE y el reglamento
-SFDR y, por otro, el marco teórico, que recoge las aportaciones de la literatura sobre
-legitimidad organizativa, gestión de impresiones y \textit{greenwashing} y el estado
+SFDR; por otro, el marco teórico, que recoge las aportaciones de la literatura sobre
+legitimidad organizativa, gestión de impresiones y \textit{greenwashing}, así como el estado
 de la cuestión en la aplicación del PLN al reporting de sostenibilidad.
 
 El \textbf{capítulo~3} detalla la metodología: el diseño de la investigación y las preguntas
 que la guían, la construcción de la muestra y del corpus, las técnicas de análisis textual
-empleadas, la construcción del índice de \textit{greenwashing} y lso resultados utilizados para contrastar las hipótesis.
+empleadas —con cita expresa de la fuente original de cada una—, la construcción del índice de
+\textit{greenwashing} y el aparato estadístico utilizado para contrastar las hipótesis.
 
 El \textbf{capítulo~4} presenta y discute los resultados, organizados en torno a las cuatro
 preguntas de investigación: la radiografía del corpus y su cobertura de los estándares ESRS,
 los temas predominantes, el tono y la especificidad del discurso, el índice de
 \textit{greenwashing}, los factores que lo determinan y, finalmente, la evolución del
-reporting entre los dos regímenes normativos.
+reporting entre los dos regímenes normativos. Cada hallazgo se pone en relación con el marco
+teórico del capítulo~2, señalando coincidencias y discrepancias con la literatura previa.
 
 El \textbf{capítulo~5} recoge, a modo de autocrítica, las principales limitaciones del trabajo
 y las propuestas de mejora que de ellas se derivan. El \textbf{capítulo~6} cierra el documento
-con las conclusiones y las futuras líneas de investigación. Por último la bibliografía y los anexos
+con las conclusiones —ordenadas por objetivo específico—, una reflexión sobre la relación del
+TFG con la Agenda 2030 y las futuras líneas de investigación. Tras la bibliografía, los anexos
 recogen el material complementario que respalda el análisis.
 
 Como complemento a este documento, los resultados se han volcado además en un

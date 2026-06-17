@@ -1,3 +1,6 @@
+# Enlace simbólico local sin tildes (workaround bug de biber/Perl con rutas UTF-8 desde apps GUI)
+/redaccion_tfg
+
 # Datos crudos — no se versionan (informes empresariales pesados)
 data/raw/
 data/interim/
@@ -40,3 +43,20 @@ results/models/*.npy
 # Descartes de reemplazo de informes (backups locales, no versionar)
 /_pendiente_reemplazo/
 /_rechazados_ES/
+
+# Auxiliares de compilación LaTeX (LaTeX Workshop)
+**/build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+missfont.log

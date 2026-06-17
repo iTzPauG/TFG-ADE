@@ -368,3 +368,4 @@ toques lo que no señalaste**; los cambios deben ser localizables y mínimos.
 Fidelidad a los datos > corrección APA y estructura > voz humana del autor > elegancia.
 **Corrige lo justo, preserva lo que funciona y no inventes nada.** Si algo no está en la
 documentación, **no lo «arregles» a ciegas**: márcalo con `⟦VERIFICAR: …⟧` y sigue.
+
