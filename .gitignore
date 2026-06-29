@@ -60,3 +60,10 @@ results/models/*.npy
 *.synctex.gz
 *.toc
 missfont.log
+
+# Prompts de redacción/revisión con IA (uso interno, no versionar)
+**/PROMPT_*.md
+PROMPT_*.md
+
+# Interpretaciones AI de resultados (Fase 5, uso interno)
+docs/fase5*_interpretacion.md
