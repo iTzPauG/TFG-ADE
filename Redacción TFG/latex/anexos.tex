@@ -140,3 +140,111 @@ ROA & +0,100 & 0,488 \\
 \\[4pt]
 {\footnotesize Fuente: elaboración propia.}
 \end{table}
+
+\chapter{Reproducibilidad: pipeline, software y repositorio}
+\label{anexo:reproducibilidad}
+
+Este anexo reúne el detalle técnico necesario para reproducir el trabajo de principio a fin,
+en cumplimiento de lo anunciado en la sección~\ref{sec:reproducibilidad}. Se documentan el
+pipeline completo, las versiones del software, los parámetros de los modelos y los criterios de
+limpieza, y se ofrece la dirección del repositorio público que contiene todo el código.
+
+\section*{Pipeline completo}
+
+El procesamiento se organiza como una secuencia de scripts en Python, encadenados de forma que
+la salida de cada fase es la entrada de la siguiente:
+
+\begin{enumerate}
+    \item \textbf{Muestra.} Muestreo estratificado por sector sobre el STOXX Europe 600 (semilla
+    aleatoria fija) y recopilación de los datos financieros de control desde Yahoo Finance.
+    \item \textbf{Recolección.} Descarga de los informes corporativos en PDF y verificación de
+    contenido (empresa correcta, tipo de documento, idioma).
+    \item \textbf{Extracción y limpieza.} Extracción del texto con PyMuPDF, OCR puntual con
+    Tesseract sobre páginas ilegibles, detección de idioma con \texttt{langdetect}, segmentación
+    del informe de gestión y de la subsección de sostenibilidad, y construcción del corpus.
+    \item \textbf{Análisis de PLN.} Descriptivos y cobertura ESRS, modelado de temas (LDA y
+    BERTopic), y clasificación frase a frase con los diccionarios y los modelos de lenguaje.
+    \item \textbf{Índice de \textit{greenwashing}.} Cálculo del \gwindex{} a partir de los cuatro
+    componentes estandarizados.
+    \item \textbf{Estadística.} Contrastes no paramétricos, pruebas pareadas y regresiones OLS
+    con errores robustos.
+    \item \textbf{Visualización.} Generación del cuadro de mando y de las figuras del trabajo.
+\end{enumerate}
+
+\section*{Versiones del software}
+
+El análisis se ejecutó en un entorno \texttt{conda} con Python~3.11. La
+tabla~\ref{tab:versiones} recoge las versiones de las principales bibliotecas; el motor de OCR
+fue Tesseract~5.5.
+
+\begin{table}[H]
+\centering
+\caption{Principales bibliotecas y versiones}
+\label{tab:versiones}
+\begin{tabular}{lll}
+\toprule
+\textbf{Biblioteca} & \textbf{Versión} & \textbf{Uso} \\
+\midrule
+PyMuPDF (\texttt{fitz}) & 1.27 & Extracción de texto de PDF \\
+pytesseract / Tesseract & 0.3 / 5.5 & OCR de páginas ilegibles \\
+langdetect & 1.0.9 & Detección de idioma \\
+spaCy (\texttt{en\_core\_web\_sm}) & 3.8 & Lematización y limpieza \\
+gensim & 4.4 & Modelado de temas LDA \\
+BERTopic & 0.17 & Modelado de temas semántico \\
+sentence-transformers & 5.5 & \textit{Embeddings} de frases \\
+umap-learn & 0.5 & Reducción de dimensionalidad \\
+hdbscan & 0.8 & Agrupamiento de párrafos \\
+transformers & 5.9 & FinBERT / ClimateBERT / ESG-9 \\
+torch & 2.12 & Inferencia (aceleración MPS) \\
+scikit-learn & 1.8 & Utilidades de aprendizaje \\
+statsmodels & 0.14 & Regresiones OLS (HC3) \\
+scipy & 1.17 & Contrastes estadísticos \\
+pandas & 3.0 & Manipulación de datos \\
+\bottomrule
+\end{tabular}
+\\[4pt]
+{\footnotesize Fuente: elaboración propia.}
+\end{table}
+
+\section*{Modelos y parámetros}
+
+\begin{itemize}
+    \item \textbf{LDA} (gensim): número de temas $K=25$ (seleccionado por coherencia $C_v$),
+    \texttt{passes}=10, \texttt{random\_state}=42.
+    \item \textbf{BERTopic}: \textit{embeddings} con \texttt{all-MiniLM-L6-v2}; reducción con
+    UMAP (\texttt{n\_neighbors}=15, \texttt{n\_components}=5, \texttt{random\_state}=42);
+    agrupamiento con HDBSCAN (\texttt{min\_cluster\_size}=50, \texttt{min\_samples}=10).
+    \item \textbf{FinBERT} (tono financiero): \texttt{ProsusAI/finbert}.
+    \item \textbf{ClimateBERT} (cascada): \texttt{climatebert/distilroberta-base-climate-detector},
+    \texttt{-climate-sentiment}, \texttt{-climate-commitment} y \texttt{-climate-specificity}.
+    \item \textbf{FinBERT-ESG-9} (categoría ESG): \texttt{yiyanghkust/finbert-esg-9-categories}.
+    \item \textbf{Diccionarios}: Loughran--McDonald \textit{Master Dictionary} (edición 2024) y
+    diccionario propio de términos ESRS (once categorías).
+\end{itemize}
+
+\section*{Criterios de limpieza del texto}
+
+La construcción del corpus aplicó una limpieza uniforme: eliminación de cabeceras y pies de
+página repetidos, supresión de los números de página, retirada de caracteres de control y
+recomposición de los párrafos partidos por la maquetación a columnas. Se conservaron dos
+versiones de cada texto: una con mayúsculas y puntuación, destinada a los modelos de tipo BERT,
+y otra lematizada y en minúsculas, sin palabras vacías ni puntuación, destinada al modelado de
+temas y a los recuentos léxicos.
+
+\section*{Repositorio de código}
+
+La totalidad del código —scripts de las siete fases, diccionarios y materiales auxiliares— está
+disponible en el repositorio público del proyecto, que constituye el complemento técnico
+definitivo de este trabajo y permite reproducir cada uno de los resultados aquí presentados:
+
+\begin{center}
+\large\url{https://github.com/iTzPauG/TFG-ADE}
+\end{center}
+
+% =====================================================================
+%  APÉNDICE D — Declaración de uso de IAG (PDF externo)
+% =====================================================================
+\chapter{Declaración de uso de inteligencia artificial generativa (IAG)}
+\label{anexo:declaracion_iag}
+\thispagestyle{empty}
+\includepdf[pages=-]{../../Declaracion_Uso_IA_TFG_FADE_UPV_v2.pdf}

@@ -21,16 +21,23 @@ europeos redactados en inglés, es razonable suponer que haya cierto ruido. El v
 de la sostenibilidad no coincide exactamente con el de la contabilidad financiera, y algunas
 palabras pueden estar mal clasificadas en este nuevo contexto. Lo mismo ocurre con los
 modelos de lenguaje especializados (FinBERT, ClimateBERT, FinBERT-ESG-9), que fueron entrenados
-sobre corpus distintos del de este trabajo y que, por tanto, puede cometer errores de clasificación.
-Una mejora natural sería ajustar estos modelos sobre una muestra de frases de informes ESRS europeos previamente anotada a mano,
-lo que permitiría adaptar las herramientas al dominio concreto.
+sobre corpus distintos del de este trabajo y que, por tanto, pueden cometer errores de
+clasificación. Para acotar ese riesgo, sus salidas se validaron contra una muestra de frases
+anotada manualmente y contra un modelo de lenguaje juez sujeto a una rúbrica cerrada
+(sección~\ref{sec:validacion-modelos}), obteniendo niveles de acuerdo sustanciales que permiten su uso. 
+La mejora pendiente sería
+precisamente ajustarlos (\textit{fine-tuning}) sobre una muestra más amplia de frases de
+informes ESRS europeos anotada a mano, lo que adaptaría las herramientas al dominio concreto y
+reduciría el error residual en los casos individuales.
 
 Sobre el indicador de cobertura ESRS también vale la pena repetir un comentario que se ha hecho anteriormente. 
 Este indicador mide la \textit{anchura} del vocabulario empleado, no la profundidad
 de la información ni el compulimiento de la norma. Una empresa puede tratar en detalle un asunto
 empleando una terminología propia que no coincida con la del diccionario, y el indicador la
-penalizaría injustamente. Con mucha capacidad de cómputo se podría delegar esta tarea en modelos de razonamiento avanzado,
-que sí examinen el cumplimiento y la profundidad.
+penalizaría injustamente. Esta tarea podría delegarse en modelos de razonamiento avanzado, que
+sí examinaran el cumplimiento y la profundidad, en este trabajo no se hizo porque reclama una capacidad de cómputo 
+de la que no se dispone. Ejecutar esos modelos, sobre todo el corpus, desborda el equipo local, y hacerlo en la
+nube acarrea un coste que, en el marco de un trabajo académico, se prefirió no asumir.
 
 Por último, el índice de \textit{greenwashing} es una construcción original de este
 trabajo (aunque basada en literatura) y pese a que nos permite una orientación, sigue siendo un índice compuesto por componentes arbitrarios. 
@@ -45,9 +52,11 @@ empresa concreta.
 La segunda parte de limitaciones tiene que ver con el corpus del análisis. La
 segmentación automática que aísla la subsección de sostenibilidad de cada informe es un proceso imperfecto. 
 En ocasiones, las subsecciones no existían, o eran muy difusas. Para estos casos, se les identificó con una etiqueta de fiabilidad
-baja. Se han mantenido en el análisis pero se ha comprobado que las conclusiones se sostienen al excluirlos. Aun
-así, una segmentación más afinada, o incluso una revisión manual de los límites en los casos
-dudosos, reforzaría la solidez del corpus.
+baja. Se han mantenido en el análisis pero se ha comprobado que las conclusiones se sostienen al excluirlos. La
+verificación de una muestra revisada confirmó que los errores se concentran precisamente en esos
+casos de baja fiabilidad. Aun así, una segmentación más afinada, o una revisión manual de los
+límites extendida a todos los casos dudosos y no solo a una muestra, reforzaría la solidez del
+corpus.
 
 Por otro lado, algunos países están
 representados por muy pocas empresas, de modo que el análisis por país, de nuevo,
@@ -70,9 +79,11 @@ la contribución de la norma frente a la de otros factores.
 
 De igual forma la ventana temporal es breve. Tres ejercicios consecutivos bastan
 para detectar el salto asociado a 2024, pero no para distinguir una tendencia estructural de un
-ajuste puntual al primer año de obligatoriedad. De nuevo, con más capacidad de cómputo y esperando unos años,
-utlizando los mismos métodos, se podrían extraer conclusiones mucho más fiables de la evolución y el asentamiento
-de la sostenibilidad dentro de las empresas europeas.
+ajuste puntual al primer año de obligatoriedad. De nuevo, esperando unos años y aplicando los
+mismos métodos —idealmente a un número mayor de empresas, lo que solo es cuestión de disponer de
+más recursos de cómputo, no de un obstáculo metodológico— se podrían extraer conclusiones mucho
+más fiables de la evolución y el asentamiento de la sostenibilidad dentro de las empresas
+europeas.
 
 De nuevo ninguna de estas limitaciones invalida los resultados, pero todas tienen su alcance. El trabajo, en su espíritu de análisis exploratorio,
 ofrece un resultado riguroso y reproducible de cómo cambió la comunicación de sostenibilidad,

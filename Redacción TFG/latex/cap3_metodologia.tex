@@ -40,8 +40,17 @@ El universo de estudio es el STOXX Europe 600, índice que reúne a seiscientas 
 empresas cotizadas de Europa y que constituye una referencia habitual del mercado europeo de
 renta variable \parencite{stoxx2024}. De ese universo se seleccionó una muestra de
 \textbf{196 empresas} mediante un muestreo estratificado por sector, con una semilla aleatoria
-fija para garantizar la reproducibilidad. Este muestreo responde a la imposibilidad, debido a los recursos disponibles, de procesar 
-todos los informes de todas las empresas del EUROSTOXX 600 durante 3 años. La estratificación se hizo debido a la 
+fija para garantizar la reproducibilidad. Conviene matizar la razón del muestreo: procesar los
+informes de las seiscientas empresas del STOXX Europe 600 durante tres años es perfectamente
+posible desde el punto de vista técnico, pero no resultaba viable con los medios de este
+trabajo. El volumen de inferencia que exigen los modelos de lenguaje sobre cientos de miles de
+páginas excede lo que puede ejecutar el equipo local disponible, y la alternativa de alquilar
+capacidad de cómputo en la nube implicaba un coste económico que el proyecto no se puede asumir. 
+El muestreo no es, por tanto, una imposibilidad
+metodológica, sino una decisión deliberada de ajustada a los recursos materiales
+realmente al alcance. 
+
+Por otro lado, respecto del muestreo, la estratificación se hizo debido a la 
 sobrerrepresentación de países y sectores en el índice, de modo que un muestreo aleatorio
 simple sobrerrepresentaría a estos y dejaría sin apenas presencia a sectores pequeños pero muy
 relevantes para el análisis de sostenibilidad, como las utilities o el sector inmobiliario.
@@ -113,18 +122,32 @@ heterogéneas y, con frecuencia, en idiomas distintos del inglés. Convertir ese
 corpus de texto limpio y homogéneo fue una fase de trabajo en sí misma, que conviene describir
 porque condiciona la validez de todo lo que sigue.
 
-El primer paso fue la \textbf{extracción del texto} de los informes. La mayoría de los
-documentos permite una extracción directa, pero algunos presentaban el texto como imagen o con
-una codificación de caracteres defectuosa que lo hacía ilegible para las herramientas
-automáticas. En esos casos se recurrió a un reconocimiento óptico de caracteres aplicado
-únicamente a las páginas problemáticas, conservando el texto nativo en el resto, de modo que la
-calidad de la fuente original se preservó siempre que fue posible. El segundo paso fue la
-\textbf{homogeneización de idiomas}. Dado que los modelos de lenguaje empleados más adelante
-están entrenados sobre texto en inglés, los informes publicados en otros idiomas se
-sustituyeron por la versión oficial en inglés del mismo emisor (habitualmente el
-\textit{Annual Report} o el documento de registro universal), nunca por una traducción
-automática, que habría introducido un ruido incompatible con el análisis de sentimiento. El
-corpus final quedó así íntegramente en inglés y libre de traducciones artificiales.
+El primer paso fue la \textbf{extracción del texto} de los informes. Conviene precisar la
+herramienta concreta empleada, pues de su fidelidad depende la validez de todo lo que sigue.
+La extracción \textit{no} se delegó en un modelo de lenguaje generativo ni en un servicio de
+\textit{parsing} documental basado en IA (del tipo de los analizadores que reconstruyen el
+documento con un LLM o con modelos visión-lenguaje): esas opciones, aunque cómodas, introducen
+un riesgo de alucinación o de reescritura silenciosa del contenido que sería muy difícil de
+auditar y que comprometería la trazabilidad del corpus. Se optó, en cambio, por una extracción
+\textbf{determinista y reproducible} con la biblioteca \textbf{PyMuPDF} (módulo \texttt{fitz},
+sobre el motor MuPDF), que lee directamente la capa de texto nativa de cada PDF y devuelve el
+contenido literal del emisor sin interpretarlo. La mayoría de los documentos permite esta
+extracción directa; sin embargo, algunos presentaban el texto como imagen escaneada o con una
+codificación de caracteres defectuosa —fuentes embebidas sin tabla \textit{ToUnicode}— que lo
+hacía ilegible. Para esos casos, y solo para ellos, se aplicó un \textbf{reconocimiento óptico
+de caracteres} con el motor \textbf{Tesseract}: las páginas afectadas se rasterizaron a 300 ppp
+con PyMuPDF y se pasaron por el OCR, conservando el texto nativo en el resto del documento. De
+este modo el OCR se reservó como remedio puntual y la calidad de la fuente original se preservó
+siempre que fue posible. El segundo paso fue la \textbf{homogeneización de idiomas}. La lengua
+de cada informe se determinó de forma automática con la biblioteca \texttt{langdetect}, mediante
+un voto de mayoría sobre nueve ventanas de texto repartidas a lo largo del documento, lo que
+evita que un fragmento aislado (un resumen o una cita en otra lengua) sesgue la detección. Dado
+que los modelos de lenguaje empleados más adelante están entrenados sobre texto en inglés, los
+informes publicados en otros idiomas se sustituyeron por la versión oficial en inglés del mismo
+emisor (habitualmente el \textit{Annual Report} o el documento de registro universal), nunca por
+una traducción automática, que habría introducido un ruido incompatible con el análisis de
+sentimiento. El corpus final quedó así íntegramente en inglés y libre de traducciones
+artificiales.
 
 El tercer paso fue la \textbf{segmentación}. Cada informe se dividió para aislar,
 por un lado, el informe de gestión y, por otro, la subsección específicamente dedicada a la
@@ -144,6 +167,39 @@ diferencia respecto de las 588 observaciones del panel se debe a la exclusión d
 que, pese a existir, carecían de contenido de sostenibilidad analizable. Como ilustra la
 evolución del tamaño de los documentos, la subsección de sostenibilidad alcanza una mediana de varias
 miles de palabras por documento y crece de forma acusada a lo largo del periodo.
+
+\subsection{Verificación de la calidad del corpus}
+\label{sec:qa-corpus}
+
+Un corpus construido de forma automática sobre documentos tan heterogéneos no puede darse por
+bueno sin comprobaciones: cualquier error de extracción o de segmentación se propagaría a todas
+las métricas posteriores. Por ello el proceso incorporó varios controles de calidad, unos
+automáticos y exhaustivos sobre la totalidad del corpus y otros manuales sobre una muestra
+revisada a mano.
+
+En el plano \textbf{automático}, cada documento extraído se sometió a una rutina de control que
+verificaba el recuento de páginas frente al PDF de origen, el número de caracteres efectivamente
+recuperados y la ausencia de caracteres de control o de páginas vacías, descartando así de raíz
+los ficheros truncados o ilegibles. Este cribado destapó un problema recurrente y nada trivial:
+la coincidencia de \textit{tickers} en los repositorios de informes hacía que, en algunos casos,
+el documento descargado correspondiera a una empresa distinta de la buscada o a un tipo de
+documento equivocado (un informe solo de sostenibilidad en lugar del informe integrado, o una
+versión en otro idioma). El recuento de páginas y la verificación de contenido permitieron
+identificar veinticinco informes problemáticos, que se sustituyeron uno a uno por la versión
+correcta en inglés del emisor; ninguno se descartó sin reemplazo. La rutina final de control no
+detectó ningún documento vacío, truncado ni con codificación corrupta en los 586 documentos del
+corpus.
+
+En el plano \textbf{manual}, se revisó a mano una muestra aleatoria de sesenta documentos,
+estratificada por año y por etiqueta de fiabilidad de la segmentación, contrastando los límites
+asignados de forma automática a la subsección de sostenibilidad con los que se desprenden del
+índice real del informe. Los límites se juzgaron correctos en cincuenta y cinco de los sesenta
+casos (un 92\,\%); las discrepancias se concentraron, como cabía esperar, en los documentos
+etiquetados con fiabilidad baja —aquellos en los que la subsección no existía como tal o se
+hallaba muy difuminada en el cuerpo del informe—. Esta constatación justifica la propia
+existencia de la etiqueta de fiabilidad y el análisis de sensibilidad que excluye los casos
+dudosos, descrito más adelante. La segmentación, por tanto, no se presenta como infalible, sino
+como un proceso medido, cuyo margen de error se conoce y se acota.
 
 \section{Técnicas de procesamiento del lenguaje natural}
 \label{sec:tecnicas}
@@ -200,12 +256,47 @@ compromiso concreto o una mera declaración) y su especificidad (si aporta cifra
 metas o se queda en lo genérico). Por último, un clasificador adicional, FinBERT-ESG-9
 \parencite{yang2020}, asigna cada frase a una de nueve categorías temáticas de sostenibilidad,
 lo que ofrece una tercera vía, independiente de los diccionarios y del modelado de temas, para
-caracterizar el contenido del corpus. 
+caracterizar el contenido del corpus.
+
+\subsection{Validación de las clasificaciones automáticas}
+\label{sec:validacion-modelos}
+
+Todos estos modelos comparten una limitación de partida que no puede pasarse por alto: se
+emplean sin reentrenamiento ni ajuste fino sobre informes de sostenibilidad
+europeos, porque fueron entrenados sobre corpus distintos (noticias y comunicados financieros,
+en el caso de FinBERT; un corpus climático general, en el de ClimateBERT). Nada garantiza, a
+priori, que acierten al clasificar el lenguaje particular de los informes ESRS. Por eso, antes
+de dar por buenas sus salidas, se validaron contra un patrón de referencia revisado a mano.
+
+Para ello se extrajo una muestra de cien frases, seleccionadas al azar
+de forma estratificada por año y por sector, y se anotaron manualmente siguiendo un libro de
+códigos con criterios explícitos. Sobre esa muestra se midió el acuerdo entre la anotación
+humana y la clasificación de cada modelo. El detector de frases
+climáticas de ClimateBERT mostró el mejor comportamiento (acuerdo del 95\,\%), seguido del tono financiero de FinBERT (91\,\%); la
+especificidad y el compromiso, tareas intrínsecamente más sutiles, alcanzaron acuerdos algo
+menores pero todavía aceptables (en torno al 87\,\%). Estos valores se
+sitúan en el rango que la literatura considera de acuerdo sustancial y avalan el uso de los
+modelos para un análisis comparativo y agregado, aunque aconsejan prudencia en la lectura de
+casos individuales.
+
+Como segunda capa de validación se recurrió a un \textbf{modelo de lenguaje como juez}
+(\textit{LLM as a judge})sujeto a una \textbf{rúbrica cerrada} que reproduce los mismos
+criterios del análisis. Para cada frase, el modelo debía decidir, justificándolo: (i) si la
+afirmación es específica o genérica; (ii) si una promesa de futuro está respaldada con datos o
+queda en lo declarativo; (iii) si incorpora cifras o datos verificables; y (iv) si el fragmento
+aporta evidencia real o se limita a un discurso reputacional. Las respuestas del modelo se
+contrastaron, sobre la misma muestra, con la anotación humana, que prevaleció en todo
+caso como criterio final. El acuerdo entre el juez automático y el anotador humano en la
+dimensión de especificidad fue del 89\,\%, lo que confirma que las clasificaciones del pipeline
+son coherentes con un juicio experto guiado por criterios homogéneos. El modelo como juez no
+sustituye a la revisión humana, la complementa y la hace escalable, y sirve sobre
+todo como prueba de robustez de que las señales que el pipeline mide responden a rasgos reales
+del texto y no a artefactos del método.
 
 \section{Construcción del índice de \textit{greenwashing}}
 \label{sec:gwindex}
 
-Las métricas anteriores capturan, cada una, una faceta del discurso de sostenibilidad. Para
+Las métricas anteriores muestran, cada una, una faceta del discurso de sostenibilidad. Para
 sintetizar las señales de \textit{cheap talk} se construyó un
 índice compuesto, denominado \gwindex{}, que combina cuatro de esos componentes tras
 estandarizarlos. La razón de la creación de este índice responde a la definición de
@@ -254,3 +345,24 @@ ratios financieros, el sector, el año y la región y la segunda explica el tono
 función de la especificidad climática y los mismos controles, con el fin de contrastar
 directamente la relación entre optimismo y concreción. Los
 resultados de todos estos contrastes se presentan y discuten en el capítulo siguiente.
+
+\section{Reproducibilidad}
+\label{sec:reproducibilidad}
+
+Una de las aspiraciones de este trabajo es que su procedimiento sea no solo riguroso, sino
+\textbf{sistemático, escalable y reproducible}, que cualquier investigador pueda, partiendo de
+los mismos informes, reconstruir el corpus y obtener los mismos resultados. Para ello
+se han adoptado tres puntos. Primero, todo el
+proceso se ha implementado como una \textbf{cadena de scripts encadenados}, organizada en las
+siete fases descritas (construcción de la muestra, recolección de informes, extracción y
+limpieza del texto, análisis de PLN, índice de \textit{greenwashing}, análisis estadístico y
+visualización), de modo que cada etapa consume la salida de la anterior y deja constancia de la
+suya. Segundo, todas las operaciones con componente aleatorio (el muestreo estratificado, el
+modelado de temas LDA y BERTopic) se ejecutaron con \textbf{semillas fijas}, lo que garantiza
+que las mismas entradas produzcan siempre las mismas salidas. Tercero, se han registrado las
+\textbf{versiones exactas} de las bibliotecas empleadas, los \textbf{identificadores precisos}
+de los modelos de lenguaje descargados de \textit{Hugging Face}, los \textbf{parámetros} de cada
+modelo y los \textbf{criterios de limpieza} aplicados al texto. Todo este detalle técnico, junto
+con el repositorio público en el que reside el código, se recoge en el anexo de
+reproducibilidad (anexo~\ref{anexo:reproducibilidad}), de manera que el cuerpo del trabajo
+conserve su hilo argumental sin renunciar a la transparencia completa del método.
