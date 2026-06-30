@@ -133,7 +133,7 @@ auditar y que comprometería la trazabilidad del corpus. Se optó, en cambio, po
 sobre el motor MuPDF), que lee directamente la capa de texto nativa de cada PDF y devuelve el
 contenido literal del emisor sin interpretarlo. La mayoría de los documentos permite esta
 extracción directa; sin embargo, algunos presentaban el texto como imagen escaneada o con una
-codificación de caracteres defectuosa —fuentes embebidas sin tabla \textit{ToUnicode}— que lo
+codificación de caracteres defectuosa (fuentes embebidas sin tabla \textit{ToUnicode}) que lo
 hacía ilegible. Para esos casos, y solo para ellos, se aplicó un \textbf{reconocimiento óptico
 de caracteres} con el motor \textbf{Tesseract}: las páginas afectadas se rasterizaron a 300 ppp
 con PyMuPDF y se pasaron por el OCR, conservando el texto nativo en el resto del documento. De
@@ -195,8 +195,8 @@ estratificada por año y por etiqueta de fiabilidad de la segmentación, contras
 asignados de forma automática a la subsección de sostenibilidad con los que se desprenden del
 índice real del informe. Los límites se juzgaron correctos en cincuenta y cinco de los sesenta
 casos (un 92\,\%); las discrepancias se concentraron, como cabía esperar, en los documentos
-etiquetados con fiabilidad baja —aquellos en los que la subsección no existía como tal o se
-hallaba muy difuminada en el cuerpo del informe—. Esta constatación justifica la propia
+etiquetados con fiabilidad baja (aquellos en los que la subsección no existía como tal o se
+hallaba muy difuminada en el cuerpo del informe). Esta constatación justifica la propia
 existencia de la etiqueta de fiabilidad y el análisis de sensibilidad que excluye los casos
 dudosos, descrito más adelante. La segmentación, por tanto, no se presenta como infalible, sino
 como un proceso medido, cuyo margen de error se conoce y se acota.
@@ -248,7 +248,7 @@ en ese hallazgo aumenta.
 El tercer bloque recurre a modelos de lenguaje especializados de la arquitectura
 BERT \parencite{devlin2019,liu2019}, que clasifican cada frase del corpus según diversos
 criterios. FinBERT \parencite{araci2019} evalúa el tono financiero general de cada frase
-—positivo, negativo o neutro—. Las cuatro variantes de ClimateBERT
+(positivo, negativo o neutro). Las cuatro variantes de ClimateBERT
 \parencite{webersinke2022}, operan en cascada:
 la primera detecta si una frase trata de clima, sobre las que sí lo hacen, las restantes
 evalúan su sentimiento (riesgo frente a oportunidad), su grado de compromiso (si contiene un
@@ -280,7 +280,7 @@ modelos para un análisis comparativo y agregado, aunque aconsejan prudencia en 
 casos individuales.
 
 Como segunda capa de validación se recurrió a un \textbf{modelo de lenguaje como juez}
-(\textit{LLM as a judge})sujeto a una \textbf{rúbrica cerrada} que reproduce los mismos
+(\textit{LLM as a judge}) sujeto a una \textbf{rúbrica cerrada} que reproduce los mismos
 criterios del análisis. Para cada frase, el modelo debía decidir, justificándolo: (i) si la
 afirmación es específica o genérica; (ii) si una promesa de futuro está respaldada con datos o
 queda en lo declarativo; (iii) si incorpora cifras o datos verificables; y (iv) si el fragmento
