@@ -4,9 +4,17 @@
 las empresas europeas: un análisis de contenido mediante técnicas de inteligencia
 artificial.**
 
-TFG (ADE, Universidad de Valencia). Análisis con técnicas de PLN (FinBERT, ClimateBERT,
-diccionario Loughran-McDonald, diccionario ESRS propio) de las secciones de sostenibilidad
-de 97 empresas del STOXX Europe 600 (2022-2024), bajo el marco normativo CSRD/ESRS.
+Trabajo de fin de grado en Administración y Dirección de Empresas (ADE) de la
+**Universitat Politècnica de València (UPV)**, Facultad de Administración y Dirección de
+Empresas (FADE), tutelado por Elíes Seguí Mas. El proyecto analiza, mediante técnicas de
+PLN, cómo las grandes empresas europeas comunican su estrategia de sostenibilidad en sus
+informes corporativos, comparando los ejercicios 2022, 2023 y 2024 bajo el marco normativo
+NFRD/CSRD y los estándares ESRS.
+
+La solución combina extracción de texto, limpieza y segmentación de informes, modelado de
+temas con LDA y BERTopic, análisis de sentimiento y especificidad con FinBERT y ClimateBERT,
+plus un índice de greenwashing textual (`GW_index`) construido a partir de reglas sobre el
+texto.
 
 Contexto completo del proyecto, decisiones metodológicas y estado del pipeline en
 [`CLAUDE.md`](CLAUDE.md), [`GUÍA.MD`](GUÍA.MD) y [`docs/decisiones.md`](docs/decisiones.md).
@@ -15,10 +23,13 @@ Contexto completo del proyecto, decisiones metodológicas y estado del pipeline 
 
 | Fase | Descripción | Estado |
 |------|-------------|--------|
-| 1-4 | Marco teórico, muestra, recolección, extracción/limpieza | ✅ |
+| 1 | Marco teórico + normativo + preguntas de investigación | ✅ |
+| 2 | Construcción de la muestra | ✅ |
+| 3 | Recolección de informes | ✅ |
+| 4 | Extracción, limpieza y segmentación del texto | ✅ |
 | 5 | Análisis PLN (descriptivos, topics, sentimiento, GW_index, estadística) | ✅ |
-| 6 | Dashboard (HTML estático) + reproducibilidad | 🔄 |
-| 7 | Redacción del TFG | ⬜ |
+| 6 | Dashboard HTML estático + reproducibilidad | ✅ |
+| 7 | Redacción final del TFG | ✅/en cierre |
 
 ## Entorno
 
@@ -31,9 +42,10 @@ conda activate tfg-ade
 
 ## Dashboard (Fase 6)
 
-El dashboard explora los resultados de la Fase 5 (5A-5E) sobre el panel de 289 documentos
-(secciones de sostenibilidad, 97 empresas × 3 años). Es un **HTML estático autocontenido**
-(sin Streamlit ni servidor): usa Plotly.js vía CDN y los datos van embebidos como JSON inline.
+El dashboard explora los resultados de la Fase 5 (5A-5E) sobre el panel final de
+**586 documentos** (`196 empresas × 3 años`, excluyendo los dos informes descartados por
+contenido ESG no analizable). Es un **HTML estático autocontenido** (sin Streamlit ni
+servidor): usa Plotly.js vía CDN y los datos van embebidos como JSON inline.
 
 Para generarlo (regenera las tablas precalculadas si cambian los resultados de Fase 5):
 
@@ -49,7 +61,7 @@ en `results/figures/` carguen correctamente con cualquier configuración).
 Secciones:
 - **Overview** — descriptivos del corpus, distribución de tokens, cobertura ESRS
 - **Explorador de empresa** — evolución de tono, especificidad, GW_index y tópicos por empresa
-- **Topics** — modelos LDA (K=15) y BERTopic (339 tópicos)
+- **Topics** — modelos LDA (K=25) y BERTopic (578 topics, más outliers)
 - **Comparador** — comparación de métricas clave entre empresas
 - **Resultados RQ** — hallazgos por pregunta de investigación (RQ1-RQ4)
 
